@@ -1,23 +1,23 @@
 //----------  variables
 //------------------------------------------------------------------------------
 
-$font-default: Arial, sans-serif;
+$font-default: 'Montserrat', Tahoma, Verdana, Segoe, sans-serif;
 
 // Colors
 $white: #fff;
+$whitesmoke: #fafafa;
 $black: #000;
-$orange: #f1592a;
+$grey: #333;
+$blue: #278ed0;
+$mint: #28d2c6;
+
 
 $site-colors: (
 	'black': $black,
 	'white': $white,
-	'orange': $orange
+	'blue': $blue,
+	'mint': $mint
 ) !default;
-
-//----------  Bootstrap grid
-//------------------------------------------------------------------------------
-
-$enable-grid-classes: true !default;
 
 //----------  Media queries breakpoints - Grid breakpoint
 //------------------------------------------------------------------------------
@@ -29,9 +29,3 @@ $grid-breakpoints: (
 	lg: 992px,
 	xl: 1200px
 ) !default;
-
-//----------  Grid columns
-//------------------------------------------------------------------------------
-
-$grid-columns: 12 !default;
-$grid-gutter-width: 30px !default;
