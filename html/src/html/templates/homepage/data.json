@@ -6,6 +6,9 @@
 		},
 		"footer": {
 			">>": "shared/footer/data.json"
+		},
+		"joinUs": {
+			">>": "modules/join-module/data.json"
 		}
 	}
 }
