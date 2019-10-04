@@ -1,0 +1,17 @@
+{
+	"template": "index",
+	"data": {
+		"header": {
+			">>": "shared/header/data.json"
+		},
+		"footer": {
+			">>": "shared/footer/data.json"
+		},
+		"slider": {
+			">>": "modules/slider/data.json"
+		},
+		"banner": {
+			">>": "modules/banner/data.json"
+		}
+	}
+}

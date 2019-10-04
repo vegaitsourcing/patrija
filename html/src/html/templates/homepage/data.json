@@ -1,0 +1,11 @@
+{
+	"template": "homepage",
+	"data": {
+		"header": {
+			">>": "shared/header/data.json"
+		},
+		"footer": {
+			">>": "shared/footer/data.json"
+		}
+	}
+}
