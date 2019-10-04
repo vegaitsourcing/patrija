@@ -21,13 +21,13 @@ const plumberErrorHandler = {
 	})
 };
 
+const processors = [
+	autoprefixer(),
+	flexBugsFix
+];
+
 // compile scss files
 gulp.task('css', () => {
-	const processors = [
-		autoprefixer({browsers: ['last 2 versions', 'ios >= 8']}),
-		flexBugsFix
-	];
-
 	return gulp.src(['src/scss/**/*.scss', 'src/html/**/**/*.scss'])
 		.pipe(plumber(plumberErrorHandler))
 		.pipe(sourcemaps.init())

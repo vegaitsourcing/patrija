@@ -1,8 +1,8 @@
 @font-face {
 	font-family: 'svgicons';
-	src: url('../assets/fonts/svgicons.woff2') format('woff2'),
-		url('../assets/fonts/svgicons.woff') format('woff'),
-		url('../assets/fonts/svgicons.ttf') format('truetype');
+	src: url('../assets/fonts/svgicons.woff2?v=1570210807175') format('woff2'),
+		url('../assets/fonts/svgicons.woff?v=1570210807175') format('woff'),
+		url('../assets/fonts/svgicons.ttf?v=1570210807175') format('truetype');
 }
 
 @mixin font-styles {
@@ -26,17 +26,8 @@
 @function font-char($filename) {
 	$char: "";
 
-	@if $filename == ico-chevron-down {
-		$char: '\E001';
-	}
-	@if $filename == ico-dog {
-		$char: '\E002';
-	}
-	@if $filename == ico-download {
-		$char: '\E003';
-	}
 	@if $filename == ico-share {
-		$char: '\E004';
+		$char: '\E001';
 	}
 
 	@return $char;
@@ -57,15 +48,6 @@
 	display: inline-block;
 }
 
-.font-ico-chevron-down {
-	@include font(ico-chevron-down);
-}
-.font-ico-dog {
-	@include font(ico-dog);
-}
-.font-ico-download {
-	@include font(ico-download);
-}
 .font-ico-share {
 	@include font(ico-share);
 }

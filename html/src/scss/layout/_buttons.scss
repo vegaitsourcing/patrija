@@ -4,11 +4,6 @@ a,
 button {
 	appearance: none;
 	outline: none;
-	@include media-breakpoint-up(lg) {
-		&:focus {
-			outline: 1px dashed rgba($orange, .2);
-		}
-	}
 }
 
 button,
@@ -33,6 +28,5 @@ input[type='submit'] {
 	transition: 0.4s ease-out;
 	@include hover {
 		background-color: lighten($black, 30%);
-		border-radius: 20px;
 	}
 }
