@@ -20,19 +20,19 @@
 
 .footer__logo-image {
 	max-width: 56px;
-	height: auto;
+	vertical-align: top;
 	display: inline-block;
 }
 
 .footer__logo-text {
-	display: inline-block;
 	font-size: 20px;
 	line-height: 24px;
 	color: $white;
 	font-weight: 700;
-	padding: 0 24px;
+	padding: 12px 24px 0;
 	max-width: 260px;
-	vertical-align: middle;
+	vertical-align: top;
+	display: inline-block;
 }
 
 .footer__links {
@@ -45,10 +45,31 @@
 }
 
 .footer__links-link {
+	position: relative;
 	font-size: 16px;
-	line-height: 30px;
-	color: $white;
 	font-weight: 400;
+	color: $white;
+	line-height: 30px;
+	display: inline-block;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 12px;
+		left: 0;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: $white;
+		transform: translateX(5px) scale(0);
+		.loaded & {
+			transition: $duration $ease;
+		}
+	}
+	@include hover {
+		&::before {
+			transform: translateX(-15px) scale(1);
+		}
+	}
 }
 
 .footer__copyright-text {
