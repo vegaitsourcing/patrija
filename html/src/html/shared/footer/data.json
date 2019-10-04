@@ -1,3 +1,39 @@
 {
-  "footer": "@copyright"
+	"footerText": "Udruženje građana \"Patrija\"",
+	"footerLinks": [
+		{
+			"footerLink": "Naslovna"
+		},
+		{
+			"footerLink": "Ko smo mi?"
+		},
+		{
+			"footerLink": "Lice Ulice"
+		},
+		{
+			"footerLink": "NS Klub „Kompas“"
+		},
+		{
+			"footerLink": "Kako da nas podržiš?"
+		},
+		{
+			"footerLink": "Novosti"
+		},
+		{
+			"footerLink": "Forum"
+		},
+		{
+			"footerLink": "Kontakt"
+		},
+		{
+			"footerLink": "Uslovi korišćenja"
+		},
+		{
+			"footerLink": "Politika privatnosti"
+		},
+		{
+			"footerLink": "Politika o kolačićima"
+		}
+	],
+	"copyright": "Sva prava zadržana © 2009 - 2019 Udruzenje građana Patrija. Web dizajn - PopArt Studio"
 }
