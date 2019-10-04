@@ -72,11 +72,6 @@ node_modules/
 
 #Site Assets
 dist
-Patrija.Web/css/style.min.css
-Patrija.Web/css/style.min.css.map
-Patrija.Web/js/global.min.js
-Patrija.Web/js/global.min.js.map
-Patrija.Web/fonts/
 
 #html
 html/*.html
