@@ -7,6 +7,9 @@
 		"footer": {
 			">>": "shared/footer/data.json"
 		},
+		"homeIntro": {
+			">>": "modules/home-intro/data.json"
+		},
 		"joinUs": {
 			">>": "modules/join-module/data.json"
 		}
