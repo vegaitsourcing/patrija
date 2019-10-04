@@ -3,8 +3,8 @@
 	"text": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag.",
 	"btnTextFirst": "Kao korisnik",
 	"btnTextSecond": "Kao volonter",
-	"imageTop": "assets/img/content/join-top.png",
-	"imageRight": "assets/img/content/join-right.png",
-	"imageBotto": "assets/img/content/join-bottom.png",
-	"imageLeft": "assets/img/content/join-left.png"
+	"imageTop": "assets/images/content/join-top.png",
+	"imageRight": "assets/images/content/join-right.png",
+	"imageBottom": "assets/images/content/join-bottom.png",
+	"imageLeft": "assets/images/content/join-left.png"
 }
