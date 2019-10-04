@@ -10,6 +10,9 @@
 		"homeIntro": {
 			">>": "modules/home-intro/data.json"
 		},
+		"newsSlider": {
+			">>": "modules/news-slider/data.json"
+		},
 		"joinUs": {
 			">>": "modules/join-module/data.json"
 		}

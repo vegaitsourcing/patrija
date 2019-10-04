@@ -6,12 +6,6 @@
 		},
 		"footer": {
 			">>": "shared/footer/data.json"
-		},
-		"slider": {
-			">>": "modules/slider/data.json"
-		},
-		"banner": {
-			">>": "modules/banner/data.json"
 		}
 	}
 }
