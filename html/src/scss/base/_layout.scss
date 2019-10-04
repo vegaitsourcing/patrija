@@ -16,6 +16,11 @@ body {
 	overflow-y: scroll;
 }
 
+.main {
+	width: 100%;
+	overflow: hidden;
+}
+
 .wrap {
 	margin: 0 auto;
 	max-width: 1768px;
