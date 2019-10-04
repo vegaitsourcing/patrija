@@ -1,8 +1,16 @@
 {
 	"logo": "assets/images/logo.png",
 	"menu": [
-		"Home",
-		"About us",
-		"Contacts us"
-	]
+		"Naslovna",
+		"Ko smo mi?",
+		"LiceuliceNS",
+		"NS Klub „Kompas“",
+		"Kako da nas podržiš?",
+		"Novosti",
+		"Forum",
+		"Kontakt",
+		"EN >"
+	],
+	"joinUs": "Pridruži nam se",
+	"navToggle": "Menu"
 }

@@ -3,14 +3,15 @@
 .footer {
 	background-image: url('../assets/images/shapes/footer-shape.svg');
 	color: $white;
-	padding: 170px 0 52px;
+	padding: 194px 0 52px;
 }
 
 .footer__container {
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
-	padding: 20px 116px 50px 20px;
+	padding-right: 96px;
+	margin-bottom: 50px;
 }
 
 .footer__logo {
