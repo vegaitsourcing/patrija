@@ -1,5 +1,30 @@
 <div class="news-slider">
-	<h2>{{title}} - news-slider</h2>
+	<div class="wrap wrap--normal">
+		<h2 class="h2 news-slider__title">{{title}}</h2>
+		{{#if sliderItems}}
+		<div class="news-slider__container">
+			<div class="news-slider__slider js-news-slider">
+				{{#each sliderItems}}
+				<div class="news-slider__item">
+					<div class="news-slider__image has-cover" style="background-image: url('{{this.image}}');"></div>
+					<div class="news-slider__meta">
+						{{#if this.itemCategory}}
+							<span class="news-slider__category">{{this.itemCategory}}</span>
+						{{/if}}
+						{{#if this.itemDate}}
+							<span class="news-slider__date">{{this.itemDate}}</span>
+						{{/if}}
+					</div>
+					<h4 class="h6 news-slider__item-title">
+						<a href="javascript:;">{{this.itemTitle}}</a>
+					</h4>
+					<p class="news-slider__text">{{this.text}}</p>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+		{{/if}}
+	</div>
 </div>
 
 {{!-- Najnovije na sajtu, zavrseni projekti   --}}
