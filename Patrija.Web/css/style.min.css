@@ -291,7 +291,7 @@ td {
 --------------------------------------------------------------*/
 @font-face {
   font-family: 'svgicons';
-  src: url("../assets/fonts/svgicons.woff2?v=1570219419775") format("woff2"), url("../assets/fonts/svgicons.woff?v=1570219419775") format("woff"), url("../assets/fonts/svgicons.ttf?v=1570219419775") format("truetype");
+  src: url("../assets/fonts/svgicons.woff2?v=1570225079159") format("woff2"), url("../assets/fonts/svgicons.woff?v=1570225079159") format("woff"), url("../assets/fonts/svgicons.ttf?v=1570225079159") format("truetype");
 }
 
 .font-ico-share:before {
@@ -499,6 +499,7 @@ p {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -518,7 +519,7 @@ body {
 
 .wrap {
   margin: 0 auto;
-  max-width: 1764px;
+  max-width: 1768px;
   padding: 0 20px;
   width: 100%;
 }
@@ -529,6 +530,10 @@ body {
 
 .wrap--normal {
   max-width: 1368px;
+}
+
+.wrap--small {
+  max-width: 964px;
 }
 
 /*--------------------------------------------------------------
@@ -554,31 +559,36 @@ input[type='submit'] {
 
 .btn {
   background-color: #278ed0;
-  color: #fff;
-  display: inline-block;
   font-size: 16px;
+  font-weight: 400;
+  color: #fff;
   line-height: 20px;
-  padding: 0 30px;
-  -webkit-transition: 0.4s ease-out;
-  transition: 0.4s ease-out;
+  padding: 14px 30px;
+  min-width: 206px;
+  border-radius: 24px;
+  text-align: center;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  display: inline-block;
 }
 
 @media only screen and (min-width: 1025px) {
   .no-touch .btn:hover {
-    background-color: #4d4d4d;
+    -webkit-box-shadow: 0 10px 16px rgba(39, 142, 208, 0.16);
+            box-shadow: 0 10px 16px rgba(39, 142, 208, 0.16);
   }
 }
 
-.btn--mint {
-  background-color: #28d2c6;
+.btn--small {
+  min-width: 156px;
 }
 
 .btn--wide {
   min-width: 270px;
 }
 
-.btn--medium {
-  min-width: 206px;
+.btn--mint {
+  background-color: #28d2c6;
 }
 
 input,
@@ -745,6 +755,7 @@ textarea::placeholder {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-right: 12px;
 }
 
 .nav__item {
@@ -752,11 +763,11 @@ textarea::placeholder {
 }
 
 .nav__link {
+  position: relative;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   color: #333;
   line-height: 20px;
-  padding: 0 10px;
   display: block;
 }
 
@@ -767,7 +778,7 @@ textarea::placeholder {
   left: 0;
   width: 100%;
   height: 6px;
-  border-radius: 3px;
+  border-radius: 6px;
   background-color: #28d2c6;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
@@ -799,7 +810,10 @@ textarea::placeholder {
 
 .header__join-btn {
   vertical-align: middle;
-  display: inline-block;
+}
+
+.nav-toggle {
+  display: none;
 }
 
 .footer {
@@ -831,19 +845,19 @@ textarea::placeholder {
 
 .footer__logo-image {
   max-width: 56px;
-  height: auto;
+  vertical-align: top;
   display: inline-block;
 }
 
 .footer__logo-text {
-  display: inline-block;
   font-size: 20px;
   line-height: 24px;
   color: #fff;
   font-weight: 700;
-  padding: 0 24px;
+  padding: 12px 24px 0;
   max-width: 260px;
-  vertical-align: middle;
+  vertical-align: top;
+  display: inline-block;
 }
 
 .footer__links {
@@ -860,10 +874,37 @@ textarea::placeholder {
 }
 
 .footer__links-link {
+  position: relative;
   font-size: 16px;
-  line-height: 30px;
-  color: #fff;
   font-weight: 400;
+  color: #fff;
+  line-height: 30px;
+  display: inline-block;
+}
+
+.footer__links-link::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transform: translateX(5px) scale(0);
+          transform: translateX(5px) scale(0);
+}
+
+.loaded .footer__links-link::before {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+@media only screen and (min-width: 1025px) {
+  .no-touch .footer__links-link:hover::before {
+    -webkit-transform: translateX(-15px) scale(1);
+            transform: translateX(-15px) scale(1);
+  }
 }
 
 .footer__copyright-text {
@@ -897,6 +938,10 @@ textarea::placeholder {
 
 .banner__holder {
   position: relative;
+}
+
+.join-module {
+  background-image: url("assets/img/shapes/joinus-shape.svg");
 }
 
 /*# sourceMappingURL=style.min.css.map */
