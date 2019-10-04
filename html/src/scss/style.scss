@@ -2,12 +2,10 @@
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Config
-# Grid
 # Helpers
 # Base
 # Layout
 # Plugins
-# Print Styles
 # Components
 --------------------------------------------------------------*/
 
@@ -16,14 +14,7 @@
 --------------------------------------------------------------*/
 @import 'config/reset';
 @import 'config/variables';
-
-/*--------------------------------------------------------------
-# Grid
---------------------------------------------------------------*/
-@import 'base/breakpoints';
-@import 'base/grid-framework';
-@import 'base/grid';
-@import 'base/grid-layout';
+@import 'config/breakpoints';
 
 /*--------------------------------------------------------------
 # Helpers
@@ -51,14 +42,10 @@
 @import 'plugins/slick';
 
 /*--------------------------------------------------------------
-# Print Styles
---------------------------------------------------------------*/
-@import 'helpers/print';
-
-/*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
 @import 'modules/header';
 @import 'modules/footer';
 @import 'modules/banner';
 @import 'modules/slider';
+@import 'modules/join-module';

@@ -37,7 +37,7 @@ gulp.task('js-lint', () => {
 
 // task: concats all the libraries (jQuery, slick etc)
 gulp.task('js-libs', () => {
-	return gulp.src(['src/js/_libs/jquery-3.3.1.min.js', 'src/js/_libs/**/*.js'])
+	return gulp.src(['src/js/_libs/jquery-3.4.1.min.js', 'src/js/_libs/**/*.js'])
 		.pipe(concat('libs.js'))
 		.pipe(gulp.dest(destinationFolder));
 });

@@ -1,5 +1,24 @@
-<footer class="footer">
-	<div class="wrap">
-		<span>{{footer}}</span>
+<footer class="footer has-cover">
+	<div class="wrap wrap--normal">
+		<div class="footer__container">
+			<div class="footer__logo">
+				<img class="footer__logo-image" src="assets/images/footer-logo.svg" alt="logo">
+				<span class="footer__logo-text">{{footerText}}</span>
+			</div>
+			{{#if footerLinks}}
+				<div class="footer__links">
+					<ul class="footer__links-list">
+						{{#each footerLinks}}
+							<li class="footer__links-item">
+								<a class="footer__links-link" href="javascript:;">{{this.footerLink}}</a>
+							</li>
+						{{/each}}
+					</ul>
+				</div>
+			{{/if}}
+		</div>
+		<div class="footer__copyright">
+			<span class="footer__copyright-text">{{copyright}}</span>
+		</div>
 	</div>
 </footer>

@@ -3,9 +3,10 @@
 
 body {
 	font-family: $font-default;
-	font-size: 14px;
-	font-weight: 400;
-	color: $black;
+	font-size: 18px;
+	font-weight: 300;
+	color: $grey;
+	line-height: 30px;
 }
 
 .scroll-disabled {
@@ -17,7 +18,15 @@ body {
 
 .wrap {
 	margin: 0 auto;
-	max-width: 1280px;
+	max-width: 1764px;
 	padding: 0 20px;
 	width: 100%;
+}
+
+.wrap--medium {
+	max-width: 1532px;
+}
+
+.wrap--normal {
+	max-width: 1368px;
 }

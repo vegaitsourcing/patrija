@@ -4,11 +4,6 @@ a,
 button {
 	appearance: none;
 	outline: none;
-	@include media-breakpoint-up(lg) {
-		&:focus {
-			outline: 1px dashed rgba($orange, .2);
-		}
-	}
 }
 
 button,
@@ -22,17 +17,26 @@ input[type='submit'] {
 }
 
 .btn {
-	background-color: $black;
+	background-color: $blue;
 	color: $white;
 	display: inline-block;
-	font-size: 14px;
-	font-weight: bold;
-	height: 40px;
-	line-height: 40px;
-	padding: 0 20px;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 0 30px;
 	transition: 0.4s ease-out;
 	@include hover {
 		background-color: lighten($black, 30%);
-		border-radius: 20px;
 	}
+}
+
+.btn--mint {
+	background-color: $mint;
+}
+
+.btn--wide {
+	min-width: 270px;
+}
+
+.btn--medium {
+	min-width: 206px;
 }
