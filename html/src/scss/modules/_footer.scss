@@ -2,6 +2,58 @@
 //------------------------------------------------------------------------------
 .footer {
 	background-image: url('../assets/images/shapes/footer-shape.svg');
-	padding: 30px 0;
 	color: $white;
+	padding: 170px 0 52px;
+}
+
+.footer__container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 20px 116px 50px 20px;
+}
+
+.footer__logo {
+	padding: 10px 0;
+}
+
+.footer__logo-image {
+	max-width: 56px;
+	height: auto;
+	display: inline-block;
+}
+
+.footer__logo-text {
+	display: inline-block;
+	font-size: 20px;
+	line-height: 24px;
+	color: $white;
+	font-weight: 700;
+	padding: 0 24px;
+	max-width: 260px;
+	vertical-align: middle;
+}
+
+.footer__links {
+	margin-bottom: 20px;
+}
+
+.footer__links-list {
+	column-count: 3;
+	column-gap: 30px;
+}
+
+.footer__links-link {
+	font-size: 16px;
+	line-height: 30px;
+	color: $white;
+	font-weight: 400;
+}
+
+.footer__copyright-text {
+	font-size: 14px;
+	line-height: 18px;
+	display: block;
+	text-align: center;
+	font-weight: 400;
 }
