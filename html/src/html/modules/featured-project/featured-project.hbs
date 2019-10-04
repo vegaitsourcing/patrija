@@ -1,5 +1,35 @@
 <div class="featured-project">
-	<h2>{{title}} - featured-project</h2>
+	<div class="wrap">
+		<div class="featured-project__item featured-project__image--normal">
+			<div class="featured-project__text">
+				<h6 class="h6 featured-project__tag">{{tag}}</h6>
+				<h2 class="h2 featured-project__title">{{title}}</h2>
+				<p class="featured-project__text">{{text}}</p>
+				<a class="btn" href="javascript:;">{{link}}</a>
+			</div>
+			<div class="featured-project__image featured-project__image--normal">
+				{{#if additionalImage}}
+				<img class="featured-project__additional-image" src="{{additionalImage}}" alt="">
+				{{/if}}
+				<img src="{{image}}" alt="">
+			</div>
+		</div>
+		<div class="featured-project__item featured-project__image--reverse">
+			<div class="featured-project__text">
+				<h6 class="h6 featured-project__tag">{{tagReverse}}</h6>
+				<h2 class="h2 featured-project__title">{{titleReverse}}</h2>
+				<p class="featured-project__text">{{textReverse}}</p>
+				<a class="btn" href="javascript:;">{{linkReverse}}</a>
+			</div>
+			<div class="featured-project__image featured-project__image--reverse">
+				{{#if additionalImageReverse}}
+				<img class="featured-project__additional-image" src="{{additionalImageReverse}}" alt="">
+				{{/if}}
+				<img src="{{imageReverse}}" alt="">
+			</div>
+		</div>
+		<span class="circle circle--mint"></span>
+	</div>
 </div>
 
 {{!-- Homepage NS klub kompas, lice ulice --}}

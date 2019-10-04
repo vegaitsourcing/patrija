@@ -1,5 +1,18 @@
 <div class="links-list">
-	<h2>{{title}} - links-list</h2>
+	<div class="wrap wrap--small">
+		<h3 class="h3 links-list__tutle">{{title}}</h3>
+		{{#if linksList}}
+			<ul class="linksList">
+				{{#each linksList}}
+					<li class="links-list__item">
+						<a class="btn links-list__link" href="javascript:;">{{this.link}}</a>
+					</li>
+				{{/each}}
+			</ul>
+			<div class="circle circle--mint"></div>
+			<div class="circle circle--blue"></div>
+		{{/if}}
+	</div>
 </div>
 
 {{!-- Korisni linkovi --}}

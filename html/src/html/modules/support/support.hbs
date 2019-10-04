@@ -1,5 +1,18 @@
 <div class="support">
-	<h2>{{title}} - support</h2>
+	<div class="wrap">
+		{{#if supportItem}}
+			<div class="support__container">
+				{{#each supportItem}}
+					<div class="support__item">
+						<h3 class="h3">{{this.title}}</h3>
+						<p class="support__item-text">{{this.text}}</p>
+						<a class="btn{{#if mintBtn}} btn--mint{{/if}}" href="javascript:;">{{this.link}}</a>
+					</div>
+				{{/each}}
+				<div class="circle circle--grey circle--small"></div>
+			</div>
+		{{/if}}
+	</div>
 </div>
 
 
