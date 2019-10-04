@@ -4,43 +4,53 @@
 .rte h1, .rte h2, .rte h3, .rte h4, .rte h5, .rte h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: $font-default;
-	font-weight: normal;
-	line-height: 1.35em;
+	font-weight: 700;
 }
 
 .rte h1, .h1 {
-	font-size: 48px;
+	font-size: 72px;
+	line-height: 78px;
 }
 
 .rte h2, .h2 {
-	font-size: 36px;
+	font-size: 60px;
+	line-height: 65px;
 }
 
 .rte h3, .h3 {
-	font-size: 30px;
+	font-size: 40px;
+	line-height: 55px;
 }
 
 .rte h4, .h4 {
-	font-size: 24px;
+	font-size: 32px;
+	line-height: 42px;
 }
 
 .rte h5, .h5 {
-	font-size: 20px;
+	font-size: 26px;
+	line-height: 36px;
 }
 
 .rte h6, .h6 {
-	font-size: 16px;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+p {
+	font-size: 18px;
+	font-weight: 300;
+	color: $grey;
+	line-height: 30px;
+	margin-bottom: 15px;
+	a {
+		@include hover {
+			text-decoration: underline;
+		}
+	}
 }
 
 .rte {
-	p {
-		margin-bottom: 15px;
-		a {
-			@include hover {
-				text-decoration: underline;
-			}
-		}
-	}
 	blockquote {
 		border-top: 1px solid $black;
 		border-bottom: 1px solid $black;
