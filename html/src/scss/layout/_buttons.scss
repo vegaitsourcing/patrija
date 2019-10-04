@@ -9,6 +9,7 @@ button {
 button,
 input[type='button'],
 input[type='submit'] {
+	font-family: $font-default;
 	background: none;
 	border: 0;
 	cursor: pointer;

@@ -3,4 +3,58 @@
 
 .join-module {
 	background-image: url('assets/img/shapes/joinus-shape.svg');
+	text-align: center;
+}
+
+.join-module__container {
+	padding: 130px 80px 212px;
+	position: relative;
+}
+
+.join-module__title {
+	margin-bottom: 16px;
+}
+
+.join-module__info {
+	font-size: 16px;
+	line-height: 25px;
+	margin-bottom: 36px;
+}
+
+.join-module__btn {
+	margin: 0 10px;
+}
+
+.join-module__image {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+	position: absolute;
+}
+
+.join-module__image--top {
+	top: 0;
+	left: 34.5%;
+	transform: translateX(-50%);
+}
+.join-module__image--right {
+	width: 82px;
+	height: 82px;
+	top: 27%;
+	right: -24%;
+}
+
+.join-module__image--bottom {
+	width: 110px;
+	height: 110px;
+	bottom: 5%;
+	right: 13%;
+}
+
+.join-module__image--left {
+	width: 104px;
+	height: 104px;
+	left: -21.4%;
+	top: 34.4%;
 }
