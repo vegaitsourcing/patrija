@@ -11,7 +11,7 @@
                 @foreach (var link in Model.Items)
                 {
                     <li class="links-list__item">
-				        @Html.Partial("Link", link, new ViewDataDictionary(new { className = "btn links-list__link" }))
+				        @Html.Partial("Link", link, new ViewDataDictionary() { { "className", "btn links-list__link" } })
                     </li>
                 }
                 

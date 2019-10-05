@@ -4,12 +4,17 @@
     Html.RenderAction<NestedContentController>(c => nameof(c.HomeIntro), new { viewModel = Model.HomeIntro });
 }
 
-@foreach(var linkList in Model.LinksList)
+@foreach (var feature in Model.Features)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.TaggedFeature), new { viewModel = feature });
+}
+
+@foreach (var linkList in Model.LinksList)
 {
     Html.RenderAction<NestedContentController>(c => nameof(c.LinksList), new { viewModel = linkList });
 }
 
-@foreach(var feature in Model.Features)
+@if (Model.JoinUs != null)
 {
-    Html.RenderAction<NestedContentController>(c => nameof(c.TaggedFeature), new { viewModel = feature });
+    Html.RenderAction<NestedContentController>(c => nameof(c.JoinUs), new { viewModel = Model.JoinUs });
 }

@@ -60,11 +60,11 @@ namespace Patrija.Models.Generated
 		public string JoinUsAsVolunteerButtonText => this.Value<string>("joinUsAsVolunteerButtonText");
 
 		///<summary>
-		/// Buttom Image
+		/// Bottom Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("joinUsButtomImage")]
-		public IPublishedContent JoinUsButtomImage => this.Value<IPublishedContent>("joinUsButtomImage");
+		[ImplementPropertyType("joinUsBottomImage")]
+		public IPublishedContent JoinUsBottomImage => this.Value<IPublishedContent>("joinUsBottomImage");
 
 		///<summary>
 		/// Left Image
