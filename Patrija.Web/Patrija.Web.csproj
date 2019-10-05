@@ -437,6 +437,7 @@
     <Content Include="config\logviewer.searches.config.js" />
     <Content Include="Global.asax" />
     <Content Include="Views\AboutUsPage.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_ImageWithText.cshtml" />
     <Content Include="Views\Partials\NestedContent\_PageIntro.cshtml" />
     <Content Include="Views\Partials\NestedContent\_TaggedFeature.cshtml" />
     <Content Include="Views\Partials\Shared\_Link.cshtml" />
