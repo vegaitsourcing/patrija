@@ -22,7 +22,7 @@ namespace Patrija.Models.Generated
 {
 	/// <summary>Featured Project</summary>
 	[PublishedModel("featuredProject")]
-	public partial class FeaturedProject : PublishedContentModel
+	public partial class FeaturedProject : PublishedContentModel, IFeature
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -46,13 +46,6 @@ namespace Patrija.Models.Generated
 		// properties
 
 		///<summary>
-		/// Read More: Read more link
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("featuredProjectReadMoreLink")]
-		public Umbraco.Web.Models.Link FeaturedProjectReadMoreLink => this.Value<Umbraco.Web.Models.Link>("featuredProjectReadMoreLink");
-
-		///<summary>
 		/// Tag: Tag or category of featured project
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
@@ -60,17 +53,45 @@ namespace Patrija.Models.Generated
 		public string FeaturedProjectTag => this.Value<string>("featuredProjectTag");
 
 		///<summary>
-		/// Text: Text describing featured project
+		/// Additional Image: Feature Additional Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("featuredProjectText")]
-		public string FeaturedProjectText => this.Value<string>("featuredProjectText");
+		[ImplementPropertyType("featureAdditionalImage")]
+		public IPublishedContent FeatureAdditionalImage => Feature.GetFeatureAdditionalImage(this);
 
 		///<summary>
-		/// Title: Title of featured project
+		/// Content Position: Position of featured content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("featuredProjectTitle")]
-		public string FeaturedProjectTitle => this.Value<string>("featuredProjectTitle");
+		[ImplementPropertyType("featureContentPosition")]
+		public string FeatureContentPosition => Feature.GetFeatureContentPosition(this);
+
+		///<summary>
+		/// Image: Feature image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("featureImage")]
+		public IPublishedContent FeatureImage => Feature.GetFeatureImage(this);
+
+		///<summary>
+		/// Read More: Read more about feature link
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("featureReadMoreLink")]
+		public Umbraco.Web.Models.Link FeatureReadMoreLink => Feature.GetFeatureReadMoreLink(this);
+
+		///<summary>
+		/// Text: Text describing feature
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("featureText")]
+		public string FeatureText => Feature.GetFeatureText(this);
+
+		///<summary>
+		/// Title: Title of a feature
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("featureTitle")]
+		public string FeatureTitle => Feature.GetFeatureTitle(this);
 	}
 }
