@@ -22,5 +22,9 @@ namespace Patrija.Core.Controllers.Surface.Partials
         [ChildActionOnly]
         public ActionResult JoinUs(JoinUsViewModel viewModel)
             => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult ArticleContainer(ArticleContainerViewModel viewModel)
+            => PartialView(viewModel);
     }
 }

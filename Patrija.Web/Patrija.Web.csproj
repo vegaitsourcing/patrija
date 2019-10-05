@@ -482,6 +482,9 @@
     <Content Include="Views\Partials\NestedContent\_HomeIntro.cshtml" />
     <Content Include="Views\Partials\NestedContent\_LinksList.cshtml" />
     <Content Include="Views\Partials\Shared\_JoinUs.cshtml" />
+    <Content Include="Views\Partials\Shared\_ArticleContainer.cshtml" />
+    <Content Include="Views\Partials\Shared\_Article.cshtml" />
+    <Content Include="Views\DisplayTemplates\FormattedDate.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -501,6 +504,7 @@
       <Name>Patrija.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
