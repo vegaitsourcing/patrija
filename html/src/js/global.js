@@ -1,7 +1,10 @@
 import helpers from './_project/helpers';
-import newsSlider from './_project/news-slider';
+import sliders from './_project/sliders';
 
 $(() => {
 	helpers.init();
-	newsSlider.init();
+});
+
+$(window).on('load', () => {
+	sliders.init();
 });
