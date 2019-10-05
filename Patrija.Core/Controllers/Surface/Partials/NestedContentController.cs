@@ -25,10 +25,6 @@ namespace Patrija.Core.Controllers.Surface.Partials
             => PartialView(viewModel);
 
         [ChildActionOnly]
-        public ActionResult HomeSupport(HomeSupportViewModel viewModel)
-            => PartialView(viewModel);
-
-        [ChildActionOnly]
         public ActionResult JoinUs(JoinUsViewModel viewModel)
             => PartialView(viewModel);
 
@@ -42,6 +38,10 @@ namespace Patrija.Core.Controllers.Surface.Partials
 
         [ChildActionOnly]
         public ActionResult SimpleForm(SimpleFormViewModel viewModel)
+            => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult ArticleContainer(ArticleContainerViewModel viewModel)
             => PartialView(viewModel);
     }
 }

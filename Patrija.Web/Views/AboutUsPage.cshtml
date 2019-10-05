@@ -9,3 +9,9 @@
 {
     Html.RenderAction<NestedContentController>(c => nameof(c.ImageWithText), new { viewModel = Model.ImageWithText });
 }
+}
+
+@if (Model.FeaturedProjectsContainer != null)
+{
+    Html.RenderAction<ContainerController>(c => nameof(c.AboutUsProjectsContainer), new { viewModel = Model.FeaturedProjectsContainer });
+}
