@@ -1,10 +1,12 @@
 const sliders = {
 	$newsSlider: $('.js-news-slider'),
 	$testimonialsSlider: $('.js-testimonials-slider'),
+	$gallerySlider: $('.js-gallery-slider'),
 
 	init: function() {
 		this.newsSliderInit();
 		this.testimonialsSliderInit();
+		this.gallerySliderInit();
 	},
 
 	newsSliderInit: function() {
@@ -20,6 +22,14 @@ const sliders = {
 			infinite: true,
 			slidesToShow: 1,
 			slidesToScroll: 1
+		});
+	},
+
+	gallerySliderInit: function() {
+		this.$gallerySlider.slick({
+			infinite: true,
+			slidesPerRow: 3,
+			rows: 2
 		});
 	}
 };

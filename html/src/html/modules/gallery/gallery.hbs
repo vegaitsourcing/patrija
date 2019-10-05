@@ -1,3 +1,18 @@
 <div class="gallery">
-	<h2>{{title}} - gallery</h2>
+	<div class="wrap wrap--normal">
+		<h3 class="h3 gallery__title">{{title}}</h3>
+		{{#if sliderItems}}
+			<div class="gallery__container">
+				<div class="gallery__slider js-gallery-slider">
+					{{#each sliderItems}}
+						<div class="gallery__item">
+							<a href="javascript:;">
+								<div class="gallery__image has-cover" style="background-image: url('{{this.image}}');"></div>
+							</a>
+						</div>
+					{{/each}}
+				</div>
+			</div>
+		{{/if}}
+	</div>
 </div>

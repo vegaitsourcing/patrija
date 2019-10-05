@@ -1,3 +1,59 @@
 {
-	"title": "This is Title"
+	"title": "Fotografije",
+	"sliderItems": [
+		{
+			"image": "assets/images/content/news-03.jpg"
+		},
+		{
+			"image": "assets/images/content/news-01.jpg"
+		},
+		{
+			"image": "assets/images/content/news-02.jpg"
+		},
+		{
+			"image": "assets/images/content/klub-kompas-intro.jpg"
+		},
+		{
+			"image": "assets/images/content/about-us.jpg"
+		},
+		{
+			"image": "assets/images/content/image-text-right.jpg"
+		},
+		{
+			"image": "assets/images/content/news-03.jpg"
+		},
+		{
+			"image": "assets/images/content/news-02.jpg"
+		},
+		{
+			"image": "assets/images/content/news-02.jpg"
+		},
+		{
+			"image": "assets/images/content/klub-kompas-intro.jpg"
+		},
+		{
+			"image": "assets/images/content/about-us.jpg"
+		},
+		{
+			"image": "assets/images/content/image-text-right.jpg"
+		},
+		{
+			"image": "assets/images/content/image-text-right.jpg"
+		},
+		{
+			"image": "assets/images/content/news-01.jpg"
+		},
+		{
+			"image": "assets/images/content/news-03.jpg"
+		},
+		{
+			"image": "assets/images/content/klub-kompas-intro.jpg"
+		},
+		{
+			"image": "assets/images/content/about-us.jpg"
+		},
+		{
+			"image": "assets/images/content/news-01.jpg"
+		}
+	]
 }
