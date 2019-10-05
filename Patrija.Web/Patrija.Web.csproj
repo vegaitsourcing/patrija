@@ -494,6 +494,8 @@
     <Content Include="Views\Partials\Shared\_ArticleContainer.cshtml" />
     <Content Include="Views\Partials\Shared\_Article.cshtml" />
     <Content Include="Views\DisplayTemplates\FormattedDate.cshtml" />
+    <Content Include="Views\PageVariant1.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_TextBlock.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

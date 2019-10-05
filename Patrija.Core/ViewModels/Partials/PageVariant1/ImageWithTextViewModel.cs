@@ -1,8 +1,9 @@
 using Patrija.Core.Mappers;
+using Patrija.Core.ViewModels.Partials.Features;
 using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
 
-namespace Patrija.Core.ViewModels.Partials.Features
+namespace Patrija.Core.ViewModels.Partials.PageVariant1
 {
     public class ImageWithTextViewModel
     {

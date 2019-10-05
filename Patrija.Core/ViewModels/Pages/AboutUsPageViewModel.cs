@@ -1,9 +1,8 @@
 using System.Linq;
 using Patrija.Core.Contexts;
 using Patrija.Core.ViewModels.Partials.AboutUsPage;
-using Patrija.Core.ViewModels.Partials.Features;
+using Patrija.Core.ViewModels.Partials.PageVariant1;
 using Patrija.Models.Generated;
-using System.Linq;
 
 namespace Patrija.Core.ViewModels.Pages
 {
