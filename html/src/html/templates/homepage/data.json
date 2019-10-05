@@ -16,6 +16,9 @@
 		"featuredProject": {
 			">>": "modules/featured-project/data.json"
 		},
+		"support": {
+			">>": "modules/support/data.json"
+		},
 		"joinUs": {
 			">>": "modules/join-module/data.json"
 		}

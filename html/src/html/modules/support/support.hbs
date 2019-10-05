@@ -4,9 +4,11 @@
 			<div class="support__container">
 				{{#each supportItem}}
 					<div class="support__item">
-						<h3 class="h3">{{this.title}}</h3>
-						<p class="support__item-text">{{this.text}}</p>
-						<a class="btn{{#if mintBtn}} btn--mint{{/if}}" href="javascript:;">{{this.link}}</a>
+						<div class="support__item-content">
+							<h3 class="h3 support__item-title">{{this.title}}</h3>
+							<p class="support__item-text">{{this.text}}</p>
+							<a class="btn{{#if mintBtn}} btn--mint{{/if}}" href="javascript:;">{{this.link}}</a>
+						</div>
 					</div>
 				{{/each}}
 				<div class="circle circle--grey circle--small"></div>

@@ -1,6 +1,10 @@
 //---------- featured-project
 //------------------------------------------------------------------------------
 
+.featured-project {
+	position: relative;
+}
+
 .featured-project__item {
 	position: relative;
 }
@@ -80,4 +84,10 @@
 	width: 44%;
 	height: auto;
 	z-index: 20;
+}
+
+.circle {
+	position: absolute;
+	top: 39.8%;
+	right: 19.8%;
 }
