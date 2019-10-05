@@ -340,6 +340,8 @@
     <Compile Include="ViewModels\Shared\JoinUsViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\SimpleFormViewModel.cs" />
+    <Compile Include="ViewModels\Shared\TestimonialsContainerViewModel.cs" />
+    <Compile Include="ViewModels\Shared\TestimonialViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Patrija.Common\Patrija.Common.csproj">

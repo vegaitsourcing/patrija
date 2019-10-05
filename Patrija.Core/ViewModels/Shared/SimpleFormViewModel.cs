@@ -1,4 +1,5 @@
 ﻿using System;
+using Patrija.Common;
 using Patrija.Models.Generated;
 
 namespace Patrija.Core.ViewModels.Shared
@@ -7,7 +8,7 @@ namespace Patrija.Core.ViewModels.Shared
     {
         public SimpleFormViewModel(SimpleFormContent simpleForm)
         {
-            if (simpleForm == null) throw new ArgumentNullException(nameof(simpleForm));
+            Guard.AgainstDefaultValue(simpleForm);
 
             Title = simpleForm.SimpleFormTitle;
             Text = simpleForm.SimpleFormText.ToHtmlString();
