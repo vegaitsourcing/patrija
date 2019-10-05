@@ -71,7 +71,34 @@
 }
 
 .slick-arrow {
+	position: absolute;
+	top: 86px;
+	width: 68px;
+	height: 68px;
+	background-color: $mint;
+	border-radius: 50%;
+	.loaded & {
+		transition: $duration $ease;
+	}
+	&::before {
+		@include font-styles;
+		content: font-char(ico-arrow);
+		font-size: 20px;
+		color: $white;
+	}
 	&.slick-hidden {
 		display: none;
 	}
+	@include hover {
+		background-color: $blue;
+	}
+}
+.slick-prev {
+	left: -84px;
+	&::before {
+		transform: rotate(180deg);
+	}
+}
+.slick-next {
+	right: -84px;
 }
