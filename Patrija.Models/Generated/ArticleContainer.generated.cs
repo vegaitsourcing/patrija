@@ -20,57 +20,36 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Featured Project</summary>
-	[PublishedModel("featuredProject")]
-	public partial class FeaturedProject : PublishedContentModel
+	/// <summary>ArticleContainer</summary>
+	[PublishedModel("articleContainer")]
+	public partial class ArticleContainer : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "featuredProject";
+		public new const string ModelTypeAlias = "articleContainer";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<FeaturedProject, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ArticleContainer, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public FeaturedProject(IPublishedContent content)
+		public ArticleContainer(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Read More: Read more link
+		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("featuredProjectReadMoreLink")]
-		public Umbraco.Web.Models.Link FeaturedProjectReadMoreLink => this.Value<Umbraco.Web.Models.Link>("featuredProjectReadMoreLink");
-
-		///<summary>
-		/// Tag: Tag or category of featured project
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("featuredProjectTag")]
-		public string FeaturedProjectTag => this.Value<string>("featuredProjectTag");
-
-		///<summary>
-		/// Text: Text describing featured project
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("featuredProjectText")]
-		public string FeaturedProjectText => this.Value<string>("featuredProjectText");
-
-		///<summary>
-		/// Title: Title of featured project
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("featuredProjectTitle")]
-		public string FeaturedProjectTitle => this.Value<string>("featuredProjectTitle");
+		[ImplementPropertyType("articleContainerTitle")]
+		public string ArticleContainerTitle => this.Value<string>("articleContainerTitle");
 	}
 }

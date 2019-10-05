@@ -20,78 +20,71 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Home Support</summary>
-	[PublishedModel("homeSupport")]
-	public partial class HomeSupport : PublishedContentModel
+	/// <summary>Untagged Feature</summary>
+	[PublishedModel("untaggedFeature")]
+	public partial class UntaggedFeature : PublishedElementModel, IFeature
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "homeSupport";
+		public new const string ModelTypeAlias = "untaggedFeature";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<HomeSupport, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<UntaggedFeature, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public HomeSupport(IPublishedContent content)
+		public UntaggedFeature(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Image
+		/// Additional Image: Feature Additional Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeSupportImage")]
-		public IPublishedContent HomeSupportImage => this.Value<IPublishedContent>("homeSupportImage");
+		[ImplementPropertyType("featureAdditionalImage")]
+		public IPublishedContent FeatureAdditionalImage => Feature.GetFeatureAdditionalImage(this);
 
 		///<summary>
-		/// Title: Title of left content box
+		/// Content Position: Position of featured content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeSupportLeftBoxContentTitle")]
-		public string HomeSupportLeftBoxContentTitle => this.Value<string>("homeSupportLeftBoxContentTitle");
+		[ImplementPropertyType("featureContentPosition")]
+		public string FeatureContentPosition => Feature.GetFeatureContentPosition(this);
 
 		///<summary>
-		/// Button Url: Button content and url for left content box
+		/// Image: Feature image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeSupportLeftContentBoxButtonUrl")]
-		public Umbraco.Web.Models.Link HomeSupportLeftContentBoxButtonUrl => this.Value<Umbraco.Web.Models.Link>("homeSupportLeftContentBoxButtonUrl");
+		[ImplementPropertyType("featureImage")]
+		public IPublishedContent FeatureImage => Feature.GetFeatureImage(this);
 
 		///<summary>
-		/// Text: Text describing left content box
+		/// Read More: Read more about feature link
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeSupportLeftContentBoxText")]
-		public string HomeSupportLeftContentBoxText => this.Value<string>("homeSupportLeftContentBoxText");
+		[ImplementPropertyType("featureReadMoreLink")]
+		public Umbraco.Web.Models.Link FeatureReadMoreLink => Feature.GetFeatureReadMoreLink(this);
 
 		///<summary>
-		/// Button Url: Button content and url for right content box
+		/// Text: Text describing feature
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeSupportRightContentBoxButtonUrl")]
-		public Umbraco.Web.Models.Link HomeSupportRightContentBoxButtonUrl => this.Value<Umbraco.Web.Models.Link>("homeSupportRightContentBoxButtonUrl");
+		[ImplementPropertyType("featureText")]
+		public string FeatureText => Feature.GetFeatureText(this);
 
 		///<summary>
-		/// Text: Text describing right content box
+		/// Title: Title of a feature
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeSupportRightContentBoxText")]
-		public string HomeSupportRightContentBoxText => this.Value<string>("homeSupportRightContentBoxText");
-
-		///<summary>
-		/// Title: Title of right content box
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeSupportRightContentBoxTitle")]
-		public string HomeSupportRightContentBoxTitle => this.Value<string>("homeSupportRightContentBoxTitle");
+		[ImplementPropertyType("featureTitle")]
+		public string FeatureTitle => Feature.GetFeatureTitle(this);
 	}
 }
