@@ -18,6 +18,5 @@ namespace Patrija.Core.ViewModels.Partials.Home
         public SupportContentBoxViewModel[] supportContentBoxViewModels { get; }
         public ImageViewModel Image { get; }
 
-
     }
 }

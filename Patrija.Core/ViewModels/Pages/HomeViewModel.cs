@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Patrija.Core.Contexts;
+using Patrija.Core.ViewModels.Partials.Features;
 using Patrija.Core.ViewModels.Partials.Home;
 using Patrija.Models.Generated;
 
@@ -10,9 +11,20 @@ namespace Patrija.Core.ViewModels.Pages
 		public HomeViewModel(IPageContext<Home> context) : base(context)
 		{
 		    var homeIntro = context.Home.HomeIntro.FirstOrDefault();
-            HomeIntro = homeIntro != null ? new HomeIntroViewModel(homeIntro) : null; 
-        }
+            HomeIntro = homeIntro != null ? new HomeIntroViewModel(homeIntro) : null;
+
+            Features = context.Home.FeaturedContent?.Select(f => new TaggedFeatureViewModel(f)).ToArray()
+                       ?? new TaggedFeatureViewModel[0];
+		    var linksList = context.Home.HomeFeaturedLinks;
+		    LinksList = linksList?.Select(ll => new LinksListViewModel(ll)).ToArray();
+
+            //HomeSupport = new HomeSupportViewModel(context.Home)
+		}
 
         public HomeIntroViewModel HomeIntro { get; }
+        
+        public TaggedFeatureViewModel[] Features { get; }
+        public LinksListViewModel[] LinksList { get; }
+        public HomeSupportViewModel HomeSupport { get; }
 	}
 }

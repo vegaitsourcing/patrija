@@ -14,7 +14,7 @@ namespace Patrija.Core.Controllers.RenderMvc
 			Response.TrySkipIisCustomErrors = true;
 
 			// CurrentTemplate won't work here as this controller may be hit from custom made route
-			return View(new Error404ViewModel(CreatePageContext(model)));
+			return View("~/Views/Error404.cshtml", new Error404ViewModel(CreatePageContext(model)));
 		}
 	}
 }

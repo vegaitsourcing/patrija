@@ -12,6 +12,9 @@
 		},
 		"project": {
 			">>": "modules/project/data.json"
+		},
+		"imageText": {
+			">>": "modules/image-text/data.json"
 		}
 	}
 }

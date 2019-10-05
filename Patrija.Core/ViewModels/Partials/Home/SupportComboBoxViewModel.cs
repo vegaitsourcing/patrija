@@ -1,6 +1,7 @@
 ﻿using System;
 using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
+using Patrija.Core.ViewModels.Partials.Features;
 
 namespace Patrija.Core.ViewModels.Partials.Home
 {
@@ -12,13 +13,13 @@ namespace Patrija.Core.ViewModels.Partials.Home
 
             Title = supportContentBox.SupportContentBoxTitle;
             Text = supportContentBox.SupportContentBoxText;
-            ButtonColor = supportContentBox.SupportContentBoxButtonColor;
+            ButtonClass = Dictionaries.SupportContentBoxButtonType[supportContentBox.SupportContentBoxButtonColor];
             Link = new LinkViewModel(supportContentBox.SupportContentBoxButtonUrl);
         }
 
         public string Title { get; }
         public string Text { get;  }
-        public string ButtonColor { get; }
+        public string ButtonClass { get; }
 
         public LinkViewModel Link { get; }
     }

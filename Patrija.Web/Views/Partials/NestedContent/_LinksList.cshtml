@@ -1,0 +1,23 @@
+﻿@using Patrija.Core.ViewModels.Partials.Home;
+@inherits UmbracoViewPage<LinksListViewModel>
+    
+@if (Model.Items.Any())
+{
+    <div class="links-list">
+        <div class="wrap wrap--small">
+            <h3 class="h3 links-list__title">@Model.Title</h3>
+        
+            <ul class="links-list__list">
+                @foreach (var link in Model.Items)
+                {
+                    <li class="links-list__item">
+                        <a class="btn links-list__link" href="@link.Url" target="@link.Target">@link.Content</a>
+                    </li>
+                }
+                
+            </ul>
+            <div class="circle circle--mint links-list__circle links-list__circle--left"></div>
+            <div class="circle circle--blue links-list__circle links-list__circle--right"></div>
+        </div>
+    </div>
+}
