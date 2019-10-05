@@ -9,10 +9,10 @@ namespace Patrija.Core.ViewModels.Shared
         public TestimonialsContainerViewModel(TestimonialsContainer testimonialsContainer)
         {
             Guard.AgainstDefaultValue(testimonialsContainer);
-            Guard.AgainstDefaultValue(testimonialsContainer.TestimonialContainerTestimonial);
+            Guard.AgainstDefaultValue(testimonialsContainer.TestimonialsContainerItems);
 
-            Title = testimonialsContainer.TestimonialContainerTitle;
-            Testimonials = testimonialsContainer.TestimonialContainerTestimonial.Select(t => new TestimonialViewModels(t)).ToArray();
+            Title = testimonialsContainer.TestimonialsContainerTitle;
+            Testimonials = testimonialsContainer.TestimonialsContainerItems.Select(t => new TestimonialViewModels(t)).ToArray();
         }
 
         public string Title { get; }

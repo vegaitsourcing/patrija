@@ -58,13 +58,14 @@
 
 .image-text__container--reverse {
 	padding: 0 30px;
+	justify-content: space-between;
 	margin-bottom: -245px;
 	.image-text__image {
 		order: 2;
-		margin-left: 18.6vh;
-		width: 71.5vh;
+		width: 34.896vw;
+		height: auto;
 		padding-bottom: 39.81%;
-		margin-right: -55px;
+		margin-right: -3%;
 		&::after {
 			background-image: url('../assets/images/mask/image-text-right.svg');
 		}

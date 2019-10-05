@@ -330,8 +330,6 @@
     <Compile Include="ViewModels\Partials\Listing\ListingViewModel.cs" />
     <Compile Include="ViewModels\Partials\Listing\PaginationViewModel.cs" />
     <Compile Include="ViewModels\Partials\Listing\SearchResultsItemViewModel.cs" />
-    <Compile Include="ViewModels\Partials\SupportUs\TestimonialViewModels.cs" />
-    <Compile Include="ViewModels\Partials\SupportUs\TestimonialsContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\ArticleContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\ArticleViewModel.cs" />
@@ -339,6 +337,8 @@
     <Compile Include="ViewModels\Shared\JoinUsViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\SimpleFormViewModel.cs" />
+    <Compile Include="ViewModels\Shared\TestimonialsContainerViewModel.cs" />
+    <Compile Include="ViewModels\Shared\TestimonialViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Patrija.Common\Patrija.Common.csproj">

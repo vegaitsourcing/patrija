@@ -17,6 +17,9 @@
 		"simpleForm": {
 			">>": "modules/simple-form/data.json"
 		},
+		"testimonials": {
+			">>": "modules/testimonials/data.json"
+		},
 		"imageText": {
 			"itemReversed": true,
 			"title": "Kako podržati prodavce?",

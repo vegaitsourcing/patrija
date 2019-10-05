@@ -464,6 +464,9 @@
     <Compile Include="Generated\PageVariant1.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\ProjectPage.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Generated\SearchResults.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>

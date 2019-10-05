@@ -1,3 +1,22 @@
-<div class="testimonials">
-	<h2>{{title}} - testimonials</h2>
+<div class="testimonials" style="background-image: url('{{bgImage}}');">
+	<div class="wrap testimonials__wrap">
+		<h3 class="h3 testimonials__title">{{title}}</h3>
+		{{#if sliderItems}}
+			<div class="testimonials__container">
+				<div class="testimonials__slider js-testimonials-slider">
+					{{#each sliderItems}}
+						<div class="testimonials__item">
+							<p class="testimonials__text">{{this.text}}</p>
+							<div class="testimonials__image">
+								<img src="{{this.image}}" alt="">
+							</div>
+							<span class="testimonials__author">{{this.author}}</span>
+						</div>
+					{{/each}}
+				</div>
+			</div>
+		{{/if}}
+	</div>
+	<span class="circle circle--blue circle--large"></span>
+	<span class="circle circle--grey circle--small"></span>
 </div>
