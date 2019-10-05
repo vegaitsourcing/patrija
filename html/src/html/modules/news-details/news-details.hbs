@@ -13,7 +13,9 @@
 				<div class="news-details__share">
 					<span class="h6 news-details__share-title">Podeli tekst</span>
 					<div class="news-details__share-links">
-						<a href=""></a>
+						<a class="news-details__share-link" href="javascript:;"><span class="icon font-ico-facebook"><span class="sr-only">Share on facebook</span></span></a>
+						<a class="news-details__share-link" href="javascript:;"><span class="icon font-ico-twitter"><span class="sr-only">Share on twitter</span></span></a>
+						<a class="news-details__share-link" href="javascript:;"><span class="icon font-ico-youtube"><span class="sr-only">Share on youtube</span></span></a>
 					</div>
 				</div>
 			</div>
@@ -26,13 +28,13 @@
 								<li class="news-details__item">
 									<div class="news-details__item-img">
 										<a href="javascript:;">
-											<img class="news-details__item-image" src="{{image}}" alt="">
+											<img class="news-details__item-image" src="{{this.image}}" alt="">
 										</a>
 									</div>
 									<div class="news-details__item-content">
-										<span class="news-details__item-date">{{date}}</span>
+										<span class="news-details__item-date">{{this.date}}</span>
 										<h4 class="h6 news-details__item-title">
-											<a href="javascript:;">{{titleText}}</a>
+											<a href="javascript:;">{{this.titleText}}</a>
 										</h4>
 									</div>
 								</li>
