@@ -22,10 +22,11 @@
     Html.RenderAction<NestedContentController>(c => nameof(c.LinksList), new { viewModel = linkList });
 }
 
+@{ 
+    Html.RenderAction<NestedContentController>(c => nameof(c.AboutUs), new { viewModel = Model.AboutUs });
+}
+
 @if (Model.JoinUs != null)
 {
     Html.RenderAction<NestedContentController>(c => nameof(c.JoinUs), new { viewModel = Model.JoinUs });
-}
-@{ 
-    Html.RenderAction<NestedContentController>(c => nameof(c.AboutUs), new { viewModel = Model.AboutUs });
 }
