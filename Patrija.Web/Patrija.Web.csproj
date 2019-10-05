@@ -486,8 +486,8 @@
     <Content Include="Views\Partials\NestedContent\_LinksList.cshtml" />
     <Content Include="Views\Partials\Shared\_JoinUs.cshtml" />
     <Content Include="Views\Partials\NestedContent\_AboutUs.cshtml" />
-    <Content Include="Views\Partials\Containers\_HomeSupportContainer.cshtml" />
-    <Content Include="Views\Partials\Containers\_AboutUsProjectsContainer.cshtml" />
+    <Content Include="Views\Partials\Container\_HomeSupportContainer.cshtml" />
+    <Content Include="Views\Partials\Container\_AboutUsProjectsContainer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

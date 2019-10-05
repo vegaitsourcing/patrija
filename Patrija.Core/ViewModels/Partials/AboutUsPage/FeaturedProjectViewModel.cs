@@ -14,6 +14,7 @@ namespace Patrija.Core.ViewModels.Partials.AboutUsPage
             Title = untaggedFeature.FeatureTitle;
             Text = untaggedFeature.FeatureText;
             Link = new LinkViewModel(untaggedFeature.FeatureReadMoreLink);
+            ContentPosition = untaggedFeature.FeatureContentPosition;
             FeatureImage = new ImageViewModel(untaggedFeature.FeatureImage as Image);
             AdditionalImage = new ImageViewModel(untaggedFeature.FeatureAdditionalImage as Image);
         }

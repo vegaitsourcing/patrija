@@ -3,3 +3,7 @@
 @{
     Html.RenderAction<NestedContentController>(c => nameof(c.PageIntro), new { viewModel = Model.PageIntro });
 }
+
+@{
+    Html.RenderAction<ContainerController>(c => nameof(c.AboutUsProjectsContainer), new { viewModel = Model.FeaturedProjectsContainer });
+}

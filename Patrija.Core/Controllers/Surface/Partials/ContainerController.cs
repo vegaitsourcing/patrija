@@ -8,11 +8,11 @@ namespace Patrija.Core.Controllers.Surface.Partials
     public class ContainerController : BaseSurfaceController
     {
         [ChildActionOnly]
-        public ActionResult AboutUsFeaturedProjects(FeaturedProjectsContainerViewModel viewModel)
+        public ActionResult AboutUsProjectsContainer(FeaturedProjectsContainerViewModel viewModel)
             => PartialView(viewModel);
 
         [ChildActionOnly]
-        public ActionResult HomeSupport(HomeSupportViewModel viewModel)
+        public ActionResult HomeSupportContainer(HomeSupportViewModel viewModel)
             => PartialView(viewModel);
 
     }
