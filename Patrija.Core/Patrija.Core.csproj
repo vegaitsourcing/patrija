@@ -305,6 +305,8 @@
     <Compile Include="ViewModels\Pages\PageViewModel.cs" />
     <Compile Include="ViewModels\Pages\SearchResultsViewModel.cs" />
     <Compile Include="ViewModels\Pages\XMLSitemapViewModel.cs" />
+    <Compile Include="ViewModels\Partials\AboutUsPage\FeaturedProjectViewModel.cs" />
+    <Compile Include="ViewModels\Partials\AboutUsPage\FeaturedProjectsContainerViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\SupportContentBoxButtonType.cs" />
     <Compile Include="ViewModels\Partials\Home\HomeSupportViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\ContentPosition.cs" />

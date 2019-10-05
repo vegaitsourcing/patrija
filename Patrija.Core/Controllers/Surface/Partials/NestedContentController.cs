@@ -20,10 +20,6 @@ namespace Patrija.Core.Controllers.Surface.Partials
             => PartialView(viewModel);
 
         [ChildActionOnly]
-        public ActionResult HomeSupport(HomeSupportViewModel viewModel)
-            => PartialView(viewModel);
-
-        [ChildActionOnly]
         public ActionResult JoinUs(JoinUsViewModel viewModel)
             => PartialView(viewModel);
 
