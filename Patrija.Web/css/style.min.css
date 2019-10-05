@@ -291,7 +291,7 @@ td {
 --------------------------------------------------------------*/
 @font-face {
   font-family: 'svgicons';
-  src: url("../assets/fonts/svgicons.woff2?v=1570225551351") format("woff2"), url("../assets/fonts/svgicons.woff?v=1570225551351") format("woff"), url("../assets/fonts/svgicons.ttf?v=1570225551351") format("truetype");
+  src: url("../assets/fonts/svgicons.woff2?v=1570232337907") format("woff2"), url("../assets/fonts/svgicons.woff?v=1570232337907") format("woff"), url("../assets/fonts/svgicons.ttf?v=1570232337907") format("truetype");
 }
 
 .font-ico-share:before {
@@ -517,6 +517,11 @@ body {
   overflow-y: scroll;
 }
 
+.main {
+  width: 100%;
+  overflow: hidden;
+}
+
 .wrap {
   margin: 0 auto;
   max-width: 1768px;
@@ -725,6 +730,7 @@ textarea::placeholder {
 --------------------------------------------------------------*/
 .header {
   padding-top: 56px;
+  padding-bottom: 20px;
 }
 
 .header__container {
@@ -1000,6 +1006,31 @@ textarea::placeholder {
   height: 104px;
   left: -21.4%;
   top: 34.4%;
+}
+
+.home-intro {
+  padding-top: 208px;
+  margin-bottom: 350px;
+}
+
+.home-intro__wrap {
+  max-width: 1470px;
+  position: relative;
+}
+
+.home-intro__text {
+  max-width: 800px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 55px;
+  margin-bottom: 34px;
+}
+
+.home-intro__image {
+  position: absolute;
+  width: 1444px;
+  top: -680px;
+  left: 55.6%;
 }
 
 /*# sourceMappingURL=style.min.css.map */
