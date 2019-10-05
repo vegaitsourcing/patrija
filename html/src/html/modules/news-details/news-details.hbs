@@ -1,5 +1,48 @@
 <div class="news-details">
-	<h2>{{title}} - news-details</h2>
+	<div class="wrap wrap--medium">
+		<div class="news-details__container">
+			<div class="news-details__content">
+				<div class="rte">
+					<h3>Podnaslov teksta</h3>
+					<p>“Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor. “Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor ““Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor“</p>
+					<img src="assets/images/content/rte-image.jpg" alt="">
+					<p>“Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor. “Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor ““Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor“</p>
+					<img src="assets/images/content/rte-image.jpg" alt="">
+					<p>“Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor. “Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor ““Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor“ “Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor. “Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tb</p>
+				</div>
+				<div class="news-details__share">
+					<span class="h6 news-details__share-title">Podeli tekst</span>
+					<div class="news-details__share-links">
+						<a href=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="news-details__sidebar">
+				{{#each group}}
+					<h4 class="h6 news-details__sidebar-title">{{this.title}}</h4>
+					{{#if this.items}}
+						<ul class="news-details__list">
+							{{#each this.items}}
+								<li class="news-details__item">
+									<div class="news-details__item-img">
+										<a href="javascript:;">
+											<img class="news-details__item-image" src="{{image}}" alt="">
+										</a>
+									</div>
+									<div class="news-details__item-content">
+										<span class="news-details__item-date">{{date}}</span>
+										<h4 class="h6 news-details__item-title">
+											<a href="javascript:;">{{titleText}}</a>
+										</h4>
+									</div>
+								</li>
+							{{/each}}
+						</ul>
+					{{/if}}
+				{{/each}}
+			</div>
+		</div>
+	</div>
 </div>
 
 {{!-- Single bio-Novosti  --}}
