@@ -1,12 +1,14 @@
 <div class="image-text">
 	<div class="wrap wrap--medium">
-		<div class="image-text__image">
-			<img src="{{image}}" alt="">
-		</div>
-		<div class="image-text__content">
-			<h2 class="h2 image-text__title">{{title}}</h2>
-			<p class="image-text__text">{{text}}</p>
-			<a class="btn" href="javascript:;">{{link}}</a>
+		<div class="image-text__container{{#if itemReversed}} image-text__container--reverse{{/if}}">
+			<div class="image-text__image">
+				<div class="image-text__img has-cover" style="background-image: url('{{image}}')"></div>
+			</div>
+			<div class="image-text__content">
+				<h2 class="h2 image-text__title">{{title}}</h2>
+				<p class="image-text__text">{{text}}</p>
+				<a class="btn" href="javascript:;">{{link}}</a>
+			</div>
 		</div>
 	</div>
 </div>
