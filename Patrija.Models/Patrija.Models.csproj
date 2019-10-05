@@ -388,6 +388,7 @@
     <Compile Include="Generated\BlogIntro.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\BlogItem.generated.cs" />
     <Compile Include="Generated\Error404.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
