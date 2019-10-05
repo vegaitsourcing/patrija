@@ -310,6 +310,7 @@
     <Compile Include="ViewModels\Partials\Features\ContentPosition.cs" />
     <Compile Include="ViewModels\Partials\Features\FeatureViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\TaggedFeatureViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Home\AboutUsViewModel.cs" />
     <Compile Include="ViewModels\Partials\Home\HomeIntroViewModel.cs" />
     <Compile Include="ViewModels\Partials\Home\LinksListViewModel.cs" />
     <Compile Include="ViewModels\Partials\Home\SupportComboBoxViewModel.cs" />
