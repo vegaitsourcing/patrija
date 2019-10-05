@@ -1,4 +1,5 @@
 ﻿using System;
+using Patrija.Common;
 using Patrija.Models.Generated;
 
 namespace Patrija.Core.ViewModels.Shared
@@ -7,7 +8,7 @@ namespace Patrija.Core.ViewModels.Shared
     {
         public JoinUsViewModel(JoinUs joinUs)
         {
-            if(joinUs == null) throw new ArgumentNullException(nameof(joinUs));
+            Guard.AgainstDefaultValue(joinUs);
 
             Title = joinUs.JoinUsTitle;
             Text = joinUs.JoinUsText?.ToHtmlString();
