@@ -13,6 +13,9 @@
 		"newsSlider": {
 			">>": "modules/news-slider/data.json"
 		},
+		"featuredProject": {
+			">>": "modules/featured-project/data.json"
+		},
 		"joinUs": {
 			">>": "modules/join-module/data.json"
 		}
