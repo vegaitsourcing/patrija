@@ -20,51 +20,44 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>About Us</summary>
-	[PublishedModel("aboutUsPage")]
-	public partial class AboutUsPage : PublishedContentModel, IPage
+	/// <summary>Page Variant 1</summary>
+	[PublishedModel("pageVariant1")]
+	public partial class PageVariant1 : PublishedContentModel, IPage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "aboutUsPage";
+		public new const string ModelTypeAlias = "pageVariant1";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AboutUsPage, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<PageVariant1, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public AboutUsPage(IPublishedContent content)
+		public PageVariant1(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Featured Projects: Featured projects on about page
+		/// Image With Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("aboutUsFeaturedProjects")]
-		public IEnumerable<AboutUsProjectsContainer> AboutUsFeaturedProjects => this.Value<IEnumerable<AboutUsProjectsContainer>>("aboutUsFeaturedProjects");
+		[ImplementPropertyType("pageVariant1ImageWithText")]
+		public IEnumerable<ImageWithText> PageVariant1ImageWithText => this.Value<IEnumerable<ImageWithText>>("pageVariant1ImageWithText");
 
 		///<summary>
-		/// Image With Text: Image with text under finished projects
+		/// Text Block
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("aboutUsPageImageWithText")]
-		public IEnumerable<ImageWithText> AboutUsPageImageWithText => this.Value<IEnumerable<ImageWithText>>("aboutUsPageImageWithText");
-
-		///<summary>
-		/// Page Intro: Page intro
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("aboutUsPageIntro")]
-		public PageIntro AboutUsPageIntro => this.Value<PageIntro>("aboutUsPageIntro");
+		[ImplementPropertyType("textBlock")]
+		public IEnumerable<TextBlock> TextBlock => this.Value<IEnumerable<TextBlock>>("textBlock");
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).

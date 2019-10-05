@@ -14,7 +14,7 @@
 }
 
 @{
-    Html.RenderAction<NestedContentController>(c => nameof(c.HomeSupport), new { viewModel = Model.HomeSupport });
+    Html.RenderAction<ContainerController>(c => nameof(c.HomeSupportContainer), new { viewModel = Model.HomeSupport });
 }
 
 @foreach (var linkList in Model.LinksList)

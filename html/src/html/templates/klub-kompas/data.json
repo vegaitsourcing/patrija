@@ -14,6 +14,12 @@
 		"textBlock": {
 			">>": "modules/text-block/data.json",
 			"title": "Više o Klubu"
+		},
+		"textImage": {
+			">>": "modules/text-image/data.json"
+		},
+		"joinUs": {
+			">>": "modules/join-module/data.json"
 		}
 	}
 }

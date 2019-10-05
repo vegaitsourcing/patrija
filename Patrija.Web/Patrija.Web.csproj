@@ -437,6 +437,7 @@
     <Content Include="config\logviewer.searches.config.js" />
     <Content Include="Global.asax" />
     <Content Include="Views\AboutUsPage.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_ImageWithText.cshtml" />
     <Content Include="Views\Partials\NestedContent\_PageIntro.cshtml" />
     <Content Include="Views\Partials\NestedContent\_TaggedFeature.cshtml" />
     <Content Include="Views\Partials\Shared\_Link.cshtml" />
@@ -455,6 +456,7 @@
     <Content Include="Views\Partials\Layout\_Header.cshtml" />
     <Content Include="Views\Partials\Layout\_Footer.cshtml" />
     <Content Include="Views\Home.cshtml" />
+    <Content Include="Views\SupportUs.cshtml" />
     <Content Include="Views\Error404.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\XMLSitemap.cshtml" />
@@ -484,9 +486,11 @@
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\NestedContent\_HomeIntro.cshtml" />
     <Content Include="Views\Partials\NestedContent\_LinksList.cshtml" />
-    <Content Include="Views\Partials\NestedContent\_HomeSupport.cshtml" />
     <Content Include="Views\Partials\Shared\_JoinUs.cshtml" />
     <Content Include="Views\Partials\NestedContent\_AboutUs.cshtml" />
+    <Content Include="Views\Partials\Shared\_SimpleForm.cshtml" />
+    <Content Include="Views\Partials\Container\_HomeSupportContainer.cshtml" />
+    <Content Include="Views\Partials\Container\_AboutUsProjectsContainer.cshtml" />
     <Content Include="Views\Partials\Shared\_ArticleContainer.cshtml" />
     <Content Include="Views\Partials\Shared\_Article.cshtml" />
     <Content Include="Views\DisplayTemplates\FormattedDate.cshtml" />
