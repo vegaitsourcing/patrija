@@ -53,6 +53,13 @@ namespace Patrija.Models.Generated
 		public IEnumerable<TaggedFeature> FeaturedContent => this.Value<IEnumerable<TaggedFeature>>("featuredContent");
 
 		///<summary>
+		/// About Us
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("homeAboutUs")]
+		public IEnumerable<AboutUs> HomeAboutUs => this.Value<IEnumerable<AboutUs>>("homeAboutUs");
+
+		///<summary>
 		/// Featured Links
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
@@ -65,6 +72,27 @@ namespace Patrija.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("homeIntro")]
 		public IEnumerable<HomeIntro> HomeIntro => this.Value<IEnumerable<HomeIntro>>("homeIntro");
+
+		///<summary>
+		/// Join Us
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("homeJoinUs")]
+		public IEnumerable<JoinUs> HomeJoinUs => this.Value<IEnumerable<JoinUs>>("homeJoinUs");
+
+		///<summary>
+		/// Support
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("homeSupport")]
+		public IEnumerable<SupportContentBox> HomeSupport => this.Value<IEnumerable<SupportContentBox>>("homeSupport");
+
+		///<summary>
+		/// Most Recent Blogs
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("mostRecentBlogs")]
+		public IEnumerable<MostRecentBlogs> MostRecentBlogs => this.Value<IEnumerable<MostRecentBlogs>>("mostRecentBlogs");
 
 		///<summary>
 		/// Copyright Text: The site copyright text.

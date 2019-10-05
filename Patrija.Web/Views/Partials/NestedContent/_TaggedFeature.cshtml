@@ -1,0 +1,27 @@
+﻿@using Patrija.Core.ViewModels.Partials.Features
+@inherits UmbracoViewPage<TaggedFeatureViewModel>
+
+@{
+	var positionClassSuffix = Model.ContentPosition == ContentPosition.Left ? "normal" : "reverse";
+}
+    
+<div class="featured-project">
+	<div class="wrap">
+		<div class="featured-project__item featured-project__item--@positionClassSuffix">
+			<div class="featured-project__text">
+				<h6 class="h6 featured-project__tag">@Model.Tag</h6>
+				<h2 class="h2 featured-project__title">@Model.Title</h2>
+				<p class="featured-project__text">@Model.Text</p>
+				@Html.Partial("Link", Model.ReadMore, new ViewDataDictionary() { { "className", "btn" } })
+			</div>
+			<div class="featured-project__mask featured-project__mask--@positionClassSuffix">
+				@if (Model.AdditionalImage != null)
+				{
+					<img class="featured-project__additional-image" src="@Model.AdditionalImage.Url" alt="@Model.AdditionalImage.AlternateText">
+				}
+				<div class="featured-project__image has-cover" style="background-image: url('@(Model.Image.Url)');"></div>
+			</div>
+		</div>
+		<span class="circle circle--mint circle--big featured-project__circle"></span>
+	</div>
+</div>

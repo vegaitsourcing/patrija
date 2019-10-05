@@ -1,9 +1,11 @@
-﻿@inherits UmbracoViewPage<Patrija.Core.ViewModels.Partials.Layout.HeaderViewModel>
+﻿@using Patrija.Core.ViewModels.Shared
+@inherits UmbracoViewPage<Patrija.Core.ViewModels.Partials.Layout.HeaderViewModel>
 
 @{
-    var menu = new string[]
+    var menu = new LinkViewModel[]
     {
-"Home", "About us"
+        new LinkViewModel("/", "Home"), 
+        new LinkViewModel("/", "About us"), 
     };
 }
 
@@ -19,16 +21,16 @@
                     <nav class="nav">
                         <ul class="nav__list" role="menubar">
 
-                            @for (int i = 0; i < menu.Length; i++)
+                            @for (var i = 0; i < menu.Length; i++)
                             {
                                 <li class="nav__item" role="menuitem">
-                                    <a class="nav__link @(i == 0 ? "nav__link--active" : string.Empty)" href="javascript:;">@menu[i]</a>
+		                            @Html.Partial("Link", menu[i], new ViewDataDictionary() { { "className", $"nav__link {(i == 0 ? "nav__link--active" : string.Empty)}" } })
                                 </li>
                             }
                         </ul>
                     </nav>
                 }
-                <a class="btn btn--mint header__join-btn" href="@Model.JoinUsLink.Url">@Model.JoinUsLink.Content</a>
+		        @Html.Partial("Link", Model.JoinUsLink, new ViewDataDictionary() { { "className", "btn btn--mint header__join-btn" } })
                 <button class="nav-toggle" type="button">
                     <span class="nav-toggle__line nav-toggle__line--top"></span>
                     <span class="nav-toggle__line nav-toggle__line--middle"></span>

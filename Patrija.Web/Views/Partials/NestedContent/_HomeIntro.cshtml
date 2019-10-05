@@ -1,10 +1,10 @@
-﻿@using Patrija.Core.ViewModels.Partials.Home;
+﻿@using Patrija.Core.ViewModels.Partials.Home
 @inherits UmbracoViewPage<HomeIntroViewModel>
 
 <div class="home-intro">
     <div class="wrap home-intro__wrap">
         <p class="home-intro__text">@Model.Title</p>
-        <a class="btn" href="@Model.Link.Url">@Model.Link.Content</a>
+		@Html.Partial("Link", Model.Link, new ViewDataDictionary() { { "className", "btn" } })
         <div class="home-intro__image">
             <img src="@Model.Image.Url" alt="">
             <span class="home-intro__circle home-intro__circle--blue"></span>

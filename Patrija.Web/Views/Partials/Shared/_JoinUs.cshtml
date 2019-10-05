@@ -1,0 +1,21 @@
+﻿@using Patrija.Core.ViewModels.Shared;
+@inherits UmbracoViewPage<JoinUsViewModel>
+    
+<div class="join-module has-cover ">
+    <div class="wrap wrap--small">
+        <div class="join-module__container">
+            <h2 class="h2 join-module__title">@Model.Title</h2>
+            <p class="join-module__info">@Html.Raw(Model.Text)</p>
+            <div class="join-module__links">
+                <button type="button" class="btn btn--small join-module__btn js-user-popup">@Model.AsUserButtonText</button>
+                <button type="button" class="btn btn--small btn--mint join-module__btn js-volunteer-popup">@Model.AsVolunteerButtonText</button>
+            </div>
+            <div class="join-module__images">
+                <div class="join-module__image join-module__image--top"><img src="@Model.TopImage.Url" alt=""></div>
+                <div class="join-module__image join-module__image--right"><img src="@Model.RightImage.Url" alt=""></div>
+                <div class="join-module__image join-module__image--bottom"><img src="@Model.BottomImage.Url" alt=""></div>
+                <div class="join-module__image join-module__image--left"><img src="@Model.LeftImage.Url" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>

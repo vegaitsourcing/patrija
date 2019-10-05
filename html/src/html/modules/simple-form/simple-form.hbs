@@ -1,5 +1,35 @@
 <div class="simple-form">
-	<h2>{{title}} - simple-form</h2>
+	<div class="wrap wrap--normal">
+		<div class="simple-form__content">
+			<div class="simple-form__info">
+				<h2 class="h2 simple-form__title">{{title}}</h2>
+				<p class="simple-form__text">{{text}}</p>
+			</div>
+			<div class="simple-form__container">
+				<form action="" method="post" class="form">
+					<div class="form__row">
+						<label class="form__label" for="name">{{labelName}}</label>
+						<input class="form__input" type="text" id="name" name="name">
+						<span class="form__error-message">{{errorMessage}}</span>
+					</div>
+					<div class="form__row">
+						<label class="form__label" for="email">{{labelEmail}}</label>
+						<input class="form__input" type="email" id="email" name="email">
+						<span class="form__error-message">{{errorMessage}}</span>
+					</div>
+					<div class="form__row">
+						<label class="form__label" for="message">{{labelMessage}}</label>
+						<textarea class="form__input form__input--textarea" id="message" name="message"></textarea>
+						<span class="form__error-message">{{errorMessage}}</span>
+					</div>
+					<div class="form__row">
+						<button class="btn btn--mint btn--submit" type="submit">{{submitBtn}}</button>
+					</div>
+					<span class="form__message-success">{{successMesage}}</span>
+				</form>
+			</div>
+		</div>
+	</div>
 </div>
 
 {{!-- Kako postati prodavac, podrzite nas --}}

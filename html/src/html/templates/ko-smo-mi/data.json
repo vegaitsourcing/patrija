@@ -13,8 +13,36 @@
 		"project": {
 			">>": "modules/project/data.json"
 		},
+		"newsSlider": {
+			"title": "Završeni projekti",
+			"isSlider": true,
+			"hasBg": true,
+			"sliderItems": [
+				{
+					"image": "assets/images/content/finished-projects-01.jpg",
+					"itemTitle": "\"Patrija\" je udruženje građana čiji je glavni cilj  unapređenje",
+					"text": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...."
+				},
+				{
+					"image": "assets/images/content/finished-projects-02.jpg",
+					"itemTitle": "\"Patrija\" je udruženje građana čiji je glavni cilj  unapređenje",
+					"text": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...."
+				},
+				{
+					"image": "assets/images/content/finished-projects-03.jpg",
+					"itemTitle": "\"Patrija\" je udruženje građana čiji je glavni cilj  unapređenje",
+					"text": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...."
+				}
+			]
+		},
 		"imageText": {
 			">>": "modules/image-text/data.json"
+		},
+		"linksList": {
+			">>": "modules/links-list/data.json"
+		},
+		"joinUs": {
+			">>": "modules/join-module/data.json"
 		}
 	}
 }

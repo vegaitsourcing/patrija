@@ -22,7 +22,7 @@ namespace Patrija.Models.Generated
 {
 	/// <summary>Home Support Container</summary>
 	[PublishedModel("homeSupport")]
-	public partial class HomeSupport : PublishedContentModel
+	public partial class HomeSupport : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -39,7 +39,7 @@ namespace Patrija.Models.Generated
 #pragma warning restore 0109
 
 		// ctor
-		public HomeSupport(IPublishedContent content)
+		public HomeSupport(IPublishedElement content)
 			: base(content)
 		{ }
 

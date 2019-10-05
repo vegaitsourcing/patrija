@@ -2,20 +2,21 @@
 //------------------------------------------------------------------------------
 
 .image-text {
-	padding: 42px 0;
+	padding: 42px 0 228px;
 }
 
 .image-text__container {
 	padding: 0 52px;
 	display: flex;
+	align-items: flex-start;
 }
 
 .image-text__image {
 	display: inline-block;
 	position: relative;
-	width: 46.2vh;
-	padding-bottom: 28.9%;
-	margin-right: 12.5vh;
+	width: 436px;
+	height: 404px;
+	margin-right: 6vw;
 	&::after {
 		background-image: url('../assets/images/mask/image-text-left.svg');
 		background-size: 100% 100%;
@@ -53,4 +54,22 @@
 	font-size: 18px;
 	line-height: 30px;
 	margin-bottom: 32px;
+}
+
+.image-text__container--reverse {
+	padding: 0 30px;
+	.image-text__image {
+		order: 2;
+		margin-left: 18.6vh;
+		width: 71.5vh;
+		padding-bottom: 39.81%;
+		margin-right: -55px;
+		&::after {
+			background-image: url('../assets/images/mask/image-text-right.svg');
+		}
+	}
+	.image-text__content {
+		padding: 70px 0;
+		max-width: 630px;
+	}
 }
