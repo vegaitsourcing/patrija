@@ -11,8 +11,15 @@ namespace Patrija.Core.ViewModels.Pages
         {
             var form = context.Page.SupportUsDonationForm.SingleOrDefault();
             DonationForm = form != null ? new SimpleFormViewModel(form) : null;
+
+            var testimonials = context.Page.SupportUsTestimonials.FirstOrDefault();
+            if(testimonials != null)
+            {
+                TestimonialsContainer = new TestimonialsContainerViewModel(testimonials);
+            }
         }
 
         public SimpleFormViewModel DonationForm { get; } 
+        public TestimonialsContainerViewModel TestimonialsContainer { get; }
     }
 }

@@ -15,7 +15,7 @@ namespace Patrija.Core.Controllers.Surface.Partials
         [ChildActionOnly]
         public ActionResult HomeIntro(HomeIntroViewModel viewModel)
             => PartialView(viewModel);
-        
+
         [ChildActionOnly]
         public ActionResult TaggedFeature(TaggedFeatureViewModel viewModel)
             => PartialView(viewModel);
@@ -42,6 +42,10 @@ namespace Patrija.Core.Controllers.Surface.Partials
 
         [ChildActionOnly]
         public ActionResult ArticleContainer(ArticleContainerViewModel viewModel)
+            => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult TestimonialContainer(TestimonialsContainerViewModel viewModel)
             => PartialView(viewModel);
     }
 }

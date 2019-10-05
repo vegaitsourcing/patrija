@@ -11,12 +11,12 @@ namespace Patrija.Core.ViewModels.Shared
             Guard.AgainstDefaultValue(testimonial);
 
             Text = testimonial.TestimonialItemText;
-            User = testimonial.TestimonialItemUser;
-            UserImage = new ImageViewModel(testimonial.TestimonialItemUserImage as Image);
+            Author = testimonial.TestimonialItemUser;
+            AuthorsImage = new ImageViewModel(testimonial.TestimonialItemUserImage as Image);
         }
 
         public string Text { get; }
-        public string User { get; }
-        public ImageViewModel UserImage { get; }
+        public string Author { get; }
+        public ImageViewModel AuthorsImage { get; }
     }
 }
