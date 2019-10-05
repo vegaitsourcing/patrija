@@ -1,0 +1,24 @@
+//---------- member-form
+//------------------------------------------------------------------------------
+
+.member-form {
+	margin-bottom: 70px;
+}
+
+.member-form__title {
+	max-width: 384px;
+	margin-bottom: 16px;
+}
+
+.member-form__container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 0 42px;
+}
+
+.member-form__column {
+	flex: 1 1 50%;
+	max-width: 44%;
+	padding: 28px 0;
+}
