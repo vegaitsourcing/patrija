@@ -10,8 +10,8 @@
 <header class="header">
     <div class="wrap">
         <div class="header__container">
-            <a href="/" class="header__logo">
-                <img src="@Model.LogoUrl" alt="">
+            <a href="@Model.LogoUrl" class="header__logo">
+                <img src="@Model.Logo.Url" alt="@Model.Logo.AlternateText">
             </a>
             <div class="navigation">
                 @if (menu?.Length > 0)

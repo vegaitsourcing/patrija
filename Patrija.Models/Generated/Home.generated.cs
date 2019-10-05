@@ -46,11 +46,11 @@ namespace Patrija.Models.Generated
 		// properties
 
 		///<summary>
-		/// Text
+		/// Intro
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("text")]
-		public IHtmlString Text => this.Value<IHtmlString>("text");
+		[ImplementPropertyType("homeIntro")]
+		public IEnumerable<HomeIntro> HomeIntro => this.Value<IEnumerable<HomeIntro>>("homeIntro");
 
 		///<summary>
 		/// Copyright Text: The site copyright text.
