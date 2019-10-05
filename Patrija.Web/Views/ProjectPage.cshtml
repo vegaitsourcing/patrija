@@ -1,0 +1,6 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ProjectPageViewModel>
+
+@foreach (var block in Model.Blocks)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.Block), new { viewModel = block });
+}

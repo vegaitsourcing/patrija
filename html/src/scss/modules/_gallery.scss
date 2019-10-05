@@ -2,5 +2,50 @@
 //------------------------------------------------------------------------------
 
 .gallery {
-	color: $black;
+	margin-bottom: -42px;
+}
+
+.gallery__title {
+	text-align: center;
+	margin-bottom: 22px;
+}
+
+.gallery__container {
+	padding: 0 94px;
+}
+
+.gallery__slider {
+	font-size: 0;
+	margin: 0 -15px;
+	.slick-arrow {
+		top: 50%;
+		margin-top: -50px;
+	}
+	.slick-prev {
+		left: -78px;
+	}
+	.slick-next {
+		right: -78px;
+	}
+}
+
+.gallery__item {
+	width: 33.333%;
+	padding: 0 14px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.gallery__image {
+	width: 100%;
+	position: relative;
+	padding-bottom: 66%;
+	border-radius: 15px;
+	margin-bottom: 28px;
+	.loaded & {
+		transition: $duration $ease;
+	}
+	@include hover {
+		box-shadow: 0 10px 16px rgba($black, 0.16);
+	}
 }

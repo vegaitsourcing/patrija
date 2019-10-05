@@ -1,0 +1,19 @@
+{
+	"template": "single-blog",
+	"data": {
+		"header": {
+			">>": "shared/header/data.json"
+		},
+		"footer": {
+			">>": "shared/footer/data.json"
+		},
+		"pageIntro": {
+			"title": "Naslov teksta sa bloga u dva reda",
+			"text": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freega",
+			"image": "../assets/images/content/blog-image.jpg"
+		},
+		"newsDetails": {
+			">>": "modules/news-details/data.json"
+		}
+	}
+}
