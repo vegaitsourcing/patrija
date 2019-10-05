@@ -2,5 +2,32 @@
 //------------------------------------------------------------------------------
 
 .simple-form {
-	color: $black;
+	margin-bottom: 250px;
+}
+
+.simple-form__content {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.simple-form__info {
+	flex: 1 1 50%;
+	max-width: 50%;
+	padding: 0 8px;
+}
+
+.simple-form__title {
+	max-width: 80%;
+	margin-bottom: 25px;
+}
+
+.simple-form__text {
+	max-width: 80%;
+}
+
+.simple-form__container {
+	flex: 1 1 50%;
+	max-width: 50%;
+	padding: 27px 0 20px 6.4vw;
 }
