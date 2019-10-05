@@ -53,6 +53,13 @@ namespace Patrija.Models.Generated
 		public IEnumerable<AboutUsProjectsContainer> AboutUsFeaturedProjects => this.Value<IEnumerable<AboutUsProjectsContainer>>("aboutUsFeaturedProjects");
 
 		///<summary>
+		/// Image With Text: Image with text under finished projects
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("aboutUsPageImageWithText")]
+		public IEnumerable<ImageWithText> AboutUsPageImageWithText => this.Value<IEnumerable<ImageWithText>>("aboutUsPageImageWithText");
+
+		///<summary>
 		/// Page Intro: Page intro
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
