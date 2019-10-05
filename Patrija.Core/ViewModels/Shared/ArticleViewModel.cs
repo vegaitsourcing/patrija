@@ -1,4 +1,5 @@
-﻿using Patrija.Models.Generated;
+﻿using Patrija.Common;
+using Patrija.Models.Generated;
 using System;
 
 namespace Patrija.Core.ViewModels.Shared
@@ -7,8 +8,8 @@ namespace Patrija.Core.ViewModels.Shared
     {
         public ArticleViewModel(BlogItem blogItem)
         {
-            if (blogItem == null) { throw new ArgumentNullException(nameof(blogItem)); }
-            if (blogItem.BlogItemIntro == null) { throw new ArgumentNullException(nameof(blogItem.BlogItemIntro)); }
+            Guard.AgainstDefaultValue(blogItem);
+            Guard.AgainstDefaultValue(blogItem.BlogItemIntro);
 
             Title = blogItem.BlogItemIntro.BlogIntroTitle;
             PreviewText = blogItem.BlogItemIntro.BlogIntroPreview;

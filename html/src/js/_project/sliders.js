@@ -1,8 +1,4 @@
 const sliders = {
-	$newsSlider: $('.js-news-slider'),
-	$testimonialsSlider: $('.js-testimonials-slider'),
-	$gallerySlider: $('.js-gallery-slider'),
-
 	init: function() {
 		this.newsSliderInit();
 		this.testimonialsSliderInit();
@@ -10,7 +6,7 @@ const sliders = {
 	},
 
 	newsSliderInit: function() {
-		this.$newsSlider.slick({
+		$('.js-news-slider').slick({
 			infinite: true,
 			slidesToShow: 3,
 			slidesToScroll: 1
@@ -18,7 +14,7 @@ const sliders = {
 	},
 
 	testimonialsSliderInit: function() {
-		this.$testimonialsSlider.slick({
+		$('.js-testimonials-slider').slick({
 			infinite: true,
 			slidesToShow: 1,
 			slidesToScroll: 1
@@ -26,7 +22,7 @@ const sliders = {
 	},
 
 	gallerySliderInit: function() {
-		this.$gallerySlider.slick({
+		$('.js-gallery-slider').slick({
 			infinite: true,
 			slidesPerRow: 3,
 			rows: 2

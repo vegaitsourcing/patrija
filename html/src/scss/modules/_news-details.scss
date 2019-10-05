@@ -41,7 +41,7 @@
 	margin: 0 6px;
 	display: inline-block;
 	.loaded & {
-		transition: 0.3s ease-out;
+		transition: $duration $ease;
 	}
 	.icon {
 		position: absolute;

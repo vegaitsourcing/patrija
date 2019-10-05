@@ -319,9 +319,9 @@
     <Compile Include="ViewModels\Partials\AboutUsPage\FeaturedProjectsContainerViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\PageIntroViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\ShapeVariant.cs" />
-    <Compile Include="ViewModels\Partials\PageVariant1\TextBlockViewModel.cs" />
-    <Compile Include="ViewModels\Partials\PageVariant1\ImageWithTextViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Features\ImageWithTextViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\SupportContentBoxButtonType.cs" />
+    <Compile Include="ViewModels\Partials\Features\TextBlockViewModel.cs" />
     <Compile Include="ViewModels\Partials\Home\HomeSupportViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\ContentPosition.cs" />
     <Compile Include="ViewModels\Partials\Features\FeatureViewModel.cs" />
@@ -343,6 +343,8 @@
     <Compile Include="ViewModels\Shared\JoinUsViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\SimpleFormViewModel.cs" />
+    <Compile Include="ViewModels\Shared\TestimonialsContainerViewModel.cs" />
+    <Compile Include="ViewModels\Shared\TestimonialViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Patrija.Common\Patrija.Common.csproj">
