@@ -20,36 +20,64 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>ArticleContainer</summary>
-	[PublishedModel("articleContainer")]
-	public partial class ArticleContainer : PublishedContentModel
+	/// <summary>About Us</summary>
+	[PublishedModel("aboutUs")]
+	public partial class AboutUs : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "articleContainer";
+		public new const string ModelTypeAlias = "aboutUs";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ArticleContainer, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AboutUs, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public ArticleContainer(IPublishedContent content)
+		public AboutUs(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Title
+		/// Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("articleContainerTitle")]
-		public string ArticleContainerTitle => this.Value<string>("articleContainerTitle");
+		[ImplementPropertyType("aboutUsImage")]
+		public IPublishedContent AboutUsImage => this.Value<IPublishedContent>("aboutUsImage");
+
+		///<summary>
+		/// Link
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("aboutUsLink")]
+		public Umbraco.Web.Models.Link AboutUsLink => this.Value<Umbraco.Web.Models.Link>("aboutUsLink");
+
+		///<summary>
+		/// Tag: "Ko smo mi?"
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("aboutUsTag")]
+		public string AboutUsTag => this.Value<string>("aboutUsTag");
+
+		///<summary>
+		/// Text: Text description below title.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("aboutUsText")]
+		public string AboutUsText => this.Value<string>("aboutUsText");
+
+		///<summary>
+		/// Title: "O nama"
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("aboutUsTitle")]
+		public string AboutUsTitle => this.Value<string>("aboutUsTitle");
 	}
 }

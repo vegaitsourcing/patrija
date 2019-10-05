@@ -20,43 +20,43 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Home Support Container</summary>
-	[PublishedModel("homeSupport")]
-	public partial class HomeSupport : PublishedElementModel
+	/// <summary>Most Recent Blogs</summary>
+	[PublishedModel("mostRecentBlogs")]
+	public partial class MostRecentBlogs : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "homeSupport";
+		public new const string ModelTypeAlias = "mostRecentBlogs";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<HomeSupport, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<MostRecentBlogs, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public HomeSupport(IPublishedElement content)
+		public MostRecentBlogs(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Content Boxes
+		/// Count: Provided number of blogs will be listed on the view
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeSupportContentBoxes")]
-		public IEnumerable<SupportContentBox> HomeSupportContentBoxes => this.Value<IEnumerable<SupportContentBox>>("homeSupportContentBoxes");
+		[ImplementPropertyType("mostRecentBlogsCount")]
+		public int MostRecentBlogsCount => this.Value<int>("mostRecentBlogsCount");
 
 		///<summary>
-		/// Image
+		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeSupportImage")]
-		public IPublishedContent HomeSupportImage => this.Value<IPublishedContent>("homeSupportImage");
+		[ImplementPropertyType("mostRecentBlogsTitle")]
+		public string MostRecentBlogsTitle => this.Value<string>("mostRecentBlogsTitle");
 	}
 }

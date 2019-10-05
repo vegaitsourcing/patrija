@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using Patrija.Core.ViewModels.Partials.Features;
 using Patrija.Core.ViewModels.Partials.Home;
+using Patrija.Core.ViewModels.Shared;
 
 namespace Patrija.Core.Controllers.Surface.Partials
 {
@@ -16,6 +17,10 @@ namespace Patrija.Core.Controllers.Surface.Partials
 
         [ChildActionOnly]
         public ActionResult LinksList(LinksListViewModel viewModel)
+            => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult JoinUs(JoinUsViewModel viewModel)
             => PartialView(viewModel);
     }
 }
