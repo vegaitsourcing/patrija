@@ -48,5 +48,9 @@ namespace Patrija.Core.Controllers.Surface.Partials
         [ChildActionOnly]
         public ActionResult TextBlock(TextBlockViewModel viewModel)
             => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult Block(object viewModel)
+            => PartialView(viewModel);
     }
 }
