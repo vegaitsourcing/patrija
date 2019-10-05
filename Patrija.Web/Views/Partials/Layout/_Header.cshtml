@@ -24,13 +24,13 @@
                             @for (var i = 0; i < menu.Length; i++)
                             {
                                 <li class="nav__item" role="menuitem">
-		                            @Html.Partial("Link", menu[i], new ViewDataDictionary(new { className = $"nav__link {(i == 0 ? "nav__link--active" : string.Empty)}" }))
+		                            @Html.Partial("Link", menu[i], new ViewDataDictionary() { { "className", $"nav__link {(i == 0 ? "nav__link--active" : string.Empty)}" } })
                                 </li>
                             }
                         </ul>
                     </nav>
                 }
-		        @Html.Partial("Link", Model.JoinUsLink, new ViewDataDictionary(new { className = "btn btn--mint header__join-btn" }))
+		        @Html.Partial("Link", Model.JoinUsLink, new ViewDataDictionary() { { "className", "btn btn--mint header__join-btn" } })
                 <button class="nav-toggle" type="button">
                     <span class="nav-toggle__line nav-toggle__line--top"></span>
                     <span class="nav-toggle__line nav-toggle__line--middle"></span>

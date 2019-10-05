@@ -14,7 +14,7 @@
                         @foreach (var link in Model.Links)
                         {
                             <li class="footer__links-item">
-				                @Html.Partial("Link", link, new ViewDataDictionary(new { className = "footer__links-link" }))
+				                @Html.Partial("Link", link, new ViewDataDictionary() {{ "className", "footer__links-link" }})
                             </li>
                         }
                     </ul>

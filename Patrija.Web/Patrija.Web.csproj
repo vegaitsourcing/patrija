@@ -481,6 +481,7 @@
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\NestedContent\_HomeIntro.cshtml" />
     <Content Include="Views\Partials\NestedContent\_LinksList.cshtml" />
+    <Content Include="Views\Partials\Shared\_JoinUs.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
