@@ -20,43 +20,43 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Testimonials Container</summary>
-	[PublishedModel("testimonialsContainer")]
-	public partial class TestimonialsContainer : PublishedElementModel
+	/// <summary>Project Page</summary>
+	[PublishedModel("projectPage")]
+	public partial class ProjectPage : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "testimonialsContainer";
+		public new const string ModelTypeAlias = "projectPage";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<TestimonialsContainer, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ProjectPage, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public TestimonialsContainer(IPublishedElement content)
+		public ProjectPage(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Testimonials
+		/// Blocks: Blocks presenting content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("testimonialsContainerItems")]
-		public IEnumerable<TestimonialItem> TestimonialsContainerItems => this.Value<IEnumerable<TestimonialItem>>("testimonialsContainerItems");
+		[ImplementPropertyType("projectPageBlocks")]
+		public IEnumerable<IPublishedElement> ProjectPageBlocks => this.Value<IEnumerable<IPublishedElement>>("projectPageBlocks");
 
 		///<summary>
-		/// Title
+		/// Page Intro: Intro
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("testimonialsContainerTitle")]
-		public string TestimonialsContainerTitle => this.Value<string>("testimonialsContainerTitle");
+		[ImplementPropertyType("projectPageIntro")]
+		public PageIntro ProjectPageIntro => this.Value<PageIntro>("projectPageIntro");
 	}
 }
