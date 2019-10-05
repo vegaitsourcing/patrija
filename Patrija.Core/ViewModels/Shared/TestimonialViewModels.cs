@@ -2,7 +2,7 @@
 using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
 
-namespace Patrija.Core.ViewModels.Partials.SupportUs
+namespace Patrija.Core.ViewModels.Shared
 {
     public class TestimonialViewModels
     {

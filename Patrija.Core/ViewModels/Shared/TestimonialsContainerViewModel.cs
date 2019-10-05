@@ -1,12 +1,8 @@
 ﻿using Patrija.Common;
 using Patrija.Models.Generated;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Patrija.Core.ViewModels.Partials.SupportUs
+namespace Patrija.Core.ViewModels.Shared
 {
     public class TestimonialsContainerViewModel
     {
