@@ -27,6 +27,18 @@ namespace Patrija.Models.Generated
 		/// <summary>Copyright Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		string CopyrightText { get; }
+
+		/// <summary>Links</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		IEnumerable<Umbraco.Web.Models.Link> FooterLinks { get; }
+
+		/// <summary>Logo</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		IPublishedContent FooterLogo { get; }
+
+		/// <summary>Logo Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string FooterLogoText { get; }
 	}
 
 	/// <summary>Footer</summary>
@@ -64,5 +76,38 @@ namespace Patrija.Models.Generated
 		/// <summary>Static getter for Copyright Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public static string GetCopyrightText(IFooter that) => that.Value<string>("copyrightText");
+
+		///<summary>
+		/// Links
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("footerLinks")]
+		public IEnumerable<Umbraco.Web.Models.Link> FooterLinks => GetFooterLinks(this);
+
+		/// <summary>Static getter for Links</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static IEnumerable<Umbraco.Web.Models.Link> GetFooterLinks(IFooter that) => that.Value<IEnumerable<Umbraco.Web.Models.Link>>("footerLinks");
+
+		///<summary>
+		/// Logo
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("footerLogo")]
+		public IPublishedContent FooterLogo => GetFooterLogo(this);
+
+		/// <summary>Static getter for Logo</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static IPublishedContent GetFooterLogo(IFooter that) => that.Value<IPublishedContent>("footerLogo");
+
+		///<summary>
+		/// Logo Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("footerLogoText")]
+		public string FooterLogoText => GetFooterLogoText(this);
+
+		/// <summary>Static getter for Logo Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetFooterLogoText(IFooter that) => that.Value<string>("footerLogoText");
 	}
 }
