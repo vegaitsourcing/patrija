@@ -3,6 +3,11 @@
     Html.RenderAction<NestedContentController>(c => nameof(c.HomeIntro), new { viewModel = Model.HomeIntro });
 }
 
+@if(Model.ArticleContainer != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.ArticleContainer), new { viewModel = Model.ArticleContainer });
+}
+
 @foreach (var feature in Model.Features)
 {
     Html.RenderAction<NestedContentController>(c => nameof(c.TaggedFeature), new { viewModel = feature });

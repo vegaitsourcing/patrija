@@ -1,0 +1,22 @@
+﻿@model Patrija.Core.ViewModels.Shared.ArticleViewModel
+
+<div class="news-slider__item">
+    <div class="news-slider__image has-cover" style="background-image: url('@Model.Image.Url');"></div>
+    @if (Model.HasMetadata)
+    {
+        <div class="news-slider__meta">
+            @if (Model.Category != null)
+            {
+                <span class="news-slider__category">@Model.Category</span>
+            }
+            @if (Model.PublishDate != null)
+            {
+                <span class="news-slider__date">@Html.DisplayFor(model => model.PublishDate, "FormattedDate")</span>
+            }
+        </div>
+    }
+    <h4 class="h6 news-slider__item-title">
+        <a href="@Model.BlogPageUrl">@Model.Title</a>
+    </h4>
+    <p class="news-slider__text">@Model.PreviewText</p>
+</div>
