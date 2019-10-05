@@ -17,6 +17,9 @@
 		},
 		"textImage": {
 			">>": "modules/text-image/data.json"
+		},
+		"joinUs": {
+			">>": "modules/join-module/data.json"
 		}
 	}
 }
