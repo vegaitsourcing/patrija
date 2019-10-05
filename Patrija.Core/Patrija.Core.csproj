@@ -275,6 +275,7 @@
     <Compile Include="Controllers\RenderMvc\Error404Controller.cs" />
     <Compile Include="Controllers\RenderMvc\HomeController.cs" />
     <Compile Include="Controllers\RenderMvc\SearchResultsController.cs" />
+    <Compile Include="Controllers\RenderMvc\SupportUsController.cs" />
     <Compile Include="Controllers\RenderMvc\XMLSitemapController.cs" />
     <Compile Include="Controllers\Surface\BaseSurfaceController.cs" />
     <Compile Include="Controllers\Surface\Partials\LayoutController.cs" />
@@ -306,6 +307,7 @@
     <Compile Include="ViewModels\Pages\HomeViewModel.cs" />
     <Compile Include="ViewModels\Pages\PageViewModel.cs" />
     <Compile Include="ViewModels\Pages\SearchResultsViewModel.cs" />
+    <Compile Include="ViewModels\Pages\SupportUsViewModel.cs" />
     <Compile Include="ViewModels\Pages\XMLSitemapViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\PageIntroViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\ShapeVariant.cs" />
@@ -329,6 +331,7 @@
     <Compile Include="ViewModels\Shared\ImageViewModel.cs" />
     <Compile Include="ViewModels\Shared\JoinUsViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />
+    <Compile Include="ViewModels\Shared\SimpleFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Patrija.Common\Patrija.Common.csproj">
