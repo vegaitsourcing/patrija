@@ -20,43 +20,57 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Most Recent Blogs</summary>
-	[PublishedModel("mostRecentBlogs")]
-	public partial class MostRecentBlogs : PublishedElementModel
+	/// <summary>Page Intro</summary>
+	[PublishedModel("pageIntro")]
+	public partial class PageIntro : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "mostRecentBlogs";
+		public new const string ModelTypeAlias = "pageIntro";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<MostRecentBlogs, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<PageIntro, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public MostRecentBlogs(IPublishedElement content)
+		public PageIntro(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Count: Provided number of blogs will be listed on the view
+		/// Image: Page intro image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("mostRecentBlogsCount")]
-		public int MostRecentBlogsCount => this.Value<int>("mostRecentBlogsCount");
+		[ImplementPropertyType("pageIntroImage")]
+		public IPublishedContent PageIntroImage => this.Value<IPublishedContent>("pageIntroImage");
 
 		///<summary>
-		/// Title
+		/// Shape Variant: Shape Variant
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("mostRecentBlogsTitle")]
-		public string MostRecentBlogsTitle => this.Value<string>("mostRecentBlogsTitle");
+		[ImplementPropertyType("pageIntroShapeVariant")]
+		public string PageIntroShapeVariant => this.Value<string>("pageIntroShapeVariant");
+
+		///<summary>
+		/// Text: Page Intro Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("pageIntroText")]
+		public string PageIntroText => this.Value<string>("pageIntroText");
+
+		///<summary>
+		/// Title: Page intro title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("pageIntroTitle")]
+		public string PageIntroTitle => this.Value<string>("pageIntroTitle");
 	}
 }
