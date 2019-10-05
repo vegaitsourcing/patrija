@@ -18,6 +18,9 @@
 		"textImage": {
 			">>": "modules/text-image/data.json"
 		},
+		"gallery": {
+			">>": "modules/gallery/data.json"
+		},
 		"joinUs": {
 			">>": "modules/join-module/data.json"
 		}
