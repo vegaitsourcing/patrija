@@ -1,0 +1,17 @@
+﻿@using Patrija.Core.ViewModels.Partials.Features
+@inherits UmbracoViewPage<ImageWithTextViewModel>
+    
+<div class="image-text">
+	<div class="wrap wrap--medium">
+		<div class="image-text__container@(Model.ContentPosition == ContentPosition.Right ? "image-text__container--reverse" : string.Empty)">
+			<div class="image-text__image">
+				<div class="image-text__img has-cover" style="background-image: url(@Model.Image.Url)"></div>
+			</div>
+			<div class="image-text__content">
+				<h2 class="h2 image-text__title">@Model.Title</h2>
+				<p class="image-text__text">@Model.Text</p>
+				@Html.Partial("Link", Model.ReadMore, new ViewDataDictionary() { { "className", "btn" } })
+			</div>
+		</div>
+	</div>
+</div>
