@@ -53,6 +53,13 @@ namespace Patrija.Models.Generated
 		public IEnumerable<SimpleFormContent> SupportUsDonationForm => this.Value<IEnumerable<SimpleFormContent>>("supportUsDonationForm");
 
 		///<summary>
+		/// Testimonials: Container with included users testimonials
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("supportUsTestimonials")]
+		public IEnumerable<TestimonialsContainer> SupportUsTestimonials => this.Value<IEnumerable<TestimonialsContainer>>("supportUsTestimonials");
+
+		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]

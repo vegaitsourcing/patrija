@@ -2,5 +2,37 @@
 //------------------------------------------------------------------------------
 
 .donations {
-	color: $black;
+	text-align: center;
+	padding-bottom: 140px;
+}
+
+.donations__content {
+	padding: 0 74px;
+}
+
+.donations__title {
+	margin-bottom: 16px;
+}
+
+.donations__text {
+	margin-bottom: 98px;
+}
+
+.donations__logos {
+	font-size: 0;
+}
+
+.donations__logo {
+	display: inline-block;
+	width: 274px;
+	height: 170px;
+	vertical-align: top;
+	background: #fbfbfb;
+	border-radius: 10px;
+	margin: 0 10px;
+}
+
+.donations__logo-img {
+	max-height: 100%;
+	max-width: 100%;
 }

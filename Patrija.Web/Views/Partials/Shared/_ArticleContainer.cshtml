@@ -1,0 +1,24 @@
+﻿@model Patrija.Core.ViewModels.Shared.ArticleContainerViewModel
+@*{{#if hasBg}} news-slider__background has-cover{{/if}}   {{#if hasBg}} style="background-image: url('{{bgImage}}); {{/if}}'*@
+<div class="news-slider">
+    <div class="wrap wrap--normal">
+        <h2 class="h2 news-slider__title">@Model.Title</h2>
+        @if (Model.Articles.Any())
+        {
+            <div class="news-slider__container">
+                <div class="news-slider__slider js-news-slider">
+                    @foreach (var article in Model.Articles)
+                    {
+                        @Html.Partial("~/Views/Partials/Shared/_Article.cshtml", article)
+                    }
+                </div>
+            </div>
+        }
+    </div>
+    <span class="circle circle--grey"></span>
+		<span class="circle circle--blue circle--large"></span>
+    @*{{#if hasBg}}
+    <span class="circle circle--grey"></span>
+    <span class="circle circle--blue circle--large"></span>
+    {{/if}}*@
+</div>

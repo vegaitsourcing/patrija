@@ -1,5 +1,6 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.SupportUs>
-@using ContentModels = Patrija.Models.Generated;
-@{
-	Layout = null;
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<SupportUsViewModel>
+
+@if (Model.DonationForm != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.SimpleForm), new { viewModel = Model.DonationForm });
 }

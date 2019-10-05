@@ -2,5 +2,51 @@
 //------------------------------------------------------------------------------
 
 .text-image {
+	padding: 42px 0 164px;
+}
 
+.text-image__container {
+	position: relative;
+	padding: 0 30px;
+}
+.text-image__content {
+	max-width: 44%;
+}
+
+.text-image__image {
+	position: absolute;
+	top: 17px;
+	right: 6.5vw;
+	width: 26.39vw;
+	padding-bottom: 28.9%;
+	&::after {
+		background-image: url('../assets/images/mask/image-text-right.svg');
+		background-size: 100% 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		content: '';
+		display: block;
+	}
+}
+
+.text-image__img {
+	position: absolute;
+	top: 0.25%;
+	left: 0.25%;
+	width: 99.5%;
+	height: 99.5%;
+}
+
+.text-image__title {
+	margin-bottom: 20px;
+}
+
+.text-image__circle {
+	top: 254px;
+	right: 0;
 }
