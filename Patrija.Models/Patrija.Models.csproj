@@ -382,8 +382,6 @@
     <Compile Include="Generated\AboutUs.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-      <DependentUpon>ModelsBuilder.cs</DependentUpon>
-    </Compile>
     <Compile Include="Generated\AboutUsPage.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
