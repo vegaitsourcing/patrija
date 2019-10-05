@@ -60,6 +60,13 @@ namespace Patrija.Models.Generated
 		public string CopyrightText => Footer.GetCopyrightText(this);
 
 		///<summary>
+		/// Join Us Link: Link to join us page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("joinUsLink")]
+		public Umbraco.Web.Models.Link JoinUsLink => Header.GetJoinUsLink(this);
+
+		///<summary>
 		/// Logo: The site logo image.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]

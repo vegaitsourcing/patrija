@@ -24,6 +24,10 @@ namespace Patrija.Models.Generated
 	/// <summary>Header</summary>
 	public partial interface IHeader : IPublishedContent
 	{
+		/// <summary>Join Us Link</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		Umbraco.Web.Models.Link JoinUsLink { get; }
+
 		/// <summary>Logo</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		IPublishedContent Logo { get; }
@@ -53,6 +57,17 @@ namespace Patrija.Models.Generated
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Join Us Link: Link to join us page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("joinUsLink")]
+		public Umbraco.Web.Models.Link JoinUsLink => GetJoinUsLink(this);
+
+		/// <summary>Static getter for Join Us Link</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static Umbraco.Web.Models.Link GetJoinUsLink(IHeader that) => that.Value<Umbraco.Web.Models.Link>("joinUsLink");
 
 		///<summary>
 		/// Logo: The site logo image.
