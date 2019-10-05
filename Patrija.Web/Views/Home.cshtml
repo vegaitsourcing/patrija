@@ -8,3 +8,8 @@
 {
     Html.RenderAction<NestedContentController>(c => nameof(c.LinksList), new { viewModel = linkList });
 }
+
+@foreach(var feature in Model.Features)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.TaggedFeature), new { viewModel = feature });
+}
