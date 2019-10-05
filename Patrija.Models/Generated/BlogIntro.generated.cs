@@ -20,78 +20,57 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Featured Project</summary>
-	[PublishedModel("featuredProject")]
-	public partial class FeaturedProject : PublishedContentModel, IFeature
+	/// <summary>Blog Intro</summary>
+	[PublishedModel("blogIntro")]
+	public partial class BlogIntro : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "featuredProject";
+		public new const string ModelTypeAlias = "blogIntro";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<FeaturedProject, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogIntro, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public FeaturedProject(IPublishedContent content)
+		public BlogIntro(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Tag: Tag or category of featured project
+		/// Date of Publishing
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("featuredProjectTag")]
-		public string FeaturedProjectTag => this.Value<string>("featuredProjectTag");
+		[ImplementPropertyType("blogIntroDateOfPublishing")]
+		public DateTime BlogIntroDateOfPublishing => this.Value<DateTime>("blogIntroDateOfPublishing");
 
 		///<summary>
-		/// Additional Image: Feature Additional Image
+		/// Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("featureAdditionalImage")]
-		public IPublishedContent FeatureAdditionalImage => Feature.GetFeatureAdditionalImage(this);
+		[ImplementPropertyType("blogIntroImage")]
+		public IPublishedContent BlogIntroImage => this.Value<IPublishedContent>("blogIntroImage");
 
 		///<summary>
-		/// Content Position: Position of featured content
+		/// Preview
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("featureContentPosition")]
-		public string FeatureContentPosition => Feature.GetFeatureContentPosition(this);
+		[ImplementPropertyType("blogIntroPreview")]
+		public string BlogIntroPreview => this.Value<string>("blogIntroPreview");
 
 		///<summary>
-		/// Image: Feature image
+		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("featureImage")]
-		public IPublishedContent FeatureImage => Feature.GetFeatureImage(this);
-
-		///<summary>
-		/// Read More: Read more about feature link
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("featureReadMoreLink")]
-		public Umbraco.Web.Models.Link FeatureReadMoreLink => Feature.GetFeatureReadMoreLink(this);
-
-		///<summary>
-		/// Text: Text describing feature
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("featureText")]
-		public string FeatureText => Feature.GetFeatureText(this);
-
-		///<summary>
-		/// Title: Title of a feature
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("featureTitle")]
-		public string FeatureTitle => Feature.GetFeatureTitle(this);
+		[ImplementPropertyType("blogIntroTitle")]
+		public string BlogIntroTitle => this.Value<string>("blogIntroTitle");
 	}
 }

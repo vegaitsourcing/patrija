@@ -20,43 +20,57 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Home Support Container</summary>
-	[PublishedModel("homeSupport")]
-	public partial class HomeSupport : PublishedContentModel
+	/// <summary>Support Content Box</summary>
+	[PublishedModel("supportContentBox")]
+	public partial class SupportContentBox : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "homeSupport";
+		public new const string ModelTypeAlias = "supportContentBox";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<HomeSupport, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<SupportContentBox, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public HomeSupport(IPublishedContent content)
+		public SupportContentBox(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Content Boxes
+		/// Button Color: Styling of a button
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeSupportContentBoxes")]
-		public IEnumerable<SupportContentBox> HomeSupportContentBoxes => this.Value<IEnumerable<SupportContentBox>>("homeSupportContentBoxes");
+		[ImplementPropertyType("supportContentBoxButtonColor")]
+		public string SupportContentBoxButtonColor => this.Value<string>("supportContentBoxButtonColor");
 
 		///<summary>
-		/// Image
+		/// Button Url: Button url of support content box
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeSupportImage")]
-		public IPublishedContent HomeSupportImage => this.Value<IPublishedContent>("homeSupportImage");
+		[ImplementPropertyType("supportContentBoxButtonUrl")]
+		public Umbraco.Web.Models.Link SupportContentBoxButtonUrl => this.Value<Umbraco.Web.Models.Link>("supportContentBoxButtonUrl");
+
+		///<summary>
+		/// Text: Text describing support content box
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("supportContentBoxText")]
+		public string SupportContentBoxText => this.Value<string>("supportContentBoxText");
+
+		///<summary>
+		/// Title: Title of support content box
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("supportContentBoxTitle")]
+		public string SupportContentBoxTitle => this.Value<string>("supportContentBoxTitle");
 	}
 }

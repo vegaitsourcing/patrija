@@ -22,7 +22,7 @@ namespace Patrija.Models.Generated
 {
 	/// <summary>Links List</summary>
 	[PublishedModel("linksList")]
-	public partial class LinksList : PublishedContentModel
+	public partial class LinksList : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -39,7 +39,7 @@ namespace Patrija.Models.Generated
 #pragma warning restore 0109
 
 		// ctor
-		public LinksList(IPublishedContent content)
+		public LinksList(IPublishedElement content)
 			: base(content)
 		{ }
 

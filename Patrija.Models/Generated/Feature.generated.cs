@@ -22,7 +22,7 @@ namespace Patrija.Models.Generated
 {
 	// Mixin Content Type with alias "feature"
 	/// <summary>Feature</summary>
-	public partial interface IFeature : IPublishedContent
+	public partial interface IFeature : IPublishedElement
 	{
 		/// <summary>Additional Image</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
@@ -51,7 +51,7 @@ namespace Patrija.Models.Generated
 
 	/// <summary>Feature</summary>
 	[PublishedModel("feature")]
-	public partial class Feature : PublishedContentModel, IFeature
+	public partial class Feature : PublishedElementModel, IFeature
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -68,7 +68,7 @@ namespace Patrija.Models.Generated
 #pragma warning restore 0109
 
 		// ctor
-		public Feature(IPublishedContent content)
+		public Feature(IPublishedElement content)
 			: base(content)
 		{ }
 
