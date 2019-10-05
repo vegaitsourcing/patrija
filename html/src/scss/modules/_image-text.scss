@@ -2,7 +2,6 @@
 //------------------------------------------------------------------------------
 
 .image-text {
-	// padding: 42px 0;
 	padding: 42px 0 228px;
 }
 
@@ -15,9 +14,9 @@
 .image-text__image {
 	display: inline-block;
 	position: relative;
-	width: 46.2vh;
-	padding-bottom: 28.89%;
-	margin-right: 12.5vh;
+	width: 436px;
+	height: 404px;
+	margin-right: 6vw;
 	&::after {
 		background-image: url('../assets/images/mask/image-text-left.svg');
 		background-size: 100% 100%;

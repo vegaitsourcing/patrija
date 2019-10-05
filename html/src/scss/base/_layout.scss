@@ -61,12 +61,19 @@ body {
 	background-color: $grey-light;
 	box-shadow: 0 10px 16px rgba(196, 196, 196, 0.16), 0 4px 6px rgba(0, 0, 0, 0.06);
 }
+.circle--tiny {
+	width: 36px;
+	height: 36px;
+}
 .circle--small {
 	width: 42px;
 	height: 42px;
 }
-
 .circle--big {
 	width: 58px;
 	height: 58px;
+}
+.circle--large {
+	width: 61px;
+	height: 61px;
 }
