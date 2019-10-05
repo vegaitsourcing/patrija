@@ -27,6 +27,9 @@
 	padding: 34px;
 	margin-bottom: 20px;
 	border-radius: 8px;
+	@include hover {
+		background-color: $mint;
+	}
 }
 
 .links-list__title {
