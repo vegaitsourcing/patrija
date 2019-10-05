@@ -1,8 +1,8 @@
 @font-face {
 	font-family: 'svgicons';
-	src: url('../assets/fonts/svgicons.woff2?v=1570313133835') format('woff2'),
-		url('../assets/fonts/svgicons.woff?v=1570313133835') format('woff'),
-		url('../assets/fonts/svgicons.ttf?v=1570313133835') format('truetype');
+	src: url('../assets/fonts/svgicons.woff2?v=1570315950012') format('woff2'),
+		url('../assets/fonts/svgicons.woff?v=1570315950012') format('woff'),
+		url('../assets/fonts/svgicons.ttf?v=1570315950012') format('truetype');
 }
 
 @mixin font-styles {
@@ -29,17 +29,8 @@
 	@if $filename == ico-arrow {
 		$char: '\E001';
 	}
-	@if $filename == ico-facebook {
-		$char: '\E002';
-	}
 	@if $filename == ico-share {
-		$char: '\E003';
-	}
-	@if $filename == ico-twitter {
-		$char: '\E004';
-	}
-	@if $filename == ico-youtube {
-		$char: '\E005';
+		$char: '\E002';
 	}
 
 	@return $char;
@@ -63,16 +54,7 @@
 .font-ico-arrow {
 	@include font(ico-arrow);
 }
-.font-ico-facebook {
-	@include font(ico-facebook);
-}
 .font-ico-share {
 	@include font(ico-share);
-}
-.font-ico-twitter {
-	@include font(ico-twitter);
-}
-.font-ico-youtube {
-	@include font(ico-youtube);
 }
 
