@@ -9,3 +9,27 @@
 		pointer-events: none;
 	}
 }
+
+.single-blog-page {
+	position: relative;
+	.single-blog-shape-blue {
+		position: absolute;
+		top: 36.4%;
+		left: -25.2vw;
+		pointer-events: none;
+	}
+	.single-blog-shape-mint {
+		position: absolute;
+		top: 68.4%;
+		right: -22.8vw;
+		pointer-events: none;
+	}
+	.single-blog-circle-left {
+		top: 37.8%;
+		left: 9.5vw;
+	}
+	.single-blog-circle-right {
+		top: 64%;
+		right: 9vw;
+	}
+}
