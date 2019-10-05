@@ -4,51 +4,59 @@
 	"hasBg": false,
 	"sliderItems": [
 		{
-			"image": "",
+			"image": "assets/images/content/news-01.jpg",
 			"itemCategory": "Aktuelnosti",
 			"itemDate": "10.09.2019",
 			"itemTitle": "\"Patrija\" je udruženje građana čiji je glavni cilj unapređenje",
-			"itemText": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...",
+			"text": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...",
 			"hasMeta": true
 		},
 		{
-			"image": "",
+			"image": "assets/images/content/news-02.jpg",
 			"itemCategory": "Blog",
 			"itemDate": "10.09.2019",
 			"itemTitle": "\"Patrija\" je udruženje građana čiji je glavni cilj unapređenje",
-			"itemText": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...",
+			"text": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...",
 			"hasMeta": true
 		},
 		{
-			"image": "",
+			"image": "assets/images/content/news-03.jpg",
 			"itemCategory": "Dobro je znati",
 			"itemDate": "10.09.2019",
 			"itemTitle": "\"Patrija\" je udruženje građana čiji je glavni cilj unapređenje",
-			"itemText": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...",
+			"text": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...",
 			"hasMeta": true
 		},
 		{
-			"image": "",
+			"image": "assets/images/content/news-02.jpg",
+			"itemCategory": "Blog",
+			"itemDate": "10.09.2019",
+			"itemTitle": "\"Patrija\" je udruženje građana čiji je glavni cilj unapređenje",
+			"text": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...",
+			"hasMeta": true
+		},
+		{
+			"image": "assets/images/content/news-01.jpg",
 			"itemCategory": "Aktuelnosti",
 			"itemDate": "10.09.2019",
 			"itemTitle": "\"Patrija\" je udruženje građana čiji je glavni cilj unapređenje",
-			"itemText": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...",
+			"text": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...",
 			"hasMeta": true
 		},
 		{
-			"image": "",
+			"image": "assets/images/content/news-03.jpg",
 			"itemCategory": "Dobro je znati",
 			"itemDate": "10.09.2019",
 			"itemTitle": "\"Patrija\" je udruženje građana čiji je glavni cilj unapređenje",
-			"itemText": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...",
+			"text": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...",
 			"hasMeta": true
 		},
 		{
-			"image": "",
-			"itemCategory": "Blog",
+			"image": "assets/images/content/news-02.jpg",
+			"itemCategory": "Dobro je znati",
 			"itemDate": "10.09.2019",
 			"itemTitle": "\"Patrija\" je udruženje građana čiji je glavni cilj unapređenje",
-			"itemText": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...",
+			"text": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave...",
 			"hasMeta": true
 		}
 	]
