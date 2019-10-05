@@ -35,5 +35,9 @@ namespace Patrija.Core.Controllers.Surface.Partials
         [ChildActionOnly]
         public ActionResult AboutUs(AboutUsViewModel viewModel)
             => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult SimpleForm(SimpleFormViewModel viewModel)
+            => PartialView(viewModel);
     }
 }

@@ -15,6 +15,8 @@ namespace Patrija.Core.ViewModels.Shared
             NameFieldError = simpleForm.SimpleFormNameError;
             EmailFieldText = simpleForm.SimpleFormEmailFieldText;
             EmailFieldError = simpleForm.SimpleFormEmailError;
+            CommentFieldText = simpleForm.SimpleFormCommentFieldText;
+            CommentFieldError = simpleForm.SimpleFormCommentError;
             SubmitButtonText = simpleForm.SimpleFormSubmitButtonText;
             SuccessMessage = simpleForm.SimpleFormSuccessMessage.ToHtmlString();
         }
@@ -25,6 +27,8 @@ namespace Patrija.Core.ViewModels.Shared
         public string NameFieldError { get; }
         public string EmailFieldText { get; }
         public string EmailFieldError { get; }
+        public string CommentFieldText { get; }
+        public string CommentFieldError { get; }
         public string SubmitButtonText { get; }
         public string SuccessMessage { get; }
     }
