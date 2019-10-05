@@ -1,3 +1,16 @@
 <div class="page-intro">
-	<h2>{{title}} - page-intro</h2>
+	<div class="wrap wrap--medium">
+		<div class="page-intro__container">
+			<div class="page-intro__text">
+				<h1 class="h2 page-intro__title">{{title}}</h1>
+				<p class="page-intro__text">{{text}}</p>
+			</div>
+			{{!-- additionalImgClass can be: page-intro__image--secondary, page-intro__image--tertiary, page-intro__image--quaternary --}}
+			<div class="page-intro__image{{#if additionalImgClass}} {{additionalImgClass}}{{/if}}">
+				<img src="{{image}}" alt="">
+				<span class="circle circle--blue circle--large"></span>
+				<span class="circle circle--mint"></span>
+			</div>
+		</div>
+	</div>
 </div>
