@@ -7,11 +7,11 @@
 				<p class="featured-project__text">{{text}}</p>
 				<a class="btn" href="javascript:;">{{link}}</a>
 			</div>
-			<div class="featured-project__image featured-project__image--normal">
+			<div class="featured-project__mask featured-project__mask--normal">
 				{{#if additionalImage}}
 				<img class="featured-project__additional-image" src="{{additionalImage}}" alt="">
 				{{/if}}
-				<img src="{{image}}" alt="">
+				<div class="featured-project__image" style="background-image: url('{{image}}');"></div>
 			</div>
 		</div>
 		<div class="featured-project__item featured-project__item--reverse">
@@ -21,11 +21,11 @@
 				<p class="featured-project__text">{{textReverse}}</p>
 				<a class="btn" href="javascript:;">{{linkReverse}}</a>
 			</div>
-			<div class="featured-project__image featured-project__image--reverse">
+			<div class="featured-project__mask featured-project__mask--reverse">
 				{{#if additionalImageReverse}}
 				<img class="featured-project__additional-image" src="{{additionalImageReverse}}" alt="">
 				{{/if}}
-				<img src="{{imageReverse}}" alt="">
+				<div class="featured-project__image" style="background-image: url('{{imageReverse}}');"></div>
 			</div>
 		</div>
 		<span class="circle circle--mint"></span>

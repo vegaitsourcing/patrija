@@ -1,4 +1,5 @@
-﻿@inherits UmbracoViewPage<PageViewModel>
+﻿@using System.Web.Optimization
+@inherits UmbracoViewPage<PageViewModel>
 
 @{
 	Layout = null;
@@ -12,6 +13,8 @@
 	@{
 		Html.RenderAction<LayoutController>(c => nameof(c.MetaTags), new { viewModel = Model.MetaTags });
 	}
+    
+    @Styles.Render("~/css/style.min.css")
 </head>
 <body>
 @{
