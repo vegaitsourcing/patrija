@@ -20,43 +20,43 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Most Recent Blogs</summary>
-	[PublishedModel("mostRecentBlogs")]
-	public partial class MostRecentBlogs : PublishedElementModel
+	/// <summary>About Us Projects Container</summary>
+	[PublishedModel("aboutUsProjectsContainer")]
+	public partial class AboutUsProjectsContainer : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "mostRecentBlogs";
+		public new const string ModelTypeAlias = "aboutUsProjectsContainer";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<MostRecentBlogs, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AboutUsProjectsContainer, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public MostRecentBlogs(IPublishedElement content)
+		public AboutUsProjectsContainer(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Count: Provided number of blogs will be listed on the view
+		/// Main Title: Title of about us projects container
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("mostRecentBlogsCount")]
-		public int MostRecentBlogsCount => this.Value<int>("mostRecentBlogsCount");
+		[ImplementPropertyType("aboutUsProjectsContainerMainTitle")]
+		public string AboutUsProjectsContainerMainTitle => this.Value<string>("aboutUsProjectsContainerMainTitle");
 
 		///<summary>
-		/// Title
+		/// Untagged Features Container: Container of untagged project features
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("mostRecentBlogsTitle")]
-		public string MostRecentBlogsTitle => this.Value<string>("mostRecentBlogsTitle");
+		[ImplementPropertyType("aboutUsUntaggedFeaturesContainer")]
+		public IEnumerable<UntaggedFeature> AboutUsUntaggedFeaturesContainer => this.Value<IEnumerable<UntaggedFeature>>("aboutUsUntaggedFeaturesContainer");
 	}
 }

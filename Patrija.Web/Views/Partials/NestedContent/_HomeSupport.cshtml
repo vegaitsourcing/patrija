@@ -1,0 +1,24 @@
+﻿@using Patrija.Core.ViewModels.Partials.Home;
+@inherits UmbracoViewPage<HomeSupportViewModel>
+    
+<div class="support">
+    <div class="wrap support__wrap">
+        
+        <div class="support__container">
+               @foreach (SupportContentBoxViewModel supportContentBoxViewModel in Model.supportContentBoxViewModels)
+                {
+                    <div class="support__item">
+                        <div class="support__item-content">
+                            <h3 class="h3 support__item-title">@supportContentBoxViewModel.Title</h3>
+                            <p class="support__item-text">@supportContentBoxViewModel.Text</p>
+                            <a class="btn @supportContentBoxViewModel.ButtonClass" href="@supportContentBoxViewModel.Link.Target">@supportContentBoxViewModel.Link.Content</a>
+                        </div>
+                    </div>
+                }
+                <div class="circle circle--grey circle--small support__circle"></div>
+            </div>
+        <div class="support__image-mask">
+            <div class="support__image has-cover" style="background-image: url('@Model.Image.Url');"></div>
+        </div>
+    </div>
+</div>
