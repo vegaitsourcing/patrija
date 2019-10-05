@@ -50,7 +50,7 @@ namespace Patrija.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("featuredContent")]
-		public IEnumerable<LinksList> FeaturedContent => this.Value<IEnumerable<LinksList>>("featuredContent");
+		public IEnumerable<TaggedFeature> FeaturedContent => this.Value<IEnumerable<TaggedFeature>>("featuredContent");
 
 		///<summary>
 		/// Featured Links
