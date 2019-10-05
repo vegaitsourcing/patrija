@@ -3,5 +3,4 @@ import newsSlider from './_project/news-slider';
 
 $(() => {
 	helpers.init();
-	newsSlider.init();
 });
