@@ -304,6 +304,7 @@
     <Compile Include="ViewModels\Pages\PageViewModel.cs" />
     <Compile Include="ViewModels\Pages\SearchResultsViewModel.cs" />
     <Compile Include="ViewModels\Pages\XMLSitemapViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Home\HomeSupportViewModel.cs" />
     <Compile Include="ViewModels\Partials\Home\HomeIntroViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\FooterViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\HeaderViewModel.cs" />
