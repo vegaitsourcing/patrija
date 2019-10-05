@@ -436,6 +436,7 @@
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Partials\NestedContent\_TaggedFeature.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
