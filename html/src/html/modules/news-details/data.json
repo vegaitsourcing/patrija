@@ -7,6 +7,41 @@
 					"image": "assets/images/content/blog-image.jpg",
 					"date": "10.09.2019.",
 					"titleText": "Lorem ipsum dolor amet vinyl subway....."
+				},
+				{
+					"image": "assets/images/content/blog-image.jpg",
+					"date": "10.09.2019.",
+					"titleText": "Lorem ipsum dolor amet vinyl subway....."
+				},
+				{
+					"image": "assets/images/content/blog-image.jpg",
+					"date": "10.09.2019.",
+					"titleText": "Lorem ipsum dolor amet vinyl subway....."
+				},
+				{
+					"image": "assets/images/content/blog-image.jpg",
+					"date": "10.09.2019.",
+					"titleText": "Lorem ipsum dolor amet vinyl subway....."
+				}
+			]
+		},
+		{
+			"title": "Aktuelnosti",
+			"items": [
+				{
+					"image": "assets/images/content/blog-image.jpg",
+					"date": "10.09.2019.",
+					"titleText": "Lorem ipsum dolor amet vinyl subway....."
+				},
+				{
+					"image": "assets/images/content/blog-image.jpg",
+					"date": "10.09.2019.",
+					"titleText": "Lorem ipsum dolor amet vinyl subway....."
+				},
+				{
+					"image": "assets/images/content/blog-image.jpg",
+					"date": "10.09.2019.",
+					"titleText": "Lorem ipsum dolor amet vinyl subway....."
 				}
 			]
 		}
