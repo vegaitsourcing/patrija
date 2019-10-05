@@ -1,4 +1,4 @@
-<div class="news-slider{{#if hasBg}} news-slider__background has-cover{{/if}}"{{#if hasBg}} style="background-image: url('{{bgImage}}');"{{/if}}>
+<div class="news-slider{{#if hasBg}} news-slider__background{{/if}}"{{#if hasBg}} style="background-image: url('{{bgImage}}');"{{/if}}>
 	<div class="wrap wrap--normal">
 		<h2 class="h2 news-slider__title">{{title}}</h2>
 		{{#if sliderItems}}
@@ -28,7 +28,7 @@
 		{{/if}}
 	</div>
 	{{#if hasBg}}
-		<span class="circle circle--grey"></span>
+		<span class="circle circle--grey circle--small"></span>
 		<span class="circle circle--blue circle--large"></span>
 	{{/if}}
 </div>

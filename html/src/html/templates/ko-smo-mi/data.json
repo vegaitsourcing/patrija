@@ -17,6 +17,7 @@
 			"title": "Završeni projekti",
 			"isSlider": true,
 			"hasBg": true,
+			"bgImage": "assets/images/shapes/news-slider-bg.svg",
 			"sliderItems": [
 				{
 					"image": "assets/images/content/finished-projects-01.jpg",

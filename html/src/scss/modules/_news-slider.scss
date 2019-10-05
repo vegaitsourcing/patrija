@@ -5,6 +5,24 @@
 	margin-bottom: 198px;
 }
 
+.news-slider__background {
+	position: relative;
+	padding-top: 168px;
+	padding-bottom: 334px;
+	margin-bottom: 126px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% auto;
+	.circle--grey {
+		top: 14.4%;
+		right: 8.5%;
+	}
+	.circle--blue {
+		bottom: 20px;
+		left: 47.9%;
+	}
+}
+
 .news-slider__title {
 	text-align: center;
 	margin-bottom: 45px;
