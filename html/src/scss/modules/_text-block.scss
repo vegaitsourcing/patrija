@@ -2,5 +2,28 @@
 //------------------------------------------------------------------------------
 
 .text-block {
-	color: $black;
+	margin-bottom: 300px;
+}
+
+.text-block__title {
+	text-align: center;
+	margin-bottom: 26px;
+}
+
+.text-block__text {
+	display: inline-block;
+	max-width: 44.56%;
+	padding: 0 22px;
+}
+
+.text-block__content {
+	text-align: center;
+}
+
+.text-block__text--left {
+	text-align: right;
+}
+
+.text-block__text--right {
+	text-align: left;
 }
