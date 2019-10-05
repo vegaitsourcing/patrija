@@ -22,6 +22,9 @@
 		"linksList": {
 			">>": "modules/links-list/data.json"
 		},
+		"aboutUs": {
+			">>": "modules/about-us/data.json"
+		},
 		"joinUs": {
 			">>": "modules/join-module/data.json"
 		}
