@@ -1,0 +1,5 @@
+﻿@inherits UmbracoViewPage<AboutUsPageViewModel>
+
+@{
+    Html.RenderAction<NestedContentController>(c => nameof(c.PageIntro), new { viewModel = Model.PageIntro });
+}
