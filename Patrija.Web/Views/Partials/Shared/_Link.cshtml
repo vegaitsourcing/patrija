@@ -1,0 +1,7 @@
+@model Patrija.Core.ViewModels.Shared.LinkViewModel
+
+@{
+    var className = ViewData["ClassName"] as string ?? "btn";
+}
+
+<a class="@className" target="@Model.Target" href="@Model.Url">@Model.Content</a>

@@ -12,7 +12,7 @@
 				<h6 class="h6 featured-project__tag">@Model.Tag</h6>
 				<h2 class="h2 featured-project__title">@Model.Title</h2>
 				<p class="featured-project__text">@Model.Text</p>
-				<a class="btn" href="@Model.ReadMore.Url">@Model.ReadMore.Content</a>
+				@Html.Partial("Link", Model.ReadMore, new ViewDataDictionary(new {className = "btn"}))
 			</div>
 			<div class="featured-project__mask featured-project__mask--@positionClassSuffix">
 				@if (Model.AdditionalImage != null)
