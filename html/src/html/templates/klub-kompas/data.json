@@ -1,0 +1,19 @@
+{
+	"template": "klub-kompas",
+	"data": {
+		"header": {
+			">>": "shared/header/data.json"
+		},
+		"footer": {
+			">>": "shared/footer/data.json"
+		},
+		"pageIntro": {
+			"title": "Jedna kratka rečenica o projektu Klub kompas.",
+			"image": "../assets/images/content/klub-kompas-intro.jpg"
+		},
+		"textBlock": {
+			">>": "modules/text-block/data.json",
+			"title": "Više o Klubu"
+		}
+	}
+}
