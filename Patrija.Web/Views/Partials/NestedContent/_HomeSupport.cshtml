@@ -5,7 +5,7 @@
     <div class="wrap support__wrap">
         
         <div class="support__container">
-                @*@foreach (SupportContentBoxViewModel supportContentBoxViewModel in Model.supportContentBoxViewModels)
+               *@foreach (SupportContentBoxViewModel supportContentBoxViewModel in Model.supportContentBoxViewModels)
                 {
                     <div class="support__item">
                         <div class="support__item-content">
@@ -14,7 +14,7 @@
                             <a class="btn @supportContentBoxViewModel.ButtonClass" href="@supportContentBoxViewModel.Link.Target">@supportContentBoxViewModel.Link.Content</a>
                         </div>
                     </div>
-                }*@
+                }
                 <div class="circle circle--grey circle--small support__circle"></div>
             </div>
         }

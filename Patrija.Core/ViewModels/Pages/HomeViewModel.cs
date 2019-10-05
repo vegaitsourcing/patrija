@@ -24,8 +24,8 @@ namespace Patrija.Core.ViewModels.Pages
 		}
 
         public HomeIntroViewModel HomeIntro { get; }
-        
         public TaggedFeatureViewModel[] Features { get; }
+        public HomeSupportViewModel HomeSupport { get; }
         public LinksListViewModel[] LinksList { get; }
         public JoinUsViewModel JoinUs { get; }
 	}
