@@ -27,17 +27,25 @@ namespace Patrija.Core.ViewModels.Pages
             Features = context.Home.FeaturedContent?.Select(f => new TaggedFeatureViewModel(f)).ToArray()
                        ?? new TaggedFeatureViewModel[0];
 		    var linksList = context.Home.HomeFeaturedLinks;
+
+            var homeSupport = context.Home.HomeSupport.FirstOrDefault();
+            HomeSupport = homeSupport != null ? new HomeSupportViewModel(homeSupport) : null;
+
 		    LinksList = linksList?.Select(ll => new LinksListViewModel(ll)).ToArray();
 
 		    var joinUs = context.Home.HomeJoinUs.FirstOrDefault();
             JoinUs = joinUs != null ? new JoinUsViewModel(joinUs) : null;
+
+            var aboutUs = context.Home.HomeAboutUs.FirstOrDefault();
+            AboutUs = aboutUs != null ? new AboutUsViewModel(aboutUs) : null;
 		}
 
         public HomeIntroViewModel HomeIntro { get; }
-        
         public TaggedFeatureViewModel[] Features { get; }
         public ArticleContainerViewModel ArticleContainer { get; }
+        public HomeSupportViewModel HomeSupport { get; }
         public LinksListViewModel[] LinksList { get; }
         public JoinUsViewModel JoinUs { get; }
+        public AboutUsViewModel AboutUs { get; }
 	}
 }

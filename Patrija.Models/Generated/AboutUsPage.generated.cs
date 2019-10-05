@@ -46,6 +46,13 @@ namespace Patrija.Models.Generated
 		// properties
 
 		///<summary>
+		/// Featured Projects: Featured projects on about page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("aboutUsFeaturedProjects")]
+		public IEnumerable<AboutUsProjectsContainer> AboutUsFeaturedProjects => this.Value<IEnumerable<AboutUsProjectsContainer>>("aboutUsFeaturedProjects");
+
+		///<summary>
 		/// Page Intro: Page intro
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]

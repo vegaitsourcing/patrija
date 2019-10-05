@@ -444,6 +444,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DisplayHelpers\SupportContentBoxButtonType.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -481,7 +482,9 @@
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\NestedContent\_HomeIntro.cshtml" />
     <Content Include="Views\Partials\NestedContent\_LinksList.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_HomeSupport.cshtml" />
     <Content Include="Views\Partials\Shared\_JoinUs.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_AboutUs.cshtml" />
     <Content Include="Views\Partials\Shared\_ArticleContainer.cshtml" />
     <Content Include="Views\Partials\Shared\_Article.cshtml" />
     <Content Include="Views\DisplayTemplates\FormattedDate.cshtml" />

@@ -8,12 +8,12 @@ namespace Patrija.Core.Mappers
         public static ContentPosition MapContentPosition(string contentPosition)
         {
             switch (contentPosition)
-            {    
+            {
                 case "Left":
                     return ContentPosition.Left;
                 case "Right":
                     return ContentPosition.Right;
-                default: 
+                default:
                     throw new ArgumentOutOfRangeException(nameof(contentPosition));
             }
         }
