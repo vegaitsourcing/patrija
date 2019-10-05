@@ -278,6 +278,7 @@
     <Compile Include="Controllers\RenderMvc\SupportUsController.cs" />
     <Compile Include="Controllers\RenderMvc\XMLSitemapController.cs" />
     <Compile Include="Controllers\Surface\BaseSurfaceController.cs" />
+    <Compile Include="Controllers\Surface\Partials\ContainerController.cs" />
     <Compile Include="Controllers\Surface\Partials\LayoutController.cs" />
     <Compile Include="Controllers\Surface\Partials\NestedContentController.cs" />
     <Compile Include="Controllers\Surface\Partials\SearchListingController.cs" />
@@ -309,6 +310,8 @@
     <Compile Include="ViewModels\Pages\SearchResultsViewModel.cs" />
     <Compile Include="ViewModels\Pages\SupportUsViewModel.cs" />
     <Compile Include="ViewModels\Pages\XMLSitemapViewModel.cs" />
+    <Compile Include="ViewModels\Partials\AboutUsPage\FeaturedProjectViewModel.cs" />
+    <Compile Include="ViewModels\Partials\AboutUsPage\FeaturedProjectsContainerViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\PageIntroViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\ShapeVariant.cs" />
     <Compile Include="ViewModels\Partials\Features\ImageWithTextViewModel.cs" />

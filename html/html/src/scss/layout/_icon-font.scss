@@ -1,8 +1,8 @@
 @font-face {
 	font-family: 'svgicons';
-	src: url('../assets/fonts/svgicons.woff2?v=1570306027120') format('woff2'),
-		url('../assets/fonts/svgicons.woff?v=1570306027120') format('woff'),
-		url('../assets/fonts/svgicons.ttf?v=1570306027120') format('truetype');
+	src: url('../assets/fonts/svgicons.woff2?v=1570306331957') format('woff2'),
+		url('../assets/fonts/svgicons.woff?v=1570306331957') format('woff'),
+		url('../assets/fonts/svgicons.ttf?v=1570306331957') format('truetype');
 }
 
 @mixin font-styles {
@@ -57,4 +57,4 @@
 .font-ico-share {
 	@include font(ico-share);
 }
-
+
