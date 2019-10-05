@@ -4,6 +4,7 @@
 .links-list {
 	text-align: center;
 	padding: 42px 0 96px;
+	position: relative;
 }
 
 .links-list__list {
@@ -30,4 +31,20 @@
 
 .links-list__title {
 	margin-bottom: 35px;
+}
+
+.links-list__circle {
+	width: 61px;
+	height: 61px;
+	position: absolute;
+}
+
+.links-list__circle--right {
+	top: 42.2%;
+    right: 9.2vw;
+}
+
+.links-list__circle--left {
+	top: 47.5%;
+    left: 8.5vw;
 }
