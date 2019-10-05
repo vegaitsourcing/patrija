@@ -440,7 +440,12 @@
     <Content Include="Views\Partials\NestedContent\_ImageWithText.cshtml" />
     <Content Include="Views\Partials\NestedContent\_PageIntro.cshtml" />
     <Content Include="Views\Partials\NestedContent\_TaggedFeature.cshtml" />
+    <Content Include="Views\Partials\Shared\_Block.cshtml" />
     <Content Include="Views\Partials\Shared\_Link.cshtml" />
+    <Content Include="Views\ProjectPage.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ImageWithTextViewModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\JoinUsViewModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\TaggedFeatureViewModel.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -513,7 +518,6 @@
       <Name>Patrija.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
