@@ -1,1 +1,42 @@
-﻿
+﻿@inherits UmbracoViewPage<Patrija.Core.ViewModels.Partials.Layout.HeaderViewModel>
+
+@{
+    var menu = new string[]
+    {
+        "Home", "About us"
+    };
+}
+
+<header class="header">
+    <div class="wrap">
+        <div class="header__container">
+            <a href="/" class="header__logo">
+                <img src="@Model.LogoUrl" alt="">
+            </a>
+            <div class="navigation">
+                @if (menu?.Length > 0)
+                {
+                    <nav class="nav">
+                        <ul class="nav__list" role="menubar">
+                            
+                            @for (int i = 0; i < menu.Length; i++)
+                            {
+                                <li class="nav__item" role="menuitem">
+                                    <a class="nav__link @(i == 0 ? "nav__link--active" : string.Empty)" href="javascript:;">@menu[i]</a>
+                                </li>
+                            }
+                        </ul>
+                    </nav>
+                }
+                @*@Html.ActionLink("Join Us",)
+                <a class="btn btn--mint header__join-btn" href="javascript:;">{{joinUs}}</a>
+                <button class="nav-toggle" type="button">
+                    <span class="nav-toggle__line nav-toggle__line--top"></span>
+                    <span class="nav-toggle__line nav-toggle__line--middle"></span>
+                    <span class="nav-toggle__line nav-toggle__line--bottom"></span>
+                    <span class="sr-only">{{navToggle}}</span>
+                </button>*@
+            </div>
+        </div>
+    </div>
+</header>
