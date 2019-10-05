@@ -4,7 +4,7 @@
 			"title": "Ostali tekstovi",
 			"items": [
 				{
-					"image": "../assets/images/content/blog-image.jpg",
+					"image": "assets/images/content/blog-image.jpg",
 					"date": "10.09.2019.",
 					"titleText": "Lorem ipsum dolor amet vinyl subway....."
 				}
