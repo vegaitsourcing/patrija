@@ -274,6 +274,7 @@
     <Compile Include="Controllers\RenderMvc\BasePageController.cs" />
     <Compile Include="Controllers\RenderMvc\Error404Controller.cs" />
     <Compile Include="Controllers\RenderMvc\HomeController.cs" />
+    <Compile Include="Controllers\RenderMvc\ProjectPageController.cs" />
     <Compile Include="Controllers\RenderMvc\SearchResultsController.cs" />
     <Compile Include="Controllers\RenderMvc\SupportUsController.cs" />
     <Compile Include="Controllers\RenderMvc\XMLSitemapController.cs" />
@@ -294,6 +295,7 @@
     <Compile Include="Handlers\DomainRootRouteHandler.cs" />
     <Compile Include="Handlers\Error404RouteHandler.cs" />
     <Compile Include="HttpHandlers\RobotsHandler.cs" />
+    <Compile Include="Mappers\BlockMapper.cs" />
     <Compile Include="Mappers\EnumMapper.cs" />
     <Compile Include="Models\IPagination.cs" />
     <Compile Include="Models\IReadOnlyPagedCollection.cs" />
@@ -307,6 +309,7 @@
     <Compile Include="ViewModels\Pages\Error404ViewModel.cs" />
     <Compile Include="ViewModels\Pages\HomeViewModel.cs" />
     <Compile Include="ViewModels\Pages\PageViewModel.cs" />
+    <Compile Include="ViewModels\Pages\ProjectPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\SearchResultsViewModel.cs" />
     <Compile Include="ViewModels\Pages\SupportUsViewModel.cs" />
     <Compile Include="ViewModels\Pages\XMLSitemapViewModel.cs" />

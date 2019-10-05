@@ -43,5 +43,9 @@ namespace Patrija.Core.Controllers.Surface.Partials
         [ChildActionOnly]
         public ActionResult ArticleContainer(ArticleContainerViewModel viewModel)
             => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult Block(object viewModel)
+            => PartialView(viewModel);
     }
 }

@@ -403,6 +403,9 @@
     <Compile Include="Generated\Feature.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\FeaturesNews.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Generated\File.cs" />
     <Compile Include="Generated\File.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
@@ -453,6 +456,12 @@
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Generated\MostRecentBlogs.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\News.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\NewsList.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\Page.generated.cs">
