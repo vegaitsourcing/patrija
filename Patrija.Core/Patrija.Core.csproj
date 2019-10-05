@@ -270,6 +270,7 @@
     <Compile Include="Contexts\PageContext.cs" />
     <Compile Include="Contexts\SeoContext.cs" />
     <Compile Include="Contexts\SiteContext.cs" />
+    <Compile Include="Controllers\RenderMvc\AboutUsPageController.cs" />
     <Compile Include="Controllers\RenderMvc\BasePageController.cs" />
     <Compile Include="Controllers\RenderMvc\Error404Controller.cs" />
     <Compile Include="Controllers\RenderMvc\HomeController.cs" />
@@ -300,6 +301,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UmbracoDictionary.cs" />
     <Compile Include="ViewEngines\PartialViewEngine.cs" />
+    <Compile Include="ViewModels\Pages\AboutUsPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\Error404ViewModel.cs" />
     <Compile Include="ViewModels\Pages\HomeViewModel.cs" />
     <Compile Include="ViewModels\Pages\PageViewModel.cs" />
@@ -307,6 +309,8 @@
     <Compile Include="ViewModels\Pages\XMLSitemapViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\FeaturedProjectViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\FeaturedProjectsContainerViewModel.cs" />
+    <Compile Include="ViewModels\Partials\AboutUsPage\PageIntroViewModel.cs" />
+    <Compile Include="ViewModels\Partials\AboutUsPage\ShapeVariant.cs" />
     <Compile Include="ViewModels\Partials\Features\SupportContentBoxButtonType.cs" />
     <Compile Include="ViewModels\Partials\Home\HomeSupportViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\ContentPosition.cs" />
