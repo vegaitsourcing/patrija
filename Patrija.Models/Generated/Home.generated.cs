@@ -81,6 +81,13 @@ namespace Patrija.Models.Generated
 		public IEnumerable<JoinUs> HomeJoinUs => this.Value<IEnumerable<JoinUs>>("homeJoinUs");
 
 		///<summary>
+		/// Support
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("homeSupport")]
+		public IEnumerable<SupportContentBox> HomeSupport => this.Value<IEnumerable<SupportContentBox>>("homeSupport");
+
+		///<summary>
 		/// Copyright Text: The site copyright text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]

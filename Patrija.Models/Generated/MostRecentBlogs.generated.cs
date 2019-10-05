@@ -20,36 +20,43 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>ArticleContainer</summary>
-	[PublishedModel("articleContainer")]
-	public partial class ArticleContainer : PublishedContentModel
+	/// <summary>Most Recent Blogs</summary>
+	[PublishedModel("mostRecentBlogs")]
+	public partial class MostRecentBlogs : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "articleContainer";
+		public new const string ModelTypeAlias = "mostRecentBlogs";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ArticleContainer, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<MostRecentBlogs, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public ArticleContainer(IPublishedContent content)
+		public MostRecentBlogs(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
+		/// Count: Provided number of blogs will be listed on the view
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("mostRecentBlogsCount")]
+		public int MostRecentBlogsCount => this.Value<int>("mostRecentBlogsCount");
+
+		///<summary>
 		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("articleContainerTitle")]
-		public string ArticleContainerTitle => this.Value<string>("articleContainerTitle");
+		[ImplementPropertyType("mostRecentBlogsTitle")]
+		public string MostRecentBlogsTitle => this.Value<string>("mostRecentBlogsTitle");
 	}
 }
