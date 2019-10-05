@@ -8,5 +8,9 @@ namespace Patrija.Core.Controllers.Surface.Partials
         [ChildActionOnly]
         public ActionResult HomeIntro(HomeIntroViewModel viewModel)
             => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult LinksList(LinksListViewModel viewModel)
+            => PartialView(viewModel);
     }
 }

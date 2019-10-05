@@ -10,9 +10,13 @@ namespace Patrija.Core.ViewModels.Pages
 		public HomeViewModel(IPageContext<Home> context) : base(context)
 		{
 		    var homeIntro = context.Home.HomeIntro.FirstOrDefault();
-            HomeIntro = homeIntro != null ? new HomeIntroViewModel(homeIntro) : null; 
-        }
+            HomeIntro = homeIntro != null ? new HomeIntroViewModel(homeIntro) : null;
+
+		    var linksList = context.Home.HomeFeaturedLinks;
+		    LinksList = linksList?.Select(ll => new LinksListViewModel(ll)).ToArray();
+		}
 
         public HomeIntroViewModel HomeIntro { get; }
+        public LinksListViewModel[] LinksList { get; }
 	}
 }
