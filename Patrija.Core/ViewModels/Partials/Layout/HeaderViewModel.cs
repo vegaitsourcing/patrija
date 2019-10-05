@@ -14,8 +14,8 @@ namespace Patrija.Core.ViewModels.Partials.Layout
 			if (header == null) throw new ArgumentNullException(nameof(header));
 
 			//Logo = header.Logo.ToViewModel();
-			LogoUrl = header.AncestorOrSelf<Home>().Url;
-		    JoinUsLink = new LinkViewModel(header.AncestorOrSelf<Home>().JoinUsLink);
+			LogoUrl = header.AncestorOrSelf<Patrija.Models.Generated.Home>().Url;
+		    JoinUsLink = new LinkViewModel(header.AncestorOrSelf<Patrija.Models.Generated.Home>().JoinUsLink);
 
 		}
 
