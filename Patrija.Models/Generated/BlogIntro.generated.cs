@@ -20,43 +20,57 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Home Support Container</summary>
-	[PublishedModel("homeSupport")]
-	public partial class HomeSupport : PublishedContentModel
+	/// <summary>Blog Intro</summary>
+	[PublishedModel("blogIntro")]
+	public partial class BlogIntro : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "homeSupport";
+		public new const string ModelTypeAlias = "blogIntro";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<HomeSupport, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogIntro, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public HomeSupport(IPublishedContent content)
+		public BlogIntro(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Content Boxes
+		/// Date of Publishing
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeSupportContentBoxes")]
-		public IEnumerable<SupportContentBox> HomeSupportContentBoxes => this.Value<IEnumerable<SupportContentBox>>("homeSupportContentBoxes");
+		[ImplementPropertyType("blogIntroDateOfPublishing")]
+		public DateTime BlogIntroDateOfPublishing => this.Value<DateTime>("blogIntroDateOfPublishing");
 
 		///<summary>
 		/// Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeSupportImage")]
-		public IPublishedContent HomeSupportImage => this.Value<IPublishedContent>("homeSupportImage");
+		[ImplementPropertyType("blogIntroImage")]
+		public IPublishedContent BlogIntroImage => this.Value<IPublishedContent>("blogIntroImage");
+
+		///<summary>
+		/// Preview
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("blogIntroPreview")]
+		public string BlogIntroPreview => this.Value<string>("blogIntroPreview");
+
+		///<summary>
+		/// Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("blogIntroTitle")]
+		public string BlogIntroTitle => this.Value<string>("blogIntroTitle");
 	}
 }

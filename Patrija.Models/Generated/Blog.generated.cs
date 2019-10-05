@@ -44,5 +44,12 @@ namespace Patrija.Models.Generated
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Intro
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("blogIntro")]
+		public BlogIntro BlogIntro => this.Value<BlogIntro>("blogIntro");
 	}
 }
