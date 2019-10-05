@@ -4,7 +4,7 @@
 	"labelName": "Ime i prezime",
 	"labelEmail": "Email adresa",
 	"labelMessage": "Komentar",
-	"errorMessage": "This field is required.",
+	"errorMessage": "Ovo polje je obavezno.",
 	"submitBtn": "Postani prodavac",
 	"successMesage": "Uskoro će vam stići mejl sa daljim instrukcijama"
 }
