@@ -1028,9 +1028,85 @@ textarea::placeholder {
 
 .home-intro__image {
   position: absolute;
-  width: 1444px;
+  width: 75.21vw;
   top: -680px;
   left: 55.6%;
+}
+
+.project {
+  color: #000;
+}
+
+.news-slider {
+  color: #000;
+}
+
+.support {
+  color: #000;
+}
+
+.links-list {
+  color: #000;
+}
+
+.about-us {
+  color: #000;
+}
+
+.page-intro {
+  color: #000;
+}
+
+.image-text {
+  color: #000;
+}
+
+.testimonials {
+  color: #000;
+}
+
+.text-block {
+  color: #000;
+}
+
+.simple-form {
+  color: #000;
+}
+
+.gallery {
+  color: #000;
+}
+
+.alumni {
+  color: #000;
+}
+
+.donations {
+  color: #000;
+}
+
+.faq {
+  color: #000;
+}
+
+.featured-news {
+  color: #000;
+}
+
+.news-list {
+  color: #000;
+}
+
+.articles {
+  color: #000;
+}
+
+.news-details {
+  color: #000;
+}
+
+.comments {
+  color: #000;
 }
 
 /*# sourceMappingURL=style.min.css.map */
