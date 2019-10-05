@@ -10,6 +10,7 @@ namespace Patrija.Core.ViewEngines
 			{
 				"~/Views/Partials/{1}/{0}.cshtml",
 				"~/Views/Partials/{1}/_{0}.cshtml",
+				"~/Views/Partials/Shared/_{0}.cshtml",
 			};
 		}
 	}
