@@ -21,6 +21,9 @@ namespace Patrija.Core.ViewModels.Pages
 
 		    var joinUs = context.Home.HomeJoinUs.FirstOrDefault();
             JoinUs = joinUs != null ? new JoinUsViewModel(joinUs) : null;
+
+            var aboutUs = context.Home.HomeAboutUs.FirstOrDefault();
+            AboutUs = aboutUs != null ? new AboutUsViewModel(aboutUs) : null;
 		}
 
         public HomeIntroViewModel HomeIntro { get; }
@@ -28,5 +31,6 @@ namespace Patrija.Core.ViewModels.Pages
         public TaggedFeatureViewModel[] Features { get; }
         public LinksListViewModel[] LinksList { get; }
         public JoinUsViewModel JoinUs { get; }
+        public AboutUsViewModel AboutUs { get; }
 	}
 }

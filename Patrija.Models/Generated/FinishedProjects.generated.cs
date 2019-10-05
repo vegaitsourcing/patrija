@@ -20,26 +20,26 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Most Recent Blogs</summary>
-	[PublishedModel("mostRecentBlogs")]
-	public partial class MostRecentBlogs : PublishedElementModel
+	/// <summary>Finished Projects</summary>
+	[PublishedModel("finishedProjects")]
+	public partial class FinishedProjects : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "mostRecentBlogs";
+		public new const string ModelTypeAlias = "finishedProjects";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<MostRecentBlogs, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<FinishedProjects, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public MostRecentBlogs(IPublishedElement content)
+		public FinishedProjects(IPublishedElement content)
 			: base(content)
 		{ }
 
@@ -49,14 +49,14 @@ namespace Patrija.Models.Generated
 		/// Count: Provided number of blogs will be listed on the view
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("mostRecentBlogsCount")]
-		public int MostRecentBlogsCount => this.Value<int>("mostRecentBlogsCount");
+		[ImplementPropertyType("finishedProjectsCount")]
+		public int FinishedProjectsCount => this.Value<int>("finishedProjectsCount");
 
 		///<summary>
 		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("mostRecentBlogsTitle")]
-		public string MostRecentBlogsTitle => this.Value<string>("mostRecentBlogsTitle");
+		[ImplementPropertyType("finishedProjectsTitle")]
+		public string FinishedProjectsTitle => this.Value<string>("finishedProjectsTitle");
 	}
 }

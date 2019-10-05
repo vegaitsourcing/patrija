@@ -13,6 +13,9 @@
 		},
 		"textBlock": {
 			">>": "modules/text-block/data.json"
+		},
+		"simpleForm": {
+			">>": "modules/simple-form/data.json"
 		}
 	}
 }

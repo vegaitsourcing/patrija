@@ -3,12 +3,73 @@
 input,
 textarea {
 	background: $white;
-	border-radius: 0;
 	box-shadow: none;
-	color: $black;
-	height: 25px;
-	padding: 0 10px;
+	border: 2px solid #ededed;
+	color: $grey;
+	height: 48px;
+	padding: 22px;
+	font-weight: 400;
+	font-family: $font-default;
+	display: inline-block;
+	width: calc(100% - 180px);
 	&::placeholder {
 		color: $black;
 	}
+}
+
+input {
+	border-radius: 50px;
+}
+
+textarea {
+	border-radius: 20px;
+	resize: none;
+}
+
+.form__row {
+	margin-bottom: 12px;
+	font-size: 0;
+}
+
+.form__input {
+	font-size: 14px;
+	line-height: 48px;
+}
+
+.form__input--textarea {
+	line-height: 20px;
+	height: 110px;
+}
+
+.form__label {
+	font-size: 14px;
+	line-height: 48px;
+	color: $grey;
+	width: 170px;
+	margin-right: 10px;
+	display: inline-block;
+	font-weight: 400;
+}
+
+.form__error-message {
+	width: 100%;
+	padding-left: 205px;
+	font-size: 10px;
+	line-height: 16px;
+	color: #d8000c;
+	font-weight: 400;
+	display: none;
+}
+
+.btn--submit {
+	margin-left: 180px;
+	width: calc(100% - 180px);
+}
+
+.form__message-success {
+	font-size: 14px;
+	line-height: 18px;
+	padding-left: 180px;
+	font-weight: 400;
+	display: none;
 }
