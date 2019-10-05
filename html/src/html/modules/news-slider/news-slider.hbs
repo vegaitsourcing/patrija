@@ -1,12 +1,13 @@
-<div class="news-slider">
+<div class="news-slider{{#if hasBg}} news-slider__background has-cover{{/if}}"{{#if hasBg}} style="background-image: url('{{bgImage}}');"{{/if}}>
 	<div class="wrap wrap--normal">
 		<h2 class="h2 news-slider__title">{{title}}</h2>
 		{{#if sliderItems}}
 		<div class="news-slider__container">
-			<div class="news-slider__slider js-news-slider">
+			<div class="news-slider__slider{{#if isSlider}} js-news-slider{{/if}}">
 				{{#each sliderItems}}
 				<div class="news-slider__item">
 					<div class="news-slider__image has-cover" style="background-image: url('{{this.image}}');"></div>
+					{{#if this.hasMeta}}
 					<div class="news-slider__meta">
 						{{#if this.itemCategory}}
 							<span class="news-slider__category">{{this.itemCategory}}</span>
@@ -15,6 +16,7 @@
 							<span class="news-slider__date">{{this.itemDate}}</span>
 						{{/if}}
 					</div>
+					{{/if}}
 					<h4 class="h6 news-slider__item-title">
 						<a href="javascript:;">{{this.itemTitle}}</a>
 					</h4>
@@ -25,6 +27,10 @@
 		</div>
 		{{/if}}
 	</div>
+	{{#if hasBg}}
+		<span class="circle circle--grey"></span>
+		<span class="circle circle--blue circle--large"></span>
+	{{/if}}
 </div>
 
 {{!-- Najnovije na sajtu, zavrseni projekti   --}}
