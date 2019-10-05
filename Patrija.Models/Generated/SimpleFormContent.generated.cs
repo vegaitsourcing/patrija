@@ -46,6 +46,20 @@ namespace Patrija.Models.Generated
 		// properties
 
 		///<summary>
+		/// Comment Field Error Message
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("simpleFormCommentError")]
+		public string SimpleFormCommentError => this.Value<string>("simpleFormCommentError");
+
+		///<summary>
+		/// Comment Field Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("simpleFormCommentFieldText")]
+		public string SimpleFormCommentFieldText => this.Value<string>("simpleFormCommentFieldText");
+
+		///<summary>
 		/// Email Field Error Message
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
