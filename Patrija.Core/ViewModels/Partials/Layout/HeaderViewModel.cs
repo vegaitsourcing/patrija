@@ -15,9 +15,13 @@ namespace Patrija.Core.ViewModels.Partials.Layout
 
 			//Logo = header.Logo.ToViewModel();
 			LogoUrl = header.AncestorOrSelf<Home>().Url;
+		    JoinUsLink = new LinkViewModel(header.AncestorOrSelf<Home>().JoinUsLink);
+
 		}
 
 		public ImageViewModel Logo { get; }
 		public string LogoUrl { get; }
-	}
+	    public LinkViewModel JoinUsLink { get; }
+
+    }
 }

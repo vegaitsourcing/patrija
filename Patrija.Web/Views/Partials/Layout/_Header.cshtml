@@ -3,7 +3,7 @@
 @{
     var menu = new string[]
     {
-        "Home", "About us"
+"Home", "About us"
     };
 }
 
@@ -18,7 +18,7 @@
                 {
                     <nav class="nav">
                         <ul class="nav__list" role="menubar">
-                            
+
                             @for (int i = 0; i < menu.Length; i++)
                             {
                                 <li class="nav__item" role="menuitem">
@@ -28,14 +28,13 @@
                         </ul>
                     </nav>
                 }
-                @*@Html.ActionLink("Join Us",)
-                <a class="btn btn--mint header__join-btn" href="javascript:;">{{joinUs}}</a>
+                <a class="btn btn--mint header__join-btn" href="@Model.JoinUsLink.Url">@Model.JoinUsLink.Content</a>
                 <button class="nav-toggle" type="button">
                     <span class="nav-toggle__line nav-toggle__line--top"></span>
                     <span class="nav-toggle__line nav-toggle__line--middle"></span>
                     <span class="nav-toggle__line nav-toggle__line--bottom"></span>
-                    <span class="sr-only">{{navToggle}}</span>
-                </button>*@
+                    @*<span class="sr-only">{{navToggle}}</span>*@
+                </button>
             </div>
         </div>
     </div>
