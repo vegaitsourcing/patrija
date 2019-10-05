@@ -1,0 +1,17 @@
+{
+	"template": "ko-smo-mi",
+	"data": {
+		"header": {
+			">>": "shared/header/data.json"
+		},
+		"footer": {
+			">>": "shared/footer/data.json"
+		},
+		"pageIntro": {
+			">>": "modules/page-intro/data.json"
+		},
+		"project": {
+			">>": "modules/project/data.json"
+		}
+	}
+}

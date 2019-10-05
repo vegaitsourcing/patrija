@@ -5,10 +5,12 @@
 	padding-top: 208px;
 	margin-bottom: 480px;
 }
+
 .home-intro__wrap {
 	max-width: 1470px;
 	position: relative;
 }
+
 .home-intro__text {
 	max-width: 800px;
 	font-size: 40px;
@@ -16,18 +18,21 @@
 	line-height: 55px;
 	margin-bottom: 34px;
 }
+
 .home-intro__image {
 	position: absolute;
 	width: 75.21vw;
 	top: -680px;
 	left: 55.6%;
 }
+
 .home-intro__circle {
 	position: absolute;
 	border-radius: 50%;
 	z-index: 100;
 	display: block;
 }
+
 .home-intro__circle--blue {
 	background-color: $blue;
 	width: 61px;
@@ -36,6 +41,7 @@
 	left: 17.1%;
 	box-shadow: 0 10px 16px rgba(39, 142, 208, 0.16), 0 4px 6px rgba(0, 0, 0, 0.06);
 }
+
 .home-intro__circle--mint {
 	background-color: $mint;
 	width: 49px;
@@ -44,6 +50,7 @@
 	left: 13.7%;
 	box-shadow: 0 10px 16px rgba(40, 210, 198, 0.16), 0 4px 6px rgba(0, 0, 0, 0.06);
 }
+
 .home-intro__circle--grey {
 	background-color: $grey-light;
 	width: 42px;

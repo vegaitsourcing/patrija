@@ -2,5 +2,76 @@
 //------------------------------------------------------------------------------
 
 .page-intro {
-	color: $black;
+	height: 720px;
+	margin-bottom: 230px;
+	.wrap {
+		height: 100%;
+	}
+	.circle--blue {
+		width: 61px;
+		height: 61px;
+		top: -5.4%;
+		left: 33.5%;
+	}
+	.circle--mint {
+		width: 49px;
+		height: 49px;
+		top: 76%;
+		left: -15.1%;
+	}
+}
+
+.page-intro__container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 176px 0 106px 30px;
+}
+
+.page-intro__content {
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.page-intro__text {
+	max-width: 49%;
+	margin-bottom: 34px;
+	padding-top: 26px;
+}
+
+.page-intro__image {
+	position: absolute;
+	width: 39.271vw;
+	top: 10%;
+	left: 59%;
+	padding-bottom: 44.505%;
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('../assets/images/mask/page-intro-mask.svg');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+.page-intro__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.page-intro__circle {
+	position: absolute;
+	border-radius: 50%;
+	z-index: 100;
+	display: block;
 }
