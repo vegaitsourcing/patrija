@@ -75,8 +75,10 @@
 	top: 86px;
 	width: 68px;
 	height: 68px;
+	font-size: 0;
 	background-color: $mint;
 	border-radius: 50%;
+	z-index: 50;
 	.loaded & {
 		transition: $duration $ease;
 	}

@@ -20,44 +20,44 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Support Us</summary>
-	[PublishedModel("supportUs")]
-	public partial class SupportUs : PublishedContentModel, IPage
+	/// <summary>Page Variant 1</summary>
+	[PublishedModel("pageVariant1")]
+	public partial class PageVariant1 : PublishedContentModel, IPage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "supportUs";
+		public new const string ModelTypeAlias = "pageVariant1";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<SupportUs, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<PageVariant1, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public SupportUs(IPublishedContent content)
+		public PageVariant1(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Donation Form: Donation form on support us page
+		/// Image With Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("supportUsDonationForm")]
-		public IEnumerable<SimpleFormContent> SupportUsDonationForm => this.Value<IEnumerable<SimpleFormContent>>("supportUsDonationForm");
+		[ImplementPropertyType("pageVariant1ImageWithText")]
+		public IEnumerable<ImageWithText> PageVariant1ImageWithText => this.Value<IEnumerable<ImageWithText>>("pageVariant1ImageWithText");
 
 		///<summary>
-		/// Testimonials: Container with included users testimonials
+		/// Text Block
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("supportUsTestimonials")]
-		public IEnumerable<TestimonialsContainer> SupportUsTestimonials => this.Value<IEnumerable<TestimonialsContainer>>("supportUsTestimonials");
+		[ImplementPropertyType("textBlock")]
+		public IEnumerable<TextBlock> TextBlock => this.Value<IEnumerable<TextBlock>>("textBlock");
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).
