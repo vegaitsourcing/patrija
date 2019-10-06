@@ -2,5 +2,64 @@
 //------------------------------------------------------------------------------
 
 .news-list {
-	color: $black;
+	margin-bottom: -12px;
+}
+
+.news-list__title {
+	text-align: center;
+	margin-bottom: 45px;
+}
+
+.news-list__container {
+	padding: 0 79px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.news-list__item {
+	padding: 0 15px;
+	margin-bottom: 64px;
+	flex: 1 1 33.333%;
+	max-width: 33.333%;
+}
+
+.news-list__image {
+	width: 100%;
+	position: relative;
+	padding-bottom: 66%;
+	border-radius: 15px;
+	margin-bottom: 18px;
+}
+
+.news-list__meta {
+	position: relative;
+	width: 100%;
+	margin-bottom: 4px;
+}
+
+.news-list__item-title {
+	margin-bottom: 5px;
+}
+
+.news-list__date {
+	font-size: 14px;
+	font-weight: 300;
+	color: $grey;
+	line-height: 18px;
+	display: block;
+}
+
+.news-list__text {
+	font-size: 14px;
+	line-height: 25px;
+}
+
+.news-list__buttons {
+	margin-top: -12px;
+	text-align: center;
+}
+
+.news-list__load-more {
+	min-width: 262px;
 }
