@@ -12,7 +12,6 @@ namespace Patrija.Core.ViewModels.Pages
             Title = context.Page.PageTitle;
 
             var pageIntro = context.Page.BlogArticlePageIntro;
-            //PageIntro = pageIntro != null ? new PageIntroViewModel(pageIntro) : null;
 
             ArticleSubtitle = context.Page.BlogArticleSubtitle;
 
