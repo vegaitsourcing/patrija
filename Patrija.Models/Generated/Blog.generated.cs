@@ -46,6 +46,13 @@ namespace Patrija.Models.Generated
 		// properties
 
 		///<summary>
+		/// Comments Block
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("blogCommentsBlock")]
+		public CommentsBlock BlogCommentsBlock => this.Value<CommentsBlock>("blogCommentsBlock");
+
+		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]

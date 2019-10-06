@@ -2,3 +2,8 @@
 @{
     Html.RenderAction<NestedContentController>(c => nameof(c.PageIntro), new { viewModel = Model.ArticleContent });
 }
+
+@if (Model.AreCommentsEnabled)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.CommentsBlock), new { blogId = Model.PageId });
+}

@@ -442,6 +442,7 @@
     <Content Include="Views\Partials\NestedContent\_PageIntro.cshtml" />
     <Content Include="Views\Partials\NestedContent\_TaggedFeature.cshtml" />
     <Content Include="Views\Partials\Shared\_Block.cshtml" />
+    <Content Include="Views\Partials\Shared\_CommentsBlock.cshtml" />
     <Content Include="Views\Partials\Shared\_Link.cshtml" />
     <Content Include="Views\ProjectPage.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\ImageWithTextViewModel.cshtml" />
@@ -537,9 +538,6 @@
       <Project>{5F883FB4-7390-4A64-9F89-12597A61EDA2}</Project>
       <Name>Patrija.Models</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Shared\EditorTemplates\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
