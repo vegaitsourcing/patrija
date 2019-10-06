@@ -511,6 +511,7 @@
     <Content Include="Views\Shared\DisplayTemplates\UntaggedFeatureViewModel.cshtml" />
     <Content Include="Views\ContactUs.cshtml" />
     <Content Include="Views\Partials\NestedContent\_ContactMap.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_Donations.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
