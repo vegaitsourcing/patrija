@@ -2,7 +2,11 @@
 	init: function() {
 
 		$('#donations-form').on('click', '.btn--submit', (event) => {
-			this.submitSingleForm(event, '/umbraco/surface/SupportUsSurface/SubmitDonationForm');
+			this.submitSingleForm(event, '/umbraco/surface/SimpleFormSurface/SubmitDonationForm');
+		});
+
+		$('#seller-form').on('click', '.btn--submit', (event) => {
+			this.submitSingleForm(event, '/umbraco/surface/SimpleFormSurface/SubmitSellerForm');
 		});
 	},
 

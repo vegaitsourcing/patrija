@@ -61,7 +61,6 @@ namespace Patrija.Core.Controllers.Surface.Partials
             => PartialView(viewModel);
 
         [ChildActionOnly]
-
         public ActionResult SimpleForm(SimpleFormViewModel viewModel, string formId)
         {
             ViewData["formId"] = formId;
