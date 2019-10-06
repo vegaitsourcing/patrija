@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using Patrija.Core.ViewModels.Partials.AboutUsPage;
+using Patrija.Core.ViewModels.Partials.ContactUs;
 using Patrija.Core.ViewModels.Partials.Features;
 using Patrija.Core.ViewModels.Partials.Home;
 using Patrija.Core.ViewModels.Partials.SupportUs;
@@ -59,7 +60,12 @@ namespace Patrija.Core.Controllers.Surface.Partials
             ViewData["formId"] = formId;
             return PartialView(viewModel);
         }
+        [ChildActionOnly]
         public ActionResult Donations(DonationsViewModel viewModel)
+            => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult ContactMap(ContactMapViewModel viewModel)
             => PartialView(viewModel);
     }
 }

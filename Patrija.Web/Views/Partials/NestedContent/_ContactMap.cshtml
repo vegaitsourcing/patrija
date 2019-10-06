@@ -1,0 +1,20 @@
+﻿@using Patrija.Core.ViewModels.Partials.ContactUs
+@inherits UmbracoViewPage<ContactMapViewModel>
+    
+<div class="contact-map">
+    <div class="wrap wrap--medium">
+        <div class="contact-map__container">
+            <div class="contact-map__content">
+                <div class="contact-map__content-align">
+                    <h1 class="h2 contact-map__title">@Model.Title</h1>
+                    <p class="contact-map__text">@Model.Text</p>
+                </div>
+            </div>
+            <div class="contact-map__image">
+                <iframe width="664" height="600" src="@Model.LocationUrl"></iframe>
+                <span class="circle circle--blue circle--large"></span>
+                <span class="circle circle--mint"></span>
+            </div>
+        </div>
+    </div>
+</div>

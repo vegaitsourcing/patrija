@@ -14,8 +14,14 @@
 			"text": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor",
 			"image": "assets/images/content/news-intro-img.jpg"
 		},
+		"featuredNews": {
+			">>": "modules/featured-news/data.json"
+		},
 		"newsList": {
 			">>": "modules/news-list/data.json"
+		},
+		"articles": {
+			">>": "modules/articles/data.json"
 		},
 		"joinUs": {
 			">>": "modules/join-module/data.json"

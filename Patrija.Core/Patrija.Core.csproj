@@ -272,6 +272,7 @@
     <Compile Include="Contexts\SiteContext.cs" />
     <Compile Include="Controllers\RenderMvc\AboutUsPageController.cs" />
     <Compile Include="Controllers\RenderMvc\BasePageController.cs" />
+    <Compile Include="Controllers\RenderMvc\ContactUsController.cs" />
     <Compile Include="Controllers\RenderMvc\Error404Controller.cs" />
     <Compile Include="Controllers\RenderMvc\HomeController.cs" />
     <Compile Include="Controllers\RenderMvc\ProjectPageController.cs" />
@@ -344,6 +345,7 @@
     <Compile Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\ArticleContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\ArticleViewModel.cs" />
+    <Compile Include="ViewModels\Shared\FormWithoutDescriptionViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageViewModel.cs" />
     <Compile Include="ViewModels\Shared\JoinUsViewModel.cs" />
