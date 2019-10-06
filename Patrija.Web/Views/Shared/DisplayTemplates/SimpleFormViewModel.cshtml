@@ -1,0 +1,8 @@
+﻿@using Patrija.Core.ViewModels.Shared;
+@model SimpleFormViewModel
+    
+@{
+    ViewData["formId"] = "seller-form";
+}
+
+@Html.Partial("~/Views/Partials/Shared/_SimpleForm.cshtml", Model);

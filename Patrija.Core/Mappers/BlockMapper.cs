@@ -34,7 +34,9 @@ namespace Patrija.Core.Mappers
                 {
                     typeof(ImageContainer), el => new ImageContainerViewModel((ImageContainer)el)
                 },
-
+                {
+                    typeof(SimpleFormContent), el => new SimpleFormViewModel((SimpleFormContent)el)
+                }
             };
 
         public static object MapBlock(IPublishedElement blockContent)
