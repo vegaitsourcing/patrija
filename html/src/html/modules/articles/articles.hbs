@@ -1,5 +1,27 @@
-<div class="articles">
-	<h2>{{title}} - articles</h2>
+<div class="articles has-cover" style="background-image: url('{{bgImage}}');">
+	<div class="wrap wrap--normal">
+		<h2 class="h2 articles__title">{{title}}</h2>
+		<div class="articles__container">
+			{{#each blogItems}}
+				<div class="articles__item">
+					<div class="articles__item-img">
+						<a href="javascript:;">
+							<span class="articles__item-image has-cover" style="background-image: url('{{this.image}}');"></span>
+						</a>
+					</div>
+					<div class="articles__item-content">
+						<span class="articles__item-date">{{this.date}}</span>
+						<h4 class="h6 articles__item-title">
+							<a href="javascript:;">{{this.titleText}}</a>
+						</h4>
+					</div>
+				</div>
+			{{/each}}
+		</div>
+		<div class="articles__buttons">
+			<button class="btn btn--mint articles__load-more" type="button">{{loadMore}}</button>
+		</div>
+	</div>
 </div>
 
 {{!-- Dobro je znati --}}
