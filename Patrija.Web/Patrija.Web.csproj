@@ -499,7 +499,6 @@
     <Content Include="Views\Partials\Shared\_ArticleContainer.cshtml" />
     <Content Include="Views\Partials\Shared\_Article.cshtml" />
     <Content Include="Views\DisplayTemplates\FormattedDate.cshtml" />
-    <Content Include="Views\PageVariant1.cshtml" />
     <Content Include="Views\Partials\NestedContent\_TextBlock.cshtml" />
     <Content Include="Views\Partials\Shared\_TestimonialItem.cshtml" />
     <Content Include="Views\Partials\Shared\_TestimonialContainer.cshtml" />

@@ -23,7 +23,7 @@ namespace Patrija.Core.Mappers
                 },
                 {
                     typeof(TextBlock), el => new TextBlockViewModel((TextBlock)el)
-                }
+                },
             };
 
         public static object MapBlock(IPublishedElement blockContent)
