@@ -1,6 +1,7 @@
 ﻿using Patrija.Common;
 using Patrija.Models.Generated;
 using System;
+using System.Linq;
 
 namespace Patrija.Core.ViewModels.Shared
 {
@@ -12,10 +13,12 @@ namespace Patrija.Core.ViewModels.Shared
             Guard.AgainstDefaultValue(blogArticle);
             Guard.AgainstDefaultValue(blogArticle.BlogArticlePageIntro);
 
-            Title = blogArticle.BlogArticlePageIntro.BlogIntroTitle;
-            PreviewText = blogArticle.BlogArticlePageIntro.BlogIntroPreview;
-            PublishDate = blogArticle.BlogArticlePageIntro.BlogIntroDateOfPublishing.Date;
-            Image = new ImageViewModel(blogArticle.BlogArticlePageIntro.BlogIntroImage as Image);
+            var blogIntro = blogArticle.BlogArticlePageIntro.FirstOrDefault();
+
+            Title = blogIntro.BlogIntroTitle;
+            PreviewText = blogIntro.BlogIntroPreview;
+            PublishDate = blogIntro.BlogIntroDateOfPublishing.Date;
+            Image = new ImageViewModel(blogIntro.BlogIntroImage as Image);
             BlogPageUrl = blogArticle.Url;
             Category = category;
         }
