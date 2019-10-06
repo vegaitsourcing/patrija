@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using Patrija.Core.Dtos;
 using Patrija.Core.ViewModels.Pages;
 using Patrija.Models.Generated;
 

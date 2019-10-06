@@ -9,7 +9,7 @@
 		},
 		"pageIntro": {
 			"title": "Jedna kratka rečenica o projektu Klub kompas.",
-			"image": "../assets/images/content/klub-kompas-intro.jpg"
+			"image": "assets/images/content/klub-kompas-intro.jpg"
 		},
 		"textBlock": {
 			">>": "modules/text-block/data.json",

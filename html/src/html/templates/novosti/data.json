@@ -1,0 +1,20 @@
+{
+	"template": "novosti",
+	"data": {
+		"header": {
+			">>": "shared/header/data.json"
+		},
+		"footer": {
+			">>": "shared/footer/data.json"
+		},
+		"pageIntro": {
+			"additionalImgClass": "page-intro__image--secondary",
+			"title": "Novosti",
+			"text": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor",
+			"image": "assets/images/content/news-intro-img.jpg"
+		},
+		"joinUs": {
+			">>": "modules/join-module/data.json"
+		}
+	}
+}

@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Patrija.Core.Contexts;
 using Patrija.Core.ViewModels.Partials.SupportUs;
+using Patrija.Core.Dtos;
 using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
 

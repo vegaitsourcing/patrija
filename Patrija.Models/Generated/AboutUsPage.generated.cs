@@ -46,11 +46,32 @@ namespace Patrija.Models.Generated
 		// properties
 
 		///<summary>
+		/// Featured links: Featured links
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("aboutUsFeaturedLinks")]
+		public IEnumerable<LinksList> AboutUsFeaturedLinks => this.Value<IEnumerable<LinksList>>("aboutUsFeaturedLinks");
+
+		///<summary>
 		/// Featured Projects: Featured projects on about page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("aboutUsFeaturedProjects")]
 		public IEnumerable<AboutUsProjectsContainer> AboutUsFeaturedProjects => this.Value<IEnumerable<AboutUsProjectsContainer>>("aboutUsFeaturedProjects");
+
+		///<summary>
+		/// Finished projects: Finished projects
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("aboutUsFinishedProjects")]
+		public IEnumerable<FinishedProjects> AboutUsFinishedProjects => this.Value<IEnumerable<FinishedProjects>>("aboutUsFinishedProjects");
+
+		///<summary>
+		/// Join Us: Join us
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("aboutUsJoinUs")]
+		public IEnumerable<JoinUs> AboutUsJoinUs => this.Value<IEnumerable<JoinUs>>("aboutUsJoinUs");
 
 		///<summary>
 		/// Image With Text: Image with text under finished projects

@@ -83,3 +83,6 @@ Patrija.Web/fonts/
 #html
 html/*.html
 
+/Patrija.Web/assets/fonts/svgicons.ttf
+/Patrija.Web/assets/fonts/svgicons.woff
+/Patrija.Web/assets/fonts/svgicons.woff2
