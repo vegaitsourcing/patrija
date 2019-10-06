@@ -515,6 +515,7 @@
     <Content Include="Views\JoinUsPage.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlogContent.cshtml" />
     <Content Include="Views\BlogPage.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_ContactForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
