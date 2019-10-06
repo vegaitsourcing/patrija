@@ -513,6 +513,9 @@
     <Content Include="Views\Partials\NestedContent\_Donations.cshtml" />
     <Content Include="Views\Partials\Shared\_FormWithoutDescription.cshtml" />
     <Content Include="Views\JoinUsPage.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_BlogContent.cshtml" />
+    <Content Include="Views\BlogPage.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_ContactForm.cshtml" />
     <Content Include="Views\BlogArticle.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlogArticleContent.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlogIntro.cshtml" />

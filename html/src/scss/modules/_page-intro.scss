@@ -15,6 +15,18 @@
 		top: 76%;
 		left: -15.1%;
 	}
+	@include breakpoint(laptop) {
+		height: 600px;
+		margin-bottom: 20px;
+	}
+	@include mq-between(md, lg) {
+		height: 550px;
+		margin-bottom: 20px;
+	}
+	@include mq-down(sm) {
+		height: auto;
+		margin-bottom: 20px;
+	}
 }
 
 .page-intro__container {
@@ -22,6 +34,15 @@
 	width: 100%;
 	height: 100%;
 	padding: 176px 0 106px 30px;
+	@include breakpoint(laptop) {
+		padding-bottom: 86px;
+	}
+	@include mq-between(md, lg) {
+		padding: 140px 0 80px 10px;
+	}
+	@include mq-down(sm) {
+		padding: 300px 0 20px;
+	}
 }
 
 .page-intro__content {
@@ -33,12 +54,18 @@
 
 .page-intro__title {
 	max-width: 52%;
+	@include mq-down(sm) {
+		max-width: 100%;
+	}
 }
 
 .page-intro__text {
 	max-width: 49%;
 	margin-bottom: 34px;
 	padding-top: 26px;
+	@include mq-down(sm) {
+		max-width: 100%;
+	}
 }
 
 .page-intro__image-outer {
@@ -46,6 +73,12 @@
 	width: 39.271vw;
 	top: 10%;
 	left: 59%;
+	@include mq-down(sm) {
+		top: 80px;
+		left: 55%;
+		transform: translateX(-50%);
+		width: 70vw;
+	}
 }
 
 .page-intro__image {
@@ -90,10 +123,10 @@
 
 .page-intro__img {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	top: 0.5%;
+	left: 0.5%;
+	width: 99%;
+	height: 99%;
 }
 
 .page-intro__circle {

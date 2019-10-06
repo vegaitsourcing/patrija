@@ -30,6 +30,22 @@
 		bottom: 20px;
 		left: 47.9%;
 	}
+	@include breakpoint(laptop) {
+		padding-top: 100px;
+		padding-bottom: 140px;
+		margin-bottom: 86px;
+		background-size: cover;
+	}
+	@include mq-only(md) {
+		padding-top: 80px;
+		padding-bottom: 100px;
+		margin-bottom: 60px;
+	}
+	@include mq-down(sm) {
+		padding-top: 40px;
+		padding-bottom: 100px;
+		margin-bottom: 20px;
+	}
 }
 
 .news-slider__title {
@@ -39,6 +55,12 @@
 
 .news-slider__container {
 	padding: 0 94px;
+	@include mq-only(md) {
+		padding: 0 54px;
+	}
+	@include mq-down(sm) {
+		padding: 0 24px;
+	}
 }
 
 .news-slider__slider {
