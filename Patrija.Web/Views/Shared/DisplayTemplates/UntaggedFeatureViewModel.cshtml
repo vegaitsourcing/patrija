@@ -13,12 +13,14 @@
                 <p class="featured-project__text">@Model.Text</p>
                 @Html.Partial("Link", Model.ReadMore, new ViewDataDictionary() { { "className", "btn" } })
             </div>
-            <div class="featured-project__mask featured-project__mask--@positionClassSuffix">
-                @if (Model.AdditionalImage != null)
-                {
-                    <img class="featured-project__additional-image" src="@Model.AdditionalImage.Url" alt="@Model.AdditionalImage.AlternateText">
-                }
-                <div class="featured-project__image has-cover" style="background-image: url('@(Model.Image.Url)');"></div>
+			<div class="featured-project__image-outer @(Model.ContentPosition == ContentPosition.Right ? "featured-project__image-outer--reverse" : string.Empty)">
+                <div class="featured-project__mask featured-project__mask--@positionClassSuffix">
+                    @if (Model.AdditionalImage != null)
+                    {
+                        <img class="featured-project__additional-image" src="@Model.AdditionalImage.Url" alt="@Model.AdditionalImage.AlternateText">
+                    }
+                    <div class="featured-project__image has-cover" style="background-image: url('@(Model.Image.Url)');"></div>
+                </div>
             </div>
         </div>
         <span class="circle circle--mint circle--big featured-project__circle"></span>

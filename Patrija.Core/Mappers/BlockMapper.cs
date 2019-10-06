@@ -10,6 +10,8 @@ namespace Patrija.Core.Mappers
 {
     public static class BlockMapper
     {
+        private const string _testimonialsContainerBackgroundImageUrl = "/assets/images/shapes/testimonials-bg.svg";
+
         private static readonly Dictionary<Type, Func<IPublishedElement, object>> _contentMappers =
             new Dictionary<Type, Func<IPublishedElement, object>>()
             {
@@ -26,7 +28,7 @@ namespace Patrija.Core.Mappers
                     typeof(TextBlock), el => new TextBlockViewModel((TextBlock)el)
                 },
                 {
-                    typeof(TestimonialsContainer), el => new TestimonialsContainerViewModel((TestimonialsContainer)el, "")
+                    typeof(TestimonialsContainer), el => new TestimonialsContainerViewModel((TestimonialsContainer)el, _testimonialsContainerBackgroundImageUrl)
                 },
                 {
                     typeof(UntaggedFeature), el => new UntaggedFeatureViewModel((UntaggedFeature)el)
