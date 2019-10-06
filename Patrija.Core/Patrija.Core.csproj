@@ -337,6 +337,7 @@
     <Compile Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\ArticleContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\ArticleViewModel.cs" />
+    <Compile Include="ViewModels\Shared\ImageContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageViewModel.cs" />
     <Compile Include="ViewModels\Shared\JoinUsViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />

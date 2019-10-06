@@ -55,5 +55,9 @@ namespace Patrija.Core.Controllers.Surface.Partials
         [ChildActionOnly]
         public ActionResult TestimonialContainer(TestimonialsContainerViewModel viewModel)
             => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult ImageContainer(ImageContainerViewModel viewModel)
+           => PartialView(viewModel);
     }
 }

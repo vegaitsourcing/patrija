@@ -31,6 +31,9 @@ namespace Patrija.Core.Mappers
                 {
                     typeof(UntaggedFeature), el => new FeatruedProjectViewModel((UntaggedFeature)el)
                 },
+                {
+                    typeof(ImageContainer), el => new ImageContainerViewModel((ImageContainer)el)
+                },
 
             };
 

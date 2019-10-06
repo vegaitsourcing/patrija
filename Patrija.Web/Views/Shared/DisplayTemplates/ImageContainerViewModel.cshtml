@@ -1,0 +1,23 @@
+﻿@using Patrija.Core.ViewModels.Shared;
+@inherits UmbracoViewPage<ImageContainerViewModel>
+
+    <div class="gallery">
+        <div class="wrap wrap--normal">
+            <h3 class="h3 gallery__title">@Model.Title</h3>
+            @if (Model.Images.Any())
+            {
+                <div class="gallery__container">
+                    <div class="gallery__slider js-gallery-slider">
+                        @foreach (var image in Model.Images)
+                        {
+                            <div class="gallery__item">
+                                <a href="javascript:;">
+                                    <div class="gallery__image has-cover" style="background-image: url('@image.Url');"></div>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
