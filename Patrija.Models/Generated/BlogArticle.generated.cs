@@ -60,6 +60,13 @@ namespace Patrija.Models.Generated
 		public IEnumerable<BlogIntro> BlogArticlePageIntro => this.Value<IEnumerable<BlogIntro>>("blogArticlePageIntro");
 
 		///<summary>
+		/// Show Comments Toggle
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("blogArticleShowCommentsToggle")]
+		public bool BlogArticleShowCommentsToggle => this.Value<bool>("blogArticleShowCommentsToggle");
+
+		///<summary>
 		/// Article Subtitle
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]

@@ -442,6 +442,7 @@
     <Content Include="Views\Partials\NestedContent\_PageIntro.cshtml" />
     <Content Include="Views\Partials\NestedContent\_TaggedFeature.cshtml" />
     <Content Include="Views\Partials\Shared\_Block.cshtml" />
+    <Content Include="Views\Partials\Shared\_CommentsBlock.cshtml" />
     <Content Include="Views\Partials\Shared\_Link.cshtml" />
     <Content Include="Views\ProjectPage.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\ImageWithTextViewModel.cshtml" />
