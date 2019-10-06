@@ -322,6 +322,7 @@
     <Compile Include="ViewModels\Partials\AboutUsPage\ShapeVariant.cs" />
     <Compile Include="ViewModels\Partials\ContactUs\ContactMapViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\DonationsViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Features\UntaggedFeatureViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\ImageWithTextViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\SupportContentBoxButtonType.cs" />
     <Compile Include="ViewModels\Partials\Features\TextBlockViewModel.cs" />
@@ -344,6 +345,7 @@
     <Compile Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\ArticleContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\ArticleViewModel.cs" />
+    <Compile Include="ViewModels\Shared\FormWithoutDescriptionViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageViewModel.cs" />
     <Compile Include="ViewModels\Shared\JoinUsViewModel.cs" />

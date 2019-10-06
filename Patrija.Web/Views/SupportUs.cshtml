@@ -1,8 +1,8 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<SupportUsViewModel>
 
-@if (Model.TestimonialsContainer != null)
+@if (Model.PageIntro != null)
 {
-    Html.RenderAction<NestedContentController>(c => nameof(c.TestimonialsContainer), new { viewModel = Model.TestimonialsContainer });
+    Html.RenderAction<NestedContentController>(c => nameof(c.PageIntro), new { viewModel = Model.PageIntro });
 }
 
 @if (Model.DonationForm != null)
@@ -10,7 +10,22 @@
     Html.RenderAction<NestedContentController>(c => nameof(c.SimpleForm), new { viewModel = Model.DonationForm, formId = "donations-form" });
 }
 
+@if (Model.TestimonialsContainer != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.TestimonialsContainer), new { viewModel = Model.TestimonialsContainer });
+}
+
+@if (Model.Donations != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.Donations), new { viewModel = Model.Donations });
+}
+
 @if (Model.FaqContainer != null)
 {
     Html.RenderAction<NestedContentController>(c => nameof(c.FaqContainer), new { viewModel = Model.FaqContainer });
+}
+
+@if (Model.JoinUs != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.JoinUs), new { viewModel = Model.JoinUs });
 }
