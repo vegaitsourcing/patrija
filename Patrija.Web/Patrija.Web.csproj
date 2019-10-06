@@ -503,6 +503,9 @@
     <Content Include="Views\Partials\Shared\_TestimonialItem.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\TestimonialsContainerViewModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\ImageContainerViewModel.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_FaqContainer.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_FaqItem.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_TestimonialsContainer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -522,6 +525,7 @@
       <Name>Patrija.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

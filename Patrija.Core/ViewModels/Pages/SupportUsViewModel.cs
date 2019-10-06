@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Patrija.Core.Contexts;
+using Patrija.Core.ViewModels.Partials.SupportUs;
 using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
 
@@ -17,9 +18,16 @@ namespace Patrija.Core.ViewModels.Pages
             {
                 TestimonialsContainer = new TestimonialsContainerViewModel(testimonials);
             }
+
+            var frequentlyAskedQuestions = context.Page.SupportUsFaq.FirstOrDefault();
+            if(frequentlyAskedQuestions != null)
+            {
+                FaqContainer = new FaqContainerViewModel(frequentlyAskedQuestions);
+            }
         }
 
         public SimpleFormViewModel DonationForm { get; } 
         public TestimonialsContainerViewModel TestimonialsContainer { get; }
+        public FaqContainerViewModel FaqContainer { get; }
     }
 }

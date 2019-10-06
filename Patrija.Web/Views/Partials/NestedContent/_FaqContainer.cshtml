@@ -1,0 +1,12 @@
+﻿@model Patrija.Core.ViewModels.Partials.SupportUs.FaqContainerViewModel
+<div class="faq">
+    <div class="wrap faq__wrap">
+        <h3 class="h3 faq__title">@Model.Title</h3>
+        <div class="faq__accordion">
+            @foreach (var item in Model.Items)
+            {
+                @Html.Partial("FaqItem", item);
+            }
+        </div>
+    </div>
+</div>

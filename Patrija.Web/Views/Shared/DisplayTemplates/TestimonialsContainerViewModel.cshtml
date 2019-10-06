@@ -1,20 +1,3 @@
 ﻿@model Patrija.Core.ViewModels.Shared.TestimonialsContainerViewModel
-@*style="background-image: url('{{bgImage}}');"*@
-<div class="testimonials">
-    <div class="wrap testimonials__wrap">
-        <h3 class="h3 testimonials__title">@Model.Title</h3>
-        @if (Model.Testimonials.Any())
-        {
-            <div class="testimonials__container">
-                <div class="testimonials__slider js-testimonials-slider">
-                    @foreach (var testimonial in Model.Testimonials)
-                    {
-                       @Html.Partial("TestimonialItem", testimonial);
-                    }
-                </div>
-            </div>
-        }
-    </div>
-    <span class="circle circle--blue circle--large"></span>
-    <span class="circle circle--grey circle--small"></span>
-</div>
+
+@Html.Partial("~/Views/Partials/NestedContent/_TestimonialsContainer.cshtml", Model)

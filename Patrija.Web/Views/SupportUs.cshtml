@@ -1,11 +1,16 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<SupportUsViewModel>
 
-@if (Model.DonationForm != null)
+@if (Model.TestimonialsContainer != null)
 {
-    Html.RenderAction<NestedContentController>(c => nameof(c.TestimonialContainer), new { viewModel = Model.TestimonialsContainer });
+    Html.RenderAction<NestedContentController>(c => nameof(c.TestimonialsContainer), new { viewModel = Model.TestimonialsContainer });
 }
 
 @if (Model.DonationForm != null)
 {
     Html.RenderAction<NestedContentController>(c => nameof(c.SimpleForm), new { viewModel = Model.DonationForm });
+}
+
+@if (Model.FaqContainer != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.FaqContainer), new { viewModel = Model.FaqContainer });
 }
