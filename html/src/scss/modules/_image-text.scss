@@ -3,12 +3,27 @@
 
 .image-text {
 	padding: 42px 0 228px;
+	@include breakpoint(laptop) {
+		padding-bottom: 128px;
+	}
+	@include mq-only(lg) {
+		padding-bottom: 100px;
+	}
+	@include mq-only(md) {
+		padding-bottom: 60px;
+	}
 }
 
 .image-text__container {
 	position: relative;
 	width: 100%;
 	padding-left: 40.6%;
+	@include breakpoint(laptop) {
+		padding-left: 35%;
+	}
+	@include mq-only(md) {
+		padding-left: 35%;
+	}
 }
 
 .image-text__image-outer {
@@ -33,6 +48,9 @@
 		content: '';
 		display: block;
 	}
+	@include mq-only(md) {
+		padding-bottom: 92.6%;
+	}
 }
 
 .image-text__img {
@@ -47,15 +65,19 @@
 	max-width: 694px;
 	display: inline-block;
 	padding: 18px 0;
+	@include mq-only(lg) {
+		max-width: 560px;
+	}
 }
 
 .image-text__title {
 	margin-bottom: 28px;
+	@include mq-down(md) {
+		margin-bottom: 16px;
+	}
 }
 
 .image-text__text {
-	font-size: 18px;
-	line-height: 30px;
 	margin-bottom: 32px;
 }
 

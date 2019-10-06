@@ -8,6 +8,15 @@
 .project__main-title {
 	text-align: center;
 	margin-bottom: 196px;
+	@include breakpoint(laptop) {
+		margin-bottom: 80px;
+	}
+	@include mq-between(md, lg) {
+		margin-bottom: 60px;
+	}
+	@include mq-down(sm) {
+		margin-bottom: 30px;
+	}
 }
 
 .project__item {
@@ -17,28 +26,87 @@
 .project__item--normal {
 	padding-left: 45.5%;
 	margin-bottom: 216px;
+	@include breakpoint(laptop) {
+		margin-bottom: 120px;
+	}
+	@include mq-between(md, lg) {
+		margin-bottom: 100px;
+	}
+	@include mq-down(sm) {
+		padding-left: 0;
+	}
 }
 
 .project__item--reverse {
 	padding: 28px 0 0 7.5%;
 	margin-bottom: 160px;
+	@include breakpoint(laptop) {
+		margin-bottom: 60px;
+	}
+	@include mq-only(md) {
+		padding-left: 0;
+		margin-bottom: 40px;
+	}
+	@include mq-down(sm) {
+		padding-left: 0;
+	}
 }
 
 .project__item-content {
 	padding-top: 112px;
 	max-width: 590px;
+	@include mq-only(lg) {
+		padding-top: 80px;
+	}
+	@include mq-between(md, lg) {
+		max-width: 420px;
+	}
+	@include mq-only(md) {
+		padding-top: 0;
+	}
+	@include mq-down(sm) {
+		max-width: 100%;
+		padding-top: 245px;
+	}
 }
 
 .project__title {
 	font-size: 40px;
 	line-height: 55px;
 	margin-bottom: 12px;
+	@include breakpoint(laptop) {
+		font-size: 40px;
+		line-height: 55px;
+	}
+	@include mq-only(lg) {
+		font-size: 36px;
+		line-height: 52px;
+	}
+	@include mq-only(md) {
+		font-size: 32px;
+		line-height: 42px;
+	}
+	@include mq-down(sm) {
+		font-size: 28px;
+		line-height: 36px;
+	}
 }
 
 .project__text {
 	font-size: 18px;
 	line-height: 30px;
 	margin-bottom: 34px;
+	@include breakpoint(laptop) {
+		font-size: 16px;
+		line-height: 28px;
+	}
+	@include mq-down(lg) {
+		font-size: 14px;
+		line-height: 22px;
+	}
+	@include mq-only(md) {
+		padding-right: 20px;
+	}
 }
 
 .project__image-outer {
@@ -49,11 +117,32 @@
 .project__image-outer--normal {
 	left: 4.3%;
 	width: 34.183%;
+	@include mq-only(md) {
+		left: 2.3%;
+	}
+	@include mq-down(sm) {
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80vw;
+		max-width: 80vw;
+	}
 }
 
 .project__image-outer--reverse {
 	left: 58.1%;
 	width: 32.976%;
+	@include breakpoint(laptop) {
+		left: 66%;
+	}
+	@include mq-only(md) {
+		left: 67%;
+	}
+	@include mq-down(sm) {
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80vw;
+		max-width: 80vw;
+	}
 }
 
 .project__image {
@@ -94,10 +183,10 @@
 
 .project__img {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	top: 0.5%;
+	left: 0.5%;
+	width: 99%;
+	height: 99%;
 }
 
 .project__additional-image {
