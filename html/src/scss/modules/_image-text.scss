@@ -115,4 +115,33 @@
 		padding: 70px 0;
 		max-width: 630px;
 	}
+	@include breakpoint(laptop) {
+		margin-bottom: -100px;
+	}
+	@include mq-only(lg) {
+		.image-text__content {
+			max-width: 520px;
+		}
+	}
+	@include mq-only(md) {
+		padding-left: 0;
+		margin-bottom: -60px;
+		.image-text__content {
+			max-width: 420px;
+		}
+	}
+	@include mq-down(sm) {
+		padding-left: 0;
+		padding-top: 60vw;
+		margin-bottom: 0;
+		.image-text__image-outer {
+			left: 50%;
+			transform: translateX(-50%);
+			width: 80vw;
+			right: auto;
+		}
+		.image-text__content {
+			max-width: 100%;
+		}
+	}
 }
