@@ -71,6 +71,10 @@ namespace Patrija.Core.Controllers.Surface.Partials
             => PartialView(viewModel);
 
         [ChildActionOnly]
+        public ActionResult BlogIntro(BlogIntroViewModel viewModel)
+            => PartialView(viewModel);
+        
+        [ChildActionOnly]
         public ActionResult BlogArticleContent(ArticleContentViewModel viewModel)
             => PartialView(viewModel);
 
