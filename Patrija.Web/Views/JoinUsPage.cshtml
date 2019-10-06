@@ -1,0 +1,20 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<JoinUsPageViewModel>
+
+@if (Model.VolunteerForm != null && Model.UserForm != null)
+{
+    <div class="member-form">
+        <div class="wrap wrap--normal">
+            <div class="member-form__container">
+                @if (Model.VolunteerForm != null)
+                {
+                    Html.RenderAction<NestedContentController>(c => nameof(c.FormWithoutDescription), new { viewModel = Model.VolunteerForm, formId = "volunteer-form" });
+                }
+
+                @if (Model.UserForm != null)
+                {
+                    Html.RenderAction<NestedContentController>(c => nameof(c.FormWithoutDescription), new { viewModel = Model.UserForm, formId = "user-form" });
+                }
+            </div>
+        </div>
+    </div>
+}

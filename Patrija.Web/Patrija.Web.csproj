@@ -512,6 +512,8 @@
     <Content Include="Views\ContactUs.cshtml" />
     <Content Include="Views\Partials\NestedContent\_ContactMap.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Donations.cshtml" />
+    <Content Include="Views\Partials\Shared\_FormWithoutDescription.cshtml" />
+    <Content Include="Views\JoinUsPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
