@@ -20,37 +20,51 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>News</summary>
-	[PublishedModel("news")]
-	public partial class News : PublishedContentModel, IPage
+	/// <summary>Join Us</summary>
+	[PublishedModel("joinUsPage")]
+	public partial class JoinUsPage : PublishedContentModel, IPage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "news";
+		public new const string ModelTypeAlias = "joinUsPage";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<News, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<JoinUsPage, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public News(IPublishedContent content)
+		public JoinUsPage(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Page Intro
+		/// As User
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("newsPageIntro")]
-		public PageIntro NewsPageIntro => this.Value<PageIntro>("newsPageIntro");
+		[ImplementPropertyType("joinUsPageAsUser")]
+		public IEnumerable<FormWithoutDescription> JoinUsPageAsUser => this.Value<IEnumerable<FormWithoutDescription>>("joinUsPageAsUser");
+
+		///<summary>
+		/// As Volunteer Form
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("joinUsPageAsVolunteerForm")]
+		public IEnumerable<FormWithoutDescription> JoinUsPageAsVolunteerForm => this.Value<IEnumerable<FormWithoutDescription>>("joinUsPageAsVolunteerForm");
+
+		///<summary>
+		/// Intro
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("joinUsPageIntro")]
+		public IEnumerable<PageIntro> JoinUsPageIntro => this.Value<IEnumerable<PageIntro>>("joinUsPageIntro");
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).

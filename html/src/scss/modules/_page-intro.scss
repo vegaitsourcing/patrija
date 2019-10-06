@@ -41,12 +41,16 @@
 	padding-top: 26px;
 }
 
-.page-intro__image {
+.page-intro__image-outer {
 	position: absolute;
 	width: 39.271vw;
 	top: 10%;
 	left: 59%;
-	padding-bottom: 44.505%;
+}
+
+.page-intro__image {
+	position: relative;
+	padding-bottom: 88.065%;
 	&::after {
 		content: '';
 		position: absolute;
@@ -61,11 +65,15 @@
 	}
 }
 
-.page-intro__image--secondary {
-	width: 34.48vw;
+.page-intro__image-outer--secondary {
+	width: 34.4799vw;
 	top: 10.1%;
 	left: 63.2%;
-	padding-bottom: 40.22%;
+}
+
+.page-intro__image--secondary {
+	position: relative;
+	padding-bottom: 90.635%;
 	&::after {
 		background-image: url('../assets/images/mask/page-intro-secondary-mask.svg');
 	}

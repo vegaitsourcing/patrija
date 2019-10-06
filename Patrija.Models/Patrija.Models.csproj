@@ -391,10 +391,19 @@
     <Compile Include="Generated\Blog.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\BlogArticle.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\BlogCategory.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Generated\BlogIntro.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Generated\BlogItem.generated.cs">
+    <Compile Include="Generated\ContactMap.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ContactUs.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\Donations.generated.cs">
@@ -428,6 +437,9 @@
     <Compile Include="Generated\Footer.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\FormWithoutDescription.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Generated\Header.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
@@ -455,6 +467,9 @@
     <Compile Include="Generated\JoinUs.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\JoinUsPage.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Generated\LinksList.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
@@ -471,6 +486,9 @@
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\News.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\NewsBlogBlock.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\NewsList.generated.cs">

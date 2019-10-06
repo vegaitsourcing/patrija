@@ -20,37 +20,44 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>News</summary>
-	[PublishedModel("news")]
-	public partial class News : PublishedContentModel, IPage
+	/// <summary>Blog Article</summary>
+	[PublishedModel("blogArticle")]
+	public partial class BlogArticle : PublishedContentModel, IPage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "news";
+		public new const string ModelTypeAlias = "blogArticle";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<News, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogArticle, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public News(IPublishedContent content)
+		public BlogArticle(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
+		/// Article Content
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("blogArticleContent")]
+		public IHtmlString BlogArticleContent => this.Value<IHtmlString>("blogArticleContent");
+
+		///<summary>
 		/// Page Intro
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("newsPageIntro")]
-		public PageIntro NewsPageIntro => this.Value<PageIntro>("newsPageIntro");
+		[ImplementPropertyType("blogArticlePageIntro")]
+		public BlogIntro BlogArticlePageIntro => this.Value<BlogIntro>("blogArticlePageIntro");
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).

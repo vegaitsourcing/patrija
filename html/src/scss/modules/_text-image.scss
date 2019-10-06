@@ -13,12 +13,16 @@
 	max-width: 44%;
 }
 
-.text-image__image {
+.text-image__image-outer {
 	position: absolute;
 	top: 17px;
 	right: 6.5vw;
 	width: 26.39vw;
-	padding-bottom: 28.9%;
+}
+
+.text-image__image {
+	position: relative;
+	padding-bottom: 85.55%;
 	&::after {
 		background-image: url('../assets/images/mask/image-text-right.svg');
 		background-size: 100% 100%;
