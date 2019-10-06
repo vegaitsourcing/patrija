@@ -1,0 +1,42 @@
+﻿@model Patrija.Core.ViewModels.Shared.NewsBlogBlockViewModel
+
+@{
+    var featuredArticle = Model.Articles.First();
+}
+<div class="featured-news">
+    <div class="wrap wrap--normal">
+        <h2 class="h2 featured-news__title">@Model.BlogCategoryName</h2>
+        <div class="featured-news__container">
+            <div class="featured-news__large">
+                <div class="featured-news__large-image has-cover" style="background-image: url('@featuredArticle.Image.Url');">
+                    <h3 class="h6 featured-news__large-title"><a href="javascript:;">@featuredArticle.Title</a></h3>
+                </div>
+            </div>
+            <div class="featured-news__items">
+                @if(Model.Articles.Skip(1).Any()) {
+                <ul class="featured-news__items-list">
+                    @foreach (var article in Model.Articles.Skip(1))
+                    {
+                        <li class="featured-news__item">
+                            <div class="featured-news__item-img">
+                                <a href="javascript:;">
+                                    <span class="featured-news__item-image has-cover" style="background-image: url('@article.Image.Url');"></span>
+                                </a>
+                            </div>
+                            <div class="featured-news__item-content">
+                                <span class="featured-news__item-date">@article.DateOfPublishing</span>
+                                <h4 class="h6 featured-news__item-title">
+                                    <a href="javascript:;">@article.Title</a>
+                                </h4>
+                            </div>
+                        </li>
+                    }
+                </ul>
+                }
+            </div>
+        </div>
+        <div class="featured-news__buttons">
+            <button class="btn btn--mint featured-news__load-more" type="button">@Model.LoadMoreButtonText</button>
+        </div>
+    </div>
+</div>

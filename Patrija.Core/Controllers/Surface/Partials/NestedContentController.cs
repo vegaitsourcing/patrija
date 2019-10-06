@@ -51,6 +51,18 @@ namespace Patrija.Core.Controllers.Surface.Partials
             => PartialView(viewModel);
 
         [ChildActionOnly]
+        public ActionResult NewsBlogBlockLatestArticleInFocus(NewsBlogBlockViewModel viewModel)
+            => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult NewsBlogBlockTwoColumnThreeRows(NewsBlogBlockViewModel viewModel)
+            => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult NewsBlogBlockThreeColumnTwoRows(NewsBlogBlockViewModel viewModel)
+            => PartialView(viewModel);
+
+        [ChildActionOnly]
         public ActionResult FaqContainer(FaqContainerViewModel viewModel)
             => PartialView(viewModel);
 

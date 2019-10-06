@@ -276,6 +276,7 @@
     <Compile Include="Controllers\RenderMvc\ContactUsController.cs" />
     <Compile Include="Controllers\RenderMvc\Error404Controller.cs" />
     <Compile Include="Controllers\RenderMvc\HomeController.cs" />
+    <Compile Include="Controllers\RenderMvc\NewsController.cs" />
     <Compile Include="Controllers\RenderMvc\JoinUsPageController.cs" />
     <Compile Include="Controllers\RenderMvc\ProjectPageController.cs" />
     <Compile Include="Controllers\RenderMvc\SearchResultsController.cs" />
@@ -316,6 +317,7 @@
     <Compile Include="ViewModels\Pages\ContactUsViewModel.cs" />
     <Compile Include="ViewModels\Pages\Error404ViewModel.cs" />
     <Compile Include="ViewModels\Pages\HomeViewModel.cs" />
+    <Compile Include="ViewModels\Pages\NewsViewModel.cs" />
     <Compile Include="ViewModels\Pages\BlogPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\JoinUsPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\PageViewModel.cs" />
@@ -347,16 +349,21 @@
     <Compile Include="ViewModels\Partials\Listing\ListingViewModel.cs" />
     <Compile Include="ViewModels\Partials\Listing\PaginationViewModel.cs" />
     <Compile Include="ViewModels\Partials\Listing\SearchResultsItemViewModel.cs" />
+    <Compile Include="ViewModels\Partials\News\DisplayVariant.cs" />
     <Compile Include="ViewModels\Partials\SupportUs\FaqContainerViewModel.cs" />
     <Compile Include="ViewModels\Partials\SupportUs\FaqViewModel.cs" />
     <Compile Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\ArticleContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\ArticleViewModel.cs" />
+    <Compile Include="ViewModels\Shared\BlogCategoryViewModel.cs" />
     <Compile Include="ViewModels\Shared\FormWithoutDescriptionViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageViewModel.cs" />
     <Compile Include="ViewModels\Shared\JoinUsViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />
+    <Compile Include="ViewModels\Shared\NewsBlogBlockPreviewViewModel.cs" />
+    <Compile Include="ViewModels\Shared\NewsBlogBlockViewModel.cs" />
+    <Compile Include="ViewModels\Shared\NewsListViewModel.cs" />
     <Compile Include="ViewModels\Shared\SimpleFormViewModel.cs" />
     <Compile Include="ViewModels\Shared\TestimonialsContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\TestimonialViewModels.cs" />
