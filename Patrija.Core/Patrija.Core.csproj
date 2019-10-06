@@ -326,6 +326,7 @@
     <Compile Include="ViewModels\Partials\AboutUsPage\FeaturedProjectsContainerViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\PageIntroViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\ShapeVariant.cs" />
+    <Compile Include="ViewModels\Partials\ContactUs\ContactFormViewModel.cs" />
     <Compile Include="ViewModels\Partials\ContactUs\ContactMapViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\DonationsViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\UntaggedFeatureViewModel.cs" />

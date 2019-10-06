@@ -16,6 +16,10 @@
 		$('#volunteer-form').on('click', '.btn--submit', (event) => {
 			this.submitSingleForm(event, '/umbraco/surface/SimpleFormSurface/SubmitVolunteerForm');
 		});
+
+		$('#contact-form').on('click', '.btn--submit', (event) => {
+			this.submitSingleForm(event, '/umbraco/surface/SimpleFormSurface/SubmitContactForm');
+		});
 	},
 
 	submitSingleForm: function(event, url) {

@@ -12,6 +12,9 @@
 	@include mq-only(md) {
 		padding-bottom: 60px;
 	}
+	@include mq-down(sm) {
+		padding-bottom: 20px;
+	}
 }
 
 .image-text__container {
@@ -24,6 +27,9 @@
 	@include mq-only(md) {
 		padding-left: 35%;
 	}
+	@include mq-down(sm) {
+		padding-left: 0;
+	}
 }
 
 .image-text__image-outer {
@@ -31,6 +37,11 @@
 	top: 0;
 	left: 3.5%;
 	width: 22.709vw;
+	@include mq-down(sm) {
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80vw;
+	}
 }
 
 .image-text__image {
@@ -67,6 +78,10 @@
 	padding: 18px 0;
 	@include mq-only(lg) {
 		max-width: 560px;
+	}
+	@include mq-down(sm) {
+		padding-top: 80vw;
+		max-width: 100%;
 	}
 }
 

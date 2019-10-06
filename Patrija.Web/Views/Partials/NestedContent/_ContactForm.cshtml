@@ -1,0 +1,32 @@
+﻿@using Patrija.Core.ViewModels.Partials.ContactUs;
+@using Patrija.Core.ViewModels.Shared
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContactFormViewModel>
+
+@{
+    var formId = ViewData["formId"] as string ?? string.Empty;
+}
+
+<div class="contact-form">
+    <div class="wrap wrap--normal">
+        <div class="contact-form__content">
+            <div class="contact-form__info">
+                <span class="contact-form__address-title">Adresa</span>
+                <p class="contact-form__address-details">
+                    @Model.Address
+                </p>
+                <span class="contact-form__address-title">Radno vreme</span>
+                <p class="contact-form__address-details">
+                    @Model.WorkingHours
+                </p>
+            </div>
+            @{
+                Html.RenderAction<NestedContentController>(c => nameof(c.FormWithoutDescription),
+                    new { viewModel = (FormWithoutDescriptionViewModel)Model,
+                        formId = "contact-form",
+                        containerClass = "contact-form__container",
+                        titleClass = "contact-form__info"
+                    });
+            }
+        </div>
+    </div>
+</div>
