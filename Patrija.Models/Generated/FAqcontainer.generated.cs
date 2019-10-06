@@ -50,7 +50,7 @@ namespace Patrija.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("faqContainerItems")]
-		public IEnumerable<FAqitem> FaqContainerItems => this.Value<IEnumerable<FAqitem>>("faqContainerItems");
+		public IEnumerable<FaqItem> FaqContainerItems => this.Value<IEnumerable<FaqItem>>("faqContainerItems");
 
 		///<summary>
 		/// Title
