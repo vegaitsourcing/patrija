@@ -4,7 +4,7 @@ using Patrija.Models.Generated;
 
 namespace Patrija.Core.Controllers.RenderMvc
 {
-	public class BlogPageController : BasePageController<BlogArticle>
+	public class BlogArticleController : BasePageController<BlogArticle>
 	{
 		public ActionResult Index(BlogArticle model) 
 			=> CurrentTemplate(new BlogPageViewModel(CreatePageContext(model)));

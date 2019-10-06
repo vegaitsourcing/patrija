@@ -125,10 +125,22 @@
 	@include breakpoint(laptop) {
 		left: -74px;
 	}
+	@include mq-only(md) {
+		left: -60px;
+	}
+	@include mq-down(sm) {
+		left: -20px;
+	}
 }
 .slick-next {
 	right: -84px;
 	@include breakpoint(laptop) {
 		right: -74px;
+	}
+	@include mq-only(md) {
+		right: -60px;
+	}
+	@include mq-down(sm) {
+		right: -20px;
 	}
 }

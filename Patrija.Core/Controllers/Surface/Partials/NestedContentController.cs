@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using Patrija.Core.ViewModels.Partials.AboutUsPage;
+using Patrija.Core.ViewModels.Partials.Blog;
 using Patrija.Core.ViewModels.Partials.ContactUs;
 using Patrija.Core.ViewModels.Partials.Features;
 using Patrija.Core.ViewModels.Partials.Home;
@@ -70,10 +71,24 @@ namespace Patrija.Core.Controllers.Surface.Partials
             => PartialView(viewModel);
 
         [ChildActionOnly]
+        public ActionResult BlogIntro(BlogIntroViewModel viewModel)
+            => PartialView(viewModel);
+        
+        [ChildActionOnly]
+        public ActionResult BlogArticleContent(ArticleContentViewModel viewModel)
+            => PartialView(viewModel);
+
+        [ChildActionOnly]
         public ActionResult FormWithoutDescription(FormWithoutDescriptionViewModel viewModel, string formId)
         {
             ViewData["formId"] = formId;
+            ViewData["containerClass"] = containerClass;
+            ViewData["titleClass"] = titleClass;
             return PartialView(viewModel);
         }
+
+        [ChildActionOnly]
+        public ActionResult ContactForm(ContactFormViewModel viewModel)
+            => PartialView(viewModel);
     }
 }

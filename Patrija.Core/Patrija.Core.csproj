@@ -270,7 +270,7 @@
     <Compile Include="Contexts\PageContext.cs" />
     <Compile Include="Contexts\SeoContext.cs" />
     <Compile Include="Contexts\SiteContext.cs" />
-    <Compile Include="Controllers\RenderMvc\BlogPageController.cs" />
+    <Compile Include="Controllers\RenderMvc\BlogArticleController.cs" />
     <Compile Include="Controllers\RenderMvc\AboutUsPageController.cs" />
     <Compile Include="Controllers\RenderMvc\BasePageController.cs" />
     <Compile Include="Controllers\RenderMvc\ContactUsController.cs" />
@@ -326,6 +326,8 @@
     <Compile Include="ViewModels\Partials\AboutUsPage\FeaturedProjectsContainerViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\PageIntroViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\ShapeVariant.cs" />
+    <Compile Include="ViewModels\Partials\ContactUs\ContactFormViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Blog\ArticleContentViewModel.cs" />
     <Compile Include="ViewModels\Partials\ContactUs\ContactMapViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\DonationsViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\UntaggedFeatureViewModel.cs" />
@@ -351,6 +353,7 @@
     <Compile Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\ArticleContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\ArticleViewModel.cs" />
+    <Compile Include="ViewModels\Shared\BlogIntroViewModel.cs" />
     <Compile Include="ViewModels\Shared\FormWithoutDescriptionViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageViewModel.cs" />
