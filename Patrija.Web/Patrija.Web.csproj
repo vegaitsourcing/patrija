@@ -507,6 +507,7 @@
     <Content Include="Views\Partials\NestedContent\_FaqItem.cshtml" />
     <Content Include="Views\Partials\NestedContent\_TestimonialsContainer.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SimpleFormViewModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\UntaggedFeatureViewModel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

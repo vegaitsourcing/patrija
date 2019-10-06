@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Patrija.Core.ViewModels.Partials.Features;
 using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
 
@@ -12,10 +13,10 @@ namespace Patrija.Core.ViewModels.Partials.AboutUsPage
             if (projectsContainer == null) throw new ArgumentNullException(nameof(projectsContainer));
 
             Title = projectsContainer.AboutUsProjectsContainerMainTitle;
-            featruedProjectViewModels = projectsContainer.AboutUsUntaggedFeaturesContainer.Select(utgf => new FeatruedProjectViewModel(utgf)).ToArray();
+            UntaggedFeatures = projectsContainer.AboutUsUntaggedFeaturesContainer.Select(utgf => new UntaggedFeatureViewModel(utgf)).ToArray();
         }
 
         public string Title { get; }
-        public FeatruedProjectViewModel[] featruedProjectViewModels { get; }
+        public UntaggedFeatureViewModel[] UntaggedFeatures { get; }
     }
 }
