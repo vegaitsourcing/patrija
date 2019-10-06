@@ -11,6 +11,8 @@ namespace Patrija.Core.ViewModels.Shared
 {
     public class FormWithoutDescriptionViewModel
     {
+        public FormWithoutDescriptionViewModel() { }
+
         public FormWithoutDescriptionViewModel(FormWithoutDescription simpleForm)
         {
             Guard.AgainstDefaultValue(simpleForm);
@@ -27,15 +29,15 @@ namespace Patrija.Core.ViewModels.Shared
             SuccessMessage = simpleForm.FormWithoutDescriptionSuccessMessage;
         }
 
-        public string Title { get; }
-        public string NameFieldText { get; }
-        public string NameFieldError { get; }
-        public string EmailFieldText { get; }
-        public string EmailFieldError { get; }
-        public string CommentFieldText { get; }
-        public string CommentFieldError { get; }
-        public string SubmitButtonText { get; }
-        public string SubmitButtonClass { get; }
-        public string SuccessMessage { get; }
+        public string Title { get; set; }
+        public string NameFieldText { get; set; }
+        public string NameFieldError { get; set; }
+        public string EmailFieldText { get; set; }
+        public string EmailFieldError { get; set; }
+        public string CommentFieldText { get; set; }
+        public string CommentFieldError { get; set; }
+        public string SubmitButtonText { get; set; }
+        public string SubmitButtonClass { get; set; }
+        public string SuccessMessage { get; set; }
     }
 }

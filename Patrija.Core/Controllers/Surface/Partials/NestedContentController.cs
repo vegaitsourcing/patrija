@@ -70,10 +70,16 @@ namespace Patrija.Core.Controllers.Surface.Partials
             => PartialView(viewModel);
 
         [ChildActionOnly]
-        public ActionResult FormWithoutDescription(FormWithoutDescriptionViewModel viewModel, string formId)
+        public ActionResult FormWithoutDescription(FormWithoutDescriptionViewModel viewModel, string formId, string containerClass = null, string titleClass = null)
         {
             ViewData["formId"] = formId;
+            ViewData["containerClass"] = containerClass;
+            ViewData["titleClass"] = titleClass;
             return PartialView(viewModel);
         }
+
+        [ChildActionOnly]
+        public ActionResult ContactForm(ContactFormViewModel viewModel)
+            => PartialView(viewModel);
     }
 }

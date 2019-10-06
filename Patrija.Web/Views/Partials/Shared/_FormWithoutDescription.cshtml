@@ -3,10 +3,12 @@
 
 @{
     var formId = ViewData["formId"] as string ?? string.Empty;
+    var containerClass = ViewData["containerClass"] as string ?? "member-form__column";
+    var titleClass = ViewData["titleClass"] as string ?? "member-form__title";
 }
 
-<div class="member-form__column" id="@formId">
-    <h3 class="h3 member-form__title">@Model.Title</h3>
+<div class="@containerClass" id="@formId">
+    <h3 class="h3 @titleClass">@Model.Title</h3>
     <form action="" method="post" class="form">
         <div class="form__row">
             <label class="form__label" for="name">@Model.NameFieldText</label>

@@ -5,4 +5,7 @@
     Html.RenderAction<NestedContentController>(c => nameof(c.ContactMap), new { viewModel = Model.MapInfo });
 }
 
-@*{{> contact-form contactForm}}*@
+@if (Model.Form != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.ContactForm), new { viewModel = Model.Form });
+}
