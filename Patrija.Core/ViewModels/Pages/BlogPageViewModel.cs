@@ -1,4 +1,5 @@
-﻿using Patrija.Core.Contexts;
+﻿using System;
+using Patrija.Core.Contexts;
 using Patrija.Core.ViewModels.Partials.AboutUsPage;
 using Patrija.Core.ViewModels.Partials.Blog;
 using Patrija.Core.ViewModels.Shared;
@@ -20,10 +21,19 @@ namespace Patrija.Core.ViewModels.Pages
 
             var articleContentHtml = context.Page.BlogArticleContent;
             ArticleContent = new ArticleContentViewModel(context.Page.BlogArticleSubtitle, articleContentHtml.ToHtmlString());
+            AreCommentsEnabled = context.Page.BlogArticleShowCommentsToggle;
+
+            PageId = context.Page.Key;
         }
 
         public string Title { get; }
         public BlogIntroViewModel BlogIntro { get; }
+        public PageIntroViewModel PageIntro { get; }
+        public string ArticleSubtitle { get; }
+        public string ArticleContent { get; }
+        public bool AreCommentsEnabled { get; }
+        
+        public Guid PageId { get; }
         public ArticleContentViewModel ArticleContent { get; }
     }
 }
