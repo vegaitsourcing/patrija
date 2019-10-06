@@ -18,10 +18,26 @@
 		top: -58px;
 		right: 70px;
 	}
+	@include breakpoint(laptop) {
+		padding-top: 100px;
+		padding-bottom: 60px;
+		margin-bottom: 100px;
+	}
+	@include mq-only(md) {
+		padding-top: 100px;
+		padding-bottom: 60px;
+		margin-bottom: 100px;
+	}
 }
 
 .testimonials__wrap {
 	max-width: 50vw;
+	@include breakpoint(laptop) {
+		max-width: 70vw;
+	}
+	@include mq-down(lg) {
+		max-width: 100%;
+	}
 }
 
 .testimonials__title {
@@ -39,6 +55,14 @@
 	.slick-next {
 		top: 0;
 		right: 58px;
+	}
+	@include mq-between(md, lg) {
+		.slick-prev {
+			left: 20px;
+		}
+		.slick-next {
+			right: 20px;
+		}
 	}
 }
 
