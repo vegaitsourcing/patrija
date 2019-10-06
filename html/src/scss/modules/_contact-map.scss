@@ -1,0 +1,85 @@
+//---------- contact-map
+//------------------------------------------------------------------------------
+
+.contact-map {
+	height: 720px;
+	margin-bottom: 130px;
+	.wrap {
+		height: 100%;
+	}
+	.circle--blue {
+		top: 23%;
+		right: 13.6%;
+	}
+	.circle--mint {
+		top: 78.5%;
+		left: -6.8%;
+	}
+}
+
+.contact-map__container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 176px 0 106px 30px;
+}
+
+.contact-map__content {
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.contact-map__title {
+	max-width: 52%;
+}
+
+.contact-map__text {
+	max-width: 49%;
+	margin-bottom: 34px;
+	padding-top: 26px;
+}
+
+.contact-map__image {
+	position: absolute;
+	width: 34.48vw;
+	top: 9.1%;
+	left: 62.4%;
+	padding-bottom: 40.22%;
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('../assets/images/mask/map-mask.svg');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		pointer-events: none;
+	}
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.contact-map__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.contact-map__circle {
+	position: absolute;
+	border-radius: 50%;
+	z-index: 100;
+	display: block;
+}

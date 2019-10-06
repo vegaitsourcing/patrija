@@ -2,6 +2,7 @@
 //------------------------------------------------------------------------------
 
 .faq {
+	position: relative;
 	padding-top: 130px;
 	margin-bottom: 88px;
 }
@@ -72,4 +73,10 @@
 			margin-bottom: 0;
 		}
 	}
+}
+
+.faq__shape {
+	position: absolute;
+	top: 248px;
+	right: -22.5%;
 }
