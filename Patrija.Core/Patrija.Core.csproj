@@ -275,6 +275,7 @@
     <Compile Include="Controllers\RenderMvc\ContactUsController.cs" />
     <Compile Include="Controllers\RenderMvc\Error404Controller.cs" />
     <Compile Include="Controllers\RenderMvc\HomeController.cs" />
+    <Compile Include="Controllers\RenderMvc\JoinUsPageController.cs" />
     <Compile Include="Controllers\RenderMvc\ProjectPageController.cs" />
     <Compile Include="Controllers\RenderMvc\SearchResultsController.cs" />
     <Compile Include="Controllers\RenderMvc\SupportUsController.cs" />

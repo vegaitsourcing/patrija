@@ -1,5 +1,10 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<JoinUsPageViewModel>
 
+@if (Model.PageIntro != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.PageIntro), new {viewModel = Model.PageIntro});
+}
+
 @if (Model.VolunteerForm != null && Model.UserForm != null)
 {
     <div class="member-form">
