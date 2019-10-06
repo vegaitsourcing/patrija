@@ -6,17 +6,20 @@
 }
 
 .image-text__container {
-	padding: 0 52px;
-	display: flex;
-	align-items: flex-start;
+	position: relative;
+	width: 100%;
+	padding-left: 40.6%;
+}
+
+.image-text__image-outer {
+	position: absolute;
+	top: 0;
+	left: 3.5%;
+	width: 22.709vw;
 }
 
 .image-text__image {
-	display: inline-block;
-	position: relative;
-	width: 436px;
-	height: 404px;
-	margin-right: 6vw;
+	padding-bottom: 92.661%;
 	&::after {
 		background-image: url('../assets/images/mask/image-text-left.svg');
 		background-size: 100% 100%;
@@ -34,10 +37,10 @@
 
 .image-text__img {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 99.9%;
-	height: 100%;
+	top: 0.5%;
+	left: 0.5%;
+	width: 99%;
+	height: 99%;
 }
 
 .image-text__content {
@@ -57,15 +60,16 @@
 }
 
 .image-text__container--reverse {
-	padding: 0 30px;
-	justify-content: space-between;
-	margin-bottom: -245px;
+	padding-left: 30px;
+	margin-bottom: -172px;
+	.image-text__image-outer {
+		top: 2px;
+		right: -12px;
+		left: auto;
+		width: 34.9vw;
+	}
 	.image-text__image {
-		order: 2;
-		width: 34.896vw;
-		height: auto;
-		padding-bottom: 39.81%;
-		margin-right: -3%;
+		padding-bottom: 85%;
 		&::after {
 			background-image: url('../assets/images/mask/image-text-right.svg');
 		}

@@ -1,5 +1,4 @@
 const accordion = {
-	$accBtn: $('.js-acc-btn'),
 	accBtnActive: 'faq__accordion-btn--active',
 
 	init: function() {
@@ -8,16 +7,17 @@ const accordion = {
 
 	bindEvents: function() {
 		const _this = this;
-		this.$accBtn.each(function() {
-			$(this).on('click', function() {
-				if($(this).hasClass(_this.accBtnActive)) {
-					$(this).removeClass(_this.accBtnActive);
-					$(this).next().stop().slideUp('fast');
+		$('.js-acc-btn').each(function() {
+			const $btn = $(this);
+			$btn.on('click', () => {
+				if($btn.hasClass(_this.accBtnActive)) {
+					$btn.removeClass(_this.accBtnActive);
+					$btn.next().stop().slideUp('fast');
 				} else {
-					_this.$accBtn.next().stop().slideUp('fast');
-					$(this).next().stop().slideDown('fast');
-					_this.$accBtn.removeClass(_this.accBtnActive);
-					$(this).addClass(_this.accBtnActive);
+					$('.js-acc-btn').next().stop().slideUp('fast');
+					$btn.next().stop().slideDown('fast');
+					$('.js-acc-btn').removeClass(_this.accBtnActive);
+					$btn.addClass(_this.accBtnActive);
 				}
 			});
 		});

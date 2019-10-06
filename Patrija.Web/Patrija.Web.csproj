@@ -435,6 +435,7 @@
     <Content Include="config\Lang\sv-SE.user.xml" />
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
+    <Content Include="ConnectionStrings.config" />
     <Content Include="Global.asax" />
     <Content Include="Views\AboutUsPage.cshtml" />
     <Content Include="Views\Partials\NestedContent\_ImageWithText.cshtml" />
@@ -507,7 +508,12 @@
     <Content Include="Views\Partials\NestedContent\_FaqItem.cshtml" />
     <Content Include="Views\Partials\NestedContent\_TestimonialsContainer.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SimpleFormViewModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\UntaggedFeatureViewModel.cshtml" />
     <Content Include="Views\ContactUs.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_ContactMap.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_Donations.cshtml" />
+    <Content Include="Views\Partials\Shared\_FormWithoutDescription.cshtml" />
+    <Content Include="Views\JoinUsPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -525,6 +531,10 @@
     <ProjectReference Include="..\Patrija.Core\Patrija.Core.csproj">
       <Project>{5db13650-d2d7-4e7e-9fdf-1166067d6ccf}</Project>
       <Name>Patrija.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Patrija.Models\Patrija.Models.csproj">
+      <Project>{5F883FB4-7390-4A64-9F89-12597A61EDA2}</Project>
+      <Name>Patrija.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

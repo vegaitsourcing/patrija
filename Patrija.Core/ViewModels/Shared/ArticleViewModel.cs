@@ -6,16 +6,18 @@ namespace Patrija.Core.ViewModels.Shared
 {
     public class ArticleViewModel
     {
-        public ArticleViewModel(BlogItem blogItem)
+        
+        public ArticleViewModel(BlogArticle blogArticle, string category)
         {
-            Guard.AgainstDefaultValue(blogItem);
-            Guard.AgainstDefaultValue(blogItem.BlogItemIntro);
+            Guard.AgainstDefaultValue(blogArticle);
+            Guard.AgainstDefaultValue(blogArticle.BlogArticlePageIntro);
 
-            Title = blogItem.BlogItemIntro.BlogIntroTitle;
-            PreviewText = blogItem.BlogItemIntro.BlogIntroPreview;
-            PublishDate = blogItem.BlogItemIntro.BlogIntroDateOfPublishing.Date;
-            Image = new ImageViewModel(blogItem.BlogItemIntro.BlogIntroImage as Image);
-            BlogPageUrl = blogItem.Url;
+            Title = blogArticle.BlogArticlePageIntro.BlogIntroTitle;
+            PreviewText = blogArticle.BlogArticlePageIntro.BlogIntroPreview;
+            PublishDate = blogArticle.BlogArticlePageIntro.BlogIntroDateOfPublishing.Date;
+            Image = new ImageViewModel(blogArticle.BlogArticlePageIntro.BlogIntroImage as Image);
+            BlogPageUrl = blogArticle.Url;
+            Category = category;
         }
 
         public bool HasMetadata => !string.IsNullOrEmpty(Category) || PublishDate != null;
@@ -23,7 +25,7 @@ namespace Patrija.Core.ViewModels.Shared
         public string Title { get; }
         public string PreviewText { get; }
         public string Category { get; }
-        public string BlogPageUrl { get; } 
+        public string BlogPageUrl { get; }
         public DateTime PublishDate { get; }
         public ImageViewModel Image { get; }
     }

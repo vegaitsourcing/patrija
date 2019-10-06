@@ -20,36 +20,43 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Blog Item</summary>
-	[PublishedModel("blogItem")]
-	public partial class BlogItem : PublishedContentModel
+	/// <summary>News Blog Block</summary>
+	[PublishedModel("newsBlogBlock")]
+	public partial class NewsBlogBlock : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "blogItem";
+		public new const string ModelTypeAlias = "newsBlogBlock";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogItem, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<NewsBlogBlock, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public BlogItem(IPublishedContent content)
+		public NewsBlogBlock(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Intro
+		/// Blog Category: Blog category
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("blogItemIntro")]
-		public BlogIntro BlogItemIntro => this.Value<BlogIntro>("blogItemIntro");
+		[ImplementPropertyType("newsBlogBlockBlogCategory")]
+		public IPublishedContent NewsBlogBlockBlogCategory => this.Value<IPublishedContent>("newsBlogBlockBlogCategory");
+
+		///<summary>
+		/// Display Variant: Display Variant
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("newsBlogBlockDisplayVariant")]
+		public string NewsBlogBlockDisplayVariant => this.Value<string>("newsBlogBlockDisplayVariant");
 	}
 }

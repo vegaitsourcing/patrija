@@ -20,72 +20,51 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Support Us</summary>
-	[PublishedModel("supportUs")]
-	public partial class SupportUs : PublishedContentModel, IPage
+	/// <summary>Join Us</summary>
+	[PublishedModel("joinUsPage")]
+	public partial class JoinUsPage : PublishedContentModel, IPage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "supportUs";
+		public new const string ModelTypeAlias = "joinUsPage";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<SupportUs, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<JoinUsPage, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public SupportUs(IPublishedContent content)
+		public JoinUsPage(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Donation Form: Donation form on support us page
+		/// As User
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("supportUsDonationForm")]
-		public IEnumerable<SimpleFormContent> SupportUsDonationForm => this.Value<IEnumerable<SimpleFormContent>>("supportUsDonationForm");
+		[ImplementPropertyType("joinUsPageAsUserForm")]
+		public IEnumerable<FormWithoutDescription> JoinUsPageAsUserForm => this.Value<IEnumerable<FormWithoutDescription>>("joinUsPageAsUserForm");
 
 		///<summary>
-		/// Donations
+		/// As Volunteer Form
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("supportUsDonations")]
-		public IEnumerable<Donations> SupportUsDonations => this.Value<IEnumerable<Donations>>("supportUsDonations");
+		[ImplementPropertyType("joinUsPageAsVolunteerForm")]
+		public IEnumerable<FormWithoutDescription> JoinUsPageAsVolunteerForm => this.Value<IEnumerable<FormWithoutDescription>>("joinUsPageAsVolunteerForm");
 
 		///<summary>
-		/// FAQ
+		/// Intro
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("supportUsFaq")]
-		public IEnumerable<FaqContainer> SupportUsFaq => this.Value<IEnumerable<FaqContainer>>("supportUsFaq");
-
-		///<summary>
-		/// Join Us: Join us block
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("supportUsJoinUs")]
-		public IEnumerable<JoinUs> SupportUsJoinUs => this.Value<IEnumerable<JoinUs>>("supportUsJoinUs");
-
-		///<summary>
-		/// Page Intro: Page intro
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("SupportUsPageIntro")]
-		public PageIntro SupportUsPageIntro => this.Value<PageIntro>("SupportUsPageIntro");
-
-		///<summary>
-		/// Testimonials: Container with included users testimonials
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("supportUsTestimonials")]
-		public IEnumerable<TestimonialsContainer> SupportUsTestimonials => this.Value<IEnumerable<TestimonialsContainer>>("supportUsTestimonials");
+		[ImplementPropertyType("joinUsPageIntro")]
+		public IEnumerable<PageIntro> JoinUsPageIntro => this.Value<IEnumerable<PageIntro>>("joinUsPageIntro");
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).

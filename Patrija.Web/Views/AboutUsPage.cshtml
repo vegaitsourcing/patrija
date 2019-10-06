@@ -5,13 +5,24 @@
     Html.RenderAction<NestedContentController>(c => nameof(c.PageIntro), new { viewModel = Model.PageIntro });
 }
 
-@if (Model.ImageWithText != null)
-{
-    Html.RenderAction<NestedContentController>(c => nameof(c.ImageWithText), new { viewModel = Model.ImageWithText });
-}
-}
-
 @if (Model.FeaturedProjectsContainer != null)
 {
     Html.RenderAction<ContainerController>(c => nameof(c.AboutUsProjectsContainer), new { viewModel = Model.FeaturedProjectsContainer });
 }
+
+@if (Model.ImageWithText != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.ImageWithText), new { viewModel = Model.ImageWithText });
+}
+
+@if (Model.Links != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.LinksList), new { viewModel = Model.Links });
+}
+
+@if (Model.JoinUs != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.JoinUs), new { viewModel = Model.JoinUs });
+}
+
+
