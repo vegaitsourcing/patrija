@@ -15,14 +15,14 @@ namespace Patrija.Core.ViewModels.Pages
             HomeIntro = homeIntro != null ? new HomeIntroViewModel(homeIntro) : null;
 
             var mostRecentBlogsRequest = context.Home.MostRecentBlogs.FirstOrDefault();
-            if(mostRecentBlogsRequest != null)
-            {
-                var blogItems = context.Home.Children.OfType<Blog>().First().Children.OfType<BlogItem>()
-                    .OrderByDescending(blogItem => blogItem?.BlogItemIntro.BlogIntroDateOfPublishing)
-                    .Take(mostRecentBlogsRequest.MostRecentBlogsCount).ToArray();
+            //if(mostRecentBlogsRequest != null)
+            //{
+            //    var blogItems = context.Home.Children.OfType<Blog>().First().Children.OfType<BlogItem>()
+            //        .OrderByDescending(blogItem => blogItem?.BlogItemIntro.BlogIntroDateOfPublishing)
+            //        .Take(mostRecentBlogsRequest.MostRecentBlogsCount).ToArray();
 
-                ArticleContainer = new ArticleContainerViewModel(mostRecentBlogsRequest.MostRecentBlogsTitle, blogItems.Select(bi => new ArticleViewModel(bi)).ToArray());
-            }
+            //    ArticleContainer = new ArticleContainerViewModel(mostRecentBlogsRequest.MostRecentBlogsTitle, blogItems.Select(bi => new ArticleViewModel(bi)).ToArray());
+            //}
             
             Features = context.Home.FeaturedContent?.Select(f => new TaggedFeatureViewModel(f)).ToArray()
                        ?? new TaggedFeatureViewModel[0];
