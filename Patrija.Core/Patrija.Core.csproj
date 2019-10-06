@@ -272,6 +272,7 @@
     <Compile Include="Contexts\SiteContext.cs" />
     <Compile Include="Controllers\RenderMvc\AboutUsPageController.cs" />
     <Compile Include="Controllers\RenderMvc\BasePageController.cs" />
+    <Compile Include="Controllers\RenderMvc\ContactUsController.cs" />
     <Compile Include="Controllers\RenderMvc\Error404Controller.cs" />
     <Compile Include="Controllers\RenderMvc\HomeController.cs" />
     <Compile Include="Controllers\RenderMvc\ProjectPageController.cs" />
