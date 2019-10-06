@@ -24,12 +24,16 @@
 	margin-bottom: 22px;
 }
 
-.about-us__image {
+.about-us__image-outer {
 	position: absolute;
 	top: 0;
 	right: 94.6%;
-	width: 39.1vw;
-	padding-bottom: 67.1%;
+	width: 39.187vw;
+}
+
+.about-us__image {
+	position: relative;
+	padding-bottom: 82.6%;
 	&::after {
 		background-image: url('../assets/images/mask/about-us-mask.svg');
 		background-repeat: no-repeat;

@@ -3,6 +3,9 @@
 
 .news-slider {
 	margin-bottom: 198px;
+	@include breakpoint(laptop) {
+		margin-bottom: 120px;
+	}
 }
 
 .news-slider__background {
@@ -68,6 +71,10 @@
 	padding: 6px 20px;
 	border-radius: 15px;
 	display: inline-block;
+	@include breakpoint(laptop) {
+		font-size: 12px;
+		padding: 4px 14px;
+	}
 }
 
 .news-slider__item-title {
@@ -82,6 +89,9 @@
 	font-weight: 300;
 	color: $grey;
 	line-height: 30px;
+	@include breakpoint(laptop) {
+		font-size: 12px;
+	}
 }
 
 .news-slider__text {

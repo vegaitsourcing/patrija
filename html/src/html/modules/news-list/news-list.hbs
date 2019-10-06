@@ -1,5 +1,26 @@
 <div class="news-list">
-	<h2>{{title}} - news-list</h2>
+	<div class="wrap wrap--normal">
+		<h2 class="h2 news-list__title">{{title}}</h2>
+		{{#if blogItems}}
+			<div class="news-list__container">
+				{{#each blogItems}}
+					<div class="news-list__item">
+						<div class="news-list__image has-cover" style="background-image: url('{{this.image}}');"></div>
+						<div class="news-list__meta">
+							<span class="news-list__date">{{this.itemDate}}</span>
+						</div>
+						<h4 class="h6 news-list__item-title">
+							<a href="javascript:;">{{this.itemTitle}}</a>
+						</h4>
+						<p class="news-list__text">{{this.text}}</p>
+					</div>
+				{{/each}}
+			</div>
+		{{/if}}
+		<div class="news-list__buttons">
+			<button class="btn btn--mint news-list__load-more" type="button">{{loadMore}}</button>
+		</div>
+	</div>
 </div>
 
 {{!-- Blog --}}

@@ -4,11 +4,18 @@
 .home-intro {
 	padding-top: 208px;
 	margin-bottom: 480px;
+	@include breakpoint(laptop) {
+		padding-top: 140px;
+		margin-bottom: 240px;
+	}
 }
 
 .home-intro__wrap {
 	max-width: 1470px;
 	position: relative;
+	@include breakpoint(laptop) {
+		padding: 0 80px;
+	}
 }
 
 .home-intro__text {
@@ -17,6 +24,11 @@
 	font-weight: 700;
 	line-height: 55px;
 	margin-bottom: 34px;
+	@include breakpoint(laptop) {
+		font-size: 30px;
+		line-height: 40px;
+		max-width: 600px;
+	}
 }
 
 .home-intro__image {
@@ -24,6 +36,11 @@
 	width: 75.21vw;
 	top: -680px;
 	left: 55.6%;
+	@include breakpoint(laptop) {
+		width: 61.21vw;
+		top: -338px;
+		left: 61.6%;
+	}
 }
 
 .home-intro__circle {
@@ -40,6 +57,10 @@
 	top: 36.8%;
 	left: 17.1%;
 	box-shadow: 0 10px 16px rgba(39, 142, 208, 0.16), 0 4px 6px rgba(0, 0, 0, 0.06);
+	@include breakpoint(laptop) {
+		width: 40px;
+		height: 40px;
+	}
 }
 
 .home-intro__circle--mint {
@@ -49,6 +70,10 @@
 	top: 74.2%;
 	left: 13.7%;
 	box-shadow: 0 10px 16px rgba(40, 210, 198, 0.16), 0 4px 6px rgba(0, 0, 0, 0.06);
+	@include breakpoint(laptop) {
+		width: 30px;
+		height: 30px;
+	}
 }
 
 .home-intro__circle--grey {
@@ -58,4 +83,8 @@
 	top: 77.7%;
 	left: 48.4%;
 	box-shadow: 0 10px 16px rgba(196, 196, 196, 0.16), 0 4px 6px rgba(0, 0, 0, 0.06);
+	@include breakpoint(laptop) {
+		width: 22px;
+		height: 22px;
+	}
 }
