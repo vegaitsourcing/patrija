@@ -1,0 +1,28 @@
+﻿@model Patrija.Core.ViewModels.Shared.NewsBlogBlockViewModel
+
+<div class="articles has-cover" style="background-image: url('{{bgImage}}');">
+    <div class="wrap wrap--normal">
+        <h2 class="h2 articles__title">@Model.BlogCategoryName</h2>
+        <div class="articles__container">
+            @foreach (var article in Model.Articles)
+            {
+                <div class="articles__item">
+                    <div class="articles__item-img">
+                        <a href="javascript:;">
+                            <span class="articles__item-image has-cover" style="background-image: url('@article.Image.Url');"></span>
+                        </a>
+                    </div>
+                    <div class="articles__item-content">
+                        <span class="articles__item-date">@article.DateOfPublishing</span>
+                        <h4 class="h6 articles__item-title">
+                            <a href="javascript:;">@article.Title</a>
+                        </h4>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="articles__buttons">
+            <button class="btn btn--mint articles__load-more" type="button">@Model.LoadMoreButtonText</button>
+        </div>
+    </div>
+</div>

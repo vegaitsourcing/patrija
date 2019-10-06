@@ -1,5 +1,4 @@
-﻿using System;
-using Patrija.Common;
+﻿using Patrija.Common;
 using Patrija.Models.Generated;
 
 namespace Patrija.Core.ViewModels.Shared

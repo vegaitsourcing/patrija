@@ -442,6 +442,7 @@
     <Content Include="Views\Partials\NestedContent\_PageIntro.cshtml" />
     <Content Include="Views\Partials\NestedContent\_TaggedFeature.cshtml" />
     <Content Include="Views\Partials\Shared\_Block.cshtml" />
+    <Content Include="Views\Partials\Shared\_CommentsBlock.cshtml" />
     <Content Include="Views\Partials\Shared\_Link.cshtml" />
     <Content Include="Views\ProjectPage.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\ImageWithTextViewModel.cshtml" />
@@ -516,9 +517,18 @@
     <Content Include="Views\Partials\NestedContent\_BlogContent.cshtml" />
     <Content Include="Views\BlogPage.cshtml" />
     <Content Include="Views\Partials\NestedContent\_ContactForm.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_Donations.cshtml" />
+    <Content Include="Views\Partials\Shared\_FormWithoutDescription.cshtml" />
+    <Content Include="Views\JoinUsPage.cshtml" />
     <Content Include="Views\BlogArticle.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlogArticleContent.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlogIntro.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_BlogContent.cshtml" />
+    <Content Include="Views\BlogPage.cshtml" />
+    <Content Include="Views\News.cshtml" />
+    <Content Include="Views\Partials\Shared\_NewsBlogBlockLatestArticleInFocus.cshtml" />
+    <Content Include="Views\Partials\Shared\_NewsBlogBlockTwoColumnThreeRows.cshtml" />
+    <Content Include="Views\Partials\Shared\_NewsBlogBlockThreeColumnTwoRows.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -543,6 +553,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\MacroPartials\" />
     <Folder Include="Views\Shared\EditorTemplates\" />
   </ItemGroup>
   <PropertyGroup>

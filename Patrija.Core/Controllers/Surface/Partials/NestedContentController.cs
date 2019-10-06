@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using Patrija.Core.ViewModels.Partials.AboutUsPage;
 using Patrija.Core.ViewModels.Partials.Blog;
 using Patrija.Core.ViewModels.Partials.ContactUs;
@@ -6,11 +7,20 @@ using Patrija.Core.ViewModels.Partials.Features;
 using Patrija.Core.ViewModels.Partials.Home;
 using Patrija.Core.ViewModels.Partials.SupportUs;
 using Patrija.Core.ViewModels.Shared;
+using Patrija.Models.Generated;
 
 namespace Patrija.Core.Controllers.Surface.Partials
 {
     public class NestedContentController : BaseSurfaceController
     {
+        [ChildActionOnly]
+        public ActionResult CommentsBlock(Guid pageId)
+        {
+            var article = Umbraco.Content(pageId) as BlogArticle;
+
+            return PartialView(new CommentsBlockViewModel(article));
+        }
+
         [ChildActionOnly]
         public ActionResult PageIntro(PageIntroViewModel viewModel)
             => PartialView(viewModel);
@@ -49,6 +59,18 @@ namespace Patrija.Core.Controllers.Surface.Partials
 
         [ChildActionOnly]
         public ActionResult TestimonialsContainer(TestimonialsContainerViewModel viewModel)
+            => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult NewsBlogBlockLatestArticleInFocus(NewsBlogBlockViewModel viewModel)
+            => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult NewsBlogBlockTwoColumnThreeRows(NewsBlogBlockViewModel viewModel)
+            => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult NewsBlogBlockThreeColumnTwoRows(NewsBlogBlockViewModel viewModel)
             => PartialView(viewModel);
 
         [ChildActionOnly]
