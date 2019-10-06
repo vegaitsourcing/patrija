@@ -29,7 +29,7 @@ namespace Patrija.Core.Mappers
                     typeof(TestimonialsContainer), el => new TestimonialsContainerViewModel((TestimonialsContainer)el, "")
                 },
                 {
-                    typeof(UntaggedFeature), el => new FeatruedProjectViewModel((UntaggedFeature)el)
+                    typeof(UntaggedFeature), el => new UntaggedFeatureViewModel((UntaggedFeature)el)
                 },
                 {
                     typeof(ImageContainer), el => new ImageContainerViewModel((ImageContainer)el)

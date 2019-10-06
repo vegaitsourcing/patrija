@@ -316,11 +316,11 @@
     <Compile Include="ViewModels\Pages\SearchResultsViewModel.cs" />
     <Compile Include="ViewModels\Pages\SupportUsViewModel.cs" />
     <Compile Include="ViewModels\Pages\XMLSitemapViewModel.cs" />
-    <Compile Include="ViewModels\Partials\AboutUsPage\FeaturedProjectViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\FeaturedProjectsContainerViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\PageIntroViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\ShapeVariant.cs" />
     <Compile Include="ViewModels\Partials\ContactUs\ContactMapViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Features\DonationsViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\ImageWithTextViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\SupportContentBoxButtonType.cs" />
     <Compile Include="ViewModels\Partials\Features\TextBlockViewModel.cs" />
