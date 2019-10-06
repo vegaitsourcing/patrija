@@ -42,10 +42,6 @@ namespace Patrija.Core.Controllers.Surface.Partials
             => PartialView(viewModel);
 
         [ChildActionOnly]
-        public ActionResult TextBlock(TextBlockViewModel viewModel)
-            => PartialView(viewModel);
-
-        [ChildActionOnly]
         public ActionResult Block(object viewModel)
             => PartialView(viewModel);
 
@@ -54,14 +50,10 @@ namespace Patrija.Core.Controllers.Surface.Partials
             => PartialView(viewModel);
 
         [ChildActionOnly]
-        public ActionResult ImageContainer(ImageContainerViewModel viewModel)
-           => PartialView(viewModel);
-
         public ActionResult FaqContainer(FaqContainerViewModel viewModel)
             => PartialView(viewModel);
 
         [ChildActionOnly]
-
         public ActionResult SimpleForm(SimpleFormViewModel viewModel, string formId)
         {
             ViewData["formId"] = formId;

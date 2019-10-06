@@ -283,7 +283,7 @@
     <Compile Include="Controllers\Surface\Partials\LayoutController.cs" />
     <Compile Include="Controllers\Surface\Partials\NestedContentController.cs" />
     <Compile Include="Controllers\Surface\Partials\SearchListingController.cs" />
-    <Compile Include="Controllers\Surface\Partials\SupportUsSurfaceController.cs" />
+    <Compile Include="Controllers\Surface\Partials\SimpleFormSurfaceController.cs" />
     <Compile Include="Dtos\SimpleFormDto.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\HttpContextExtensions.cs" />

@@ -16,31 +16,55 @@
 .rte h1, .h1 {
 	font-size: 72px;
 	line-height: 78px;
+	@include breakpoint(laptop) {
+		font-size: 56px;
+		line-height: 64px;
+	}
 }
 
 .rte h2, .h2 {
 	font-size: 60px;
 	line-height: 65px;
+	@include breakpoint(laptop) {
+		font-size: 40px;
+		line-height: 55px;
+	}
 }
 
 .rte h3, .h3 {
 	font-size: 40px;
 	line-height: 55px;
+	@include breakpoint(laptop) {
+		font-size: 30px;
+		line-height: 45px;
+	}
 }
 
 .rte h4, .h4 {
 	font-size: 32px;
 	line-height: 42px;
+	@include breakpoint(laptop) {
+		font-size: 28px;
+		line-height: 38px;
+	}
 }
 
 .rte h5, .h5 {
 	font-size: 26px;
 	line-height: 36px;
+	@include breakpoint(laptop) {
+		font-size: 20px;
+		line-height: 30px;
+	}
 }
 
 .rte h6, .h6 {
 	font-size: 20px;
 	line-height: 30px;
+	@include breakpoint(laptop) {
+		font-size: 18px;
+		line-height: 28px;
+	}
 }
 
 .rte h1, .rte h2, .rte h3, .rte h4, .rte h5, .rte h6 {
@@ -57,6 +81,10 @@ p {
 		@include hover {
 			text-decoration: underline;
 		}
+	}
+	@include breakpoint(laptop) {
+		font-size: 16px;
+		line-height: 28px;
 	}
 }
 
@@ -82,6 +110,10 @@ p {
 	}
 	ol li {
 		list-style-type: decimal-leading-zero;
+	}
+	@include breakpoint(laptop) {
+		font-size: 16px;
+		line-height: 28px;
 	}
 }
 
