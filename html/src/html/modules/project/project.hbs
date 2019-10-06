@@ -7,12 +7,14 @@
 				<p class="project__text">{{text}}</p>
 				<a class="btn" href="javascript:;">{{link}}</a>
 			</div>
-			<div class="project__image project__image--normal">
-				{{#if additionalImage}}
-				<img class="project__additional-image" src="{{additionalImage}}" alt="">
-				{{/if}}
-				<div class="project__img has-cover" style="background-image: url('{{image}}');"></div>
-				<span class="circle circle--blue circle--large"></span>
+			<div class="project__image-outer project__image-outer--normal">
+				<div class="project__image project__image--normal">
+					{{#if additionalImage}}
+					<img class="project__additional-image" src="{{additionalImage}}" alt="">
+					{{/if}}
+					<div class="project__img has-cover" style="background-image: url('{{image}}');"></div>
+					<span class="circle circle--blue circle--large"></span>
+				</div>
 			</div>
 		</div>
 		<div class="project__item project__item--reverse">
@@ -21,12 +23,14 @@
 				<p class="project__text">{{textReverse}}</p>
 				<a class="btn" href="javascript:;">{{linkReverse}}</a>
 			</div>
-			<div class="project__image project__image--reverse">
-				{{#if additionalImageReverse}}
-				<img class="project__additional-image" src="{{additionalImageReverse}}" alt="">
-				{{/if}}
-				<div class="project__img has-cover" style="background-image: url('{{imageReverse}}');"></div>
-				<span class="circle circle--mint circle--tiny"></span>
+			<div class="project__image-outer project__image-outer--reverse">
+				<div class="project__image project__image--reverse">
+					{{#if additionalImageReverse}}
+					<img class="project__additional-image" src="{{additionalImageReverse}}" alt="">
+					{{/if}}
+					<div class="project__img has-cover" style="background-image: url('{{imageReverse}}');"></div>
+					<span class="circle circle--mint circle--tiny"></span>
+				</div>
 			</div>
 		</div>
 	</div>

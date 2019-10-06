@@ -7,7 +7,24 @@
         <h2 class="h2 project__main-title">@Model.Title</h2>
         @for (int i= 0; i < Model.UntaggedFeatures.Length; i++)
         {
-            @Html.DisplayFor(m => Model.UntaggedFeatures[i])
+            var isLeft = featruedProjectViewModel.ContentPosition == ContentPosition.Left;
+            var itemClass = isLeft ? "project__item--normal" : "project__item--reverse";
+            var imageClass = isLeft ? "project__image--normal" : "project__image--reverse";
+            <div class="project__item @(itemClass)">
+                <div class="project__item-content">
+                    <h2 class="h2 project__title">@featruedProjectViewModel.Title</h2>
+                    <p class="project__text">@featruedProjectViewModel.Text</p>
+                    <a class="btn" href="@featruedProjectViewModel.Link.Url">@featruedProjectViewModel.Link.Content</a>
+                </div>
+                <div class="project__image @(imageClass)">
+                    @if (featruedProjectViewModel.AdditionalImage != null)
+                    {
+                        <img class="project__additional-image" src="@featruedProjectViewModel.AdditionalImage" alt="">
+                    }
+                    <div class="project__img has-cover" style="background-image: url('@featruedProjectViewModel.FeatureImage');"></div>
+                    <span class="circle circle--blue circle--large"></span>
+                </div>
+            </div>
         }
     </div>
 </div>
