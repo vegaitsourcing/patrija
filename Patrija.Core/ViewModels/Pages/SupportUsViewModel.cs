@@ -11,6 +11,8 @@ namespace Patrija.Core.ViewModels.Pages
 {
     public class SupportUsViewModel : PageViewModel
     {
+        private const string _testimonialsContainerBackgroundImageUrl = "/assets/images/shapes/testimonials-volunteers-bg.svg";
+
         public SupportUsViewModel(IPageContext<SupportUs> context) : base(context)
         {
             var pageIntro = context.Page.SupportUsPageIntro;
@@ -22,7 +24,7 @@ namespace Patrija.Core.ViewModels.Pages
             var testimonials = context.Page.SupportUsTestimonials.FirstOrDefault();
             if(testimonials != null)
             {
-                TestimonialsContainer = new TestimonialsContainerViewModel(testimonials, "");
+                TestimonialsContainer = new TestimonialsContainerViewModel(testimonials, _testimonialsContainerBackgroundImageUrl);
             }
 
             // var donations = context.Page.SupportUsDonations
