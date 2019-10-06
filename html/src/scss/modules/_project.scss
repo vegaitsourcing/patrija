@@ -41,9 +41,23 @@
 	margin-bottom: 34px;
 }
 
-.project__image {
+.project__image-outer {
 	position: absolute;
 	top: 0;
+}
+
+.project__image-outer--normal {
+	left: 4.3%;
+	width: 34.183%;
+}
+
+.project__image-outer--reverse {
+	left: 58.1%;
+	width: 32.976%;
+}
+
+.project__image {
+	position: relative;
 	&::after {
 		background-image: url('../assets/images/mask/project-mask-left.svg');
 		background-position: center center;
@@ -60,9 +74,7 @@
 }
 
 .project__image--normal {
-	left: 4.3%;
-	width: 34.183%;
-	padding-bottom: 27.748%;
+	padding-bottom: 81.178%;
 	.circle {
 		bottom: -10px;
 		left: 29%;
@@ -70,9 +82,7 @@
 }
 
 .project__image--reverse {
-	left: 58.1%;
-	width: 32.976%;
-	padding-bottom: 29.357%;
+	padding-bottom: 89.025%;
 	&::after {
 		background-image: url('../assets/images/mask/project-mask-right.svg');
 	}

@@ -16,13 +16,16 @@
                     <p class="project__text">@featruedProjectViewModel.Text</p>
                     <a class="btn" href="@featruedProjectViewModel.Link.Url">@featruedProjectViewModel.Link.Content</a>
                 </div>
-                <div class="project__image @(imageClass)">
-                    @if (featruedProjectViewModel.AdditionalImage != null)
-                    {
-                        <img class="project__additional-image" src="@featruedProjectViewModel.AdditionalImage" alt="">
-                    }
-                    <div class="project__img has-cover" style="background-image: url('@featruedProjectViewModel.FeatureImage');"></div>
-                    <span class="circle circle--blue circle--large"></span>
+                <!-- TODO: ADD image outer class option (check hbs file) -->
+                <div class="project__image-outer @(imageOuterClass)">
+                    <div class="project__image @(imageClass)">
+                        @if (featruedProjectViewModel.AdditionalImage != null)
+                        {
+                            <img class="project__additional-image" src="@featruedProjectViewModel.AdditionalImage" alt="">
+                        }
+                        <div class="project__img has-cover" style="background-image: url('@featruedProjectViewModel.FeatureImage');"></div>
+                        <span class="circle circle--blue circle--large"></span>
+                    </div>
                 </div>
             </div>
         }
