@@ -9,7 +9,7 @@
 		},
 		"pageIntro": {
 			"title": "Jedna kratka rečenica o projektu Lice Ulice.",
-			"image": "../assets/images/content/lice-ulice-intro.jpg"
+			"image": "assets/images/content/lice-ulice-intro.jpg"
 		},
 		"textBlock": {
 			">>": "modules/text-block/data.json"

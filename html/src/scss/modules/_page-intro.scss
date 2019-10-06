@@ -8,14 +8,10 @@
 		height: 100%;
 	}
 	.circle--blue {
-		width: 61px;
-		height: 61px;
 		top: -5.4%;
 		left: 33.5%;
 	}
 	.circle--mint {
-		width: 49px;
-		height: 49px;
 		top: 76%;
 		left: -15.1%;
 	}
@@ -62,6 +58,25 @@
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
+	}
+}
+
+.page-intro__image--secondary {
+	width: 34.48vw;
+	top: 10.1%;
+	left: 63.2%;
+	padding-bottom: 40.22%;
+	&::after {
+		background-image: url('../assets/images/mask/page-intro-secondary-mask.svg');
+	}
+	.circle--blue {
+		top: 27.8%;
+		right: 6.2%;
+		left: auto;
+	}
+	.circle--mint {
+		top: 80.2%;
+		left: -13.8%;
 	}
 }
 
