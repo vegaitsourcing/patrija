@@ -21,25 +21,25 @@ using Umbraco.ModelsBuilder.Umbraco;
 namespace Patrija.Models.Generated
 {
 	/// <summary>FAQ Container</summary>
-	[PublishedModel("fAQContainer")]
-	public partial class FAqcontainer : PublishedContentModel
+	[PublishedModel("faqContainer")]
+	public partial class FaqContainer : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "fAQContainer";
+		public new const string ModelTypeAlias = "faqContainer";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<FAqcontainer, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<FaqContainer, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public FAqcontainer(IPublishedContent content)
+		public FaqContainer(IPublishedContent content)
 			: base(content)
 		{ }
 
