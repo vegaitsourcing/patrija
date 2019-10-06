@@ -400,10 +400,10 @@
     <Compile Include="Generated\Error404.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Generated\FAqcontainer.generated.cs">
+    <Compile Include="Generated\FaqContainer.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Generated\FAqitem.generated.cs">
+    <Compile Include="Generated\FaqItem.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\Feature.generated.cs">

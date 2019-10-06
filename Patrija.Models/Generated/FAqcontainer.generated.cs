@@ -22,7 +22,7 @@ namespace Patrija.Models.Generated
 {
 	/// <summary>FAQ Container</summary>
 	[PublishedModel("faqContainer")]
-	public partial class FaqContainer : PublishedContentModel
+	public partial class FaqContainer : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -39,7 +39,7 @@ namespace Patrija.Models.Generated
 #pragma warning restore 0109
 
 		// ctor
-		public FaqContainer(IPublishedContent content)
+		public FaqContainer(IPublishedElement content)
 			: base(content)
 		{ }
 

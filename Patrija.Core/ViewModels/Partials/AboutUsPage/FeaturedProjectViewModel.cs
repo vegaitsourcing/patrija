@@ -17,7 +17,7 @@ namespace Patrija.Core.ViewModels.Partials.AboutUsPage
             Link = new LinkViewModel(untaggedFeature.FeatureReadMoreLink);
             ContentPosition = EnumMapper.MapContentPosition(untaggedFeature.FeatureContentPosition);
             FeatureImage = new ImageViewModel(untaggedFeature.FeatureImage as Image);
-            AdditionalImage = new ImageViewModel(untaggedFeature.FeatureAdditionalImage as Image);
+            AdditionalImage = untaggedFeature.FeatureAdditionalImage != null ? new ImageViewModel(untaggedFeature.FeatureAdditionalImage as Image) : null;
         }
 
         public string Title { get; }
