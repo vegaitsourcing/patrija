@@ -20,6 +20,14 @@
 		font-size: 56px;
 		line-height: 64px;
 	}
+	@include mq-between(md, lg) {
+		font-size: 46px;
+		line-height: 54px;
+	}
+	@include mq-down(sm) {
+		font-size: 30px;
+		line-height: 38px;
+	}
 }
 
 .rte h2, .h2 {
@@ -28,6 +36,18 @@
 	@include breakpoint(laptop) {
 		font-size: 40px;
 		line-height: 55px;
+	}
+	@include mq-only(lg) {
+		font-size: 36px;
+		line-height: 52px;
+	}
+	@include mq-only(md) {
+		font-size: 32px;
+		line-height: 42px;
+	}
+	@include mq-down(sm) {
+		font-size: 28px;
+		line-height: 36px;
 	}
 }
 
@@ -38,6 +58,14 @@
 		font-size: 30px;
 		line-height: 45px;
 	}
+	@include mq-only(md) {
+		font-size: 24px;
+		line-height: 32px;
+	}
+	@include mq-down(sm) {
+		font-size: 20px;
+		line-height: 26px;
+	}
 }
 
 .rte h4, .h4 {
@@ -46,6 +74,14 @@
 	@include breakpoint(laptop) {
 		font-size: 28px;
 		line-height: 38px;
+	}
+	@include mq-only(md) {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	@include mq-down(sm) {
+		font-size: 16px;
+		line-height: 22px;
 	}
 }
 
@@ -56,6 +92,14 @@
 		font-size: 20px;
 		line-height: 30px;
 	}
+	@include mq-only(md) {
+		font-size: 16px;
+		line-height: 22px;
+	}
+	@include mq-down(sm) {
+		font-size: 14px;
+		line-height: 20px;
+	}
 }
 
 .rte h6, .h6 {
@@ -64,6 +108,14 @@
 	@include breakpoint(laptop) {
 		font-size: 18px;
 		line-height: 28px;
+	}
+	@include mq-only(md) {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	@include mq-down(sm) {
+		font-size: 13px;
+		line-height: 18px;
 	}
 }
 
@@ -85,6 +137,10 @@ p {
 	@include breakpoint(laptop) {
 		font-size: 16px;
 		line-height: 28px;
+	}
+	@include mq-down(md) {
+		font-size: 14px;
+		line-height: 22px;
 	}
 }
 
@@ -112,8 +168,16 @@ p {
 		list-style-type: decimal-leading-zero;
 	}
 	@include breakpoint(laptop) {
-		font-size: 16px;
-		line-height: 28px;
+		p {
+			font-size: 16px;
+			line-height: 28px;
+		}
+	}
+	@include mq-down(md) {
+		p {
+			font-size: 14px;
+			line-height: 22px;
+		}
 	}
 }
 

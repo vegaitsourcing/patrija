@@ -6,11 +6,23 @@
 	text-align: center;
 	background-size: 100% auto;
 	padding-top: 135px;
+	@include breakpoint(laptop) {
+		padding-top: 70px;
+	}
+	@include mq-down(md) {
+		padding-top: 20px;
+	}
 }
 
 .join-module__container {
 	padding: 130px 80px 212px;
 	position: relative;
+	@include mq-only(lg) {
+		padding: 100px 100px 212px;
+	}
+	@include mq-down(md) {
+		padding: 100px 80px 140px;
+	}
 }
 
 .join-module__title {
@@ -33,18 +45,38 @@
 	border-radius: 50%;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 	position: absolute;
+	@include mq-down(md) {
+		transform: scale(0.7);
+	}
 }
 
 .join-module__image--top {
 	top: 0;
 	left: 34.5%;
-	transform: translateX(-50%);
+	@include mq-only(lg) {
+		left: 39.5%;
+	}
+	@include mq-down(md) {
+		left: 38.5%;
+	}
 }
+
 .join-module__image--right {
 	width: 82px;
 	height: 82px;
 	top: 27%;
 	right: -24%;
+	@include breakpoint(laptop) {
+		top: 22%;
+		right: -12%;
+	}
+	@include mq-only(lg) {
+		right: -2%;
+	}
+	@include mq-down(md) {
+		top: 20%;
+		right: -4px;
+	}
 }
 
 .join-module__image--bottom {
@@ -52,6 +84,14 @@
 	height: 110px;
 	bottom: 5%;
 	right: 13%;
+	@include mq-only(lg) {
+		bottom: 9%;
+		right: 20%;
+	}
+	@include mq-down(md) {
+		bottom: 2%;
+		right: 26%;
+	}
 }
 
 .join-module__image--left {
@@ -59,4 +99,14 @@
 	height: 104px;
 	left: -21.4%;
 	top: 34.4%;
+	@include breakpoint(laptop) {
+		left: -7.4%;
+	}
+	@include mq-only(lg) {
+		left: -3.4%;
+	}
+	@include mq-down(md) {
+		left: -4%;
+		top: 30.4%;
+	}
 }
