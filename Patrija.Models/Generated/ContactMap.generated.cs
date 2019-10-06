@@ -46,11 +46,11 @@ namespace Patrija.Models.Generated
 		// properties
 
 		///<summary>
-		/// Location Url
+		/// Location Url: Paste in url of embedded Google map location
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("contactLocationUrl")]
-		public Umbraco.Web.Models.Link ContactLocationUrl => this.Value<Umbraco.Web.Models.Link>("contactLocationUrl");
+		public string ContactLocationUrl => this.Value<string>("contactLocationUrl");
 
 		///<summary>
 		/// Text
