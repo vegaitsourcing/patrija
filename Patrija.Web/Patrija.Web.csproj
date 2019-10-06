@@ -514,6 +514,8 @@
     <Content Include="Views\Partials\NestedContent\_Donations.cshtml" />
     <Content Include="Views\Partials\Shared\_FormWithoutDescription.cshtml" />
     <Content Include="Views\JoinUsPage.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_BlogContent.cshtml" />
+    <Content Include="Views\BlogPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
