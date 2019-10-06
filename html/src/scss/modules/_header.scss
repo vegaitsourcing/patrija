@@ -3,6 +3,16 @@
 .header {
 	padding-top: 56px;
 	padding-bottom: 20px;
+	@include breakpoint(laptop) {
+		padding-top: 20px;
+		position: relative;
+		.wrap {
+			padding: 0 20px;
+		}
+	}
+	@include mq-between(md, lg) {
+		padding-top: 20px;
+	}
 }
 .header__container {
 	display: flex;
@@ -11,6 +21,9 @@
 }
 .header__logo {
 	width: 290px;
+	@include breakpoint(laptop) {
+		width: 220px;
+	}
 }
 .nav {
 	vertical-align: middle;
@@ -22,6 +35,9 @@
 }
 .nav__item {
 	margin: 0 10px;
+	@include breakpoint(laptop) {
+		margin: 0 6px;
+	}
 }
 .nav__link {
 	position: relative;
@@ -49,6 +65,9 @@
 			transform: scaleX(0.7);
 		}
 	}
+	@include breakpoint(laptop) {
+		font-size: 14px;
+	}
 }
 .nav__link--active {
 	&::before {
@@ -65,6 +84,14 @@
 }
 .header__join-btn {
 	vertical-align: middle;
+	@include breakpoint(laptop) {
+		position: absolute;
+		right: 20px;
+		top: 32px;
+		font-size: 14px;
+		padding: 8px 12px;
+		min-width: 150px;
+	}
 }
 .nav-toggle {
 	display: none;

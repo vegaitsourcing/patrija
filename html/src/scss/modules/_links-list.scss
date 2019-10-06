@@ -30,6 +30,10 @@
 	@include hover {
 		background-color: $mint;
 	}
+	@include breakpoint(laptop) {
+		font-size: 18px;
+		padding: 20px;
+	}
 }
 
 .links-list__title {
@@ -40,14 +44,24 @@
 	width: 61px;
 	height: 61px;
 	position: absolute;
+	@include breakpoint(laptop) {
+		width: 40px;
+		height: 40px;
+	}
 }
 
 .links-list__circle--right {
 	top: 42.2%;
 	right: 9.2vw;
+	@include breakpoint(laptop) {
+		right: 5.2vw;
+	}
 }
 
 .links-list__circle--left {
 	top: 47.5%;
 	left: 8.5vw;
+	@include breakpoint(laptop) {
+		left: 5.5vw;
+	}
 }
