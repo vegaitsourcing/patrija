@@ -14,6 +14,9 @@
 	@include mq-only(md) {
 		margin-bottom: 100px;
 	}
+	@include mq-down(sm) {
+		margin-bottom: -140px;
+	}
 }
 
 .home-intro__wrap {
@@ -35,12 +38,14 @@
 		line-height: 40px;
 		max-width: 600px;
 	}
+	@include mq-only(lg) {
+		max-width: 560px;
+	}
 	@include mq-between(md, lg) {
 		font-size: 28px;
 		line-height: 38px;
-		max-width: 560px;
 	}
-	@include mq-down(sm) {
+	@include mq-down(md) {
 		font-size: 24px;
 		line-height: 32px;
 		max-width: 400px;
@@ -62,6 +67,10 @@
 	}
 	@include mq-only(md) {
 		top: -340px;
+	}
+	@include mq-down(sm) {
+		position: relative;
+		top: -490px;
 	}
 }
 

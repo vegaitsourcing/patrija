@@ -11,18 +11,30 @@
 	@include mq-down(md) {
 		padding: 42px 0 80px;
 	}
+	@include mq-down(sm) {
+		padding-bottom: 40px;
+	}
 }
 
 .links-list__list {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -10px;
+	@include mq-down(sm) {
+		display: block;
+		margin: 0;
+	}
 }
 
 .links-list__item {
 	flex: 0 0 50%;
 	max-width: 50%;
 	padding: 0 10px;
+	@include mq-down(sm) {
+		display: block;
+		max-width: 100%;
+		margin-bottom: 10px;
+	}
 }
 
 .links-list__link {
@@ -46,6 +58,11 @@
 	@include mq-only(md) {
 		font-size: 16px;
 		padding: 12px 20px;
+	}
+	@include mq-down(sm) {
+		font-size: 14px;
+		line-height: 30px;
+		padding: 10px 20px;
 	}
 }
 
@@ -77,6 +94,9 @@
 		top: 2%;
 		right: 8.2vw;
 	}
+	@include mq-down(sm) {
+		display: none;
+	}
 }
 
 .links-list__circle--left {
@@ -89,5 +109,8 @@
 		left: 3.5vw;
 		bottom: 5%;
 		top: auto;
+	}
+	@include mq-down(sm) {
+		display: none;
 	}
 }

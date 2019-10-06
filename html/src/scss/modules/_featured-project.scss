@@ -21,6 +21,9 @@
 	@include mq-only(md) {
 		padding: 101px 80px 100px 28.8%;
 	}
+	@include mq-down(sm) {
+		padding: 235px 0 40px;
+	}
 }
 
 .featured-project__item--reverse {
@@ -33,6 +36,9 @@
 	}
 	@include mq-only(md) {
 		padding: 100px 80px 100px 8%;
+	}
+	@include mq-down(sm) {
+		padding: 235px 0 40px;
 	}
 }
 
@@ -68,6 +74,12 @@
 	top: 0;
 	right: 78%;
 	width: 45vw;
+	@include mq-down(sm) {
+		right: auto;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80vw;
+	}
 }
 
 .featured-project__mask {
@@ -92,6 +104,11 @@
 	right: auto;
 	left: 77%;
 	width: 37.5vw;
+	@include mq-down(sm) {
+		left: 50%;
+		transform: translateX(-50%);
+		width: 66vw;
+	}
 }
 
 .featured-project__mask--reverse {
@@ -130,5 +147,10 @@
 	right: 19.8%;
 	@include breakpoint(laptop) {
 		top: 40.8%;
+	}
+	@include mq-down(sm) {
+		top: auto;
+		right: 14.8%;
+		bottom: 2%;
 	}
 }

@@ -12,6 +12,9 @@
 	@include mq-down(md) {
 		padding-top: 20px;
 	}
+	@include mq-down(sm) {
+		padding-top: 0;
+	}
 }
 
 .join-module__container {
@@ -20,8 +23,11 @@
 	@include mq-only(lg) {
 		padding: 100px 100px 212px;
 	}
-	@include mq-down(md) {
+	@include mq-only(md) {
 		padding: 100px 80px 140px;
+	}
+	@include mq-down(sm) {
+		padding: 0;
 	}
 }
 
@@ -30,13 +36,20 @@
 }
 
 .join-module__info {
-	font-size: 16px;
-	line-height: 25px;
 	margin-bottom: 36px;
 }
 
 .join-module__btn {
 	margin: 0 10px;
+	@include mq-down(sm) {
+		margin: 0 10px 14px;
+	}
+}
+
+.join-module__images {
+	@include mq-down(sm) {
+		display: none;
+	}
 }
 
 .join-module__image {

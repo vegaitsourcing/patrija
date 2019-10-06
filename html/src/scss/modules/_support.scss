@@ -9,6 +9,9 @@
 	@include mq-only(md) {
 		padding: 60px 0;
 	}
+	@include mq-down(sm) {
+		padding: 40px 0 20px;
+	}
 }
 
 .support__wrap {
@@ -26,6 +29,9 @@
 	}
 	@include mq-down(md) {
 		display: block;
+	}
+	@include mq-down(sm) {
+		padding: 0;
 	}
 }
 
@@ -51,6 +57,9 @@
 	@include breakpoint(laptop) {
 		padding: 48px;
 	}
+	@include mq-down(sm) {
+		padding: 40px 20px;
+	}
 }
 
 .support__item-title {
@@ -72,8 +81,13 @@
 	@include mq-only(lg) {
 		top: -30%;
 	}
-	@include mq-down(md) {
+	@include mq-only(md) {
 		top: -100px;
+	}
+	@include mq-down(sm) {
+		top: -6%;
+		right: 77.6%;
+		width: 46vw;
 	}
 }
 
@@ -107,4 +121,7 @@
 .support__circle {
 	top: 150px;
 	right: -1.5%;
+	@include mq-down(sm) {
+		display: none;
+	}
 }
