@@ -55,6 +55,12 @@
 
 .news-slider__container {
 	padding: 0 94px;
+	@include mq-only(md) {
+		padding: 0 54px;
+	}
+	@include mq-down(sm) {
+		padding: 0 24px;
+	}
 }
 
 .news-slider__slider {

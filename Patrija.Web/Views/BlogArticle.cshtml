@@ -1,5 +1,7 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.BlogArticle>
-@using ContentModels = Patrija.Models.Generated;
+﻿@inherits UmbracoViewPage<BlogPageViewModel>
 @{
-	Layout = null;
+
+    Html.RenderAction<NestedContentController>(c => nameof(c.BlogIntro), new { viewModel = Model.BlogIntro });
+
+    Html.RenderAction<NestedContentController>(c => nameof(c.BlogArticleContent), new { viewModel = Model.ArticleContent });
 }
