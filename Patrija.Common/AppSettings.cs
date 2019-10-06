@@ -10,14 +10,20 @@ namespace Patrija.Common
 	{
 		public static bool DisableHttpCompression => Get<bool>("disableHttpCompression", false);
 		public static string XMLSitemapRouteUrl => Get<string>("xmlSitemapRouteUrl", "xmlsitemap");
-		
-		/// <summary>
-		/// Retrieves configuration value associated with given <paramref name="key"/>.
-		/// </summary>
-		/// <typeparam name="T">Configuration value type.</typeparam>
-		/// <param name="key">Configuration key.</param>
-		/// <returns>Configuration value associated with given <paramref name="key"/>.</returns>
-		public static T Get<T>(string key)
+
+	    public static string SmtpHost => Get<string>("emailSmtpHost", string.Empty);
+	    public static int SmtpPort => Get<int>("emailSmtpPort", -1);
+	    public static string SourceEmailAddress => Get<string>("emailSourceAdddress", string.Empty);
+	    public static string SourceEmailPassword => Get<string>("emailSourcePassword", string.Empty);
+	    public static string DestinationEmailAddress => Get<string>("emailDestinationAdddress", string.Empty);
+
+        /// <summary>
+        /// Retrieves configuration value associated with given <paramref name="key"/>.
+        /// </summary>
+        /// <typeparam name="T">Configuration value type.</typeparam>
+        /// <param name="key">Configuration key.</param>
+        /// <returns>Configuration value associated with given <paramref name="key"/>.</returns>
+        public static T Get<T>(string key)
 		{
 			string setting = ConfigurationManager.AppSettings[key];
 			if (string.IsNullOrWhiteSpace(setting))
