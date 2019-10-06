@@ -270,7 +270,7 @@
     <Compile Include="Contexts\PageContext.cs" />
     <Compile Include="Contexts\SeoContext.cs" />
     <Compile Include="Contexts\SiteContext.cs" />
-    <Compile Include="Controllers\RenderMvc\BlogPageController.cs" />
+    <Compile Include="Controllers\RenderMvc\BlogArticleController.cs" />
     <Compile Include="Controllers\RenderMvc\AboutUsPageController.cs" />
     <Compile Include="Controllers\RenderMvc\BasePageController.cs" />
     <Compile Include="Controllers\RenderMvc\ContactUsController.cs" />
@@ -326,6 +326,7 @@
     <Compile Include="ViewModels\Partials\AboutUsPage\FeaturedProjectsContainerViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\PageIntroViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\ShapeVariant.cs" />
+    <Compile Include="ViewModels\Partials\Blog\ArticleContentViewModel.cs" />
     <Compile Include="ViewModels\Partials\ContactUs\ContactMapViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\DonationsViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\UntaggedFeatureViewModel.cs" />

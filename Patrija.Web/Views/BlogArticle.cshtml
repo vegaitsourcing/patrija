@@ -1,0 +1,4 @@
+﻿@inherits UmbracoViewPage<BlogPageViewModel>
+@{
+    Html.RenderAction<NestedContentController>(c => nameof(c.BlogArticleContent), new { viewModel = Model.ArticleContent });
+}

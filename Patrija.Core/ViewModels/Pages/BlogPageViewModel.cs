@@ -1,6 +1,6 @@
-﻿using System.Linq;
-using Patrija.Core.Contexts;
+﻿using Patrija.Core.Contexts;
 using Patrija.Core.ViewModels.Partials.AboutUsPage;
+using Patrija.Core.ViewModels.Partials.Blog;
 using Patrija.Models.Generated;
 
 namespace Patrija.Core.ViewModels.Pages
@@ -13,17 +13,12 @@ namespace Patrija.Core.ViewModels.Pages
 
             var pageIntro = context.Page.BlogArticlePageIntro;
 
-            ArticleSubtitle = context.Page.BlogArticleSubtitle;
-
-            var articleContent = context.Page.BlogArticleContent;
-            ArticleContent = articleContent.ToHtmlString();
-
+            var articleContentHtml = context.Page.BlogArticleContent;
+            ArticleContent = new ArticleContentViewModel(context.Page.BlogArticleSubtitle, articleContentHtml.ToHtmlString());
         }
 
         public string Title { get; }
         public PageIntroViewModel PageIntro { get; }
-        public string ArticleSubtitle { get; }
-        public string ArticleContent { get; }
-
+        public ArticleContentViewModel ArticleContent { get; }
     }
 }
