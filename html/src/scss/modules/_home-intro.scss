@@ -8,6 +8,12 @@
 		padding-top: 140px;
 		margin-bottom: 240px;
 	}
+	@include mq-only(lg) {
+		margin-bottom: 160px;
+	}
+	@include mq-only(md) {
+		margin-bottom: 100px;
+	}
 }
 
 .home-intro__wrap {
@@ -29,6 +35,16 @@
 		line-height: 40px;
 		max-width: 600px;
 	}
+	@include mq-between(md, lg) {
+		font-size: 28px;
+		line-height: 38px;
+		max-width: 560px;
+	}
+	@include mq-down(sm) {
+		font-size: 24px;
+		line-height: 32px;
+		max-width: 400px;
+	}
 }
 
 .home-intro__image {
@@ -40,6 +56,12 @@
 		width: 61.21vw;
 		top: -338px;
 		left: 61.6%;
+	}
+	@include mq-only(lg) {
+		top: -310px;
+	}
+	@include mq-only(md) {
+		top: -340px;
 	}
 }
 
@@ -61,6 +83,10 @@
 		width: 40px;
 		height: 40px;
 	}
+	@include mq-down(md) {
+		width: 24px;
+		height: 24px;
+	}
 }
 
 .home-intro__circle--mint {
@@ -74,6 +100,10 @@
 		width: 30px;
 		height: 30px;
 	}
+	@include mq-down(md) {
+		width: 20px;
+		height: 20px;
+	}
 }
 
 .home-intro__circle--grey {
@@ -86,5 +116,9 @@
 	@include breakpoint(laptop) {
 		width: 22px;
 		height: 22px;
+	}
+	@include mq-down(md) {
+		width: 18px;
+		height: 18px;
 	}
 }

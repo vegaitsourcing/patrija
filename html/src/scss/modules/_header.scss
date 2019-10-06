@@ -3,6 +3,7 @@
 .header {
 	padding-top: 56px;
 	padding-bottom: 20px;
+	z-index: 100;
 	@include breakpoint(laptop) {
 		padding-top: 20px;
 		position: relative;
@@ -12,6 +13,13 @@
 	}
 	@include mq-between(md, lg) {
 		padding-top: 20px;
+	}
+	@include mq-down(lg) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: $white;
 	}
 }
 .header__container {
@@ -28,6 +36,9 @@
 .nav {
 	vertical-align: middle;
 	display: inline-block;
+	@include mq-down(lg) {
+		display: none;
+	}
 }
 .nav__list {
 	display: flex;

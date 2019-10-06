@@ -102,6 +102,13 @@
 			font-size: 18px;
 		}
 	}
+	@include mq-only(md) {
+		width: 46px;
+		height: 46px;
+		&::before {
+			font-size: 16px;
+		}
+	}
 }
 .slick-prev {
 	left: -84px;

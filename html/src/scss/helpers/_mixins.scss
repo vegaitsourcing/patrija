@@ -4,7 +4,7 @@
 	@if $value == 'phone' {
 		@media only screen and (max-width: 767px) { @content; }
 	} @else if $value == 'laptop' {
-		@media only screen and (min-width: 1200px) and (max-width: 1599px) { @content; }
+		@media only screen and (min-width: 992px) and (max-width: 1599px) { @content; }
 	}
 }
 

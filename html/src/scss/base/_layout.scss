@@ -19,6 +19,9 @@ body {
 .main {
 	width: 100%;
 	overflow: hidden;
+	@include mq-down(lg) {
+		padding-top: 100px;
+	}
 }
 
 .wrap {
@@ -27,6 +30,9 @@ body {
 	padding: 0 20px;
 	width: 100%;
 	@include breakpoint(laptop) {
+		padding: 0 40px;
+	}
+	@include mq-only(md) {
 		padding: 0 40px;
 	}
 }
@@ -51,6 +57,10 @@ body {
 	border-radius: 50%;
 	z-index: 100;
 	display: block;
+	@include mq-down(md) {
+		width: 24px;
+		height: 24px;
+	}
 }
 .circle--blue {
 	background-color: $blue;
@@ -71,11 +81,19 @@ body {
 		width: 26px;
 		height: 26px;
 	}
+	@include mq-down(md) {
+		width: 20px;
+		height: 20px;
+	}
 }
 .circle--small {
 	width: 42px;
 	height: 42px;
 	@include breakpoint(laptop) {
+		width: 28px;
+		height: 28px;
+	}
+	@include mq-down(md) {
 		width: 22px;
 		height: 22px;
 	}
@@ -87,6 +105,10 @@ body {
 		width: 38px;
 		height: 38px;
 	}
+	@include mq-down(md) {
+		width: 30px;
+		height: 30px;
+	}
 }
 .circle--large {
 	width: 61px;
@@ -94,5 +116,9 @@ body {
 	@include breakpoint(laptop) {
 		width: 40px;
 		height: 40px;
+	}
+	@include mq-down(md) {
+		width: 34px;
+		height: 34px;
 	}
 }

@@ -38,6 +38,16 @@ input[type='submit'] {
 		padding: 12px 20px;
 		min-width: 180px;
 	}
+	@include mq-only(md) {
+		font-size: 14px;
+		padding: 12px 20px;
+		min-width: 160px;
+	}
+	@include mq-down(sm) {
+		font-size: 14px;
+		padding: 10px 20px;
+		min-width: 120px;
+	}
 }
 
 .btn--small {

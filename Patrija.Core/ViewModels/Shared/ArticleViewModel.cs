@@ -6,6 +6,7 @@ namespace Patrija.Core.ViewModels.Shared
 {
     public class ArticleViewModel
     {
+        
         public ArticleViewModel(BlogArticle blogArticle, string category)
         {
             Guard.AgainstDefaultValue(blogArticle);
@@ -24,7 +25,7 @@ namespace Patrija.Core.ViewModels.Shared
         public string Title { get; }
         public string PreviewText { get; }
         public string Category { get; }
-        public string BlogPageUrl { get; } 
+        public string BlogPageUrl { get; }
         public DateTime PublishDate { get; }
         public ImageViewModel Image { get; }
     }

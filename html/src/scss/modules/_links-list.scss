@@ -5,6 +5,12 @@
 	text-align: center;
 	padding: 42px 0 96px;
 	position: relative;
+	@include mq-only(lg) {
+		padding: 42px 90px 60px;
+	}
+	@include mq-down(md) {
+		padding: 42px 0 80px;
+	}
 }
 
 .links-list__list {
@@ -34,6 +40,13 @@
 		font-size: 18px;
 		padding: 20px;
 	}
+	@include mq-only(lg) {
+		padding: 12px 20px;
+	}
+	@include mq-only(md) {
+		font-size: 16px;
+		padding: 12px 20px;
+	}
 }
 
 .links-list__title {
@@ -48,6 +61,10 @@
 		width: 40px;
 		height: 40px;
 	}
+	@include mq-down(md) {
+		width: 34px;
+		height: 34px;
+	}
 }
 
 .links-list__circle--right {
@@ -56,6 +73,10 @@
 	@include breakpoint(laptop) {
 		right: 5.2vw;
 	}
+	@include mq-down(md) {
+		top: 2%;
+		right: 8.2vw;
+	}
 }
 
 .links-list__circle--left {
@@ -63,5 +84,10 @@
 	left: 8.5vw;
 	@include breakpoint(laptop) {
 		left: 5.5vw;
+	}
+	@include mq-down(md) {
+		left: 3.5vw;
+		bottom: 5%;
+		top: auto;
 	}
 }

@@ -49,6 +49,46 @@ namespace Patrija.Core.Controllers.Surface.Partials
             return new HttpStatusCodeResult(200);
         }
 
+        [HttpPost]
+        public ActionResult SubmitUserForm(SimpleFormDto formData)
+        {
+            if (!ModelState.IsValid)
+            {
+                return new HttpStatusCodeResult(400);
+            }
+
+            try
+            {
+                SendEmail(formData, $"[Korisnik] Korisnik {formData.FullName}");
+            }
+            catch
+            {
+                return new HttpStatusCodeResult(500);
+            }
+
+            return new HttpStatusCodeResult(200);
+        }
+
+        [HttpPost]
+        public ActionResult SubmitVolunteerForm(SimpleFormDto formData)
+        {
+            if (!ModelState.IsValid)
+            {
+                return new HttpStatusCodeResult(400);
+            }
+
+            try
+            {
+                SendEmail(formData, $"[Volonter] Korisnik {formData.FullName}");
+            }
+            catch
+            {
+                return new HttpStatusCodeResult(500);
+            }
+
+            return new HttpStatusCodeResult(200);
+        }
+
         private void SendEmail(SimpleFormDto formData, string subject)
         {
             var emailClient = new SmtpClient();

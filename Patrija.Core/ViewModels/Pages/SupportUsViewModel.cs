@@ -27,7 +27,8 @@ namespace Patrija.Core.ViewModels.Pages
                 TestimonialsContainer = new TestimonialsContainerViewModel(testimonials, _testimonialsContainerBackgroundImageUrl);
             }
 
-            // var donations = context.Page.SupportUsDonations
+            var donations = context.Page.SupportUsDonations.FirstOrDefault();
+            Donations = donations != null ? new DonationsViewModel(donations) : null;
 
             var frequentlyAskedQuestions = context.Page.SupportUsFaq.FirstOrDefault();
             if(frequentlyAskedQuestions != null)
@@ -44,7 +45,6 @@ namespace Patrija.Core.ViewModels.Pages
         public TestimonialsContainerViewModel TestimonialsContainer { get; }
         public DonationsViewModel Donations { get; }
         public FaqContainerViewModel FaqContainer { get; }
-
         public JoinUsViewModel JoinUs { get; }
     }
 }
