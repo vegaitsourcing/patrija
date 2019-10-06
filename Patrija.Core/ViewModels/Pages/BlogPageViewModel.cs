@@ -30,7 +30,6 @@ namespace Patrija.Core.ViewModels.Pages
         public BlogIntroViewModel BlogIntro { get; }
         public PageIntroViewModel PageIntro { get; }
         public string ArticleSubtitle { get; }
-        public string ArticleContent { get; }
         public bool AreCommentsEnabled { get; }
         
         public Guid PageId { get; }
