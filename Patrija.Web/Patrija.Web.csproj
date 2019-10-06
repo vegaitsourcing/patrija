@@ -499,9 +499,9 @@
     <Content Include="Views\Partials\Shared\_ArticleContainer.cshtml" />
     <Content Include="Views\Partials\Shared\_Article.cshtml" />
     <Content Include="Views\DisplayTemplates\FormattedDate.cshtml" />
-    <Content Include="Views\Partials\NestedContent\_TextBlock.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\TextBlockViewModel.cshtml" />
     <Content Include="Views\Partials\Shared\_TestimonialItem.cshtml" />
-    <Content Include="Views\Partials\Shared\_TestimonialContainer.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\TestimonialsContainerViewModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\ImageContainerViewModel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
