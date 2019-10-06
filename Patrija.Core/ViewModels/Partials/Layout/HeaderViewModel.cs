@@ -21,7 +21,7 @@ namespace Patrija.Core.ViewModels.Partials.Layout
             var applicationPages = header.Children.OfType<IPage>().ToArray();
             var currentPageUrl = context.CurrentPage.Url;
             
-            MenuItems = applicationPages.Select(page => new LinkViewModel(page.Url, page.Name, IsLinkActive(page, currentPageUrl))).ToArray();
+            MenuItems = applicationPages.Prepend(header as IPage).Select(page => new LinkViewModel(page.Url, page.Name, IsLinkActive(page, currentPageUrl))).ToArray();
             
 		}
 

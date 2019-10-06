@@ -8,6 +8,14 @@
 		$('#seller-form').on('click', '.btn--submit', (event) => {
 			this.submitSingleForm(event, '/umbraco/surface/SimpleFormSurface/SubmitSellerForm');
 		});
+
+		$('#user-form').on('click', '.btn--submit', (event) => {
+			this.submitSingleForm(event, '/umbraco/surface/SimpleFormSurface/SubmitUserForm');
+		});
+
+		$('#volunteer-form').on('click', '.btn--submit', (event) => {
+			this.submitSingleForm(event, '/umbraco/surface/SimpleFormSurface/SubmitVolunteerForm');
+		});
 	},
 
 	submitSingleForm: function(event, url) {

@@ -6,6 +6,12 @@
 	@include breakpoint(laptop) {
 		margin-bottom: 120px;
 	}
+	@include mq-only(md) {
+		margin-bottom: 80px;
+	}
+	@include mq-down(sm) {
+		margin-bottom: 60px;
+	}
 }
 
 .news-slider__background {
@@ -97,4 +103,7 @@
 .news-slider__text {
 	font-size: 14px;
 	line-height: 25px;
+	@include mq-only(lg) {
+		line-height: 22px;
+	}
 }

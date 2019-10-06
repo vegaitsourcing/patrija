@@ -15,6 +15,7 @@ namespace Patrija.Core.ViewModels.Pages
             HomeIntro = homeIntro != null ? new HomeIntroViewModel(homeIntro) : null;
 
             var mostRecentBlogsRequest = context.Home.MostRecentBlogs.FirstOrDefault();
+
             if(mostRecentBlogsRequest != null)
             {
                 ArticleContainer = GenerateArticleContainerViewModel(context, mostRecentBlogsRequest);

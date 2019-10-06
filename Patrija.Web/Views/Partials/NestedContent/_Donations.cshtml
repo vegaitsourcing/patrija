@@ -1,0 +1,19 @@
+﻿@using Patrija.Core.ViewModels.Partials.Features;
+@inherits UmbracoViewPage<DonationsViewModel>
+
+    <div class="donations">
+        <div class="wrap wrap--small">
+            <div class="donations__content">
+                <h3 class="h3 donations__title">@Model.Title</h3>
+                <p class="donations__text">@Model.Text</p>
+            </div>
+            <div class="donations__logos">
+                @foreach (var logoImage in Model.Images)
+                {
+                    <div class="donations__logo">
+                        <img class="donations__logo-image" src="@logoImage.Url" alt="">
+                    </div>
+                }
+            </div>
+        </div>
+    </div>

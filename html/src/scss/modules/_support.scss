@@ -6,6 +6,12 @@
 	@include breakpoint(laptop) {
 		padding: 96px 0;
 	}
+	@include mq-only(md) {
+		padding: 60px 0;
+	}
+	@include mq-down(sm) {
+		padding: 40px 0 20px;
+	}
 }
 
 .support__wrap {
@@ -18,6 +24,15 @@
 	justify-content: space-between;
 	position: relative;
 	z-index: 10;
+	@include mq-only(lg) {
+		padding: 0 5%;
+	}
+	@include mq-down(md) {
+		display: block;
+	}
+	@include mq-down(sm) {
+		padding: 0;
+	}
 }
 
 .support__item {
@@ -28,6 +43,11 @@
 	border-radius: 10px;
 	display: flex;
 	align-items: center;
+	@include mq-down(md) {
+		display: block;
+		max-width: 100%;
+		margin-bottom: 24px;
+	}
 }
 
 .support__item-content {
@@ -36,6 +56,9 @@
 	border-radius: 10px;
 	@include breakpoint(laptop) {
 		padding: 48px;
+	}
+	@include mq-down(sm) {
+		padding: 40px 20px;
 	}
 }
 
@@ -52,6 +75,20 @@
 	top: -59%;
 	right: 80.6%;
 	width: 34.375vw;
+	@include breakpoint(laptop) {
+		top: -46%;
+	}
+	@include mq-only(lg) {
+		top: -30%;
+	}
+	@include mq-only(md) {
+		top: -100px;
+	}
+	@include mq-down(sm) {
+		top: -6%;
+		right: 77.6%;
+		width: 46vw;
+	}
 }
 
 .support__image-mask {
@@ -70,9 +107,6 @@
 		width: 100%;
 		height: 100%;
 	}
-	@include breakpoint(laptop) {
-		top: -30%;
-	}
 }
 
 .support__image {
@@ -87,4 +121,7 @@
 .support__circle {
 	top: 150px;
 	right: -1.5%;
+	@include mq-down(sm) {
+		display: none;
+	}
 }

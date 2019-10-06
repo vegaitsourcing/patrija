@@ -49,8 +49,8 @@ namespace Patrija.Models.Generated
 		/// As User
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("joinUsPageAsUser")]
-		public IEnumerable<FormWithoutDescription> JoinUsPageAsUser => this.Value<IEnumerable<FormWithoutDescription>>("joinUsPageAsUser");
+		[ImplementPropertyType("joinUsPageAsUserForm")]
+		public IEnumerable<FormWithoutDescription> JoinUsPageAsUserForm => this.Value<IEnumerable<FormWithoutDescription>>("joinUsPageAsUserForm");
 
 		///<summary>
 		/// As Volunteer Form

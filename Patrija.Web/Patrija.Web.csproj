@@ -496,7 +496,6 @@
     <Content Include="Views\Partials\NestedContent\_AboutUs.cshtml" />
     <Content Include="Views\Partials\Shared\_SimpleForm.cshtml" />
     <Content Include="Views\Partials\Container\_HomeSupportContainer.cshtml" />
-    <Content Include="Views\Partials\Container\_AboutUsProjectsContainer.cshtml" />
     <Content Include="Views\Partials\Shared\_ArticleContainer.cshtml" />
     <Content Include="Views\Partials\Shared\_Article.cshtml" />
     <Content Include="Views\DisplayTemplates\FormattedDate.cshtml" />
@@ -511,6 +510,9 @@
     <Content Include="Views\Shared\DisplayTemplates\UntaggedFeatureViewModel.cshtml" />
     <Content Include="Views\ContactUs.cshtml" />
     <Content Include="Views\Partials\NestedContent\_ContactMap.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_Donations.cshtml" />
+    <Content Include="Views\Partials\Shared\_FormWithoutDescription.cshtml" />
+    <Content Include="Views\JoinUsPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

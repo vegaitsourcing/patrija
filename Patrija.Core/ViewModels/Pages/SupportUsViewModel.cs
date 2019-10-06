@@ -11,6 +11,8 @@ namespace Patrija.Core.ViewModels.Pages
 {
     public class SupportUsViewModel : PageViewModel
     {
+        private const string _testimonialsContainerBackgroundImageUrl = "/assets/images/shapes/testimonials-volunteers-bg.svg";
+
         public SupportUsViewModel(IPageContext<SupportUs> context) : base(context)
         {
             var pageIntro = context.Page.SupportUsPageIntro;
@@ -22,10 +24,11 @@ namespace Patrija.Core.ViewModels.Pages
             var testimonials = context.Page.SupportUsTestimonials.FirstOrDefault();
             if(testimonials != null)
             {
-                TestimonialsContainer = new TestimonialsContainerViewModel(testimonials, "");
+                TestimonialsContainer = new TestimonialsContainerViewModel(testimonials, _testimonialsContainerBackgroundImageUrl);
             }
 
-            // var donations = context.Page.SupportUsDonations
+            var donations = context.Page.SupportUsDonations.FirstOrDefault();
+            Donations = donations != null ? new DonationsViewModel(donations) : null;
 
             var frequentlyAskedQuestions = context.Page.SupportUsFaq.FirstOrDefault();
             if(frequentlyAskedQuestions != null)
@@ -42,7 +45,6 @@ namespace Patrija.Core.ViewModels.Pages
         public TestimonialsContainerViewModel TestimonialsContainer { get; }
         public DonationsViewModel Donations { get; }
         public FaqContainerViewModel FaqContainer { get; }
-
         public JoinUsViewModel JoinUs { get; }
     }
 }
