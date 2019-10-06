@@ -1,14 +1,6 @@
 ﻿@using Patrija.Core.ViewModels.Shared
 @inherits UmbracoViewPage<Patrija.Core.ViewModels.Partials.Layout.HeaderViewModel>
 
-@{
-    var menu = new LinkViewModel[]
-    {
-        new LinkViewModel("/", "Home"), 
-        new LinkViewModel("/", "About us"), 
-    };
-}
-
 <header class="header">
     <div class="wrap">
         <div class="header__container">
@@ -16,15 +8,15 @@
                 <img src="@Model.Logo.Url" alt="@Model.Logo.AlternateText">
             </a>
             <div class="navigation">
-                @if (menu?.Length > 0)
+                @if (Model.MenuItems?.Length > 0)
                 {
                     <nav class="nav">
                         <ul class="nav__list" role="menubar">
 
-                            @for (var i = 0; i < menu.Length; i++)
+                            @for (var i = 0; i < Model.MenuItems.Length; i++)
                             {
                                 <li class="nav__item" role="menuitem">
-		                            @Html.Partial("Link", menu[i], new ViewDataDictionary() { { "className", $"nav__link {(i == 0 ? "nav__link--active" : string.Empty)}" } })
+		                            @Html.Partial("Link", Model.MenuItems[i], new ViewDataDictionary() { { "className", $"nav__link {(Model.MenuItems[i].IsActive ? "nav__link--active" : string.Empty)}" } })
                                 </li>
                             }
                         </ul>
