@@ -11,10 +11,17 @@
 
 .featured-project__item--normal {
 	padding: 154px 80px 278px 33.8%;
+	@include breakpoint(laptop) {
+		padding-top: 104px;
+		padding-bottom: 120px;
+	}
 }
 
 .featured-project__item--reverse {
 	padding: 200px 80px 200px 17%;
+	@include breakpoint(laptop) {
+		padding: 130px 80px 120px 12%;
+	}
 }
 
 .featured-project__content {
@@ -35,14 +42,21 @@
 	line-height: 30px;
 	margin-bottom: 22px;
 	max-width: 712px;
+	@include breakpoint(laptop) {
+		max-width: 620px;
+	}
 }
 
-.featured-project__mask {
+.featured-project__image-outer {
 	position: absolute;
 	top: 0;
 	right: 78%;
 	width: 45vw;
-	padding-bottom: 40.4%;
+}
+
+.featured-project__mask {
+	position: relative;
+	padding-bottom: 80.788%;
 	&::after {
 		background-image: url('../assets/images/mask/featured-project-left.svg');
 		background-position: center center;
@@ -56,13 +70,20 @@
 		width: 100%;
 		height: 100%;
 	}
+	@include breakpoint(laptop) {
+		width: 46vw;
+	}
 }
 
-.featured-project__mask--reverse {
+.featured-project__image-outer--reverse {
 	right: auto;
 	left: 77%;
 	width: 37.5vw;
-	padding-bottom: 41.67%;
+}
+
+.featured-project__mask--reverse {
+	position: relative;
+	padding-bottom: 100%;
 	&::after {
 		background-image: url('../assets/images/mask/featured-project-right.svg');
 	}
@@ -84,10 +105,17 @@
 	width: 44%;
 	height: auto;
 	z-index: 20;
+	@include breakpoint(laptop) {
+		width: 36%;
+		left: -3.6vw;
+	}
 }
 
 .featured-project__circle {
 	position: absolute;
 	top: 39.8%;
 	right: 19.8%;
+	@include breakpoint(laptop) {
+		top: 40.8%;
+	}
 }

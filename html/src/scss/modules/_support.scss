@@ -3,6 +3,9 @@
 
 .support {
 	padding: 212px 0;
+	@include breakpoint(laptop) {
+		padding: 96px 0;
+	}
 }
 
 .support__wrap {
@@ -31,6 +34,9 @@
 	background-color: $white;
 	padding: 72px;
 	border-radius: 10px;
+	@include breakpoint(laptop) {
+		padding: 48px;
+	}
 }
 
 .support__item-title {
@@ -41,12 +47,16 @@
 	margin-bottom: 26px;
 }
 
-.support__image-mask {
+.support__image-outer {
 	position: absolute;
 	top: -59%;
 	right: 80.6%;
 	width: 34.375vw;
-	padding-bottom: 44.8%;
+}
+
+.support__image-mask {
+	position: relative;
+	padding-bottom: 120%;
 	&::after {
 		background-image: url('../assets/images/mask/support-shape.svg');
 		background-position: center center;
@@ -59,6 +69,9 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+	}
+	@include breakpoint(laptop) {
+		top: -30%;
 	}
 }
 

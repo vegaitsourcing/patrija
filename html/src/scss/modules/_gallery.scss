@@ -27,6 +27,14 @@
 	.slick-next {
 		right: -78px;
 	}
+	@include breakpoint(laptop) {
+		.slick-prev {
+			left: -68px;
+		}
+		.slick-next {
+			right: -68px;
+		}
+	}
 }
 
 .gallery__item {
