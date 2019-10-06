@@ -41,6 +41,11 @@
 		padding-bottom: 100px;
 		margin-bottom: 60px;
 	}
+	@include mq-down(sm) {
+		padding-top: 40px;
+		padding-bottom: 100px;
+		margin-bottom: 20px;
+	}
 }
 
 .news-slider__title {

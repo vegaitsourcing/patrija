@@ -34,6 +34,7 @@
 	}
 	@include mq-down(sm) {
 		padding-left: 0;
+		margin-bottom: 60px;
 	}
 }
 
@@ -49,6 +50,7 @@
 	}
 	@include mq-down(sm) {
 		padding-left: 0;
+		margin-bottom: 40px;
 	}
 }
 
@@ -66,7 +68,7 @@
 	}
 	@include mq-down(sm) {
 		max-width: 100%;
-		padding-top: 245px;
+		padding-top: 80vw;
 	}
 }
 
@@ -124,7 +126,6 @@
 		left: 50%;
 		transform: translateX(-50%);
 		width: 80vw;
-		max-width: 80vw;
 	}
 }
 
@@ -141,7 +142,6 @@
 		left: 50%;
 		transform: translateX(-50%);
 		width: 80vw;
-		max-width: 80vw;
 	}
 }
 

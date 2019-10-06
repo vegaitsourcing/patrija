@@ -38,7 +38,7 @@
 		padding: 100px 80px 100px 8%;
 	}
 	@include mq-down(sm) {
-		padding: 235px 0 40px;
+		padding: 80vw 0 40px;
 	}
 }
 
@@ -79,7 +79,6 @@
 		left: 50%;
 		transform: translateX(-50%);
 		width: 80vw;
-		max-width: 80vw;
 	}
 }
 
