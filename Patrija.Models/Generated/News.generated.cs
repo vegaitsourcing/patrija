@@ -46,6 +46,13 @@ namespace Patrija.Models.Generated
 		// properties
 
 		///<summary>
+		/// News Blog Blocks: News blog blocks
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("newsNewsBlogBlocks")]
+		public IEnumerable<NewsBlogBlock> NewsNewsBlogBlocks => this.Value<IEnumerable<NewsBlogBlock>>("newsNewsBlogBlocks");
+
+		///<summary>
 		/// Page Intro
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]

@@ -2,6 +2,8 @@ using System.Linq;
 using Patrija.Core.Contexts;
 using Patrija.Core.ViewModels.Partials.AboutUsPage;
 using Patrija.Core.ViewModels.Partials.Features;
+using Patrija.Core.ViewModels.Partials.Home;
+using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
 
 namespace Patrija.Core.ViewModels.Pages
@@ -18,11 +20,21 @@ namespace Patrija.Core.ViewModels.Pages
             
             var imageWithText = context.Page.AboutUsPageImageWithText.FirstOrDefault();
             ImageWithText = imageWithText != null ? new ImageWithTextViewModel(imageWithText) : null;
+
+            var links = context.Page.AboutUsFeaturedLinks.FirstOrDefault();
+            Links = links != null ? new LinksListViewModel(links) : null;
+
+            var joinUs = context.Page.AboutUsJoinUs.FirstOrDefault();
+            JoinUs = joinUs != null ? new JoinUsViewModel(joinUs) : null;
         }
 
         public PageIntroViewModel PageIntro { get; }
         
         public ImageWithTextViewModel ImageWithText { get; }
         public FeaturedProjectsContainerViewModel FeaturedProjectsContainer { get; }
+
+        public LinksListViewModel Links { get; }
+
+        public JoinUsViewModel JoinUs { get; }
     }
 }
