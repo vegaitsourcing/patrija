@@ -1,6 +1,5 @@
 ﻿@model Patrija.Core.ViewModels.Shared.TestimonialsContainerViewModel
-@*style="background-image: url('{{bgImage}}');"*@
-<div class="testimonials">
+<div class="testimonials" style="background-image: url('@Model.BackgroundImage.Url');">
     <div class="wrap testimonials__wrap">
         <h3 class="h3 testimonials__title">@Model.Title</h3>
         @if (Model.Testimonials.Any())

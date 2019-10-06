@@ -16,7 +16,7 @@ namespace Patrija.Core.ViewModels.Pages
             var testimonials = context.Page.SupportUsTestimonials.FirstOrDefault();
             if(testimonials != null)
             {
-                TestimonialsContainer = new TestimonialsContainerViewModel(testimonials);
+                TestimonialsContainer = new TestimonialsContainerViewModel(testimonials, "");
             }
 
             var frequentlyAskedQuestions = context.Page.SupportUsFaq.FirstOrDefault();

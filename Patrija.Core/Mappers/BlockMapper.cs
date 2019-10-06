@@ -26,7 +26,7 @@ namespace Patrija.Core.Mappers
                     typeof(TextBlock), el => new TextBlockViewModel((TextBlock)el)
                 },
                 {
-                    typeof(TestimonialsContainer), el => new TestimonialsContainerViewModel((TestimonialsContainer)el)
+                    typeof(TestimonialsContainer), el => new TestimonialsContainerViewModel((TestimonialsContainer)el, "")
                 },
                 {
                     typeof(UntaggedFeature), el => new FeatruedProjectViewModel((UntaggedFeature)el)
