@@ -1,5 +1,6 @@
 ﻿@using Patrija.Core.ViewModels.Partials.ContactUs;
 @using Patrija.Core.ViewModels.Shared
+@using Patrija.Web.Extensions
 @inherits Umbraco.Web.Mvc.UmbracoViewPage<ContactFormViewModel>
 
 @{
@@ -12,11 +13,11 @@
             <div class="contact-form__info">
                 <span class="contact-form__address-title">Adresa</span>
                 <p class="contact-form__address-details">
-                    @Model.Address
+                    @Html.MultiLineText(Model.Address)
                 </p>
                 <span class="contact-form__address-title">Radno vreme</span>
                 <p class="contact-form__address-details">
-                    @Model.WorkingHours
+                    @Html.MultiLineText(Model.WorkingHours)
                 </p>
             </div>
             @{
@@ -24,7 +25,7 @@
                     new { viewModel = (FormWithoutDescriptionViewModel)Model,
                         formId = "contact-form",
                         containerClass = "contact-form__container",
-                        titleClass = "contact-form__info"
+                        titleClass = "contact-form__form-title"
                     });
             }
         </div>

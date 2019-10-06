@@ -452,6 +452,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DisplayHelpers\Dictionaries.cs" />
   </ItemGroup>
