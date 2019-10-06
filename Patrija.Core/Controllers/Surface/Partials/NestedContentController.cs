@@ -59,5 +59,7 @@ namespace Patrija.Core.Controllers.Surface.Partials
             ViewData["formId"] = formId;
             return PartialView(viewModel);
         }
+        public ActionResult Donations(DonationsViewModel viewModel)
+            => PartialView(viewModel);
     }
 }

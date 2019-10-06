@@ -20,72 +20,44 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Support Us</summary>
-	[PublishedModel("supportUs")]
-	public partial class SupportUs : PublishedContentModel, IPage
+	/// <summary>Blog Article</summary>
+	[PublishedModel("blogArticle")]
+	public partial class BlogArticle : PublishedContentModel, IPage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "supportUs";
+		public new const string ModelTypeAlias = "blogArticle";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<SupportUs, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogArticle, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public SupportUs(IPublishedContent content)
+		public BlogArticle(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Donation Form: Donation form on support us page
+		/// Article Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("supportUsDonationForm")]
-		public IEnumerable<SimpleFormContent> SupportUsDonationForm => this.Value<IEnumerable<SimpleFormContent>>("supportUsDonationForm");
+		[ImplementPropertyType("blogArticleContent")]
+		public IHtmlString BlogArticleContent => this.Value<IHtmlString>("blogArticleContent");
 
 		///<summary>
-		/// Donations
+		/// Page Intro
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("supportUsDonations")]
-		public IEnumerable<Donations> SupportUsDonations => this.Value<IEnumerable<Donations>>("supportUsDonations");
-
-		///<summary>
-		/// FAQ
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("supportUsFaq")]
-		public IEnumerable<FaqContainer> SupportUsFaq => this.Value<IEnumerable<FaqContainer>>("supportUsFaq");
-
-		///<summary>
-		/// Join Us: Join us block
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("supportUsJoinUs")]
-		public IEnumerable<JoinUs> SupportUsJoinUs => this.Value<IEnumerable<JoinUs>>("supportUsJoinUs");
-
-		///<summary>
-		/// Page Intro: Page intro
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("SupportUsPageIntro")]
-		public PageIntro SupportUsPageIntro => this.Value<PageIntro>("SupportUsPageIntro");
-
-		///<summary>
-		/// Testimonials: Container with included users testimonials
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("supportUsTestimonials")]
-		public IEnumerable<TestimonialsContainer> SupportUsTestimonials => this.Value<IEnumerable<TestimonialsContainer>>("supportUsTestimonials");
+		[ImplementPropertyType("blogArticlePageIntro")]
+		public BlogIntro BlogArticlePageIntro => this.Value<BlogIntro>("blogArticlePageIntro");
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).
