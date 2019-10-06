@@ -13,7 +13,7 @@ namespace Patrija.Core.ViewModels.Partials.ContactUs
 
             Title = contactMap.ContactMapTitle;
             Text = contactMap.ContactMapText;
-            LocationUrl = contactMap.ContactLocationUrl.Url;
+            LocationUrl = contactMap.ContactLocationUrl;
         }
 
         public string Title { get; }
