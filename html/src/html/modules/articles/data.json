@@ -1,3 +1,37 @@
 {
-	"title": "This is Title"
+	"bgImage": "assets/images/shapes/articles-bg.svg",
+	"title": "Dobro je znati",
+	"loadMore": "Učitaj sve",
+	"blogItems": [
+		{
+			"image": "assets/images/content/news-01.jpg",
+			"date": "10.09.2019",
+			"titleText": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie."
+		},
+		{
+			"image": "assets/images/content/news-02.jpg",
+			"date": "10.09.2019",
+			"titleText": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie."
+		},
+		{
+			"image": "assets/images/content/news-03.jpg",
+			"date": "10.09.2019",
+			"titleText": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie."
+		},
+		{
+			"image": "assets/images/content/news-01.jpg",
+			"date": "10.09.2019",
+			"titleText": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie."
+		},
+		{
+			"image": "assets/images/content/news-02.jpg",
+			"date": "10.09.2019",
+			"titleText": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie."
+		},
+		{
+			"image": "assets/images/content/news-03.jpg",
+			"date": "10.09.2019",
+			"titleText": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie."
+		}
+	]
 }

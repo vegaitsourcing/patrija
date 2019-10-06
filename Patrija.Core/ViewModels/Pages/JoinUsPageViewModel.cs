@@ -13,7 +13,7 @@ namespace Patrija.Core.ViewModels.Pages
             var volunteerForm = context.Page.JoinUsPageAsVolunteerForm.FirstOrDefault();
             VolunteerForm = volunteerForm != null ? new FormWithoutDescriptionViewModel(volunteerForm) : null;
 
-            var userForm = context.Page.JoinUsPageAsUser.FirstOrDefault();
+            var userForm = context.Page.JoinUsPageAsVolunteerForm.FirstOrDefault();
             UserForm = volunteerForm != null ? new FormWithoutDescriptionViewModel(userForm) : null;
         }
 

@@ -15,15 +15,12 @@ namespace Patrija.Core.ViewModels.Pages
             HomeIntro = homeIntro != null ? new HomeIntroViewModel(homeIntro) : null;
 
             var mostRecentBlogsRequest = context.Home.MostRecentBlogs.FirstOrDefault();
-            //if(mostRecentBlogsRequest != null)
-            //{
-            //    var blogItems = context.Home.Children.OfType<Blog>().First().Children.OfType<BlogItem>()
-            //        .OrderByDescending(blogItem => blogItem?.BlogItemIntro.BlogIntroDateOfPublishing)
-            //        .Take(mostRecentBlogsRequest.MostRecentBlogsCount).ToArray();
 
-            //    ArticleContainer = new ArticleContainerViewModel(mostRecentBlogsRequest.MostRecentBlogsTitle, blogItems.Select(bi => new ArticleViewModel(bi)).ToArray());
-            //}
-            
+            if(mostRecentBlogsRequest != null)
+            {
+                ArticleContainer = GenerateArticleContainerViewModel(context, mostRecentBlogsRequest);
+            }
+
             Features = context.Home.FeaturedContent?.Select(f => new TaggedFeatureViewModel(f)).ToArray()
                        ?? new TaggedFeatureViewModel[0];
 		    var linksList = context.Home.HomeFeaturedLinks;
@@ -39,6 +36,16 @@ namespace Patrija.Core.ViewModels.Pages
             var aboutUs = context.Home.HomeAboutUs.FirstOrDefault();
             AboutUs = aboutUs != null ? new AboutUsViewModel(aboutUs) : null;
 		}
+
+        private static ArticleContainerViewModel GenerateArticleContainerViewModel(IPageContext<Home> context, MostRecentBlogs mostRecentBlogsRequest)
+        {
+            var articles = context.Home.Children.OfType<Blog>().First()
+                .Children.OfType<BlogCategory>().SelectMany(category => category
+                .Children.OfType<BlogArticle>().Select(bi => new ArticleViewModel(bi, category.BlogCategoryName)))
+                .OrderByDescending(a => a.PublishDate).Take(mostRecentBlogsRequest.MostRecentBlogsCount).ToArray();
+
+            return new ArticleContainerViewModel(mostRecentBlogsRequest.MostRecentBlogsTitle, articles);
+        }
 
         public HomeIntroViewModel HomeIntro { get; }
         public TaggedFeatureViewModel[] Features { get; }

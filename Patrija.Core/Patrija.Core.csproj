@@ -323,6 +323,7 @@
     <Compile Include="ViewModels\Partials\AboutUsPage\ShapeVariant.cs" />
     <Compile Include="ViewModels\Partials\ContactUs\ContactMapViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\DonationsViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Features\UntaggedFeatureViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\ImageWithTextViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\SupportContentBoxButtonType.cs" />
     <Compile Include="ViewModels\Partials\Features\TextBlockViewModel.cs" />
