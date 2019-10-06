@@ -1,0 +1,9 @@
+{
+	"title": "Imate pitanja?",
+	"labelName": "Ime i prezime",
+	"labelEmail": "Email adresa",
+	"labelMessage": "Komentar",
+	"errorMessage": "Ovo polje je obavezno.",
+	"submitBtn": "Pošalji",
+	"successMesage": "Uskoro će vam stići mejl sa daljim instrukcijama"
+}

@@ -1,0 +1,47 @@
+<div class="contact-form">
+	<div class="wrap wrap--normal">
+		<div class="contact-form__content">
+			<div class="contact-form__info">
+				<span class="contact-form__address-title">Adresa</span>
+				<p class="contact-form__address-details">
+					15 Camden Passage, Islington,<br>
+					London, N1 8EA<br>
+					+44 (0)20 7288 1160<br>
+					shop@loopknitting.com
+				</p>
+				<span class="contact-form__address-title">Radno vreme</span>
+				<p class="contact-form__address-details">
+					Pon - pet : 8-16h<br>
+					Nedeljom ne radimo
+				</p>
+			</div>
+			<div class="contact-form__container">
+				<h3 class="h3 contact-form__form-title">{{title}}</h3>
+				<form action="" method="post" class="form">
+					<div class="form__row">
+						<label class="form__label" for="name">{{labelName}}</label>
+						<input class="form__input" type="text" id="name" name="name">
+						<span class="form__error-message">{{errorMessage}}</span>
+					</div>
+					<div class="form__row">
+						<label class="form__label" for="email">{{labelEmail}}</label>
+						<input class="form__input" type="email" id="email" name="email">
+						<span class="form__error-message">{{errorMessage}}</span>
+					</div>
+					<div class="form__row">
+						<label class="form__label" for="message">{{labelMessage}}</label>
+						<textarea class="form__input form__input--textarea" id="message" name="message"></textarea>
+						<span class="form__error-message">{{errorMessage}}</span>
+					</div>
+					<div class="form__row">
+						<button class="btn btn--blue btn--submit" type="submit">{{submitBtn}}</button>
+					</div>
+					<span class="form__message-success">{{successMesage}}</span>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{!-- Kontaktirajte nas --}}
+

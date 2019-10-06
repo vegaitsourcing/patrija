@@ -1,5 +1,12 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.PageVariant1>
-@using ContentModels = Patrija.Models.Generated;
-@{
-	Layout = null;
+﻿@inherits UmbracoViewPage<PageVariant1ViewModel>
+}
+
+@if (Model.TextBlockViewModel != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.TextBlock), new { viewModel = Model.TextBlockViewModel });
+}
+
+@if (Model.ImageWithText != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.ImageWithText), new { viewModel = Model.ImageWithText });
 }

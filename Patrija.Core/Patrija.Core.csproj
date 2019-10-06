@@ -270,6 +270,7 @@
     <Compile Include="Contexts\PageContext.cs" />
     <Compile Include="Contexts\SeoContext.cs" />
     <Compile Include="Contexts\SiteContext.cs" />
+    <Compile Include="Controllers\RenderMvc\PageVariant1Controller.cs" />
     <Compile Include="Controllers\RenderMvc\AboutUsPageController.cs" />
     <Compile Include="Controllers\RenderMvc\BasePageController.cs" />
     <Compile Include="Controllers\RenderMvc\Error404Controller.cs" />
@@ -305,6 +306,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UmbracoDictionary.cs" />
     <Compile Include="ViewEngines\PartialViewEngine.cs" />
+    <Compile Include="ViewModels\Pages\PageVariant1ViewModel.cs" />
     <Compile Include="ViewModels\Pages\AboutUsPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\Error404ViewModel.cs" />
     <Compile Include="ViewModels\Pages\HomeViewModel.cs" />
@@ -319,6 +321,7 @@
     <Compile Include="ViewModels\Partials\AboutUsPage\ShapeVariant.cs" />
     <Compile Include="ViewModels\Partials\Features\ImageWithTextViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\SupportContentBoxButtonType.cs" />
+    <Compile Include="ViewModels\Partials\Features\TextBlockViewModel.cs" />
     <Compile Include="ViewModels\Partials\Home\HomeSupportViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\ContentPosition.cs" />
     <Compile Include="ViewModels\Partials\Features\FeatureViewModel.cs" />
@@ -340,6 +343,8 @@
     <Compile Include="ViewModels\Shared\JoinUsViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\SimpleFormViewModel.cs" />
+    <Compile Include="ViewModels\Shared\TestimonialsContainerViewModel.cs" />
+    <Compile Include="ViewModels\Shared\TestimonialViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Patrija.Common\Patrija.Common.csproj">

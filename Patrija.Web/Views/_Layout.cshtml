@@ -9,11 +9,12 @@
 
 <html>
 <head>
-	<meta name="viewport" content="width=device-width" />
-	@{
-		Html.RenderAction<LayoutController>(c => nameof(c.MetaTags), new { viewModel = Model.MetaTags });
-	}
-    
+    <meta name="viewport" content="width=device-width" />
+    @{
+        Html.RenderAction<LayoutController>(c => nameof(c.MetaTags), new { viewModel = Model.MetaTags });
+    }
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
     @Styles.Render("~/css/style.min.css")
     @Scripts.Render("~/js/global.min.js")
 </head>

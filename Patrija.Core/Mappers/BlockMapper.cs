@@ -20,6 +20,9 @@ namespace Patrija.Core.Mappers
                 },
                 {
                     typeof(TaggedFeature), el => new TaggedFeatureViewModel((TaggedFeature)el)
+                },
+                {
+                    typeof(TextBlock), el => new TextBlockViewModel((TextBlock)el)
                 }
             };
 

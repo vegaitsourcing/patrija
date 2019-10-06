@@ -2,5 +2,10 @@
 
 @if (Model.DonationForm != null)
 {
+    Html.RenderAction<NestedContentController>(c => nameof(c.TestimonialContainer), new { viewModel = Model.TestimonialsContainer });
+}
+
+@if (Model.DonationForm != null)
+{
     Html.RenderAction<NestedContentController>(c => nameof(c.SimpleForm), new { viewModel = Model.DonationForm });
 }

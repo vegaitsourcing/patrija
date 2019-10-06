@@ -1,0 +1,44 @@
+//---------- contact-form
+//------------------------------------------------------------------------------
+
+.contact-form {
+	margin-bottom: 80px;
+}
+
+.contact-form__address-title {
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.contact-form__address-details {
+	font-size: 18px;
+	line-height: 35px;
+	margin-bottom: 28px;
+}
+
+.contact-form__content {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 0 45px;
+}
+
+.contact-form__info {
+	flex: 1 1 50%;
+	max-width: 50%;
+	padding: 0 8px;
+}
+
+.contact-form__container {
+	flex: 1 1 50%;
+	max-width: 50%;
+	padding: 0 60px 20px 22px;
+}
+
+.contact-form__form-title {
+	margin-bottom: 22px;
+	max-width: 384px;
+}
