@@ -1,8 +1,12 @@
 ﻿@using Patrija.Core.ViewModels.Shared;
 @inherits Umbraco.Web.Mvc.UmbracoViewPage<SimpleFormViewModel>
+    
+@{
+    var formId = ViewData["formId"] as string ?? string.Empty;
+}
 
-<div class="simple-form">
-    <div class="wrap wrap--normal">
+<div class="simple-form" id="@formId">
+    <div class="wrap wrap--normal"> 
         <div class="simple-form__content">
             <div class="simple-form__info">
                 <h2 class="h2 simple-form__title">@Model.Title</h2>
@@ -13,20 +17,20 @@
                     <div class="form__row">
                         <label class="form__label" for="name">@Model.NameFieldText</label>
                         <input class="form__input" type="text" id="name" name="name">
-                        <span class="form__error-message">@Model.NameFieldError</span>
+                        <span class="form__error-message" data-for="name">@Model.NameFieldError</span>
                     </div>
                     <div class="form__row">
                         <label class="form__label" for="email">@Model.EmailFieldText</label>
                         <input class="form__input" type="email" id="email" name="email">
-                        <span class="form__error-message">@Model.EmailFieldError</span>
+                        <span class="form__error-message" data-for="email">@Model.EmailFieldError</span>
                     </div>
                     <div class="form__row">
                         <label class="form__label" for="message">@Model.CommentFieldText</label>
                         <textarea class="form__input form__input--textarea" id="message" name="message"></textarea>
-                        <span class="form__error-message">@Model.CommentFieldError</span>
+                        <span class="form__error-message" data-for="message">@Model.CommentFieldError</span>
                     </div>
                     <div class="form__row">
-                        <button class="btn btn--mint btn--submit" type="submit">@Model.SubmitButtonText</button>
+                        <button class="btn btn--mint btn--submit" type="button">@Model.SubmitButtonText</button>
                     </div>
                     <span class="form__message-success">@Html.Raw(Model.SuccessMessage)</span>
                 </form>

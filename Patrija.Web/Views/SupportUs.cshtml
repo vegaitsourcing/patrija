@@ -7,7 +7,7 @@
 
 @if (Model.DonationForm != null)
 {
-    Html.RenderAction<NestedContentController>(c => nameof(c.SimpleForm), new { viewModel = Model.DonationForm });
+    Html.RenderAction<NestedContentController>(c => nameof(c.SimpleForm), new { viewModel = Model.DonationForm, formId = "donations-form" });
 }
 
 @if (Model.FaqContainer != null)
