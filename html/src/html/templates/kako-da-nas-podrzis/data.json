@@ -17,8 +17,43 @@
 			"title": "Podržite nas donacijom",
 			"submitBtn": "Podrži nas"
 		},
+		"testimonials": {
+			"testimonialsSimple": true,
+			"bgImage": "assets/images/shapes/testimonials-volunteers-bg.svg",
+			"title": "Priče volontera",
+			"sliderItems": [
+				{
+					"text": "“Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor. “Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor ““Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor “",
+					"image": "assets/images/content/join-bottom.png",
+					"author": "Marko Markovic"
+				},
+				{
+					"text": "“Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor “",
+					"image": "assets/images/content/join-bottom.png",
+					"author": "Nikola Nikolic"
+				},
+				{
+					"text": "“Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor. “Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor ““Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor “",
+					"image": "assets/images/content/join-bottom.png",
+					"author": "Petar Petrovic"
+				},
+				{
+					"text": "“Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor “",
+					"image": "assets/images/content/join-bottom.png",
+					"author": "Njegoš"
+				},
+				{
+					"text": "“Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor. “Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor ““Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut. Vexillologist wolf kickstarter paleo. Snackwave DIY cred crucifix taiyaki messenger bag. Fashion axe cloud bread leggings freegan, crucifix skateboard vexillologist tbh 8-bit.Lorem ipsum dolor “",
+					"image": "assets/images/content/join-bottom.png",
+					"author": "Jovan Jovanovic"
+				}
+			]
+		},
 		"donations": {
 			">>": "modules/donations/data.json"
+		},
+		"faq": {
+			">>": "modules/faq/data.json"
 		},
 		"joinUs": {
 			">>": "modules/join-module/data.json"

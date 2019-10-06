@@ -2,5 +2,74 @@
 //------------------------------------------------------------------------------
 
 .faq {
-	color: $black;
+	padding-top: 130px;
+	margin-bottom: 88px;
+}
+
+.faq__wrap {
+	max-width: 930px;
+}
+
+.faq__title {
+	margin-bottom: 46px;
+	text-align: center;
+}
+
+.faq__accordion-item {
+	margin-bottom: 15px;
+}
+
+.faq__accordion-btn {
+	width: 100%;
+	padding: 24px 60px;
+	font-size: 18px;
+	font-weight: 400;
+	color: $white;
+	line-height: 30px;
+	text-align: left;
+	border-radius: 10px;
+	position: relative;
+	background-color: $blue;
+	display: block;
+	.loaded & {
+		transition: $duration $ease;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		border-bottom: 3px solid $white;
+		border-right: 3px solid $white;
+		width: 13px;
+		height: 13px;
+		right: 38px;
+		top: 52%;
+		transform: translateY(-50%) rotate(-45deg);
+		display: block;
+		.loaded & {
+			transition: $duration $ease;
+		}
+	}
+	@include hover {
+		background-color: $mint;
+	}
+}
+
+.faq__accordion-btn--active {
+	&::after {
+		right: 34px;
+		top: 36%;
+		transform: rotate(-315deg);
+	}
+}
+
+.faq__accordion-content {
+	padding: 28px 54px 12px 60px;
+	display: none;
+	p {
+		font-size: 18px;
+		line-height: 30px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }

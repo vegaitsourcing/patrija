@@ -1,4 +1,4 @@
-<div class="testimonials" style="background-image: url('{{bgImage}}');">
+<div class="testimonials{{#if testimonialsSimple}} testimonials--simple{{/if}}" style="background-image: url('{{bgImage}}');">
 	<div class="wrap testimonials__wrap">
 		<h3 class="h3 testimonials__title">{{title}}</h3>
 		{{#if sliderItems}}
@@ -18,5 +18,7 @@
 		{{/if}}
 	</div>
 	<span class="circle circle--blue circle--large"></span>
-	<span class="circle circle--grey circle--small"></span>
+	{{#unless testimonialsSimple}}
+		<span class="circle circle--grey circle--small"></span>
+	{{/unless}}
 </div>

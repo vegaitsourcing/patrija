@@ -1,3 +1,18 @@
 <div class="faq">
-	<h2>{{title}} - faq</h2>
+	<div class="wrap faq__wrap">
+		<h3 class="h3 faq__title">{{title}}</h3>
+		<div class="faq__accordion">
+			{{#each question}}
+				<div class="faq__accordion-item">
+					<button class="faq__accordion-btn js-acc-btn" type="button">{{this.title}}</button>
+					<div class="faq__accordion-content js-acc-content">
+						<div class="rte">
+							{{!-- plain html --}}
+							{{{this.content}}}
+						</div>
+					</div>
+				</div>
+			{{/each}}
+		</div>
+	</div>
 </div>

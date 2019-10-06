@@ -78,3 +78,38 @@
 	text-align: center;
 	display: block;
 }
+
+.testimonials--simple {
+	padding-top: 195px;
+	padding-bottom: 80px;
+	margin-top: -45px;
+	.testimonials__wrap {
+		max-width: 820px;
+	}
+	.testimonials__text {
+		font-size: 18px;
+		line-height: 30px;
+		margin-bottom: 44px;
+	}
+	.testimonials__item {
+		padding: 0;
+		opacity: 1;
+		transform: scale(1) translateY(0);
+	}
+	.slick-list {
+		overflow: hidden;
+	}
+	.slick-prev {
+		top: 122px;
+		left: -112px;
+	}
+	.slick-next {
+		top: 122px;
+		right: -112px;
+	}
+	.circle--blue {
+		top: 42px;
+		left: 9.2%;
+		right: auto;
+	}
+}
