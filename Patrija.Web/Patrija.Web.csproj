@@ -510,6 +510,7 @@
     <Content Include="Views\Shared\DisplayTemplates\SimpleFormViewModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\UntaggedFeatureViewModel.cshtml" />
     <Content Include="Views\ContactUs.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_ContactMap.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -527,6 +528,10 @@
     <ProjectReference Include="..\Patrija.Core\Patrija.Core.csproj">
       <Project>{5db13650-d2d7-4e7e-9fdf-1166067d6ccf}</Project>
       <Name>Patrija.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Patrija.Models\Patrija.Models.csproj">
+      <Project>{5F883FB4-7390-4A64-9F89-12597A61EDA2}</Project>
+      <Name>Patrija.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
