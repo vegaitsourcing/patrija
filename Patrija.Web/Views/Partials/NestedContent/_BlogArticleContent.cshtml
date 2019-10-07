@@ -1,0 +1,46 @@
+﻿@model Patrija.Core.ViewModels.Partials.Blog.ArticleContentViewModel
+
+<div class="news-details">
+    <div class="wrap wrap--medium">
+        <div class="news-details__container">
+            <div class="news-details__content">
+                <div class="rte">
+                    <h3>@Model.ArticleSubtitle</h3>
+                    @Html.Raw(Model.ArticleContentHtml)
+                </div>
+                <div class="news-details__share">
+                    <span class="h6 news-details__share-title">Podeli tekst</span>
+                    <div class="news-details__share-links">
+                        <a class="news-details__share-link" href="javascript:;"><span class="icon font-ico-facebook"><span class="sr-only">Share on facebook</span></span></a>
+                        <a class="news-details__share-link" href="javascript:;"><span class="icon font-ico-twitter"><span class="sr-only">Share on twitter</span></span></a>
+                        <a class="news-details__share-link" href="javascript:;"><span class="icon font-ico-youtube"><span class="sr-only">Share on youtube</span></span></a>
+                    </div>
+                </div>
+            </div>
+            @*<div class="news-details__sidebar">
+                    {{#each group}}
+                    <h4 class="h6 news-details__sidebar-title">{{this.title}}</h4>
+                    {{#if this.items}}
+                    <ul class="news-details__list">
+                        {{#each this.items}}
+                        <li class="news-details__item">
+                            <div class="news-details__item-img">
+                                <a href="javascript:;">
+                                    <img class="news-details__item-image" src="{{this.image}}" alt="">
+                                </a>
+                            </div>
+                            <div class="news-details__item-content">
+                                <span class="news-details__item-date">{{this.date}}</span>
+                                <h4 class="h6 news-details__item-title">
+                                    <a href="javascript:;">{{this.titleText}}</a>
+                                </h4>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+                    {{/each}}
+                </div>*@
+        </div>
+    </div>
+</div>

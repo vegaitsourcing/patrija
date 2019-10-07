@@ -3,31 +3,69 @@
 
 .simple-form {
 	margin-bottom: 250px;
+	@include breakpoint(laptop) {
+		margin-bottom: 120px;
+	}
+	@include mq-between(md, lg) {
+		margin-bottom: 80px;
+	}
+	@include mq-down(sm) {
+		margin-bottom: 60px;
+	}
 }
 
 .simple-form__content {
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
+	@include mq-down(md) {
+		display: block;
+		width: 100%;
+	}
 }
 
 .simple-form__info {
 	flex: 1 1 50%;
 	max-width: 50%;
 	padding: 0 8px;
+	@include mq-down(md) {
+		display: block;
+		max-width: 100%;
+		padding: 0;
+	}
 }
 
 .simple-form__title {
 	max-width: 562px;
 	margin-bottom: 25px;
+	@include breakpoint(laptop) {
+		padding-right: 20px;
+	}
+	@include mq-only(lg) {
+		max-width: 420px;
+	}
 }
 
 .simple-form__text {
 	max-width: 80%;
+	@include mq-down(md) {
+		max-width: 100%;
+	}
 }
 
 .simple-form__container {
 	flex: 1 1 50%;
 	max-width: 50%;
 	padding: 27px 0 20px 6.4vw;
+	@include breakpoint(laptop) {
+		padding-left: 0;
+	}
+	@include mq-down(md) {
+		display: block;
+		max-width: 100%;
+		padding-left: 0;
+	}
+	@include mq-down(sm) {
+		padding: 10px 0;
+	}
 }

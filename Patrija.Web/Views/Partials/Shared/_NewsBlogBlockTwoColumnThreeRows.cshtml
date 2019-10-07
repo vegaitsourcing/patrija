@@ -1,0 +1,30 @@
+﻿@model Patrija.Core.ViewModels.Shared.NewsBlogBlockViewModel
+
+<div class="news-list">
+    <div class="wrap wrap--normal">
+        <h2 class="h2 news-list__title">@Model.BlogCategoryName</h2>
+        @if (Model.Articles.Any())
+        {
+        <div class="news-list__container">
+            @foreach (var article in Model.Articles)
+            {
+                <div class="news-list__item">
+                    <div class="news-list__image has-cover" style="background-image: url('@article.Image.Url');"></div>
+                    <div class="news-list__meta">
+                        <span class="news-list__date">@article.DateOfPublishing</span>
+                    </div>
+                    <h4 class="h6 news-list__item-title">
+                        <a href="javascript:;">@article.Title </a>
+                    </h4>
+                    <p class="news-list__text">TODO text... TODO text...TODO text...TODO text...TODO text...TODO text...</p>
+                </div>
+            }
+
+        </div>
+        }
+
+        <div class="news-list__buttons">
+            <button class="btn btn--mint news-list__load-more" type="button">@Model.LoadMoreButtonText</button>
+        </div>
+    </div>
+</div>

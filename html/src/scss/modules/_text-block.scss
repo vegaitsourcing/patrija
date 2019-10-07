@@ -3,6 +3,15 @@
 
 .text-block {
 	margin-bottom: 220px;
+	@include breakpoint(laptop) {
+		margin-bottom: 120px;
+	}
+	@include mq-only(md) {
+		margin-bottom: 80px;
+	}
+	@include mq-down(sm) {
+		margin-bottom: 40px;
+	}
 }
 
 .text-block__title {
@@ -14,6 +23,10 @@
 	display: inline-block;
 	max-width: 44.56%;
 	padding: 0 22px;
+	@include mq-down(sm) {
+		min-width: 100%;
+		padding: 0;
+	}
 }
 
 .text-block__content {
@@ -22,8 +35,14 @@
 
 .text-block__text--left {
 	text-align: right;
+	@include mq-down(sm) {
+		text-align: left;
+	}
 }
 
 .text-block__text--right {
 	text-align: left;
+	@include mq-down(sm) {
+		text-align: left;
+	}
 }

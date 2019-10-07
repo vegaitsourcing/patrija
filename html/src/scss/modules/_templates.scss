@@ -8,6 +8,16 @@
 		left: -25.2vw;
 		pointer-events: none;
 	}
+	@include breakpoint(laptop) {
+		.lice-ulice-shape {
+			display: none;
+		}
+	}
+	@include mq-down(lg) {
+		.lice-ulice-shape {
+			display: none;
+		}
+	}
 }
 
 .single-blog-page {
