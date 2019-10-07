@@ -68,6 +68,9 @@
 			transition: $duration $ease;
 		}
 	}
+	@include mq-down(sm) {
+		top: 75px;
+	}
 }
 
 .nav--opened {
@@ -90,6 +93,7 @@
 	}
 	@include mq-down(lg) {
 		border-bottom: 1px solid $blue;
+		margin: 0;
 	}
 }
 

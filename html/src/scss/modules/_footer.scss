@@ -102,6 +102,9 @@
 			transform: translateX(-15px) scale(1);
 		}
 	}
+	@include mq-down(sm) {
+		font-size: 14px;
+	}
 }
 
 .footer__copyright-text {

@@ -19,14 +19,18 @@
 		right: 70px;
 	}
 	@include breakpoint(laptop) {
-		padding-top: 100px;
-		padding-bottom: 60px;
+		padding-top: 160px;
+		padding-bottom: 100px;
 		margin-bottom: 100px;
 	}
 	@include mq-only(md) {
 		padding-top: 100px;
 		padding-bottom: 60px;
 		margin-bottom: 100px;
+	}
+	@include mq-down(sm) {
+		padding: 60px 0;
+		margin-bottom: 40px;
 	}
 }
 
@@ -62,6 +66,16 @@
 		}
 		.slick-next {
 			right: 20px;
+		}
+	}
+	@include mq-down(sm) {
+		.slick-prev {
+			top: 30%;
+			left: -5px;
+		}
+		.slick-next {
+			top: 30%;
+			right: -5px;
 		}
 	}
 }
