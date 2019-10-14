@@ -13,7 +13,7 @@ namespace Patrija.Core.ViewModels.Shared
             Guard.AgainstDefaultValue(joinUs);
 
             Title = joinUs.JoinUsTitle;
-            Text = joinUs.JoinUsText?.ToHtmlString();
+            Text = joinUs.JoinUsText;
             TopImage = joinUs.JoinUsTopImage != null ? new ImageViewModel(joinUs.JoinUsTopImage as Image) : null;
             RightImage = joinUs.JoinUsTopImage != null ? new ImageViewModel(joinUs.JoinUsRightImage as Image) : null;
             BottomImage = joinUs.JoinUsBottomImage != null ? new ImageViewModel(joinUs.JoinUsBottomImage as Image) : null;

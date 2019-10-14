@@ -78,7 +78,7 @@ namespace Patrija.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("joinUsText")]
-		public IHtmlString JoinUsText => this.Value<IHtmlString>("joinUsText");
+		public string JoinUsText => this.Value<string>("joinUsText");
 
 		///<summary>
 		/// Title

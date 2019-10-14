@@ -13,7 +13,7 @@
                 {
                     <h2 class="h2 join-module__title">@Model.Title</h2>
                 }
-                @if (!string.IsNullOrWhiteSpace(Model.Text.ToString()))
+                @if (!string.IsNullOrWhiteSpace(Model.Text))
                 {
                     <p class="join-module__info">@Html.Raw(Model.Text)</p>
 
