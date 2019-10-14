@@ -1,13 +1,11 @@
 ﻿@using Patrija.Core.ViewModels.Partials.JoinUs;
-@using Patrija.Core.ViewModels.Shared
-@using Patrija.Web.Extensions
 
 @inherits Umbraco.Web.Mvc.UmbracoViewPage<JoinUsFormViewModel>
 
 <div class="popup-overlay @(Model.IsVolunteer? "volunteer" : "member" )-popup">
     <div class="popup">
         <button class="popup__close-btn js-close-popup" type="button">
-            <span class="sr-only">Zatvori</span>
+            <span class="sr-only">@UmbracoDictionaryHelper.ScreenReaders.BtnClose</span>
         </button>
         <div class="popup-form__container">
             <div class="popup-form__column">
