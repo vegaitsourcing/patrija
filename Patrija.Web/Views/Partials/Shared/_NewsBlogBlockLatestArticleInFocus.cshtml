@@ -8,7 +8,7 @@
         <h2 class="h2 featured-news__title">@Model.BlogCategoryName</h2>
         <div class="featured-news__container">
             <div class="featured-news__large">
-                <div class="featured-news__large-image has-cover" style="background-image: url('@featuredArticle.Image.Url');">
+                <div class="featured-news__large-image has-cover"  style="@if (featuredArticle.Image != null) {<text>background-image: url('@featuredArticle.Image.Url');</text>}">
                     <h3 class="h6 featured-news__large-title"><a href="javascript:;">@featuredArticle.Title</a></h3>
                 </div>
             </div>

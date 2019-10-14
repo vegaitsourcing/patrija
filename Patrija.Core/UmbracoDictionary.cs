@@ -9,7 +9,13 @@ namespace Patrija.Core
 
         public static class ScreenReaders
         {
-            public static string BtnClose => UmbracoHelper.GetDictionaryValue("BtnClose");
+            public static string BtnClose => UmbracoHelper.GetDictionaryValue("ScreenReaders.BtnClose");
+        }
+
+        public static class ContactUs
+        {
+            public static string WorkingHours => UmbracoHelper.GetDictionaryValue("ContactUs.WorkingHours");
+            public static string Address => UmbracoHelper.GetDictionaryValue("ContactUs.Address");
         }
     }
 }

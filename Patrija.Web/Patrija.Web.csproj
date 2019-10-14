@@ -444,6 +444,7 @@
     <Content Include="Views\Partials\NestedContent\_TaggedFeature.cshtml" />
     <Content Include="Views\Partials\Shared\_Block.cshtml" />
     <Content Include="Views\Partials\Shared\_CommentsBlock.cshtml" />
+    <Content Include="Views\Partials\Shared\_FormWithoutDescription.cshtml" />
     <Content Include="Views\Partials\Shared\_Link.cshtml" />
     <Content Include="Views\ProjectPage.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\ImageWithTextViewModel.cshtml" />
@@ -516,11 +517,9 @@
     <Content Include="Views\ContactUs.cshtml" />
     <Content Include="Views\Partials\NestedContent\_ContactMap.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Donations.cshtml" />
-    <Content Include="Views\Partials\Shared\_FormWithoutDescription.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlogContent.cshtml" />
     <Content Include="Views\Partials\NestedContent\_ContactForm.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Donations.cshtml" />
-    <Content Include="Views\Partials\Shared\_FormWithoutDescription.cshtml" />
     <Content Include="Views\BlogArticle.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlogArticleContent.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlogIntro.cshtml" />

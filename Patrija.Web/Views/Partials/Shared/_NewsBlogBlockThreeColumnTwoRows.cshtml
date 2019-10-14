@@ -9,7 +9,7 @@
                 <div class="articles__item">
                     <div class="articles__item-img">
                         <a href="javascript:;">
-                            <span class="articles__item-image has-cover" style="background-image: url('@article.Image.Url');"></span>
+                            <span class="articles__item-image has-cover"  style="@if (article.Image != null) {<text>background-image: url('@article.Image.Url');</text>}"></span>
                         </a>
                     </div>
                     <div class="articles__item-content">
