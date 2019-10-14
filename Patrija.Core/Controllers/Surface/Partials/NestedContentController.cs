@@ -5,6 +5,7 @@ using Patrija.Core.ViewModels.Partials.Blog;
 using Patrija.Core.ViewModels.Partials.ContactUs;
 using Patrija.Core.ViewModels.Partials.Features;
 using Patrija.Core.ViewModels.Partials.Home;
+using Patrija.Core.ViewModels.Partials.JoinUs;
 using Patrija.Core.ViewModels.Partials.SupportUs;
 using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
@@ -112,5 +113,9 @@ namespace Patrija.Core.Controllers.Surface.Partials
         [ChildActionOnly]
         public ActionResult ContactForm(ContactFormViewModel viewModel)
             => PartialView(viewModel);
+
+        [ChildActionOnly]
+        public ActionResult JoinUsForm(JoinUsFormViewModel viewModel)
+           => PartialView(viewModel);
     }
 }

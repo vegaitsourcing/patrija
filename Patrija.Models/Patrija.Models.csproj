@@ -476,6 +476,12 @@
     <Compile Include="Generated\JoinUs.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\JoinUsForm.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\JoinUsForms.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Generated\JoinUsPage.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
