@@ -15,24 +15,24 @@
                 {
                     <h3 class="h3 popup-form__title">@Model.Title</h3>
                 }
-                <form action="" method="post" class="form">
+                <form action="" method="post" class="form" id="@(Model.IsVolunteer ? "vol-form" : "member-form")">
                     <div class="form__row">
                         <label class="form__label" for="@(Model.IsVolunteer? "v":"m")-name">@Model.NameFieldText</label>
-                        <input class="form__input" type="text" id="@(Model.IsVolunteer? "v":"m")-name" name="@(Model.IsVolunteer? "v":"m")-name">
-                        <span class="form__error-message">Ovo polje je obavezno.</span>
+                        <input class="form__input" type="text" id="@(Model.IsVolunteer? "v":"m")-name" name="name">
+                        <span class="form__error-message" data-for="name">@Model.NameFieldError</span>
                     </div>
                     <div class="form__row">
                         <label class="form__label" for="@(Model.IsVolunteer? "v":"m")-email">@Model.EmailFieldText</label>
-                        <input class="form__input" type="email" id="@(Model.IsVolunteer? "v":"m")-email" name="@(Model.IsVolunteer? "v":"m")-email">
-                        <span class="form__error-message">Ovo polje je obavezno.</span>
+                        <input class="form__input" type="email" id="@(Model.IsVolunteer? "v":"m")-email" name="email">
+                        <span class="form__error-message" data-for="email">@Model.EmailFieldError</span>
                     </div>
                     <div class="form__row">
                         <label class="form__label" for="@(Model.IsVolunteer? "v":"m")-message">@Model.CommentFieldText</label>
-                        <textarea class="form__input form__input--textarea" id="@(Model.IsVolunteer? "v":"m")-message" name="@(Model.IsVolunteer? "v":"m")-message"></textarea>
-                        <span class="form__error-message">Ovo polje je obavezno.</span>
+                        <textarea class="form__input form__input--textarea" id="@(Model.IsVolunteer? "v":"m")-message" name="message"></textarea>
+                        <span class="form__error-message" data-for="message">@Model.CommentFieldError</span>
                     </div>
                     <div class="form__row">
-                        <button class="btn @Model.SubmitButtonClass btn--submit" type="submit">@Model.SubmitButtonText</button>
+                        <button class="btn @Model.SubmitButtonClass btn--submit" type="button">@Model.SubmitButtonText</button>
                     </div>
                     <span class="form__message-success">@Model.SuccessMessage</span>
                 </form>
