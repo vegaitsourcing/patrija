@@ -7,7 +7,7 @@
 
 @if (Model.DonationForm != null)
 {
-    Html.RenderAction<NestedContentController>(c => nameof(c.SimpleForm), new { viewModel = Model.DonationForm, formId = "donations-form" });
+    Html.RenderAction<NestedContentController>(c => nameof(c.SimpleForm), new { viewModel = Model.DonationForm, formId = Patrija.Core.Constants.Form.DonateFormId });
 }
 
 @if (Model.TestimonialsContainer != null)

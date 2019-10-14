@@ -12,12 +12,12 @@
             <div class="member-form__container">
                 @if (Model.VolunteerForm != null)
                 {
-                    Html.RenderAction<NestedContentController>(c => nameof(c.FormWithoutDescription), new { viewModel = Model.VolunteerForm, formId = "volunteer-form" });
+                    Html.RenderAction<NestedContentController>(c => nameof(c.FormWithoutDescription), new { viewModel = Model.VolunteerForm, formId = Patrija.Core.Constants.Form.VolunteerFormId });
                 }
 
                 @if (Model.UserForm != null)
                 {
-                    Html.RenderAction<NestedContentController>(c => nameof(c.FormWithoutDescription), new { viewModel = Model.UserForm, formId = "user-form" });
+                    Html.RenderAction<NestedContentController>(c => nameof(c.FormWithoutDescription), new { viewModel = Model.UserForm, formId = Patrija.Core.Constants.Form.UserFormId });
                 }
             </div>
         </div>
