@@ -15,6 +15,9 @@
 	margin-bottom: 50px;
 	display: flex;
 	justify-content: space-between;
+	@include mq-down(sm) {
+		padding: 0;
+	}
 }
 
 .featured-news__large {
@@ -22,6 +25,10 @@
 	padding: 0 15px;
 	flex: 1 1 57%;
 	max-width: 57%;
+	@include mq-down(sm) {
+		flex: 1 1 100%;
+		max-width: 100%;
+	}
 }
 
 .featured-news__large-image {
@@ -46,6 +53,10 @@
 	padding: 0 15px;
 	flex: 1 1 43%;
 	max-width: 43%;
+	@include mq-down(sm) {
+		flex: 1 1 100%;
+		max-width: 100%;
+	}
 }
 
 .featured-news__item {

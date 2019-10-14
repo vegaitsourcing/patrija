@@ -15,7 +15,8 @@
 		margin-bottom: 100px;
 	}
 	@include mq-down(sm) {
-		margin-bottom: -140px;
+		padding-top: 160px;
+		margin-bottom: -155px;
 	}
 }
 
@@ -72,7 +73,7 @@
 	}
 	@include mq-down(sm) {
 		position: relative;
-		top: -490px;
+		top: -500px;
 	}
 }
 

@@ -29,8 +29,8 @@
 		margin-bottom: 100px;
 	}
 	@include mq-down(sm) {
-		padding: 60px 0;
-		margin-bottom: 40px;
+		padding: 60px 0 20px;
+		margin-bottom: 20px;
 	}
 }
 
@@ -149,5 +149,17 @@
 		top: 42px;
 		left: 9.2%;
 		right: auto;
+	}
+	@include mq-down(sm) {
+		padding-top: 20px;
+		margin-top: 0;
+		padding-bottom: 40px;
+		.circle--blue {
+			top: -30px;
+		}
+		.testimonials__text {
+			font-size: 14px;
+			line-height: 25px;
+		}
 	}
 }
