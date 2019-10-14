@@ -20,78 +20,50 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Join Us</summary>
-	[PublishedModel("joinUs")]
-	public partial class JoinUs : PublishedElementModel
+	/// <summary>Join Us Form</summary>
+	[PublishedModel("joinUsForms")]
+	public partial class JoinUsForms : FormWithoutDescription
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "joinUs";
+		public new const string ModelTypeAlias = "joinUsForms";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<JoinUs, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<JoinUsForms, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public JoinUs(IPublishedElement content)
+		public JoinUsForms(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Forms
+		/// Image: // will be used as popup background
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("forms")]
-		public IEnumerable<JoinUsForm> Forms => this.Value<IEnumerable<JoinUsForm>>("forms");
+		[ImplementPropertyType("image")]
+		public IPublishedContent Image => this.Value<IPublishedContent>("image");
 
 		///<summary>
-		/// Bottom Image
+		/// Is Volunteer Form: // chose if the form is used for creating volunteers or members
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("joinUsBottomImage")]
-		public IPublishedContent JoinUsBottomImage => this.Value<IPublishedContent>("joinUsBottomImage");
+		[ImplementPropertyType("isVolunteerForm")]
+		public bool IsVolunteerForm => this.Value<bool>("isVolunteerForm");
 
 		///<summary>
-		/// Left Image
+		/// Popup Button Text: // will be used for the open popup button
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("joinUsLeftImage")]
-		public IPublishedContent JoinUsLeftImage => this.Value<IPublishedContent>("joinUsLeftImage");
-
-		///<summary>
-		/// Right Image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("joinUsRightImage")]
-		public IPublishedContent JoinUsRightImage => this.Value<IPublishedContent>("joinUsRightImage");
-
-		///<summary>
-		/// Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("joinUsText")]
-		public IHtmlString JoinUsText => this.Value<IHtmlString>("joinUsText");
-
-		///<summary>
-		/// Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("joinUsTitle")]
-		public string JoinUsTitle => this.Value<string>("joinUsTitle");
-
-		///<summary>
-		/// Top Image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("joinUsTopImage")]
-		public IPublishedContent JoinUsTopImage => this.Value<IPublishedContent>("joinUsTopImage");
+		[ImplementPropertyType("popupButtonText")]
+		public string PopupButtonText => this.Value<string>("popupButtonText");
 	}
 }

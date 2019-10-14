@@ -3,7 +3,7 @@
     Html.RenderAction<NestedContentController>(c => nameof(c.HomeIntro), new { viewModel = Model.HomeIntro });
 }
 
-@if(Model.ArticleContainer != null)
+@if (Model.ArticleContainer != null)
 {
     Html.RenderAction<NestedContentController>(c => nameof(c.ArticleContainer), new { viewModel = Model.ArticleContainer });
 }
@@ -22,11 +22,10 @@
     Html.RenderAction<NestedContentController>(c => nameof(c.LinksList), new { viewModel = linkList });
 }
 
-@{ 
+@{
     Html.RenderAction<NestedContentController>(c => nameof(c.AboutUs), new { viewModel = Model.AboutUs });
 }
 
-@if (Model.JoinUs != null)
-{
+@{ 
     Html.RenderAction<NestedContentController>(c => nameof(c.JoinUs), new { viewModel = Model.JoinUs });
 }

@@ -438,6 +438,7 @@
     <Content Include="ConnectionStrings.config" />
     <Content Include="Global.asax" />
     <Content Include="Views\AboutUsPage.cshtml" />
+    <Content Include="Views\JoinUsPage.cshtml" />
     <Content Include="Views\Partials\NestedContent\_ImageWithText.cshtml" />
     <Content Include="Views\Partials\NestedContent\_PageIntro.cshtml" />
     <Content Include="Views\Partials\NestedContent\_TaggedFeature.cshtml" />
@@ -470,7 +471,9 @@
     <Content Include="Views\XMLSitemap.cshtml" />
     <Content Include="Views\SearchResults.cshtml" />
     <Content Include="Views\Partials\SearchListing\_Search.cshtml" />
-    <Content Include="AppSettings.config" />
+    <Content Include="AppSettings.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="config\imageprocessor\security.config" />
     <Content Include="config\imageprocessor\processing.config" />
     <Content Include="config\imageprocessor\cache.config" />
@@ -514,22 +517,19 @@
     <Content Include="Views\Partials\NestedContent\_ContactMap.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Donations.cshtml" />
     <Content Include="Views\Partials\Shared\_FormWithoutDescription.cshtml" />
-    <Content Include="Views\JoinUsPage.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlogContent.cshtml" />
-    <Content Include="Views\BlogPage.cshtml" />
     <Content Include="Views\Partials\NestedContent\_ContactForm.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Donations.cshtml" />
     <Content Include="Views\Partials\Shared\_FormWithoutDescription.cshtml" />
-    <Content Include="Views\JoinUsPage.cshtml" />
     <Content Include="Views\BlogArticle.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlogArticleContent.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlogIntro.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlogContent.cshtml" />
-    <Content Include="Views\BlogPage.cshtml" />
     <Content Include="Views\News.cshtml" />
     <Content Include="Views\Partials\Shared\_NewsBlogBlockLatestArticleInFocus.cshtml" />
     <Content Include="Views\Partials\Shared\_NewsBlogBlockTwoColumnThreeRows.cshtml" />
     <Content Include="Views\Partials\Shared\_NewsBlogBlockThreeColumnTwoRows.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_JoinUsForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
