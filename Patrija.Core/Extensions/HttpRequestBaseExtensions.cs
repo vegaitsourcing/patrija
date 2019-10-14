@@ -1,5 +1,5 @@
 ﻿using System.Web;
-using Patrija.Common;
+using cs = Patrija.Common.Constants;
 
 namespace Patrija.Core.Extensions
 {
@@ -9,7 +9,7 @@ namespace Patrija.Core.Extensions
 		{
 			if (request == null) return string.Empty;
 
-			return request[Constants.RequestParameters.Query];
+			return request[cs.RequestParameters.Query];
 		}
 
 		public static int GetPageParameter(this HttpRequestBase request)
@@ -17,7 +17,7 @@ namespace Patrija.Core.Extensions
 			const int defaultValue = 1;
 			if (request == null) return defaultValue;
 
-			return int.TryParse(request[Constants.RequestParameters.Page], out int page) ? page : defaultValue;
+			return int.TryParse(request[cs.RequestParameters.Page], out int page) ? page : defaultValue;
 		}
 	}
 }

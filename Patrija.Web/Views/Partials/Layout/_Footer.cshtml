@@ -3,24 +3,28 @@
 <footer class="footer has-cover">
     <div class="wrap wrap--normal">
         <div class="footer__container">
-            <div class="footer__logo">
-                <img class="footer__logo-image" src="@Model.Logo.Url" alt="logo">
-                <span class="footer__logo-text">@Model.LogoText</span>
-            </div>
-            @if (Model.Links.Any())
+            @if (Model.Logo != null)
+            {
+                <div class="footer__logo">
+                    <img class="footer__logo-image" src="@Model.Logo.Url" alt="logo">
+                    <span class="footer__logo-text">@Model.LogoText</span>
+                </div>
+            }
+
+            @if (Model.Links != null && Model.Links.Any())
             {
                 <div class="footer__links">
                     <ul class="footer__links-list">
                         @foreach (var link in Model.Links)
                         {
                             <li class="footer__links-item">
-				                @Html.Partial("Link", link, new ViewDataDictionary() {{ "className", "footer__links-link" }})
+                                @Html.Partial("Link", link, new ViewDataDictionary() { { "className", "footer__links-link" } })
                             </li>
                         }
                     </ul>
                 </div>
             }
-            
+
         </div>
         <div class="footer__copyright">
             <span class="footer__copyright-text">@Model.CopyrightText</span>

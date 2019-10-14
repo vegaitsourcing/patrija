@@ -264,6 +264,7 @@
     <Compile Include="Attributes\ExternalRedirectAttribute.cs" />
     <Compile Include="Components\ApplicationConfigurationComponent.cs" />
     <Compile Include="Composers\SearchComposer.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Contexts\IPageContext.cs" />
     <Compile Include="Contexts\ISeoContext.cs" />
     <Compile Include="Contexts\ISiteContext.cs" />

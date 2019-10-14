@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Specialized;
 using System.Net.Http;
-using Patrija.Common;
+using cs = Patrija.Common.Constants;
 
 namespace Patrija.Core.Models
 {
-	public class Page
+    public class Page
 	{
 		private readonly Uri _currentUri;
 
@@ -27,7 +27,7 @@ namespace Patrija.Core.Models
 		private string GetPageUrl()
 		{
 			NameValueCollection queryString = _currentUri.ParseQueryString();
-			queryString[Constants.RequestParameters.Page] = Index.ToString();
+			queryString[cs.RequestParameters.Page] = Index.ToString();
 
 			return $"{_currentUri.AbsolutePath}?{queryString}";
 		}

@@ -1,31 +1,35 @@
 ﻿@using Patrija.Core.ViewModels.Partials.Home;
 @inherits UmbracoViewPage<HomeSupportViewModel>
 
+
 <div class="support">
     <div class="wrap support__wrap">
-
-        <div class="support__container">
-            @foreach (SupportContentBoxViewModel box in Model.supportContentBoxViewModels)
-            {
-                <div class="support__item">
-                    <div class="support__item-content">
-                        @if (!string.IsNullOrWhiteSpace(box.Title))
-                        {
-                            <h3 class="h3 support__item-title">@box.Title</h3>
-                        }
-                        @if (!string.IsNullOrWhiteSpace(box.Text))
-                        {
-                            <p class="support__item-text">@box.Text</p>
-                        }
-                        @if (box.Link != null)
-                        {
-                            <a class="btn @box.ButtonClass" href="@box.Link.Url" target="@box.Link.Target">@box.Link.Content</a>
-                        }
+        @if (Model.supportContentBoxViewModels != null && Model.supportContentBoxViewModels.Any())
+        {
+            <div class="support__container">
+                @foreach (SupportContentBoxViewModel box in Model.supportContentBoxViewModels)
+                {
+                    <div class="support__item">
+                        <div class="support__item-content">
+                            @if (!string.IsNullOrWhiteSpace(box.Title))
+                            {
+                                <h3 class="h3 support__item-title">@box.Title</h3>
+                            }
+                            @if (!string.IsNullOrWhiteSpace(box.Text))
+                            {
+                                <p class="support__item-text">@box.Text</p>
+                            }
+                            @if (box.Link != null)
+                            {
+                                <a class="btn @box.ButtonClass" href="@box.Link.Url" target="@box.Link.Target">@box.Link.Content</a>
+                            }
+                        </div>
                     </div>
-                </div>
-            }
-            <div class="circle circle--grey circle--small support__circle"></div>
-        </div>
+                }
+                <div class="circle circle--grey circle--small support__circle"></div>
+            </div>
+        }
+
         <div class="support__image-outer">
             <div class="support__image-mask">
                 <div class="support__image has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
