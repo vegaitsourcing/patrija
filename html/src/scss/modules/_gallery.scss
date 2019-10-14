@@ -12,6 +12,9 @@
 
 .gallery__container {
 	padding: 0 94px;
+	@include mq-down(sm) {
+		padding: 0 30px;
+	}
 }
 
 .gallery__slider {
@@ -27,12 +30,20 @@
 	.slick-next {
 		right: -78px;
 	}
-	@include breakpoint(laptop) {
+	@include mq-between(md, lg) {
 		.slick-prev {
 			left: -68px;
 		}
 		.slick-next {
 			right: -68px;
+		}
+	}
+	@include mq-down(sm) {
+		.slick-prev {
+			left: -24px;
+		}
+		.slick-next {
+			right: -24px;
 		}
 	}
 }
@@ -55,5 +66,8 @@
 	}
 	@include hover {
 		box-shadow: 0 10px 16px rgba($black, 0.16);
+	}
+	@include mq-down(sm) {
+		margin-bottom: 68px;
 	}
 }

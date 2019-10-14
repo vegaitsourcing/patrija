@@ -5,6 +5,9 @@
 	position: relative;
 	padding-top: 130px;
 	margin-bottom: 88px;
+	@include mq-down(sm) {
+		padding-top: 20px;
+	}
 }
 
 .faq__wrap {
@@ -14,6 +17,9 @@
 .faq__title {
 	margin-bottom: 46px;
 	text-align: center;
+	@include mq-down(sm) {
+		margin-bottom: 26px;
+	}
 }
 
 .faq__accordion-item {
@@ -53,6 +59,11 @@
 	@include hover {
 		background-color: $mint;
 	}
+	@include mq-down(sm) {
+		font-size: 14px;
+		line-height: 30px;
+		padding: 10px 20px;
+	}
 }
 
 .faq__accordion-btn--active {
@@ -79,4 +90,7 @@
 	position: absolute;
 	top: 248px;
 	right: -22.5%;
+	@include mq-down(sm) {
+		display: none;
+	}
 }
