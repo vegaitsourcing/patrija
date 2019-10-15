@@ -2,7 +2,6 @@ import scrollDisable from './helpers';
 
 const peoplePopup = {
 	$popup: $('.js-popup'),
-	$popupCloseBtn: $('.js-close-popup'),
 	popupOpenedClass: 'popup-overlay--opened',
 
 	init: function() {
@@ -37,7 +36,7 @@ const peoplePopup = {
 	bindClosePopupEvents: function() {
 		const _this = this;
 		// Close popup on click on X, overlay and Escape key
-		_this.$popupCloseBtn.on('click', () => {
+		$('.js-close-popup').on('click', () => {
 			_this.closePopup();
 		});
 
