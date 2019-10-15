@@ -17,5 +17,10 @@ namespace Patrija.Core
             public static string WorkingHours => UmbracoHelper.GetDictionaryValue("ContactUs.WorkingHours");
             public static string Address => UmbracoHelper.GetDictionaryValue("ContactUs.Address");
         }
+
+        public static class News
+        {
+            public static string ShareTitle => UmbracoHelper.GetDictionaryValue("News.ShareTitle");
+        }
     }
 }

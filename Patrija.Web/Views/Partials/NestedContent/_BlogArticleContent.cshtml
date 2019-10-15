@@ -1,4 +1,6 @@
-﻿@model Patrija.Core.ViewModels.Partials.Blog.ArticleContentViewModel
+﻿@using Patrija.Core.Controllers.Surface.Partials
+
+@model Patrija.Core.ViewModels.Partials.Blog.ArticleContentViewModel
 
 <div class="news-details">
     <div class="wrap wrap--medium">
@@ -9,12 +11,10 @@
                     @Html.Raw(Model.ArticleContentHtml)
                 </div>
                 <div class="news-details__share">
-                    <span class="h6 news-details__share-title">Podeli tekst</span>
-                    <div class="news-details__share-links">
-                        <a class="news-details__share-link" href="javascript:;"><span class="icon font-ico-facebook"><span class="sr-only">Share on facebook</span></span></a>
-                        <a class="news-details__share-link" href="javascript:;"><span class="icon font-ico-twitter"><span class="sr-only">Share on twitter</span></span></a>
-                        <a class="news-details__share-link" href="javascript:;"><span class="icon font-ico-youtube"><span class="sr-only">Share on youtube</span></span></a>
-                    </div>
+                    <span class="h6 news-details__share-title">@UmbracoDictionary.News.ShareTitle</span>
+                    @{
+                        Html.RenderAction<SharedController>(c => nameof(SharedController.Share), new { page = Model.CurrentPage});
+                    }
                 </div>
             </div>
             @*<div class="news-details__sidebar">

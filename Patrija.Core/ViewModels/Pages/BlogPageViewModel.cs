@@ -20,7 +20,7 @@ namespace Patrija.Core.ViewModels.Pages
             BlogIntro = new BlogIntroViewModel(pageIntro, categoryName);
 
             var articleContentHtml = context.Page.BlogArticleContent;
-            ArticleContent = new ArticleContentViewModel(context.Page.BlogArticleSubtitle, articleContentHtml.ToHtmlString());
+            ArticleContent = new ArticleContentViewModel(context.Page.BlogArticleSubtitle, articleContentHtml.ToHtmlString(), context.CurrentPage);
             AreCommentsEnabled = context.Page.BlogArticleShowCommentsToggle;
 
             PageId = context.Page.Key;

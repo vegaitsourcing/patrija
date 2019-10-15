@@ -6,7 +6,7 @@ namespace Patrija.Common
 	/// <summary>
 	/// Enables access to application settings, stored in App.config or Web.config 'appSettings' section.
 	/// </summary>
-	public static class AppSettings
+	public static partial class AppSettings
 	{
 		public static bool DisableHttpCompression => Get<bool>("disableHttpCompression", false);
 		public static string XMLSitemapRouteUrl => Get<string>("xmlSitemapRouteUrl", "xmlsitemap");
@@ -16,6 +16,11 @@ namespace Patrija.Common
 	    public static string SourceEmailAddress => Get<string>("emailSourceAdddress", string.Empty);
 	    public static string SourceEmailPassword => Get<string>("emailSourcePassword", string.Empty);
 	    public static string DestinationEmailAddress => Get<string>("emailDestinationAdddress", string.Empty);
+
+        public static string FacebookUrl => Get<string>("social-facebook");
+        public static string TwitterUrl => Get<string>("social-twitter");
+        public static string LinkedInUrl => Get<string>("social-linkedIn");
+        public static string GooglePlusUrl => Get<string>("social-googlePlus");
 
         /// <summary>
         /// Retrieves configuration value associated with given <paramref name="key"/>.
