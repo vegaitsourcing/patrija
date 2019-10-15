@@ -15,7 +15,7 @@ const peoplePopup = {
 	},
 
 	openVolunteerPopup: function() {
-		$('.js-volunteer-popup').on('click', (e) => {
+		$(document).on('click', '.js-volunteer-popup', (e) => {
 			if(!$('.volunteer-popup').hasClass(this.popupOpenedClass)) {
 				$('.volunteer-popup').stop().fadeIn(500).addClass(this.popupOpenedClass);
 			}
@@ -25,7 +25,7 @@ const peoplePopup = {
 	},
 
 	openMemberPopup: function() {
-		$('.js-member-popup').on('click', (e) => {
+		$(document).on('click', '.js-member-popup', (e) => {
 			if(!$('.member-popup').hasClass(this.popupOpenedClass)) {
 				$('.member-popup').stop().fadeIn(500).addClass(this.popupOpenedClass);
 			}
