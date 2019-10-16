@@ -5,6 +5,11 @@
 	padding-top: 196px;
 	padding-bottom: 180px;
 	margin-bottom: 90px;
+	@include mq-only(lg) {
+		padding-top: 80px;
+		padding-bottom: 60px;
+		margin-bottom: 40px;
+	}
 	@include mq-down(sm) {
 		padding-top: 20px;
 		padding-bottom: 40px;
@@ -15,8 +20,10 @@
 .articles__title {
 	padding: 0 94px;
 	margin-bottom: 58px;
-	@include mq-down(sm) {
+	@include mq-down(md) {
 		padding: 0;
+	}
+	@include mq-down(sm) {
 		margin-bottom: 40px;
 	}
 }
@@ -27,8 +34,10 @@
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	@include mq-down(sm) {
+	@include mq-down(md) {
 		padding: 0;
+	}
+	@include mq-down(sm) {
 		display: block;
 	}
 }
@@ -60,7 +69,7 @@
 	vertical-align: top;
 	display: inline-block;
 	width: 246px;
-	@include mq-down(sm) {
+	@include mq-down(lg) {
 		width: 100%;
 		display: block;
 	}
@@ -71,9 +80,11 @@
 	vertical-align: top;
 	display: inline-block;
 	width: calc(100% - 276px);
-	@include mq-down(sm) {
+	@include mq-down(lg) {
 		width: 100%;
 		display: block;
+	}
+	@include mq-down(sm) {
 		padding-top: 8px;
 	}
 }

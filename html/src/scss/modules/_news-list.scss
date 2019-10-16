@@ -3,6 +3,12 @@
 
 .news-list {
 	margin-bottom: -12px;
+	@include mq-only(lg) {
+		margin-bottom: 60px;
+	}
+	@include mq-down(sm) {
+		margin-bottom: 40px;
+	}
 }
 
 .news-list__title {
@@ -15,6 +21,9 @@
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	@include mq-only(md) {
+		padding: 0;
+	}
 	@include mq-down(sm) {
 		display: block;
 		padding: 0;
@@ -26,6 +35,9 @@
 	margin-bottom: 64px;
 	flex: 1 1 33.333%;
 	max-width: 33.333%;
+	@include mq-only(md) {
+		margin-bottom: 48px;
+	}
 	@include mq-down(sm) {
 		max-width: 100%;
 		display: block;
