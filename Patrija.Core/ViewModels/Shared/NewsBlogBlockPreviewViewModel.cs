@@ -9,7 +9,7 @@ namespace Patrija.Core.ViewModels.Shared
         {
             //this.blogArticlePageIntro = blogArticlePageIntro;
             DateOfPublishing = blogArticlePageIntro.BlogIntroDateOfPublishing;
-            Image = new ImageViewModel(blogArticlePageIntro.BlogIntroImage.Url);
+            Image = blogArticlePageIntro.BlogIntroImage != null ? new ImageViewModel(blogArticlePageIntro.BlogIntroImage.Url) : default(ImageViewModel);
             Title = blogArticlePageIntro.BlogIntroTitle;
         }
 

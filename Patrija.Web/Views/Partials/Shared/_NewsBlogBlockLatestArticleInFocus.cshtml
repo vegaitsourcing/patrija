@@ -20,7 +20,7 @@
                         <li class="featured-news__item">
                             <div class="featured-news__item-img">
                                 <a href="javascript:;">
-                                    <span class="featured-news__item-image has-cover" style="background-image: url('@article.Image.Url');"></span>
+                                    <span class="featured-news__item-image has-cover" style="@if (article.Image != null) {<text>background-image: url('@article.Image.Url');</text>}"></span>
                                 </a>
                             </div>
                             <div class="featured-news__item-content">
