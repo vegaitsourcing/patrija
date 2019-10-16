@@ -1,0 +1,7 @@
+This is a collection of listed things that should be done:
+
+- Pagination (News Page)
+- Shared/NewsBlockTwoCol ??
+- Remove mandatory from the CMS and do checking
+
+

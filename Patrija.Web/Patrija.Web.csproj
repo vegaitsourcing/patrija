@@ -529,6 +529,7 @@
     <Content Include="Views\Partials\Shared\_NewsBlogBlockTwoColumnThreeRows.cshtml" />
     <Content Include="Views\Partials\Shared\_NewsBlogBlockThreeColumnTwoRows.cshtml" />
     <Content Include="Views\Partials\NestedContent\_JoinUsForm.cshtml" />
+    <Content Include="Views\Partials\Shared\_Share.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
