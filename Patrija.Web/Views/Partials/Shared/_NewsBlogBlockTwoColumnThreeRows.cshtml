@@ -9,12 +9,12 @@
             @foreach (var article in Model.Articles)
             {
                 <div class="news-list__item">
-                    <div class="news-list__image has-cover" style="background-image: url('@article.Image.Url');"></div>
+                    <div class="news-list__image has-cover" style="background-image: url('@article.BlogIntro.Image.Url');"></div>
                     <div class="news-list__meta">
-                        <span class="news-list__date">@article.DateOfPublishing</span>
+                        <span class="news-list__date">@article.BlogIntro.PublishDate</span>
                     </div>
                     <h4 class="h6 news-list__item-title">
-                        <a href="javascript:;">@article.Title </a>
+                        <a href="javascript:;">@article.BlogIntro.Title </a>
                     </h4>
                     <p class="news-list__text">TODO text... TODO text...TODO text...TODO text...TODO text...TODO text...</p>
                 </div>
