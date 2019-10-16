@@ -22,6 +22,9 @@ namespace Patrija.Common
         public static string LinkedInUrl => Get<string>("social-linkedIn");
         public static string GooglePlusUrl => Get<string>("social-googlePlus");
 
+
+        public static int NumberOfArticlesOnLoad => Get<int>("news-numberOfArticlesOnLoad");
+
         /// <summary>
         /// Retrieves configuration value associated with given <paramref name="key"/>.
         /// </summary>
