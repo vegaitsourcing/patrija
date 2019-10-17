@@ -531,6 +531,8 @@
     <Content Include="Views\Partials\NestedContent\_JoinUsForm.cshtml" />
     <Content Include="Views\Partials\Shared\_Share.cshtml" />
     <Content Include="Views\Partials\Listing\_BlogsArticlesListing.cshtml" />
+    <Content Include="Views\Partials\Listing\_TwoColumnsArticlesListing.cshtml" />
+    <Content Include="Views\Partials\Listing\_ThreeColumnsArticlesListing.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

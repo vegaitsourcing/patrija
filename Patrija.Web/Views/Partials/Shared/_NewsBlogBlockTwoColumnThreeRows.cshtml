@@ -3,28 +3,37 @@
 <div class="news-list">
     <div class="wrap wrap--normal">
         <h2 class="h2 news-list__title">@Model.BlogCategoryName</h2>
-        @if (Model.ThreeColumnArticles.Any())
+        @if (Model.TwoColumnArticles.Any())
         {
-        <div class="news-list__container">
-            @foreach (var article in Model.RightArticles)
-            {
-                <div class="news-list__item">
-                    <div class="news-list__image has-cover" style="background-image: url('@article.BlogIntro.Image.Url');"></div>
-                    <div class="news-list__meta">
-                        <span class="news-list__date">@article.BlogIntro.FormatedPublishDate</span>
-                    </div>
-                    <h4 class="h6 news-list__item-title">
-                        <a href="javascript:;">@article.BlogIntro.Title </a>
-                    </h4>
-                    <p class="news-list__text">TODO text... TODO text...TODO text...TODO text...TODO text...TODO text...</p>
-                </div>
-            }
+            <div class="news-list__container js-two_column_article_container" data-on-load-number="@Model.NumberOfTwoColumnArticlesOnLoad">
+                @foreach (var article in Model.RightArticles)
+                {
+                    if (article.BlogIntro != null)
+                    {
+                        <div class="news-list__item">
+                            <div class="news-list__image has-cover" style="@if (article.BlogIntro.Image != null) {<text>background-image: url('@article.BlogIntro.Image.Url');</text>}"></div>
+                            <div class="news-list__meta">
+                                <span class="news-list__date">@article.BlogIntro.FormatedPublishDate</span>
+                            </div>
+                            @if (!string.IsNullOrWhiteSpace(article.BlogIntro.Title))
+                            {
+                                <h4 class="h6 news-list__item-title">
+                                    <a href="@article.Url">@article.BlogIntro.Title </a>
+                                </h4>
+                            }
+                            <p class="news-list__text">TODO text... TODO text...TODO text...TODO text...TODO text...TODO text...</p>
+                        </div>
+                    }
+                }
 
-        </div>
+            </div>
         }
-
-        <div class="news-list__buttons">
-            <button class="btn btn--mint news-list__load-more" type="button">@UmbracoDictionary.News.LoadMoreButton</button>
-        </div>
+        @if (Model.TotalNumberOfExistingArticles > Model.NumberOfTwoColumnArticlesOnLoad)
+        {
+            <div class="news-list__buttons">
+                <button class="btn btn--mint news-list__load-more js-load-btn" type="button">@UmbracoDictionary.News.LoadMoreButton</button>
+            </div>
+        }
     </div>
+
 </div>

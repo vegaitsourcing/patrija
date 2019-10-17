@@ -1,6 +1,6 @@
 ﻿@model Patrija.Core.ViewModels.Shared.NewsBlogBlockViewModel
 
-<div class="featured-news" data-totalnumber="">
+<div class="featured-news">
     <div class="wrap wrap--normal">
         <h2 class="h2 featured-news__title">@Model.BlogCategoryName</h2>
         <div class="featured-news__container">
@@ -46,13 +46,13 @@
                 }
             </div>
         </div>
-        <div class="featured-news__items js-rest_articles_container" data-url-controller="@Url.GetBlogsArticlesListingUrl()">
+        <div class="featured-news__items js-rest_articles_container" data-on-load-number="@Model.NumberOfFeaturedArticlesOnLoad">
             @*to insert the rest of the articles*@
         </div>
         @if (Model.TotalNumberOfExistingArticles > Model.NumberOfFeaturedArticlesOnLoad + 1)
         {
             <div class="featured-news__buttons">
-                <button class="btn btn--mint featured-news__load-more" type="button">@UmbracoDictionary.News.LoadMoreButton</button>
+                <button class="btn btn--mint featured-news__load-more js-load-btn" type="button">@UmbracoDictionary.News.LoadMoreButton</button>
             </div>
         }
     </div>

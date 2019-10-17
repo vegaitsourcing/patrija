@@ -1,5 +1,4 @@
-﻿using Patrija.Common;
-using Patrija.Core.ViewModels.Shared;
+﻿using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Extensions;
 using Patrija.Models.Generated;
 using System;
@@ -11,17 +10,17 @@ namespace Patrija.Core.Controllers.Surface.Partials
     public class ListingController : BaseSurfaceController
     {
        
-        public ActionResult BlogsArticlesListing(int newsPageId)
+        public ActionResult BlogsArticlesListing(int newsPageId, int numberArticlesOnLoad, string partial, int orderNumber)
         {
             var items = GetNewsPageModel(newsPageId)?
                 .NewsNewsBlogBlocks?
-                .FirstOrDefault()?
+                .ToList()[orderNumber]
                 .GetArticles()?
-                .Skip(AppSettings.NumberOfFeaturedArticlesOnLoad + 1)
+                .Skip(numberArticlesOnLoad)
                 .Select(article => new NewsBlogBlockPreviewViewModel(article))
                 .ToList();
 
-            return RenderActionResult(items, () => PartialView(items));
+            return PartialView(partial, items);
         }
 
         private News GetNewsPageModel(int pageId)

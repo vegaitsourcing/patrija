@@ -1,0 +1,21 @@
+﻿@inherits UmbracoViewPage<List<NewsBlogBlockPreviewViewModel>>
+
+
+@foreach (var article in Model)
+{
+    if (article.BlogIntro != null)
+    {
+        <div class="news-list__item">
+            <div class="news-list__image has-cover" style="@if (article.BlogIntro.Image != null) {<text>background-image: url('@article.BlogIntro.Image.Url');</text>}"></div>
+            <div class="news-list__meta">
+                <span class="news-list__date">@article.BlogIntro.FormatedPublishDate</span>
+            </div>
+            @if (!string.IsNullOrWhiteSpace(article.BlogIntro.Title))
+            {<h4 class="h6 news-list__item-title">
+                    <a href="@article.Url">@article.BlogIntro.Title </a>
+                </h4>
+            }
+            <p class="news-list__text">TODO text... TODO text...TODO text...TODO text...TODO text...TODO text...</p>
+        </div>
+    }
+}

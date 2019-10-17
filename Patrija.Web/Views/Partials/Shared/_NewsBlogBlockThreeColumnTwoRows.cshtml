@@ -3,32 +3,38 @@
 <div class="articles has-cover" style="background-image: url('{{bgImage}}');">
     <div class="wrap wrap--normal">
         <h2 class="h2 articles__title">@Model.BlogCategoryName</h2>
-        <div class="articles__container">
-            @foreach (var article in Model.ThreeColumnArticles)
+        <div class="articles__container  js-three_column_article_container" data-on-load-number="@Model.NumberOfThreeColumnArticlesOnLoad">
+            @if (Model.ThreeColumnArticles != null && Model.ThreeColumnArticles.Any())
             {
-                if (article.BlogIntro != null)
+                foreach (var article in Model.ThreeColumnArticles)
                 {
-                    <div class="articles__item">
-                        <div class="articles__item-img">
-                            <a href="@article.Url">
-                                <span class="articles__item-image has-cover" style="@if (article.BlogIntro.Image != null) {<text>background-image: url('@article.BlogIntro.Image.Url');</text>}"></span>
-                            </a>
+                    if (article.BlogIntro != null)
+                    {
+                        <div class="articles__item">
+                            <div class="articles__item-img">
+                                <a href="@article.Url">
+                                    <span class="articles__item-image has-cover" style="@if (article.BlogIntro.Image != null) {<text>background-image: url('@article.BlogIntro.Image.Url');</text>}"></span>
+                                </a>
+                            </div>
+                            <div class="articles__item-content">
+                                <span class="articles__item-date">@article.BlogIntro.FormatedPublishDate</span>
+                                @if (!string.IsNullOrWhiteSpace(article.BlogIntro.Title))
+                                {
+                                    <h4 class="h6 articles__item-title">
+                                        <a href="@article.Url">@article.BlogIntro.Title</a>
+                                    </h4>
+                                }
+                            </div>
                         </div>
-                        <div class="articles__item-content">
-                            <span class="articles__item-date">@article.BlogIntro.FormatedPublishDate</span>
-                            <h4 class="h6 articles__item-title">
-                                <a href="@article.Url">@article.BlogIntro.Title</a>
-                            </h4>
-                        </div>
-                    </div>
+                    }
                 }
-
             }
+
         </div>
         @if (Model.TotalNumberOfExistingArticles > Model.NumberOfThreeColumnArticlesOnLoad)
         {
             <div class="articles__buttons">
-                <button class="btn btn--mint articles__load-more" type="button">@UmbracoDictionary.News.LoadMoreButton</button>
+                <button class="btn btn--mint articles__load-more js-load-btn" type="button">@UmbracoDictionary.News.LoadMoreButton</button>
             </div>
         }
 

@@ -29,11 +29,6 @@ namespace Patrija.Core.ViewModels.Shared
                                     : null)
                         .ToList();
 
-            AllArticles = model.GetArticles().Select(article => article != null ?
-                                    new NewsBlogBlockPreviewViewModel(article)
-                                    : null)
-                        .ToList();
-
             TwoColumnArticles = model.GetOnLoadArticles(NumberOfTwoColumnArticlesOnLoad)?
                        .Select(article => article != null ?
                                    new NewsBlogBlockPreviewViewModel(article)
