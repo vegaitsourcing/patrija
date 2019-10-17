@@ -17,10 +17,10 @@
                 </div>
             }
             <div class="featured-news__items">
-                @if (Model.Articles.Any())
+                @if (Model.RightArticles.Any())
                 {
                     <ul class="featured-news__items-list">
-                        @foreach (var article in Model.Articles)
+                        @foreach (var article in Model.RightArticles)
                         {
                             if (article.BlogIntro != null)
                             {
@@ -46,14 +46,14 @@
                 }
             </div>
         </div>
-        <div class="featured-news__items js-rest_articles_container"  data-url-controller="@Url.GetBlogsArticlesListingUrl()" >
+        <div class="featured-news__items js-rest_articles_container" data-url-controller="@Url.GetBlogsArticlesListingUrl()">
             @*to insert the rest of the articles*@
         </div>
-            @if (Model.TotalNumberOfExistingArticles > Model.NumberOfArticlesOnLoad)
-            {
-                <div class="featured-news__buttons">
-                    <button class="btn btn--mint featured-news__load-more" type="button">@UmbracoDictionary.News.LoadMoreButton</button>
-                </div>
-            }
-        </div>
+        @if (Model.TotalNumberOfExistingArticles > Model.NumberOfFeaturedArticlesOnLoad + 1)
+        {
+            <div class="featured-news__buttons">
+                <button class="btn btn--mint featured-news__load-more" type="button">@UmbracoDictionary.News.LoadMoreButton</button>
+            </div>
+        }
     </div>
+</div>

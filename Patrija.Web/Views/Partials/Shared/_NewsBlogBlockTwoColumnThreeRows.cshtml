@@ -3,10 +3,10 @@
 <div class="news-list">
     <div class="wrap wrap--normal">
         <h2 class="h2 news-list__title">@Model.BlogCategoryName</h2>
-        @if (Model.Articles.Any())
+        @if (Model.ThreeColumnArticles.Any())
         {
         <div class="news-list__container">
-            @foreach (var article in Model.Articles)
+            @foreach (var article in Model.RightArticles)
             {
                 <div class="news-list__item">
                     <div class="news-list__image has-cover" style="background-image: url('@article.BlogIntro.Image.Url');"></div>

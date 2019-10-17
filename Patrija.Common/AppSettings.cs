@@ -23,7 +23,9 @@ namespace Patrija.Common
         public static string GooglePlusUrl => Get<string>("social-googlePlus");
 
 
-        public static int NumberOfArticlesOnLoad => Get<int>("news-numberOfArticlesOnLoad");
+        public static int NumberOfFeaturedArticlesOnLoad => Get<int>("news-numberOfFeaturedArticlesOnLoad");
+        public static int NumberOfTwoColumnsArticlesOnLoad => Get<int>("news-numberOfTwoColumnsArticlesOnLoad");
+        public static int NumberOfThreeColumnsArticlesOnLoad => Get<int>("news-numberOfThreeColumnsArticlesOnLoad");
 
         /// <summary>
         /// Retrieves configuration value associated with given <paramref name="key"/>.

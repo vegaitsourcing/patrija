@@ -17,7 +17,7 @@ namespace Patrija.Core.Controllers.Surface.Partials
                 .NewsNewsBlogBlocks?
                 .FirstOrDefault()?
                 .GetArticles()?
-                .Skip(AppSettings.NumberOfArticlesOnLoad + 1)
+                .Skip(AppSettings.NumberOfFeaturedArticlesOnLoad + 1)
                 .Select(article => new NewsBlogBlockPreviewViewModel(article))
                 .ToList();
 
