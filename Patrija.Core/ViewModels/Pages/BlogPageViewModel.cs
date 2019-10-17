@@ -16,8 +16,9 @@ namespace Patrija.Core.ViewModels.Pages
 
             var pageIntro = context.Page.BlogArticlePageIntro.FirstOrDefault();
             var categoryName = context.CurrentPage.Parent.Name;
+            var date = context.CurrentPage.CreateDate;
             
-            BlogIntro = new BlogIntroViewModel(pageIntro, categoryName);
+            BlogIntro = pageIntro != null ? new BlogIntroViewModel(pageIntro, date, categoryName) : default(BlogIntroViewModel);
 
             var articleContentHtml = context.Page.BlogArticleContent;
             ArticleContent = new ArticleContentViewModel(context.Page.BlogArticleSubtitle, articleContentHtml.ToHtmlString(), context.CurrentPage);

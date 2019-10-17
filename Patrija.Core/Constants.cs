@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Patrija.Core
+﻿namespace Patrija.Core
 {
     public static class Constants
     {
@@ -13,6 +7,11 @@ namespace Patrija.Core
             public const string DonateFormId = "donations-form";
             public const string VolunteerFormId = "volunteer-form";
             public const string UserFormId = "user-form";
+        }
+
+        public static class DateFormats
+        {
+            public const string DateFormatSimple = "dd.MM.yyyy";
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Patrija.Core.ViewModels.Shared
     {
         public NewsBlogBlockPreviewViewModel(BlogArticle model)
         {
-            BlogIntro = model.BlogArticlePageIntro != null ? new BlogIntroViewModel(model.BlogArticlePageIntro.FirstOrDefault()) : default(BlogIntroViewModel);
+            BlogIntro = model.BlogArticlePageIntro != null ? new BlogIntroViewModel(model.BlogArticlePageIntro.FirstOrDefault(), model.CreateDate) : default(BlogIntroViewModel);
             Url = model.Url;
         }
 
