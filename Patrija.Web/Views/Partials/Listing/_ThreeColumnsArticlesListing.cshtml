@@ -15,7 +15,12 @@
                     <a href="@article.Url">@article.BlogIntro.Title </a>
                 </h4>
             }
-            <p class="news-list__text">TODO text... TODO text...TODO text...TODO text...TODO text...TODO text...</p>
+            @if (!string.IsNullOrWhiteSpace(article.BlogIntro.PreviewText))
+            {
+                <p class="news-list__text">
+                    @Html.Raw(article.BlogIntro.PreviewText)
+                </p>
+            }
         </div>
     }
 }
