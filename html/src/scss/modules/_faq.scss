@@ -90,7 +90,7 @@
 	position: absolute;
 	top: 248px;
 	right: -22.5%;
-	@include mq-down(sm) {
+	@include mq-down(lg) {
 		display: none;
 	}
 }

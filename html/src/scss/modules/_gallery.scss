@@ -3,6 +3,9 @@
 
 .gallery {
 	margin-bottom: -42px;
+	@include mq-only(lg) {
+		margin-bottom: 40px;
+	}
 }
 
 .gallery__title {
