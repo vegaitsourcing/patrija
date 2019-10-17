@@ -7,7 +7,8 @@
             @if (Model.FeatureArticle != null && Model.FeatureArticle.BlogIntro != null)
             {
                 <div class="featured-news__large">
-                    <div class="featured-news__large-image has-cover" style="@if (Model.FeatureArticle.BlogIntro.Image != null) {<text>background-image: url('@Model.FeatureArticle.BlogIntro.Image.Url');</text>}">
+                    <div class="featured-news__large-image has-cover"
+                         style="@if (Model.FeatureArticle.BlogIntro.Image != null) {<text>background-image: url('@Model.FeatureArticle.BlogIntro.Image.Url');</text>}">
                         @if (!string.IsNullOrWhiteSpace(Model.FeatureArticle.BlogIntro.Title))
                         {
                             <h3 class="h6 featured-news__large-title"><a href="@Model.FeatureArticle.Url">@Model.FeatureArticle.BlogIntro.Title</a></h3>
@@ -45,11 +46,14 @@
                 }
             </div>
         </div>
-        @if (Model.TotalNumberOfExistingArticles > Model.NumberOfArticlesOnLoad)
-        {
-            <div class="featured-news__buttons">
-                <button class="btn btn--mint featured-news__load-more" type="button">@UmbracoDictionary.News.LoadMoreButton</button>
-            </div>
-        }
+        <div class="featured-news__items js-rest_articles_container"  data-url-controller="@Url.GetBlogsArticlesListingUrl()" >
+            @*to insert the rest of the articles*@
+        </div>
+            @if (Model.TotalNumberOfExistingArticles > Model.NumberOfArticlesOnLoad)
+            {
+                <div class="featured-news__buttons">
+                    <button class="btn btn--mint featured-news__load-more" type="button">@UmbracoDictionary.News.LoadMoreButton</button>
+                </div>
+            }
+        </div>
     </div>
-</div>

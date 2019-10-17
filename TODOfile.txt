@@ -4,5 +4,6 @@ This is a collection of listed things that should be done:
 - Shared/NewsBlockTwoCol ??
 - Remove mandatory from the CMS and do checking
 - Do we need BlogArticle Page Intro property to be more than 1 NC??
+- FE - order of loaded-News Page
 
 

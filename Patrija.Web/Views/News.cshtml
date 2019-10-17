@@ -1,6 +1,6 @@
 ﻿@inherits UmbracoViewPage<NewsViewModel>
 
-<div class="js-newspage">
+<div class="js-newspage" data-page-id="@Model.PageId">
 
     @if (Model.PageIntro != null)
     {

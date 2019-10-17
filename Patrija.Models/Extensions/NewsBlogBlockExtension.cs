@@ -46,7 +46,7 @@ namespace Patrija.Models.Extensions
                 return default(List<BlogArticle>);
             }
 
-            return model.NewsBlogBlockBlogCategory.Children.OfType<BlogArticle>().ToList();
+            return model.NewsBlogBlockBlogCategory.Children.OfType<BlogArticle>().OrderBy(article => article.CreateDate).ToList();
 
         }
 

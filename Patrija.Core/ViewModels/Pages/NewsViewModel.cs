@@ -2,11 +2,7 @@
 using Patrija.Core.ViewModels.Partials.AboutUsPage;
 using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Patrija.Core.ViewModels.Pages
 {
@@ -20,10 +16,12 @@ namespace Patrija.Core.ViewModels.Pages
             PageIntro = pageIntro != null ? new PageIntroViewModel(pageIntro) : null;
             
             NewsBlogBlocks = context.Page.NewsNewsBlogBlocks.Select(nbb => new NewsBlogBlockViewModel(nbb)).ToArray();
+            PageId = context.Page.Id;
         }
 
         public string PageTitle { get; }
         public PageIntroViewModel PageIntro { get; }
         public NewsBlogBlockViewModel[] NewsBlogBlocks { get; }
+        public int PageId { get; }
     }
 }

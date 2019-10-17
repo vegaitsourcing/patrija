@@ -287,9 +287,11 @@
     <Compile Include="Controllers\Surface\Partials\BlogCommentsSurfaceController.cs" />
     <Compile Include="Controllers\Surface\Partials\ContainerController.cs" />
     <Compile Include="Controllers\Surface\Partials\LayoutController.cs" />
+    <Compile Include="Controllers\Surface\Partials\ListingController.cs" />
     <Compile Include="Controllers\Surface\Partials\NestedContentController.cs" />
     <Compile Include="Controllers\Surface\Partials\SearchListingController.cs" />
     <Compile Include="Controllers\Surface\Partials\SharedController.cs" />
+    <Compile Include="Extensions\UrlHelperExtensions.cs" />
     <Compile Include="ViewModels\Partials\Share\ShareViewModel.cs" />
     <Compile Include="Controllers\Surface\Partials\SimpleFormSurfaceController.cs" />
     <Compile Include="Dtos\CommentDto.cs" />
