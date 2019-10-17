@@ -17,7 +17,7 @@ namespace Patrija.Core.ViewModels.Shared
             TotalNumberOfExistingArticles = model.GetNumberOfArticles();
             NumberOfArticlesOnLoad = AppSettings.NumberOfArticlesOnLoad;
             FeatureArticle = model.GetFirstArticle() != null ? new NewsBlogBlockPreviewViewModel(model.GetFirstArticle()) : default(NewsBlogBlockPreviewViewModel);
-            Articles = model.GetOnLoadArticlesSkippingFirst(NumberOfArticlesOnLoad)
+            RightArticles = model.GetOnLoadArticlesSkippingFirst(NumberOfArticlesOnLoad)
                         .Select(article => article != null ?
                                     new NewsBlogBlockPreviewViewModel(article)
                                     : null)
@@ -25,7 +25,8 @@ namespace Patrija.Core.ViewModels.Shared
         }
         public string BlogCategoryName { get; }
         public DisplayVariant DisplayVariant { get; }
-        public IReadOnlyList<NewsBlogBlockPreviewViewModel> Articles { get; }
+        public IReadOnlyList<NewsBlogBlockPreviewViewModel> RightArticles { get; }
+        public IReadOnlyList<NewsBlogBlockPreviewViewModel> AllArticles { get; }
         public NewsBlogBlockPreviewViewModel FeatureArticle { get; }
 
         public int TotalNumberOfExistingArticles { get; }

@@ -1,4 +1,5 @@
-﻿using Patrija.Core.ViewModels.Shared;
+﻿using Patrija.Common;
+using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Extensions;
 using Patrija.Models.Generated;
 using System;
@@ -16,6 +17,7 @@ namespace Patrija.Core.Controllers.Surface.Partials
                 .NewsNewsBlogBlocks?
                 .FirstOrDefault()?
                 .GetArticles()?
+                .Skip(AppSettings.NumberOfArticlesOnLoad + 1)
                 .Select(article => new NewsBlogBlockPreviewViewModel(article))
                 .ToList();
 
