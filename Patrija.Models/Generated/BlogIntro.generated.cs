@@ -46,13 +46,6 @@ namespace Patrija.Models.Generated
 		// properties
 
 		///<summary>
-		/// Date of Publishing
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("blogIntroDateOfPublishing")]
-		public DateTime BlogIntroDateOfPublishing => this.Value<DateTime>("blogIntroDateOfPublishing");
-
-		///<summary>
 		/// Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]

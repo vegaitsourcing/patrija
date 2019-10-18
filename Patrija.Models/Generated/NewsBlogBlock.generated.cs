@@ -58,12 +58,5 @@ namespace Patrija.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("newsBlogBlockDisplayVariant")]
 		public string NewsBlogBlockDisplayVariant => this.Value<string>("newsBlogBlockDisplayVariant");
-
-		///<summary>
-		/// Load More Button Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("newsBlogBlockLoadMoreButtonText")]
-		public string NewsBlogBlockLoadMoreButtonText => this.Value<string>("newsBlogBlockLoadMoreButtonText");
 	}
 }

@@ -6,7 +6,7 @@
             @if (Model.Logo != null)
             {
                 <div class="footer__logo">
-                    <img class="footer__logo-image" src="@Model.Logo.Url" alt="logo">
+                    <img class="footer__logo-image" src="@Model.Logo.Url" alt="@Model.Logo.AlternateText">
                     <span class="footer__logo-text">@Model.LogoText</span>
                 </div>
             }
@@ -26,8 +26,11 @@
             }
 
         </div>
-        <div class="footer__copyright">
-            <span class="footer__copyright-text">@Model.CopyrightText</span>
-        </div>
+        @if (!string.IsNullOrWhiteSpace(Model.CopyrightText))
+        {
+            <div class="footer__copyright">
+                <span class="footer__copyright-text">@Model.CopyrightText</span>
+            </div>
+        }
     </div>
 </footer>
