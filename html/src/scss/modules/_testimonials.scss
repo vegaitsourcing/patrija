@@ -115,6 +115,12 @@
 	line-height: 30px;
 	text-align: center;
 	display: block;
+	@include mq-only(md) {
+		font-size: 18px;
+	}
+	@include mq-down(sm) {
+		font-size: 16px;
+	}
 }
 
 .testimonials--simple {
@@ -150,16 +156,25 @@
 		left: 9.2%;
 		right: auto;
 	}
+	@include breakpoint(laptop) {
+		padding-top: 140px;
+		margin-bottom: 40px;
+	}
+	@include mq-only(md) {
+		padding-top: 100px;
+		padding-bottom: 40px;
+		margin-bottom: 60px;
+		.testimonials__text {
+			font-size: 14px;
+			line-height: 25px;
+		}
+	}
 	@include mq-down(sm) {
 		padding-top: 20px;
 		margin-top: 0;
 		padding-bottom: 40px;
 		.circle--blue {
 			top: -30px;
-		}
-		.testimonials__text {
-			font-size: 14px;
-			line-height: 25px;
 		}
 	}
 }
