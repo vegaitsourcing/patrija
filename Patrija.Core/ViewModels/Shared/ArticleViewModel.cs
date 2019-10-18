@@ -18,7 +18,7 @@ namespace Patrija.Core.ViewModels.Shared
             Title = blogIntro.BlogIntroTitle;
             PreviewText = blogIntro.BlogIntroPreview;
             PublishDate = date;
-            Image = new ImageViewModel(blogIntro.BlogIntroImage as Image);
+            Image = blogIntro.BlogIntroImage != null ? new ImageViewModel(blogIntro.BlogIntroImage as Image) : default(ImageViewModel);
             BlogPageUrl = blogArticle.Url;
             Category = category;
         }
