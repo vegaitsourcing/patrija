@@ -41,7 +41,7 @@ namespace Patrija.Core.ViewModels.Pages
         {
             var articles = context.Home.Children.OfType<Blog>().First()
                 .Children.OfType<BlogCategory>().SelectMany(category => category
-                .Children.OfType<BlogArticle>().Select(bi => new ArticleViewModel(bi, category.BlogCategoryName)))
+                .Children.OfType<BlogArticle>().Select(bi => new ArticleViewModel(bi, category.BlogCategoryName, context.Page.CreateDate)))
                 .OrderByDescending(a => a.PublishDate).Take(mostRecentBlogsRequest.MostRecentBlogsCount).ToArray();
 
             return new ArticleContainerViewModel(mostRecentBlogsRequest.MostRecentBlogsTitle, articles);

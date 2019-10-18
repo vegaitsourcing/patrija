@@ -1,21 +1,20 @@
-﻿using System;
-using System.Linq;
-using Patrija.Core.ViewModels.Shared;
+﻿using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
-using Umbraco.Web;
+using System;
+using System.Linq;
 
 namespace Patrija.Core.ViewModels.Partials.Layout
 {
-	public class FooterViewModel
+    public class FooterViewModel
 	{
-		public FooterViewModel(IFooter footer)
+		public FooterViewModel(IFooter model)
 		{
-			if (footer == null) throw new ArgumentNullException(nameof(footer));
+			if (model == null) throw new ArgumentNullException(nameof(model));
 
-			CopyrightText = footer.CopyrightText;
-		    LogoText = footer.FooterLogoText;
-            Logo = new ImageViewModel(footer.FooterLogo as Image);
-		    Links = footer.FooterLinks.Select(fl => new LinkViewModel(fl)).ToArray();
+			CopyrightText = model.CopyrightText;
+		    LogoText = model.FooterLogoText;
+            Logo = model.FooterLogo != null ? new ImageViewModel(model.FooterLogo as Image) : default(ImageViewModel);
+		    Links = model.FooterLinks.Select(fl => new LinkViewModel(fl)).ToArray();
 		}
 
 		public string CopyrightText { get; }

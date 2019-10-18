@@ -8,7 +8,7 @@ namespace Patrija.Core.ViewModels.Shared
     public class ArticleViewModel
     {
         
-        public ArticleViewModel(BlogArticle blogArticle, string category)
+        public ArticleViewModel(BlogArticle blogArticle, string category, DateTime date)
         {
             Guard.AgainstDefaultValue(blogArticle);
             Guard.AgainstDefaultValue(blogArticle.BlogArticlePageIntro);
@@ -17,7 +17,7 @@ namespace Patrija.Core.ViewModels.Shared
 
             Title = blogIntro.BlogIntroTitle;
             PreviewText = blogIntro.BlogIntroPreview;
-            PublishDate = blogIntro.BlogIntroDateOfPublishing.Date;
+            PublishDate = date;
             Image = new ImageViewModel(blogIntro.BlogIntroImage as Image);
             BlogPageUrl = blogArticle.Url;
             Category = category;
