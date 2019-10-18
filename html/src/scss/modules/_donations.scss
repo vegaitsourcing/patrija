@@ -4,6 +4,12 @@
 .donations {
 	text-align: center;
 	padding-bottom: 140px;
+	@include breakpoint(laptop) {
+		padding-bottom: 80px;
+	}
+	@include mq-only(md) {
+		padding-bottom: 60px;
+	}
 	@include mq-down(sm) {
 		padding-bottom: 40px;
 	}
@@ -22,6 +28,9 @@
 
 .donations__text {
 	margin-bottom: 98px;
+	@include mq-between(md, lg) {
+		margin-bottom: 40px;
+	}
 	@include mq-down(sm) {
 		margin-bottom: 36px;
 	}
@@ -44,6 +53,10 @@
 	background: #fbfbfb;
 	border-radius: 10px;
 	margin: 0 10px;
+	@include mq-only(md) {
+		width: 208px;
+		height: auto;
+	}
 	@include mq-down(sm) {
 		flex: 1 1 calc(50% - 20px);
 		height: auto;

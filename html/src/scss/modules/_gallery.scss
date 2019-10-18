@@ -6,6 +6,9 @@
 	@include mq-only(lg) {
 		margin-bottom: 40px;
 	}
+	@include mq-only(md) {
+		margin-bottom: 80px;
+	}
 }
 
 .gallery__title {

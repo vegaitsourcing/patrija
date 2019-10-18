@@ -23,6 +23,9 @@
 		height: 550px;
 		margin-bottom: 20px;
 	}
+	@include mq-only(md) {
+		height: 400px;
+	}
 	@include mq-down(sm) {
 		height: auto;
 		margin-bottom: 20px;

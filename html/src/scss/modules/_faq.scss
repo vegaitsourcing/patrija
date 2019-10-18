@@ -5,6 +5,12 @@
 	position: relative;
 	padding-top: 130px;
 	margin-bottom: 88px;
+	@include breakpoint(laptop) {
+		padding-top: 60px;
+	}
+	@include mq-only(md) {
+		padding-top: 40px;
+	}
 	@include mq-down(sm) {
 		padding-top: 20px;
 	}
@@ -58,6 +64,9 @@
 	}
 	@include hover {
 		background-color: $mint;
+	}
+	@include mq-only(md) {
+		padding: 18px 24px;
 	}
 	@include mq-down(sm) {
 		font-size: 14px;
