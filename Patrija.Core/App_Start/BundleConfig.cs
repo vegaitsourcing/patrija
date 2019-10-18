@@ -5,18 +5,29 @@ namespace Patrija.Core
 {
 	public class BundleConfig
 	{
-		public static void RegisterBundles(BundleCollection bundles)
-		{
-			//bundles.UseCdn = true;   //enable CDN support
+        public static void RegisterBundles(BundleCollection bundles)
+        {
+            bundles.UseCdn = true;   //enable CDN support
 
-			// Styles bundle
-			//bundles.Add(new StyleBundle("~/bundles/styles").Include("~/css/dist/style.min.css"));
+            //Styles bundle
+            bundles.Add(new StyleBundle("~/bundles-css/").Include("~/css/style.min.css"));
 
-			// Scripts bundle
-			//bundles.Add(new ScriptBundle("~/bundles/scripts").Include("~/js/dist/global.min.js"));
+            //Scripts bundle
+            bundles.Add(new ScriptBundle("~/bundles-js/").Include("~/js/global.min.js"));
 
-			//CompilationSection compilationSection = (CompilationSection)System.Configuration.ConfigurationManager.GetSection(@"system.web/compilation");
-			//BundleTable.EnableOptimizations = !compilationSection.Debug;
-		}
-	}
+            //// Scripts validation
+            //bundles.Add(new ScriptBundle("~/validationScripts/").Include(
+            //	"~/Scripts/jquery.validate.min.js",
+            //	"~/Scripts/jquery.validate.unobtrusive.min.js"));
+
+            // Scripts validation
+            //bundles.Add(new ScriptBundle("~/validationScripts/").Include(
+            //    "~/Scripts/jquery.validate.min.js",
+            //    "~/Scripts/jquery.validate.unobtrusive.min.js"
+            //    ));
+
+            CompilationSection compilationSection = (CompilationSection)System.Configuration.ConfigurationManager.GetSection(@"system.web/compilation");
+            BundleTable.EnableOptimizations = !compilationSection.Debug;
+        }
+    }
 }

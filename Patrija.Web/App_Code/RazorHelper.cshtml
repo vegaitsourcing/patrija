@@ -1,0 +1,10 @@
+﻿@using System.Web.Optimization
+
+@helper RenderScripts(bool isDefer, params string[] scripts)
+{
+    if (scripts == null || !scripts.Any()) { return; }
+    var defaultScriptFormat = string.Format("<script type='text/javascript' {0} src='{{0}}'></script>", isDefer ? "defer" : string.Empty);
+
+    @Scripts.RenderFormat(defaultScriptFormat, scripts)
+}
+
