@@ -6,7 +6,7 @@
     {
         Html.RenderAction<NestedContentController>(c => nameof(c.PageIntro), new { viewModel = Model.PageIntro });
     }
-    @if (Model.NewsBlogBlocks.Any())
+    @if (Model.NewsBlogBlocks != null && Model.NewsBlogBlocks.Any())
     {
         foreach (var block in Model.NewsBlogBlocks)
         {

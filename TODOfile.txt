@@ -1,11 +1,9 @@
 This is a collection of listed things that should be done:
 
-- Remove mandatory from the CMS and do checking
-- Do we need BlogArticle Page Intro property to be more than 1 NC??
 - FE - 1.part order of loaded-News Page
 - FE- 3.part button showing
 - FE  - 2.part image missing
-- Display Variant - create DDL - News page 
+- Display Variant - create DDL - News page  - FIX THIS
 - CommentsBlock.cshtml ??
 - FeaturedNews.cshtml ??
 - Finished Projects - where it is used??
