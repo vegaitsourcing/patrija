@@ -1,30 +1,26 @@
-using System;
-using System.Linq;
 using Patrija.Models.Generated;
-using Umbraco.Web;
+using System;
+using System.Collections.Generic;
 
 namespace Patrija.Core.ViewModels.Shared
 {
     public class CommentsBlockViewModel
     {
-        
-        public CommentsBlockViewModel(BlogArticle article)
+        public CommentsBlockViewModel(CommentsBlock model, List<CommentViewModel> blogComments)
         {
-            var commentBlock = article.Ancestor<Blog>().BlogCommentsBlock;
+            LeaveACommentTitle = model.CommentBlockLeaveAcommentTitle;
+            LeaveACommentSubtitle = model.CommentsBlockLeaveAcommentSubtitle;
+            CommenterNameLabel = model.CommentsBlockCommenterNameLabel;
+            CommenterEmailLabel = model.CommentsBlockCommenterEmail;
+            LeaveACommentSubmitText = model.CommentBlockLeaveAcommentSubmitText;
+            PreviousCommentsTitle = model.CommentsBlockPreviousCommentsTitle;
 
-            LeaveACommentTitle = commentBlock.CommentBlockLeaveAcommentTitle;
-            LeaveACommentSubtitle = commentBlock.CommentsBlockLeaveAcommentSubtitle;
-            CommenterNameLabel = commentBlock.CommentsBlockCommenterNameLabel;
-            CommenterEmailLabel = commentBlock.CommentsBlockCommenterEmail;
-            LeaveACommentSubmitText = commentBlock.CommentBlockLeaveAcommentSubmitText;
-            PreviousCommentsTitle = commentBlock.CommentsBlockPreviousCommentsTitle;
+            BlogId = model.Key;
 
-            BlogId = article.Key;
-
-            Comments = article.Children<BlogComment>().Select(c => new CommentViewModel(c)).ToArray();
+            Comments = blogComments;
         }
 
-        public CommentViewModel[] Comments { get; }
+        public List<CommentViewModel> Comments { get; }
 
         public string LeaveACommentTitle { get; }
 

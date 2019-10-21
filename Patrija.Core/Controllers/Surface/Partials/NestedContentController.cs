@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 using Patrija.Core.ViewModels.Partials.AboutUsPage;
 using Patrija.Core.ViewModels.Partials.Blog;
@@ -9,6 +10,7 @@ using Patrija.Core.ViewModels.Partials.JoinUs;
 using Patrija.Core.ViewModels.Partials.SupportUs;
 using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
+using Umbraco.Web;
 
 namespace Patrija.Core.Controllers.Surface.Partials
 {
@@ -18,8 +20,12 @@ namespace Patrija.Core.Controllers.Surface.Partials
         public ActionResult CommentsBlock(Guid pageId)
         {
             var article = Umbraco.Content(pageId) as BlogArticle;
+            var blogCommentsBlock = article?.Ancestor<Blog>().BlogCommentsBlock;
+            var blogComments = article.Children<BlogComment>().Select(c => new CommentViewModel(c)).ToList();
 
-            return PartialView(new CommentsBlockViewModel(article));
+            if (article == null || blogCommentsBlock == null || blogComments == null) return new EmptyResult();
+
+            return PartialView(new CommentsBlockViewModel(blogCommentsBlock, blogComments));
         }
 
         [ChildActionOnly]
@@ -96,7 +102,7 @@ namespace Patrija.Core.Controllers.Surface.Partials
         [ChildActionOnly]
         public ActionResult BlogIntro(BlogIntroViewModel viewModel)
             => PartialView(viewModel);
-        
+
         [ChildActionOnly]
         public ActionResult BlogArticleContent(ArticleContentViewModel viewModel)
             => PartialView(viewModel);
