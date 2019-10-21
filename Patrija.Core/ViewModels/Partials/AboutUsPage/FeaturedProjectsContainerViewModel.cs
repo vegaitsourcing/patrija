@@ -1,8 +1,7 @@
-﻿using System;
-using System.Linq;
-using Patrija.Core.ViewModels.Partials.Features;
-using Patrija.Core.ViewModels.Shared;
+﻿using Patrija.Core.ViewModels.Partials.Features;
 using Patrija.Models.Generated;
+using System;
+using System.Linq;
 
 namespace Patrija.Core.ViewModels.Partials.AboutUsPage
 {

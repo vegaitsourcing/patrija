@@ -7,5 +7,6 @@ This is a collection of listed things that should be done:
 - CommentsBlock.cshtml ??
 - FeaturedNews.cshtml ??
 - Finished Projects - where it is used??
+- AboutUsProjectsContainer - FE missing
 
 
