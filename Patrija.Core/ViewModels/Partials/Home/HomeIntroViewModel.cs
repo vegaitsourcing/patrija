@@ -11,8 +11,8 @@ namespace Patrija.Core.ViewModels.Partials.Home
             if (homeIntro == null) throw new ArgumentNullException(nameof(homeIntro));
 
             Title = homeIntro.HomeIntroTitle;
-            Link = new LinkViewModel(homeIntro.HomeIntroButton);
-            Image = new ImageViewModel(homeIntro.HomeIntroImage as Image);
+            Link = homeIntro.HomeIntroButton != null ? new LinkViewModel(homeIntro.HomeIntroButton) : default(LinkViewModel);
+            Image = homeIntro.HomeIntroImage != null ? new ImageViewModel(homeIntro.HomeIntroImage as Image) : default(ImageViewModel);
         }
 
         public string Title { get; }

@@ -3,13 +3,23 @@
 
 <div class="home-intro">
     <div class="wrap home-intro__wrap">
-        <p class="home-intro__text">@Model.Title</p>
-		@Html.Partial("Link", Model.Link, new ViewDataDictionary() { { "className", "btn" } })
-        <div class="home-intro__image">
-            <img src="@Model.Image.Url" alt="">
-            <span class="home-intro__circle home-intro__circle--blue"></span>
-            <span class="home-intro__circle home-intro__circle--mint"></span>
-            <span class="home-intro__circle home-intro__circle--grey"></span>
-        </div>
+        @if (!string.IsNullOrWhiteSpace(Model.Title))
+        {
+            <p class="home-intro__text">@Model.Title</p>
+        }
+        @if (Model.Link != null)
+        {
+            @Html.Partial("Link", Model.Link, new ViewDataDictionary() { { "className", "btn" } })
+        }
+        
+            <div class="home-intro__image">
+                @if (Model.Image != null)
+                {
+                    <img src="@Model.Image.Url" alt="@Model.Image.AlternateText">
+                }
+                <span class="home-intro__circle home-intro__circle--blue"></span>
+                <span class="home-intro__circle home-intro__circle--mint"></span>
+                <span class="home-intro__circle home-intro__circle--grey"></span>
+            </div>
     </div>
 </div>
