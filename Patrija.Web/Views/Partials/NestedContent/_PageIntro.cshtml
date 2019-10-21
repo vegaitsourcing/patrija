@@ -3,22 +3,29 @@
 @inherits UmbracoViewPage<PageIntroViewModel>
 
 <div class="page-intro">
-	<div class="wrap wrap--medium">
-		<div class="page-intro__container">
-			<div class="page-intro__content">
-				<div class="page-intro__content-align">
-					<h1 class="h2 page-intro__title">@Model.Title</h1>
-					<p class="page-intro__text">@Model.Text</p>
-				</div>
-			</div>
-			<div class="page-intro__image-outer @(Dictionaries.ShapeVariantMap[Model.ShapeVariant])">
-				<div class="page-intro__image @(Dictionaries.ShapeVariantMap[Model.ShapeVariant])">
-					<div class="page-intro__img has-cover" style="background-image: url('@Model.Image.Url');"></div>
-					<span class="circle circle--blue circle--large"></span>
-					<span class="circle circle--mint"></span>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="wrap wrap--medium">
+        <div class="page-intro__container">
+            <div class="page-intro__content">
+                <div class="page-intro__content-align">
+                    @if (!string.IsNullOrWhiteSpace(Model.Title))
+                    {
+                        <h1 class="h2 page-intro__title">@Model.Title</h1>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(Model.Text))
+                    {
+                        <p class="page-intro__text">@Model.Text</p>
+                    }
+
+                </div>
+            </div>
+            <div class="page-intro__image-outer @(Dictionaries.ShapeVariantMap[Model.ShapeVariant])">
+                <div class="page-intro__image @(Dictionaries.ShapeVariantMap[Model.ShapeVariant])">
+                    <div class="page-intro__img has-cover"style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
+                    <span class="circle circle--blue circle--large"></span>
+                    <span class="circle circle--mint"></span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 

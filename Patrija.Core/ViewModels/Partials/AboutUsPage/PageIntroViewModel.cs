@@ -12,7 +12,7 @@ namespace Patrija.Core.ViewModels.Partials.AboutUsPage
             Guard.AgainstDefaultValue(pageIntro, nameof(pageIntro));
 
             Title = pageIntro.PageIntroTitle;
-            Image = new ImageViewModel(pageIntro.PageIntroImage as Image);
+            Image = pageIntro.PageIntroImage != null ? new ImageViewModel(pageIntro.PageIntroImage as Image) : default(ImageViewModel);
             Text = pageIntro.PageIntroText;
             ShapeVariant = EnumMapper.MapShapeVariant(pageIntro.PageIntroShapeVariant);
         }
