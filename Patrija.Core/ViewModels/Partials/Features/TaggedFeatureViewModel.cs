@@ -1,6 +1,4 @@
-using System;
 using Patrija.Models.Generated;
-using Umbraco.Web.Models;
 
 namespace Patrija.Core.ViewModels.Partials.Features
 {
