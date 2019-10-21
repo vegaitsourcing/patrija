@@ -49,8 +49,8 @@ namespace Patrija.Models.Generated
 		/// Address
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("contactFormAddress")]
-		public string ContactFormAddress => this.Value<string>("contactFormAddress");
+		[ImplementPropertyType("address")]
+		public string Address => this.Value<string>("address");
 
 		///<summary>
 		/// Comment Field Error Message
@@ -126,7 +126,7 @@ namespace Patrija.Models.Generated
 		/// Working Hours
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("contactFormWorkingHours")]
-		public string ContactFormWorkingHours => this.Value<string>("contactFormWorkingHours");
+		[ImplementPropertyType("workingHours")]
+		public string WorkingHours => this.Value<string>("workingHours");
 	}
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Patrija.Common;
+﻿using Patrija.Common;
 using Patrija.Core.ViewModels.Partials.Features;
 using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
