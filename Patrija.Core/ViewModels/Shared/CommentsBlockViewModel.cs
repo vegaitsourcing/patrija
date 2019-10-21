@@ -7,21 +7,6 @@ namespace Patrija.Core.ViewModels.Shared
 {
     public class CommentsBlockViewModel
     {
-        public CommentViewModel[] Comments { get; }
-        
-        public string LeaveACommentTitle { get; }
-        
-        public string LeaveACommentSubtitle { get; }
-        
-        public string CommenterNameLabel { get; }
-        
-        public string CommenterEmailLabel { get; }
-        
-        public string LeaveACommentSubmitText { get; }
-        
-        public string PreviousCommentsTitle { get; }
-        
-        public Guid BlogId { get; }
         
         public CommentsBlockViewModel(BlogArticle article)
         {
@@ -38,5 +23,21 @@ namespace Patrija.Core.ViewModels.Shared
 
             Comments = article.Children<BlogComment>().Select(c => new CommentViewModel(c)).ToArray();
         }
+
+        public CommentViewModel[] Comments { get; }
+
+        public string LeaveACommentTitle { get; }
+
+        public string LeaveACommentSubtitle { get; }
+
+        public string CommenterNameLabel { get; }
+
+        public string CommenterEmailLabel { get; }
+
+        public string LeaveACommentSubmitText { get; }
+
+        public string PreviousCommentsTitle { get; }
+
+        public Guid BlogId { get; }
     }
 }

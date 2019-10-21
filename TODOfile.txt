@@ -5,6 +5,7 @@ This is a collection of listed things that should be done:
 - FE - 1.part order of loaded-News Page
 - FE- 3.part button showing
 - FE  - 2.part image missing
--Display Variant - create DDL - News page 
+- Display Variant - create DDL - News page 
+- CommentsBlock.cshtml ??
 
 
