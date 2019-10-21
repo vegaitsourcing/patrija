@@ -1,9 +1,16 @@
 ﻿@model Patrija.Core.ViewModels.Partials.SupportUs.FaqViewModel
 <div class="faq__accordion-item">
-    <button class="faq__accordion-btn js-acc-btn" type="button">@Model.Question</button>
-    <div class="faq__accordion-content js-acc-content">
-        <div class="rte">
-            @Model.Answer
+    @if (!string.IsNullOrWhiteSpace(Model.Question))
+    {
+        <button class="faq__accordion-btn js-acc-btn" type="button">@Model.Question</button>
+    }
+    @if (!string.IsNullOrWhiteSpace(Model.Answer.ToString()))
+    {
+        <div class="faq__accordion-content js-acc-content">
+            <div class="rte">
+                @Model.Answer
+            </div>
         </div>
-    </div>
+    }
+
 </div>

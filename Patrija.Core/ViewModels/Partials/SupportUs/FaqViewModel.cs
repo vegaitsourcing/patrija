@@ -1,5 +1,6 @@
 ﻿using Patrija.Common;
 using Patrija.Models.Generated;
+using System.Web;
 
 namespace Patrija.Core.ViewModels.Partials.SupportUs
 {
@@ -14,6 +15,6 @@ namespace Patrija.Core.ViewModels.Partials.SupportUs
         }
 
         public string Question { get; }
-        public string Answer { get; }
+        public IHtmlString Answer { get; }
     }
 }
