@@ -16,7 +16,7 @@ namespace Patrija.Core.Mappers
                 case "Right":
                     return ContentPosition.Right;
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(contentPosition));
+                    return ContentPosition.Left;
             }
         }
 
