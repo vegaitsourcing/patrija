@@ -31,19 +31,19 @@
                 <div class="join-module__images">
                     @if (Model.TopImage != null)
                     {
-                        <div class="join-module__image join-module__image--top"><img src="@Model.TopImage.Url" alt=""></div>
+                        <div class="join-module__image join-module__image--top"><img src="@Model.TopImage.Url" alt="@Model.TopImage.AlternateText"></div>
                     }
                     @if (Model.RightImage != null)
                     {
-                        <div class="join-module__image join-module__image--right"><img src="@Model.RightImage.Url" alt=""></div>
+                        <div class="join-module__image join-module__image--right"><img src="@Model.RightImage.Url" alt="@Model.TopImage.AlternateText"></div>
                     }
                     @if (Model.BottomImage != null)
                     {
-                        <div class="join-module__image join-module__image--bottom"><img src="@Model.BottomImage.Url" alt=""></div>
+                        <div class="join-module__image join-module__image--bottom"><img src="@Model.BottomImage.Url" alt="@Model.BottomImage.AlternateText"></div>
                     }
                     @if (Model.LeftImage != null)
                     {
-                        <div class="join-module__image join-module__image--left"><img src="@Model.LeftImage.Url" alt=""></div>
+                        <div class="join-module__image join-module__image--left"><img src="@Model.LeftImage.Url" alt="@Model.LeftImage.AlternateText"></div>
                     }
 
                 </div>
