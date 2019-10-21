@@ -1,4 +1,3 @@
-using Patrija.Core.Mappers;
 using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
 using System.Linq;

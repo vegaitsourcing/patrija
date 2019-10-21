@@ -11,8 +11,8 @@ namespace Patrija.Core.ViewModels.Partials.ContactUs
         {
             Guard.AgainstDefaultValue(form);
 
-            Address = form.ContactFormAddress;
-            WorkingHours = form.ContactFormWorkingHours;
+            Address = form.Address;
+            WorkingHours = form.WorkingHours;
             Title = form.ContactFormTitle;
             NameFieldText = form.ContactFormNameFieldTitle;
             NameFieldError = form.ContactFormNameError;
