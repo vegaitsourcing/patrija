@@ -17,7 +17,6 @@ This is a collection of listed things that should be done:
 - News - FE - 1.part order of loaded-News Page
 - News - FE -  3.part button showing
 - News - FE - 2.part image missing
-- News - BE - add JOin Us module
 - Home - BE - change Featured Content to picker??
 - Blog - FE - date style on title
 

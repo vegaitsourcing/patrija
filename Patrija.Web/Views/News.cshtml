@@ -16,10 +16,10 @@
                     Html.RenderAction<NestedContentController>(c => nameof(c.NewsBlogBlockLatestArticleInFocus), new { viewModel = block });
                     break;
                 case Patrija.Core.ViewModels.Partials.News.DisplayVariant.ThreeColumnTwoRows:
-                    Html.RenderAction<NestedContentController>(c => nameof(c.NewsBlogBlockTwoColumnThreeRows), new { viewModel = block });
+                    Html.RenderAction<NestedContentController>(c => nameof(c.NewsBlogBlockThreeColumnTwoRows), new { viewModel = block });
                     break;
                 case Patrija.Core.ViewModels.Partials.News.DisplayVariant.TwoColumnThreeRows:
-                    Html.RenderAction<NestedContentController>(c => nameof(c.NewsBlogBlockThreeColumnTwoRows), new { viewModel = block });
+                    Html.RenderAction<NestedContentController>(c => nameof(c.NewsBlogBlockTwoColumnThreeRows), new { viewModel = block });
                     break;
                 default:
                     Html.RenderAction<NestedContentController>(c => nameof(c.NewsBlogBlockLatestArticleInFocus), new { viewModel = block });
