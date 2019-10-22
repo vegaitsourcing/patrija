@@ -507,7 +507,6 @@
     <Content Include="config\Lang\sv-SE.user.xml" />
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
-    <Content Include="ConnectionStrings.config" />
     <Content Include="css\style.min.css" />
     <Content Include="Global.asax" />
     <Content Include="js\global.min.js" />
