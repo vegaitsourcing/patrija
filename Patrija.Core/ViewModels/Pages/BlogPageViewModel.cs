@@ -14,7 +14,7 @@ namespace Patrija.Core.ViewModels.Pages
         {
             Title = context.Page.PageTitle;
 
-            var pageIntro = context.Page.BlogArticlePageIntro.FirstOrDefault();
+            var pageIntro = context.Page.BlogArticlePageIntro != null ? context.Page.BlogArticlePageIntro.FirstOrDefault() :default(BlogIntro);
             var categoryName = context.CurrentPage.Parent.Name;
             var date = context.CurrentPage.CreateDate;
             
