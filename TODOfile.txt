@@ -1,12 +1,23 @@
 This is a collection of listed things that should be done:
 
-- FE - 1.part order of loaded-News Page
-- FE- 3.part button showing
-- FE  - 2.part image missing
+
 - Display Variant - create DDL - News page  - FIX THIS
 - CommentsBlock.cshtml ??
 - FeaturedNews.cshtml ??
 - Finished Projects - where it is used??
-- AboutUsProjectsContainer - FE missing
-
+- About us page : AboutUsProjectsContainer - FE missing
+- About us page: where the Finished projects are pulled from?
+- Project page - setup left orientation on Image with text
+- Project page - FE gray dot missing
+- Project page - image shape
+- Support us - banner image shape
+- Support us - Faq shape missing
+- News - FE -  Banner dot position
+- News - FE - Blogs box bcg shadow-
+- News - FE - 1.part order of loaded-News Page
+- News - FE -  3.part button showing
+- News - FE - 2.part image missing
+- News - BE - add JOin Us module
+- Home - BE - change Featured Content to picker??
+- Blog - BE - add date on title
 

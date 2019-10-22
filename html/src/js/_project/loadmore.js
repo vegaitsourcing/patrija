@@ -2,7 +2,12 @@
 	$newspage: $('.js-newspage'),
 	$newspageId: $('.js-newspage').data('page-id'),
 	$restBlogArticlesContainer: $('.js-rest_articles_container'),
-	$restBlogArticlesControllerUrl: $('.js-rest_articles_container').data('url-controller'),
+	$restBlogArticlesControllerUrl: $('.js-newspage').data('url-controller'),
+	$numberOfFeatureArticlesOnLoad: $('.js-rest_articles_container').data('on-load-number'),
+	$numberOfTwoColumnArticlesOnLoad: $('.js-three_column_article_container').data('on-load-number'),
+	$twoColumnArticlesContainer: $('.js-three_column_article_container'),
+	$numberOfThreeColumnArticlesOnLoad: $('.js-two_column_article_container').data('on-load-number'),
+	$threeColumnArticlesContainer: $('.js-two_column_article_container'),
 
 	init: function() {
 		const _this = this;
@@ -16,56 +21,44 @@
 		});
 
 		$(document).on('click', '.featured-news__load-more', function() {
-			_this.loadAllFeatureBlogArticles($(this).data('order-number'));
+			_this.loadAllArticles(
+				load.$numberOfFeatureArticlesOnLoad,
+				'_BlogsArticlesListing',
+				$(this).data('order-number'),
+				load.$restBlogArticlesContainer
+			);
 			$(this).hide();
 		});
 
 		$(document).on('click', '.articles__load-more', function() {
-			_this.loadAllTwoColumnArticles($(this).data('order-number'));
+			_this.loadAllArticles(
+				load.$numberOfTwoColumnArticlesOnLoad,
+				'_TwoColumnsArticlesListing',
+				$(this).data('order-number'),
+				load.$twoColumnArticlesContainer
+			);
 			$(this).hide();
 		});
 
 		$(document).on('click', '.news-list__load-more', function() {
-			_this.loadAllThreeColumnArticles($(this).data('order-number'));
+			_this.loadAllArticles(
+				load.$numberOfThreeColumnArticlesOnLoad,
+				'_ThreeColumnsArticlesListing',
+				$(this).data('order-number'),
+				load.$threeColumnArticlesContainer
+			);
 			$(this).hide();
 		});
-
-
 	},
 
-	loadAllFeatureBlogArticles: function(ordernumber) {
-		const _this = this;
-		$.get($('.js-newspage').data('url-controller'), {
-			newsPageId: $('.js-newspage').data('page-id'),
-			numberArticlesOnLoad: $('.js-rest_articles_container').data('on-load-number'),
-			partial: '_BlogsArticlesListing',
+	loadAllArticles: function(numberOfItemsOnLoad, partial, ordernumber, container) {
+		$.get(load.$restBlogArticlesControllerUrl, {
+			newsPageId: load.$newspageId,
+			numberArticlesOnLoad: numberOfItemsOnLoad,
+			partial: partial,
 			orderNumber: ordernumber
 		}, (response) => {
-			$('.js-rest_articles_container').append(response);
-		});
-	},
-
-	loadAllTwoColumnArticles: function(ordernumber) {
-		const _this = this;
-		$.get($('.js-newspage').data('url-controller'), {
-			newsPageId: $('.js-newspage').data('page-id'),
-			numberArticlesOnLoad: $('.js-three_column_article_container').data('on-load-number'),
-			partial: '_TwoColumnsArticlesListing',
-			orderNumber: ordernumber
-		}, (response) => {
-			$('.js-three_column_article_container').append(response);
-		});
-	},
-
-	loadAllThreeColumnArticles: function(ordernumber) {
-		const _this = this;
-		$.get($('.js-newspage').data('url-controller'), {
-			newsPageId: $('.js-newspage').data('page-id'),
-			numberArticlesOnLoad: $('.js-two_column_article_container').data('on-load-number'),
-			partial: '_ThreeColumnsArticlesListing',
-			orderNumber: ordernumber
-		}, (response) => {
-			$('.js-two_column_article_container').append(response);
+			container.append(response);
 		});
 	},
 
