@@ -1,7 +1,6 @@
 This is a collection of listed things that should be done:
 
 
-- Display Variant - create DDL - News page  - FIX THIS
 - CommentsBlock.cshtml ??
 - FeaturedNews.cshtml ??
 - Finished Projects - where it is used??
