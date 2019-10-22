@@ -19,5 +19,5 @@ This is a collection of listed things that should be done:
 - News - FE - 2.part image missing
 - News - BE - add JOin Us module
 - Home - BE - change Featured Content to picker??
-- Blog - BE - add date on title
+- Blog - FE - date style on title
 

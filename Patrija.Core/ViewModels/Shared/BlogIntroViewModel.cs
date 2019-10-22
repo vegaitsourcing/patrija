@@ -12,7 +12,7 @@ namespace Patrija.Core.ViewModels.Shared
             
             Title = blogIntro.BlogIntroTitle;
             PreviewText = blogIntro.BlogIntroPreview;
-            FormatedPublishDate = date.ToString(Constants.DateFormats.DateFormatSimple);
+            FormatedPublishDate = !Equals(date, default(DateTime)) ? date.ToString(Constants.DateFormats.DateFormatSimple) : null;
             Image = blogIntro.BlogIntroImage != null ? new ImageViewModel(blogIntro.BlogIntroImage.Url) : default(ImageViewModel);
             Category = category;
         }
