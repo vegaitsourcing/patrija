@@ -30,9 +30,6 @@ namespace Patrija.Core.ViewModels.Pages
 
 		    LinksList = linksList?.Select(ll => new LinksListViewModel(ll)).ToArray();
 
-		    var joinUs = context.Home.HomeJoinUs.FirstOrDefault();
-            JoinUs = joinUs != null ? new JoinUsViewModel(joinUs) : null;
-
             var aboutUs = context.Home.HomeAboutUs.FirstOrDefault();
             AboutUs = aboutUs != null ? new AboutUsViewModel(aboutUs) : null;
 		}

@@ -144,6 +144,13 @@ namespace Patrija.Models.Generated
 		public string SeoTitle => Page.GetSeoTitle(this);
 
 		///<summary>
+		/// Show Join Us Module
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("showJoinUsModule")]
+		public bool ShowJoinUsModule => Page.GetShowJoinUsModule(this);
+
+		///<summary>
 		/// Sitemap Change Frequency: The expected change frequency of the page, associated with the sitemap used by search engines.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]

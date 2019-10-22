@@ -74,18 +74,18 @@ namespace Patrija.Models.Generated
 		public IEnumerable<HomeIntro> HomeIntro => this.Value<IEnumerable<HomeIntro>>("homeIntro");
 
 		///<summary>
-		/// Join Us
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeJoinUs")]
-		public IEnumerable<JoinUs> HomeJoinUs => this.Value<IEnumerable<JoinUs>>("homeJoinUs");
-
-		///<summary>
 		/// Home Support
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("homeSupport")]
 		public IEnumerable<HomeSupport> HomeSupport => this.Value<IEnumerable<HomeSupport>>("homeSupport");
+
+		///<summary>
+		/// Join Us
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("joinUs")]
+		public IEnumerable<JoinUs> JoinUs => this.Value<IEnumerable<JoinUs>>("joinUs");
 
 		///<summary>
 		/// Most Recent Blogs
@@ -205,6 +205,13 @@ namespace Patrija.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("seoTitle")]
 		public string SeoTitle => Page.GetSeoTitle(this);
+
+		///<summary>
+		/// Show Join Us Module
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("showJoinUsModule")]
+		public bool ShowJoinUsModule => Page.GetShowJoinUsModule(this);
 
 		///<summary>
 		/// Sitemap Change Frequency: The expected change frequency of the page, associated with the sitemap used by search engines.
