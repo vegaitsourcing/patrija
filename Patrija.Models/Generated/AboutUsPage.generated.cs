@@ -67,13 +67,6 @@ namespace Patrija.Models.Generated
 		public IEnumerable<FinishedProjects> AboutUsFinishedProjects => this.Value<IEnumerable<FinishedProjects>>("aboutUsFinishedProjects");
 
 		///<summary>
-		/// Join Us: Join us
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("aboutUsJoinUs")]
-		public IEnumerable<JoinUs> AboutUsJoinUs => this.Value<IEnumerable<JoinUs>>("aboutUsJoinUs");
-
-		///<summary>
 		/// Image With Text: Image with text under finished projects
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
@@ -156,6 +149,13 @@ namespace Patrija.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("seoTitle")]
 		public string SeoTitle => Page.GetSeoTitle(this);
+
+		///<summary>
+		/// Show Join Us Module
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("showJoinUsModule")]
+		public bool ShowJoinUsModule => Page.GetShowJoinUsModule(this);
 
 		///<summary>
 		/// Sitemap Change Frequency: The expected change frequency of the page, associated with the sitemap used by search engines.

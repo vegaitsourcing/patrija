@@ -20,9 +20,4 @@
     Html.RenderAction<NestedContentController>(c => nameof(c.LinksList), new { viewModel = Model.Links });
 }
 
-@if (Model.JoinUs != null)
-{
-    Html.RenderAction<NestedContentController>(c => nameof(c.JoinUs), new { viewModel = Model.JoinUs });
-}
-
 
