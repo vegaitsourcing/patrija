@@ -9,6 +9,10 @@
 	$numberOfThreeColumnArticlesOnLoad: $('.js-two_column_article_container').data('on-load-number'),
 	$threeColumnArticlesContainer: $('.js-two_column_article_container'),
 
+	featureArticleListingPartialName: '_BlogsArticlesListing',
+	twoColumnsArticleListingPartialName: '_TwoColumnsArticlesListing',
+	threeColumnsArticleListingPartialName: '_ThreeColumnsArticlesListing',
+
 	init: function() {
 		const _this = this;
 		if (!$('.js-newspage').length) {
@@ -23,7 +27,7 @@
 		$(document).on('click', '.featured-news__load-more', function() {
 			_this.loadAllArticles(
 				load.$numberOfFeatureArticlesOnLoad,
-				'_BlogsArticlesListing',
+				load.featureArticleListingPartialName,
 				$(this).data('order-number'),
 				load.$restBlogArticlesContainer
 			);
@@ -33,7 +37,7 @@
 		$(document).on('click', '.articles__load-more', function() {
 			_this.loadAllArticles(
 				load.$numberOfTwoColumnArticlesOnLoad,
-				'_TwoColumnsArticlesListing',
+				load.twoColumnsArticleListingPartialName,
 				$(this).data('order-number'),
 				load.$twoColumnArticlesContainer
 			);
@@ -43,7 +47,7 @@
 		$(document).on('click', '.news-list__load-more', function() {
 			_this.loadAllArticles(
 				load.$numberOfThreeColumnArticlesOnLoad,
-				'_ThreeColumnsArticlesListing',
+				load.threeColumnsArticleListingPartialName,
 				$(this).data('order-number'),
 				load.$threeColumnArticlesContainer
 			);
