@@ -36,8 +36,6 @@ namespace Patrija.Core.ViewModels.Pages
                 FaqContainer = new FaqContainerViewModel(frequentlyAskedQuestions);
             }
 
-            var joinUs = context.Page.SupportUsJoinUs.FirstOrDefault();
-            JoinUs = joinUs != null ? new JoinUsViewModel(joinUs) : null;
         }
 
         public PageIntroViewModel PageIntro { get; }
@@ -45,6 +43,5 @@ namespace Patrija.Core.ViewModels.Pages
         public TestimonialsContainerViewModel TestimonialsContainer { get; }
         public DonationsViewModel Donations { get; }
         public FaqContainerViewModel FaqContainer { get; }
-        public JoinUsViewModel JoinUs { get; }
     }
 }

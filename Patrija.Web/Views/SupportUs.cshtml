@@ -25,7 +25,3 @@
     Html.RenderAction<NestedContentController>(c => nameof(c.FaqContainer), new { viewModel = Model.FaqContainer });
 }
 
-@if (Model.JoinUs != null)
-{
-    Html.RenderAction<NestedContentController>(c => nameof(c.JoinUs), new { viewModel = Model.JoinUs });
-}

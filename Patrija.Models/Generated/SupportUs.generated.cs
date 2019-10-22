@@ -67,13 +67,6 @@ namespace Patrija.Models.Generated
 		public IEnumerable<FaqContainer> SupportUsFaq => this.Value<IEnumerable<FaqContainer>>("supportUsFaq");
 
 		///<summary>
-		/// Join Us: Join us block
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("supportUsJoinUs")]
-		public IEnumerable<JoinUs> SupportUsJoinUs => this.Value<IEnumerable<JoinUs>>("supportUsJoinUs");
-
-		///<summary>
 		/// Page Intro: Page intro
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
