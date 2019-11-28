@@ -46,6 +46,13 @@ namespace Patrija.Models.Generated
 		// properties
 
 		///<summary>
+		/// Preview Info: //this info will be shown when the page is picked from the other page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("previewInfo")]
+		public IEnumerable<TaggedFeature> PreviewInfo => this.Value<IEnumerable<TaggedFeature>>("previewInfo");
+
+		///<summary>
 		/// Blocks: Blocks presenting content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
