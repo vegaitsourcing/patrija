@@ -26,7 +26,7 @@
 }
 <main class="main">
 	@RenderBody()
-    @if (Model.ShowJoinUsModule)
+    @if (Model.ShowJoinUsModule && Model.JoinUs != null)
     {
         Html.RenderAction<NestedContentController>(c => nameof(c.JoinUs), new { viewModel = Model.JoinUs });
     }
