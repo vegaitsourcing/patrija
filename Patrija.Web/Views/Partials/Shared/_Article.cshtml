@@ -9,9 +9,9 @@
             {
                 <span class="news-slider__category">@Model.Category</span>
             }
-            @if (Model.PublishDate != null)
+            @if (Model.Date != null)
             {
-                <span class="news-slider__date">@Html.DisplayFor(model => model.PublishDate, "FormattedDate")</span>
+                <span class="news-slider__date">@Html.DisplayFor(model => model.Date, "FormattedDate")</span>
             }
         </div>
     }
