@@ -74,6 +74,13 @@ namespace Patrija.Models.Generated
 		public string BlogArticleSubtitle => this.Value<string>("blogArticleSubtitle");
 
 		///<summary>
+		/// Date: //date will be used for sorting articles
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("date")]
+		public DateTime Date => this.Value<DateTime>("date");
+
+		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
