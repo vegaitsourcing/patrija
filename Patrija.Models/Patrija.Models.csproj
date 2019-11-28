@@ -389,7 +389,27 @@
     <Compile Include="Generated\AboutUsProjectsContainer.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
- 
+    <Compile Include="Generated\Articulate.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ArticulateArchive.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ArticulateAuthor.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ArticulateAuthors.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ArticulateMarkdown.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ArticulatePost.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\ArticulateRichText.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Generated\Blog.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
@@ -496,9 +516,9 @@
       <LastGenOutput>ModelsBuilder.generated.cs</LastGenOutput>
     </Compile>
     <Compile Include="Generated\ModelsBuilder.generated.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Generated\MostRecentBlogs.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
