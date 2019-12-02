@@ -375,8 +375,9 @@
     <Compile Include="DocumentTypes\ISeo.cs" />
     <Compile Include="Extensions\DomainRootExtensions.cs" />
     <Compile Include="Extensions\NewsBlogBlockExtension.cs" />
-    <Compile Include="Extensions\PublishedContentExtensions.cs" />
     <Compile Include="Extensions\PageExtensions.cs" />
+    <Compile Include="Extensions\PageIntroExtensions.cs" />
+    <Compile Include="Extensions\PublishedContentExtensions.cs" />
     <Compile Include="Extensions\PublishedContentPropertyExtensions.cs" />
     <Compile Include="Extensions\PublishedElementPropertyExtensions.cs" />
     <Compile Include="Extensions\SeoExtensions.cs" />

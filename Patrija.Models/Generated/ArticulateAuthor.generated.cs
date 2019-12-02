@@ -20,57 +20,50 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Page Intro</summary>
-	[PublishedModel("pageIntro")]
-	public partial class PageIntro : PublishedElementModel
+	/// <summary>Articulate Author</summary>
+	[PublishedModel("ArticulateAuthor")]
+	public partial class ArticulateAuthor : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "pageIntro";
+		public new const string ModelTypeAlias = "ArticulateAuthor";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<PageIntro, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ArticulateAuthor, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public PageIntro(IPublishedElement content)
+		public ArticulateAuthor(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Image: Page intro image
+		/// Author Bio: Description of the author
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("pageIntroImage")]
-		public IPublishedContent PageIntroImage => this.Value<IPublishedContent>("pageIntroImage");
+		[ImplementPropertyType("authorBio")]
+		public string AuthorBio => this.Value<string>("authorBio");
 
 		///<summary>
-		/// Shape Variant: Pick a shape
+		/// Author Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("pageIntroShapeVariant")]
-		public string PageIntroShapeVariant => this.Value<string>("pageIntroShapeVariant");
+		[ImplementPropertyType("authorImage")]
+		public Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue AuthorImage => this.Value<Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue>("authorImage");
 
 		///<summary>
-		/// Text: Page Intro Text
+		/// Author Url: A url to link to the author's website
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("pageIntroText")]
-		public string PageIntroText => this.Value<string>("pageIntroText");
-
-		///<summary>
-		/// Title: Page intro title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("pageIntroTitle")]
-		public string PageIntroTitle => this.Value<string>("pageIntroTitle");
+		[ImplementPropertyType("authorUrl")]
+		public string AuthorUrl => this.Value<string>("authorUrl");
 	}
 }
