@@ -53,7 +53,7 @@ namespace Patrija.Models.Generated
 		public IPublishedContent PageIntroImage => this.Value<IPublishedContent>("pageIntroImage");
 
 		///<summary>
-		/// Shape Variant: Pick a shape
+		/// Shape Variant: Shape Variant
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageIntroShapeVariant")]

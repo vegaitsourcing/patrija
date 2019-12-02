@@ -26,7 +26,7 @@ namespace Patrija.Core.ViewModels.Partials.Features
         
         public string Text { get; }
         
-        public LinkViewModel ReadMore { get; set; }
+        public LinkViewModel ReadMore { get; }
         
         public ContentPosition ContentPosition { get; }
         
