@@ -19,4 +19,8 @@ This is a collection of listed things that should be done:
 - Home - BE - change Featured Content to picker??
 - Blog - FE - date style on title
 - Home - FE - http://prntscr.com/q37ofr 
+- Home - FE - short text ... or from BE ??
+- Home - FE - dots
+- Home - FE - green shape - About us
+
 
