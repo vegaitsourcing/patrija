@@ -38,6 +38,9 @@ textarea {
 .form__input {
 	font-size: 14px;
 	line-height: 48px;
+	@include mq-down(md) {
+		font-size: 16px;
+	}
 }
 
 .form__input--textarea {
@@ -53,6 +56,9 @@ textarea {
 	margin-right: 10px;
 	display: inline-block;
 	font-weight: 400;
+	@include mq-down(md) {
+		font-size: 16px;
+	}
 	@include mq-down(sm) {
 		width: 100%;
 		display: block;

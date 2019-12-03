@@ -24,18 +24,40 @@
 	align-items: flex-start;
 	justify-content: space-between;
 	padding: 0 45px;
+	@include mq-down(md) {
+		padding: 0;
+		flex-direction: column;
+	}
 }
 
 .contact-form__info {
 	flex: 1 1 50%;
 	max-width: 50%;
 	padding: 0 8px;
+	@include mq-down(md) {
+		flex: 1 1 100%;
+		max-width: 100%;
+		padding: 0;
+		margin-bottom: 20px;
+	}
 }
 
 .contact-form__container {
 	flex: 1 1 50%;
 	max-width: 50%;
 	padding: 0 60px 20px 22px;
+	@include mq-down(md) {
+		flex: 1 1 100%;
+		max-width: 100%;
+		padding: 0;
+		width: 100%;
+	}
+	.btn--submit {
+		@include mq-down(md) {
+			margin: 20px 0 0;
+			width: auto;
+		}
+	}
 }
 
 .contact-form__form-title {
