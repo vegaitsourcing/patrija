@@ -20,57 +20,36 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Patrija.Models.Generated
 {
-	/// <summary>Page Intro</summary>
-	[PublishedModel("pageIntro")]
-	public partial class PageIntro : PublishedElementModel
+	/// <summary>Articulate Rich Text</summary>
+	[PublishedModel("ArticulateRichText")]
+	public partial class ArticulateRichText : ArticulatePost
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "pageIntro";
+		public new const string ModelTypeAlias = "ArticulateRichText";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<PageIntro, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ArticulateRichText, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public PageIntro(IPublishedElement content)
+		public ArticulateRichText(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Image: Page intro image
+		/// Rich Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("pageIntroImage")]
-		public IPublishedContent PageIntroImage => this.Value<IPublishedContent>("pageIntroImage");
-
-		///<summary>
-		/// Shape Variant: Pick a shape
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("pageIntroShapeVariant")]
-		public string PageIntroShapeVariant => this.Value<string>("pageIntroShapeVariant");
-
-		///<summary>
-		/// Text: Page Intro Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("pageIntroText")]
-		public string PageIntroText => this.Value<string>("pageIntroText");
-
-		///<summary>
-		/// Title: Page intro title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("pageIntroTitle")]
-		public string PageIntroTitle => this.Value<string>("pageIntroTitle");
+		[ImplementPropertyType("richText")]
+		public IHtmlString RichText => this.Value<IHtmlString>("richText");
 	}
 }
