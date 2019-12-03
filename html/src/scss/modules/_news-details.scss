@@ -9,11 +9,18 @@
 	display: flex;
 	justify-content: space-between;
 	padding-left: 13%;
+	@include mq-down(lg) {
+		flex-direction: column;
+		padding-left: 6%;
+	}
 }
 
 .news-details__content {
 	padding: 18px 33px;
 	flex: 1 1 auto;
+	@include mq-down(sm) {
+		padding: 10px 5px;
+	}
 }
 
 .news-details__share {
@@ -60,10 +67,17 @@
 .news-details__sidebar {
 	padding: 36px 54px 36px 33px;
 	flex: 1 0 484px;
+	@include mq-down(sm) {
+		padding: 20px 0;
+	}
 }
 
 .news-details__sidebar-title {
 	margin-bottom: 22px;
+}
+
+.news-details__list {
+	margin-bottom: 40px;
 }
 
 .news-details__item {
