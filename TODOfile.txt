@@ -22,5 +22,6 @@ This is a collection of listed things that should be done:
 - Home - FE - short text ... or from BE ??
 - Home - FE - dots
 - Home - FE - green shape - About us
+- EN - BE - Crate a new template
 
 
