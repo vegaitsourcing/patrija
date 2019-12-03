@@ -53,20 +53,6 @@ namespace Patrija.Models.Generated
 		public IEnumerable<LinksList> AboutUsFeaturedLinks => this.Value<IEnumerable<LinksList>>("aboutUsFeaturedLinks");
 
 		///<summary>
-		/// Featured Projects: Featured projects on about page
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("aboutUsFeaturedProjects")]
-		public IEnumerable<AboutUsProjectsContainer> AboutUsFeaturedProjects => this.Value<IEnumerable<AboutUsProjectsContainer>>("aboutUsFeaturedProjects");
-
-		///<summary>
-		/// Finished projects: Finished projects
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("aboutUsFinishedProjects")]
-		public IEnumerable<FinishedProjects> AboutUsFinishedProjects => this.Value<IEnumerable<FinishedProjects>>("aboutUsFinishedProjects");
-
-		///<summary>
 		/// Image With Text: Image with text under finished projects
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
@@ -79,6 +65,20 @@ namespace Patrija.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("aboutUsPageIntro")]
 		public PageIntro AboutUsPageIntro => this.Value<PageIntro>("aboutUsPageIntro");
+
+		///<summary>
+		/// Current Projects: Pick actual projects
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("currentProjects")]
+		public IEnumerable<IPublishedContent> CurrentProjects => this.Value<IEnumerable<IPublishedContent>>("currentProjects");
+
+		///<summary>
+		/// Finished Projects
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("finishedProjects")]
+		public IEnumerable<IPublishedContent> FinishedProjects => this.Value<IEnumerable<IPublishedContent>>("finishedProjects");
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).

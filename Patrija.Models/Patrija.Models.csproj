@@ -516,9 +516,9 @@
       <LastGenOutput>ModelsBuilder.generated.cs</LastGenOutput>
     </Compile>
     <Compile Include="Generated\ModelsBuilder.generated.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Generated\MostRecentBlogs.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>

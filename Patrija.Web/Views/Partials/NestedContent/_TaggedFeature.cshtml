@@ -2,40 +2,94 @@
 @inherits UmbracoViewPage<TaggedFeatureViewModel>
 
 @{
-	var positionClassSuffix = Model.ContentPosition == ContentPosition.Left ? "normal" : "reverse";
+    var positionClassSuffix = Model.ContentPosition == ContentPosition.Left ? "normal" : "reverse";
+    var circleShapeClassSuffix = Model.ContentPosition == ContentPosition.Left ? "circle--blue circle--large" : "circle--mint circle--tiny";
 }
-    
-<div class="featured-project">
-	<div class="wrap">
-		<div class="featured-project__item featured-project__item--@positionClassSuffix">
-            <div class="featured-project__text">
-                @if (!string.IsNullOrWhiteSpace(Model.Tag))
-                {
-                    <h6 class="h6 featured-project__tag">@Model.Tag</h6>
-                }
+
+@if (Model.CurrentProjects == null || Model.AboutUsPage == null)
+{
+    //for Home page
+    <div class="featured-project">
+        <div class="wrap">
+            <div class="featured-project__item featured-project__item--@positionClassSuffix">
+                <div class="featured-project__text">
+                    @if (!string.IsNullOrWhiteSpace(Model.Tag))
+                    {
+                        <h6 class="h6 featured-project__tag">@Model.Tag</h6>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(Model.Title))
+                    {
+                        <h2 class="h2 featured-project__title">@Model.Title</h2>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(Model.Text))
+                    {
+                        <p class="featured-project__text">@Model.Text</p>
+                    }
+                    @if (Model.ReadMore != null)
+                    {
+                        @Html.Partial("Link", Model.ReadMore, new ViewDataDictionary() { { "className", "btn" } })
+                    }
+                </div>
+                <div class="featured-project__image-outer @(Model.ContentPosition == ContentPosition.Right ? "featured-project__image-outer--reverse" : string.Empty)">
+                    <div class="featured-project__mask featured-project__mask--@positionClassSuffix">
+                        @if (Model.AdditionalImage != null)
+                        {
+                            <img class="featured-project__additional-image" src="@Model.AdditionalImage.Url" alt="@Model.AdditionalImage.AlternateText">
+                        }
+                        <div class="featured-project__image has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
+                    </div>
+                </div>
+            </div>
+            <span class="circle circle--mint circle--big featured-project__circle"></span>
+        </div>
+    </div>
+}
+else
+{
+    if (Model.AboutUsPage == true && Model.CurrentProjects == true)
+    {
+        <div class="project__item project__item--@positionClassSuffix">
+            <div class="project__item-content">
                 @if (!string.IsNullOrWhiteSpace(Model.Title))
                 {
-                    <h2 class="h2 featured-project__title">@Model.Title</h2>
+                    <h2 class="h2 project__title">@Model.Title</h2>
                 }
                 @if (!string.IsNullOrWhiteSpace(Model.Text))
                 {
-                    <p class="featured-project__text">@Model.Text</p>
+                    <p class="project__text">@Model.Text</p>
                 }
                 @if (Model.ReadMore != null)
                 {
-                    @Html.Partial("Link", Model.ReadMore, new ViewDataDictionary() { { "className", "btn" } })
+                    @Html.Partial("Link", Model.ReadMore, new ViewDataDictionary() { { "className", "btn" }, {"content", Model.Title } })
                 }
             </div>
-			<div class="featured-project__image-outer @(Model.ContentPosition == ContentPosition.Right ? "featured-project__image-outer--reverse" : string.Empty)">
-				<div class="featured-project__mask featured-project__mask--@positionClassSuffix">
-					@if (Model.AdditionalImage != null)
-					{
-						<img class="featured-project__additional-image" src="@Model.AdditionalImage.Url" alt="@Model.AdditionalImage.AlternateText">
-					}
-					<div class="featured-project__image has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
-				</div>
-			</div>
-		</div>
-		<span class="circle circle--mint circle--big featured-project__circle"></span>
-	</div>
-</div>
+            <div class="project__image-outer project__image-outer--@positionClassSuffix">
+                <div class="project__image project__image--@positionClassSuffix">
+                    @if (Model.AdditionalImage != null)
+                    {
+                        <img class="project__additional-image" src="@Model.AdditionalImage.Url" alt="@Model.AdditionalImage.AlternateText">
+                    }
+                    <div class="project__img has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
+                    <span class="circle @circleShapeClassSuffix"></span>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="news-slider__item">
+            <div class="news-slider__image has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
+            @if (Model.ReadMore != null)
+            {
+                <h4 class="h6 news-slider__item-title">
+                    <a href="@Model.ReadMore.Url">@Model.Title</a>
+                </h4>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.Text))
+            {
+                <p class="news-slider__text">@Model.Text</p>
+            }
+        </div>
+    }
+}
+

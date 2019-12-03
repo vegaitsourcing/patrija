@@ -23,5 +23,16 @@ namespace Patrija.Core
             public static string ShareTitle => UmbracoHelper.GetDictionaryValue("News.ShareTitle");
             public static string LoadMoreButton => UmbracoHelper.GetDictionaryValue("News.LoadMoreButton");
         }
+
+        public static class Common
+        {
+            public static string ReadMore => UmbracoHelper.GetDictionaryValue("Common.ReadMore");
+        }
+
+        public static class AboutUs
+        {
+            public static string CurrentProjects => UmbracoHelper.GetDictionaryValue("AboutUs.CurrentProjects");
+            public static string FinishedProjects => UmbracoHelper.GetDictionaryValue("AboutUs.FinishedProjects");
+        }
     }
 }
