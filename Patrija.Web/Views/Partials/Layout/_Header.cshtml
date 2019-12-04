@@ -13,7 +13,7 @@
             <div class="navigation">
                 @if (Model.MenuItems?.Length > 0)
                 {
-                    <nav class="nav">
+                    <nav class="nav js-nav">
                         <ul class="nav__list" role="menubar">
 
                             @for (var i = 0; i < Model.MenuItems.Length; i++)
@@ -26,11 +26,11 @@
                     </nav>
                 }
                 @Html.Partial("Link", Model.JoinUsLink, new ViewDataDictionary() { { "className", "btn btn--mint header__join-btn" } })
-                <button class="nav-toggle" type="button">
+                <button class="nav-toggle js-nav-toggle" type="button">
                     <span class="nav-toggle__line nav-toggle__line--top"></span>
                     <span class="nav-toggle__line nav-toggle__line--middle"></span>
                     <span class="nav-toggle__line nav-toggle__line--bottom"></span>
-                    @*<span class="sr-only">{{navToggle}}</span>*@
+                    <span class="sr-only">sr-only text</span>
                 </button>
             </div>
         </div>
