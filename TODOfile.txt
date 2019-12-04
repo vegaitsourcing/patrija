@@ -7,21 +7,20 @@ This is a collection of listed things that should be done:
 - About us page : AboutUsProjectsContainer - FE missing
 - About us page: where the Finished projects are pulled from?
 - Project page - setup left orientation on Image with text
-- Project page - FE gray dot missing
+- Project page - FE gray dot missing +
 - Project page - image shape
 - Support us - banner image shape
 - Support us - Faq shape missing
-- News - FE -  Banner dot position
+- News - FE -  Banner dot position +
 - News - FE - Blogs box bcg shadow-
-- News - FE - 1.part order of loaded-News Page
 - News - FE -  3.part button showing
-- News - FE - 2.part image missing
-- Home - BE - change Featured Content to picker??
-- Blog - FE - date style on title
-- Home - FE - http://prntscr.com/q37ofr 
-- Home - FE - short text ... or from BE ??
-- Home - FE - dots
+- News - FE - 2.part image missing - sta kad nema slike, predugacak naslov +
+- Blog - FE - date style on title - sivi naslov
+- Home - FE - short text ... or from BE ?? - Najnovije na sajtu +
+- Home - FE - dots overlapping image +
 - Home - FE - green shape - About us
 - EN - BE - Crate a new template
+- Project page - Text-image module
+- Comments on blog page FE/BE
 
 
