@@ -1,11 +1,16 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ProjectPageViewModel>
 
-@if(Model.PageIntro != null)
-{
-    Html.RenderAction<NestedContentController>(c => nameof(c.PageIntro), new { viewModel = Model.PageIntro });
-}
+<div class="lice-ulice-page">
+    @if (Model.PageIntro != null)
+    {
+        Html.RenderAction<NestedContentController>(c => nameof(c.PageIntro), new { viewModel = Model.PageIntro });
+    }
 
-@foreach (var block in Model.Blocks)
-{
-    Html.RenderAction<NestedContentController>(c => nameof(c.Block), new { viewModel = block });
-}
+    @foreach (var block in Model.Blocks)
+    {
+        Html.RenderAction<NestedContentController>(c => nameof(c.Block), new { viewModel = block });
+    }
+    <div class="lice-ulice-shape">
+        <img src="/assets/images/shapes/lice-ulice-shape.svg" alt="">
+    </div>
+</div>
