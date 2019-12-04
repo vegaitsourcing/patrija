@@ -20,7 +20,7 @@
 .articles__title {
 	padding: 0 94px;
 	margin-bottom: 58px;
-	@include mq-down(md) {
+	@include mq-down(lg) {
 		padding: 0;
 	}
 	@include mq-down(sm) {
@@ -34,7 +34,7 @@
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	@include mq-down(md) {
+	@include mq-down(lg) {
 		padding: 0;
 	}
 	@include mq-down(sm) {
@@ -61,6 +61,7 @@
 	padding-bottom: 57%;
 	border-radius: 10px;
 	display: block;
+	background-color: $grey-light;
 }
 
 .articles__item-img {
@@ -94,6 +95,10 @@
 	@include mq-down(sm) {
 		line-height: 22px;
 	}
+}
+
+.articles__item-link {
+	word-break: break-word;
 }
 
 .articles__item-date {
