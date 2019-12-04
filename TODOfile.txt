@@ -9,6 +9,7 @@ This is a collection of listed things that should be done:
 - Project page - setup left orientation on Image with text
 - Project page - FE gray dot missing +
 - Project page - image shape
+- Project page - Kako podrzati poslodavce - left orientetion (copy from FE)
 - Support us - banner image shape
 - Support us - Faq shape missing
 - News - FE -  Banner dot position +
