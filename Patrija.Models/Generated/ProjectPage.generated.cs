@@ -67,6 +67,13 @@ namespace Patrija.Models.Generated
 		public PageIntro ProjectPageIntro => this.Value<PageIntro>("projectPageIntro");
 
 		///<summary>
+		/// Show Green Shape: if false, the dot will be shown
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("showGreenShape")]
+		public bool ShowGreenShape => this.Value<bool>("showGreenShape");
+
+		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]

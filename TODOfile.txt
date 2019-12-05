@@ -7,7 +7,7 @@ This is a collection of listed things that should be done:
 - About us page : AboutUsProjectsContainer - FE missing
 - About us page: where the Finished projects are pulled from?
 - Project page - setup left orientation on Image with text
-- Project page - FE gray dot missing +
+- Project page - FE gray dot missing + (to add on ProjectPage.cshtml - marked )
 - Project page - image shape
 - Project page - Kako podrzati poslodavce - left orientetion (copy from FE)
 - Support us - banner image shape

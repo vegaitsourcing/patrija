@@ -10,7 +10,18 @@
     {
         Html.RenderAction<NestedContentController>(c => nameof(c.Block), new { viewModel = block });
     }
-    <div class="lice-ulice-shape">
-        <img src="/assets/images/shapes/lice-ulice-shape.svg" alt="">
-    </div>
+
+    @if (Model.ShowGreenShape)
+    {
+        <div class="lice-ulice-shape">
+            <img src="/assets/images/shapes/lice-ulice-shape.svg" alt="">
+        </div>
+    }
+    else
+    {
+        <div class="lice-ulice-dot">
+            <img src="" alt="">
+            @*Fe to finish :D *@
+        </div>
+    }
 </div>

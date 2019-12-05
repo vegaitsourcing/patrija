@@ -13,9 +13,11 @@ namespace Patrija.Core.ViewModels.Pages
             var pageIntro = context.Page.ProjectPageIntro;
             PageIntro = pageIntro != null ? new PageIntroViewModel(pageIntro) : null;
             Blocks = context.Page.ProjectPageBlocks?.Select(block => BlockMapper.MapBlock(block)).ToArray() ?? new object[0];
+            ShowGreenShape = context.Page.ShowGreenShape;
         }
 
         public PageIntroViewModel PageIntro { get; }
+        public bool ShowGreenShape { get; }
         public object[] Blocks { get; }
     }
 }
