@@ -4,24 +4,35 @@ This is a collection of listed things that should be done:
 - CommentsBlock.cshtml ??
 - FeaturedNews.cshtml ??
 - Finished Projects - where it is used??
-- About us page : AboutUsProjectsContainer - FE missing
 - About us page: where the Finished projects are pulled from?
 - Project page - setup left orientation on Image with text
-- Project page - FE gray dot missing + (to add on ProjectPage.cshtml - marked )
 - Project page - image shape
-- Project page - Kako podrzati poslodavce - left orientetion (copy from FE)
 - Support us - banner image shape
 - Support us - Faq shape missing
-- News - FE -  Banner dot position +
-- News - FE - Blogs box bcg shadow-
-- News - FE -  3.part button showing
-- News - FE - 2.part image missing - sta kad nema slike, predugacak naslov +
-- Blog - FE - date style on title - sivi naslov
-- Home - FE - short text ... or from BE ?? - Najnovije na sajtu +
-- Home - FE - dots overlapping image +
-- Home - FE - green shape - About us
 - EN - BE - Crate a new template
-- Project page - Text-image module
-- Comments on blog page FE/BE
+- Project page - BE - Text-image module
+- Comments on blog page BE
 
+
+Ana (to do):
+- Comments on blog page FE
+- About us page : AboutUsProjectsContainer - FE missing
+- Project page - FE gray dot missing
+- News - FE -  Banner dot position
+- News - FE - Blogs box bcg shadow
+- News - FE -  3.part button showing
+- News - FE - 2.part image missing - sta kad nema slike, predugacak naslov
+- Blog - FE - date style on title - sivi naslov
+- Home - FE - short text ... or from BE ?? - Najnovije na sajtu
+- Home - FE - dots overlapping image
+- Testimonial slider ????
+
+Ana (FE done):
+- Contact page - responsive design
+- Pridruzi nam se - responsive design
+- Single blog page - responsive design
+
+Ana (FE done, BE left to be done):
+- "O nama" section on home page: the green shape on the right is added to "AboutUs.cshtml". Src is currently hardcoded to a random image on web
+- Navigation on mobile - the only thing left is the sr-only text, which is currently hardcoded
 

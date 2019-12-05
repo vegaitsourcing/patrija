@@ -55,6 +55,11 @@
 	align-items: center;
 }
 
+.page-intro__date {
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
 .page-intro__title {
 	max-width: 52%;
 	@include mq-down(sm) {
