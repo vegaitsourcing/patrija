@@ -1,4 +1,6 @@
-﻿const load = {
+﻿import shave from './shave';
+
+const load = {
 	$newspage: $('.js-newspage'),
 	$newspageId: $('.js-newspage').data('page-id'),
 	$restBlogArticlesContainer: $('.js-rest_articles_container'),
@@ -63,6 +65,7 @@
 			orderNumber: ordernumber
 		}, (response) => {
 			container.append(response);
+			shave.init();
 		});
 	},
 
