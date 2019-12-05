@@ -72,9 +72,12 @@ textarea {
 	padding-left: 205px;
 	font-size: 10px;
 	line-height: 16px;
-	color: #d8000c;
+	color: $red;
 	font-weight: 400;
 	display: none;
+	@include mq-down(sm) {
+		padding: 5px 0 0 18px;
+	}
 }
 
 .btn--submit {

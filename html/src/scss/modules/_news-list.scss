@@ -19,7 +19,6 @@
 .news-list__container {
 	padding: 0 79px;
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
 	@include mq-only(md) {
 		padding: 0;
@@ -81,6 +80,8 @@
 .news-list__text {
 	font-size: 14px;
 	line-height: 25px;
+	margin-bottom: 0;
+	height: 50px;
 }
 
 .news-list__buttons {
