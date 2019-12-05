@@ -1,0 +1,30 @@
+﻿@using Patrija.Core.ViewModels.Partials.Features
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<ImageWithTextProjectPageViewModel>
+
+
+<div class="text-image">
+    <div class="wrap wrap--medium">
+        <div class="text-image__container">
+            <div class="text-image__content">
+                @if (!string.IsNullOrWhiteSpace(Model.Title))
+                {
+                    <h3 class="h3 text-image__title">@Model.Title</h3>
+                }
+                @if (!string.IsNullOrWhiteSpace(Model.Text))
+                {
+                    <p class="text-image__text">@Model.Text</p>
+                }
+            </div>
+            @if (Model.Image != null)
+            {
+                <div class="text-image__image-outer">
+                    <div class="text-image__image">
+                        <div class="text-image__img has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
+                    </div>
+                </div>
+            }
+
+            <div class="circle circle--mint text-image__circle"></div>
+        </div>
+    </div>
+</div>

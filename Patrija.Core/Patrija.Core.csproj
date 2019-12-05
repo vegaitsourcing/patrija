@@ -292,6 +292,7 @@
     <Compile Include="Controllers\Surface\Partials\SearchListingController.cs" />
     <Compile Include="Controllers\Surface\Partials\SharedController.cs" />
     <Compile Include="Extensions\UrlHelperExtensions.cs" />
+    <Compile Include="ViewModels\Partials\Features\ImageWithTextProjectPageViewModel.cs" />
     <Compile Include="ViewModels\Partials\Share\ShareViewModel.cs" />
     <Compile Include="Controllers\Surface\Partials\SimpleFormSurfaceController.cs" />
     <Compile Include="Dtos\CommentDto.cs" />
