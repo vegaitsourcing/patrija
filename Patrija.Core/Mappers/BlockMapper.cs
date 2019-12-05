@@ -19,6 +19,9 @@ namespace Patrija.Core.Mappers
                     typeof(JoinUs), el => new JoinUsViewModel((JoinUs)el)
                 },
                 {
+                    typeof(ImageWithTextProjectPage), el => new ImageWithTextProjectPageViewModel((ImageWithTextProjectPage)el)
+                },
+                {
                     typeof(ImageWithText), el => new ImageWithTextViewModel((ImageWithText)el)
                 },
                 {
