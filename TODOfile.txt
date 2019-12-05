@@ -17,11 +17,9 @@ This is a collection of listed things that should be done:
 Ana (to do):
 - Comments on blog page FE
 - About us page : AboutUsProjectsContainer - FE missing
-- Project page - FE gray dot missing
 - News - FE -  Banner dot position
 - News - FE - Blogs box bcg shadow
 - News - FE -  3.part button showing
-- Home - FE - short text ... or from BE ?? - Najnovije na sajtu
 - Home - FE - dots overlapping image
 - Testimonial slider ????
 
@@ -31,6 +29,9 @@ Ana (FE done):
 - Single blog page - responsive design
 - News - FE - 2.part image missing - sta kad nema slike, predugacak naslov
 - Blog - FE - date style on title - sivi naslov
+- Project page - FE gray dot missing
+- Home - FE - short text ... or from BE ??
+- Popup form responsive (Pridruzi nam se)
 
 Ana (FE done, BE left to be done):
 - "O nama" section on home page: the green shape on the right is added to "AboutUs.cshtml". Src is currently hardcoded

@@ -26,7 +26,7 @@
 		});
 
 		$('#vol-form').on('click', '.btn--submit', (event) => {
-			this.submitSingleFor(event, '/umbraco/surface/SimpleFormSurface/SubmitVolunteerForm');
+			this.submitSingleForm(event, '/umbraco/surface/SimpleFormSurface/SubmitVolunteerForm');
 		});
 	},
 
