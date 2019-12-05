@@ -18,29 +18,37 @@
                 </div>
             </div>
             @*<div class="news-details__sidebar">
-                    {{#each group}}
-                    <h4 class="h6 news-details__sidebar-title">{{this.title}}</h4>
-                    {{#if this.items}}
-                    <ul class="news-details__list">
-                        {{#each this.items}}
-                        <li class="news-details__item">
-                            <div class="news-details__item-img">
-                                <a href="javascript:;">
-                                    <img class="news-details__item-image" src="{{this.image}}" alt="">
-                                </a>
-                            </div>
-                            <div class="news-details__item-content">
-                                <span class="news-details__item-date">{{this.date}}</span>
-                                <h4 class="h6 news-details__item-title">
-                                    <a href="javascript:;">{{this.titleText}}</a>
-                                </h4>
-                            </div>
-                        </li>
-                        {{/each}}
-                    </ul>
-                    {{/if}}
+                {{#each group}}
+                <h4 class="h6 news-details__sidebar-title">{{this.title}}</h4>
+                {{#if this.items}}
+                <ul class="news-details__list">
+                    {{#each this.items}}
+                    <li class="news-details__item">
+                        <div class="news-details__item-img">
+                            <a href="javascript:;">
+                                <img class="news-details__item-image" src="{{this.image}}" alt="">
+                            </a>
+                        </div>
+                        <div class="news-details__item-content">
+                            <span class="news-details__item-date">{{this.date}}</span>
+                            <h4 class="h6 news-details__item-title">
+                                <a href="javascript:;">{{this.titleText}}</a>
+                            </h4>
+                        </div>
+                    </li>
                     {{/each}}
-                </div>*@
+                </ul>
+                {{/if}}
+                {{/each}}
+            </div>*@
+            <div class="circle circle--mint single-blog-circle-left"></div>
+            <div class="circle circle--large circle--blue single-blog-circle-right"></div>
+            <div class="single-blog-shape-blue">
+                <img src="/assets/images/shapes/single-blog-shape-01.svg" alt="">
+            </div>
+            <div class="single-blog-shape-mint">
+                <img src="/assets/images/shapes/single-blog-shape-02.svg" alt="">
+            </div>
         </div>
     </div>
 </div>

@@ -31,54 +31,58 @@
 
 .single-blog-page {
 	position: relative;
-	.single-blog-shape-blue {
-		position: absolute;
-		top: 36.4%;
-		left: -25.2vw;
-		pointer-events: none;
-		width: 47vw;
-		@include mq-down(lg) {
-			width: 30vw;
-			left: -18.2vw;
-		}
-		@include mq-down(md) {
-			display: none;
-		}
+}
+
+.single-blog-shape-blue {
+	position: absolute;
+	top: 36.4%;
+	left: -25.2vw;
+	pointer-events: none;
+	width: 47vw;
+	@include mq-down(lg) {
+		width: 30vw;
+		left: -18.2vw;
 	}
-	.single-blog-shape-mint {
-		position: absolute;
-		top: 68.4%;
-		right: -22.8vw;
-		pointer-events: none;
-		width: 50vw;
-		@include mq-down(lg) {
-			top: 71.4%;
-			right: -17.8vw;
-			width: 42vw;
-		}
-		@include mq-down(md) {
-			display: none;
-		}
+	@include mq-down(md) {
+		display: none;
 	}
-	.single-blog-circle-left {
-		top: 37.8%;
-		left: 9.5vw;
-		@include mq-down(md) {
-			left: 6vw;
-		}
-		@include mq-down(sm) {
-			left: 2.5vw;
-		}
+}
+
+.single-blog-shape-mint {
+	position: absolute;
+	top: 59%;
+	right: -28.8vw;
+	pointer-events: none;
+	width: 50vw;
+	@include mq-down(lg) {
+		top: 71.4%;
+		right: -17.8vw;
+		width: 38vw;
 	}
-	.single-blog-circle-right {
-		top: 64%;
-		right: 9vw;
-		@include mq-down(md) {
-			right: 2vw;
-		}
-		@include mq-down(sm) {
-			top: 74.6%;
-			right: 6vw;
-		}
+	@include mq-down(md) {
+		display: none;
+	}
+}
+
+.single-blog-circle-left {
+	top: 37.8%;
+	left: 9.5vw;
+	@include mq-down(md) {
+		left: 6vw;
+	}
+	@include mq-down(sm) {
+		left: 2.5vw;
+	}
+}
+
+.single-blog-circle-right {
+	top: 64%;
+	right: 9vw;
+	@include mq-down(md) {
+		right: 2vw;
+	}
+	@include mq-down(sm) {
+		top: 74.6%;
+		right: 6vw;
 	}
 }

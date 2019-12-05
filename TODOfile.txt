@@ -12,6 +12,7 @@ This is a collection of listed things that should be done:
 - EN - BE - Crate a new template
 - Project page - BE - Text-image module
 - Comments on blog page BE
+- Single blog page - Ostali tekstovi (BE was started - BlogArticleContent.cshtml)
 
 
 Ana (to do):
@@ -20,8 +21,8 @@ Ana (to do):
 - News - FE -  Banner dot position
 - News - FE - Blogs box bcg shadow
 - News - FE -  3.part button showing
-- Home - FE - dots overlapping image
 - Testimonial slider ????
+- 4 shapes not working well
 
 Ana (FE done):
 - Contact page - responsive design
@@ -32,6 +33,7 @@ Ana (FE done):
 - Project page - FE gray dot missing
 - Home - FE - short text ... or from BE ??
 - Popup form responsive (Pridruzi nam se)
+- Home - FE - dots overlapping image
 
 Ana (FE done, BE left to be done):
 - "O nama" section on home page: the green shape on the right is added to "AboutUs.cshtml". Src is currently hardcoded

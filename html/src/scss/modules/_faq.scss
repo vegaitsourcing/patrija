@@ -86,6 +86,9 @@
 .faq__accordion-content {
 	padding: 28px 54px 12px 60px;
 	display: none;
+	@include mq-down(sm) {
+		padding: 28px 20px 12px;
+	}
 	p {
 		font-size: 18px;
 		line-height: 30px;
