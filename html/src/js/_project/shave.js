@@ -1,9 +1,11 @@
 const shave = {
 	init: function() {
-		const selector = $('.news-list__text');
+		const newsItem = $('.news-list__text');
+		const newsSliderItem = $('.news-slider__text');
 		const maxHeight = 50;
 
-		selector.shave(maxHeight);
+		newsItem.shave(maxHeight);
+		newsSliderItem.shave(maxHeight);
 	}
 };
 
