@@ -1,6 +1,8 @@
 ﻿using Patrija.Common;
+using Patrija.Core.ViewModels.Partials.Blog;
 using Patrija.Models.Generated;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Patrija.Core.ViewModels.Shared
@@ -21,6 +23,7 @@ namespace Patrija.Core.ViewModels.Shared
             Image = blogIntro.BlogIntroImage != null ? new ImageViewModel(blogIntro.BlogIntroImage as Image) : default(ImageViewModel);
             BlogPageUrl = blogArticle.Url;
             Category = category;
+           
         }
 
         public bool HasMetadata => !string.IsNullOrEmpty(Category) || Date != null;
@@ -31,5 +34,6 @@ namespace Patrija.Core.ViewModels.Shared
         public string BlogPageUrl { get; }
         public DateTime Date { get; }
         public ImageViewModel Image { get; }
+        
     }
 }

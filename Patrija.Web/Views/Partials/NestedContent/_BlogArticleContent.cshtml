@@ -7,40 +7,64 @@
         <div class="news-details__container">
             <div class="news-details__content">
                 <div class="rte">
-                    <h3>@Model.ArticleSubtitle</h3>
-                    @Html.Raw(Model.ArticleContentHtml)
+                    @if (!string.IsNullOrWhiteSpace(Model.ArticleSubtitle))
+                    {
+                        <h3>@Model.ArticleSubtitle</h3>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(Model.ArticleContentHtml.ToString()))
+                    {
+                        @Model.ArticleContentHtml;
+                    }
+
                 </div>
                 <div class="news-details__share">
                     <span class="h6 news-details__share-title">@UmbracoDictionary.News.ShareTitle</span>
                     @{
-                        Html.RenderAction<SharedController>(c => nameof(SharedController.Share), new { page = Model.CurrentPage});
+                        Html.RenderAction<SharedController>(c => nameof(SharedController.Share), new { page = Model.CurrentPage });
                     }
                 </div>
             </div>
-            @*<div class="news-details__sidebar">
-                {{#each group}}
-                <h4 class="h6 news-details__sidebar-title">{{this.title}}</h4>
-                {{#if this.items}}
-                <ul class="news-details__list">
-                    {{#each this.items}}
-                    <li class="news-details__item">
-                        <div class="news-details__item-img">
-                            <a href="javascript:;">
-                                <img class="news-details__item-image" src="{{this.image}}" alt="">
-                            </a>
-                        </div>
-                        <div class="news-details__item-content">
-                            <span class="news-details__item-date">{{this.date}}</span>
-                            <h4 class="h6 news-details__item-title">
-                                <a href="javascript:;">{{this.titleText}}</a>
-                            </h4>
-                        </div>
-                    </li>
-                    {{/each}}
-                </ul>
-                {{/if}}
-                {{/each}}
-            </div>*@
+            @if (Model.Widgets != null && Model.Widgets.Any())
+            {
+                <div class="news-details__sidebar">
+                    @foreach (var widget in Model.Widgets)
+                    {
+                        if (!string.IsNullOrWhiteSpace(widget.Title))
+                        {
+                            <h4 class="h6 news-details__sidebar-title">@widget.Title</h4>
+                        }
+                        if (widget.Blogs != null && widget.Blogs.Any())
+                        {
+                            <ul class="news-details__list">
+                                @foreach (var blog in widget.Blogs)
+                                {
+                                    <li class="news-details__item">
+                                        @if (blog.Image != null)
+                                        {
+                                            <div class="news-details__item-img">
+                                                <a href="@blog.Url">
+                                                    <img class="news-details__item-image" src="@blog.Image.Url" alt="">
+                                                </a>
+                                            </div>
+                                        }
+
+                                        <div class="news-details__item-content">
+                                            <span class="news-details__item-date">@blog.Date.ToString("dd.MM.yyyy")</span>
+                                            @if (!string.IsNullOrWhiteSpace(blog.Title))
+                                            {
+                                                <h4 class="h6 news-details__item-title">
+                                                    <a href="@blog.Url;">@blog.Title</a>
+                                                </h4>
+                                            }
+                                        </div>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                    }
+                </div>
+            }
+
             <div class="circle circle--mint single-blog-circle-left"></div>
             <div class="circle circle--large circle--blue single-blog-circle-right"></div>
             <div class="single-blog-shape-blue">
@@ -52,3 +76,7 @@
         </div>
     </div>
 </div>
+
+
+
+

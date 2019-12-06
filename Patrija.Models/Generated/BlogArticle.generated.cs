@@ -81,6 +81,13 @@ namespace Patrija.Models.Generated
 		public DateTime Date => this.Value<DateTime>("date");
 
 		///<summary>
+		/// Widgets
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("widgets")]
+		public IEnumerable<BlogWidgets> Widgets => this.Value<IEnumerable<BlogWidgets>>("widgets");
+
+		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]

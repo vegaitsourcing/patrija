@@ -5,6 +5,7 @@ using Patrija.Core.ViewModels.Partials.Blog;
 using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Patrija.Core.ViewModels.Pages
 {
@@ -21,7 +22,9 @@ namespace Patrija.Core.ViewModels.Pages
             BlogIntro = pageIntro != null ? new BlogIntroViewModel(pageIntro, date, categoryName) : default(BlogIntroViewModel);
 
             var articleContentHtml = context.Page.BlogArticleContent;
-            ArticleContent = new ArticleContentViewModel(context.Page.BlogArticleSubtitle, articleContentHtml.ToHtmlString(), context.CurrentPage);
+            var widgets = context.Page.Widgets != null ? context.Page.Widgets.Select(bw => new BlogWidgetsViewModel(bw)).ToList() : default(List<BlogWidgetsViewModel>);
+
+            ArticleContent = new ArticleContentViewModel(context.Page.BlogArticleSubtitle, articleContentHtml, widgets, context.CurrentPage);
             AreCommentsEnabled = context.Page.BlogArticleShowCommentsToggle;
 
             PageId = context.Page.Key;
@@ -35,5 +38,6 @@ namespace Patrija.Core.ViewModels.Pages
         
         public Guid PageId { get; }
         public ArticleContentViewModel ArticleContent { get; }
+        
     }
 }

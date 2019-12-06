@@ -24,6 +24,8 @@ Ana (to do):
 - Testimonial slider ????
 - 4 shapes not working well
 - Project page - LiceUlice - featured module - to discuss
+- SupportUS - Kako da nas podrzis - Intro Image - http://prntscr.com/q711uv?
+- News - Dobro je znati - when only 2 items - bcg image shape
 
 Ana (FE done):
 - Contact page - responsive design
