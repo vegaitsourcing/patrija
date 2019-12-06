@@ -23,6 +23,7 @@ Ana (to do):
 - News - FE -  3.part button showing
 - Testimonial slider ????
 - 4 shapes not working well
+- Project page - LiceUlice - featured module - to discuss
 
 Ana (FE done):
 - Contact page - responsive design
