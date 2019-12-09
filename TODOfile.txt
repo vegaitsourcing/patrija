@@ -15,11 +15,10 @@ Ana (to do):
 - News - FE - Blogs box bcg shadow
 - News - FE -  3.part button showing
 - Testimonial slider ????
-- 4 shapes not working well (should all images have multiple options?)
 - Project page - LiceUlice - featured module - to discuss
-- SupportUS - Kako da nas podrzis - Intro Image - http://prntscr.com/q711uv?
 - News - Dobro je znati - when only 2 items - bcg image shape
-- ContactUs - Green dot is missing
+
+- 4 shapes not working well (should all images have multiple options?)
 
 Ana (FE done):
 - Contact page - responsive design
@@ -32,9 +31,10 @@ Ana (FE done):
 - Popup form responsive (Pridruzi nam se)
 - Home - FE - dots overlapping image
 - Comments on blog page FE
+- ContactUs - Green dot is missing
+- SupportUS - Kako da nas podrzis - Intro Image - http://prntscr.com/q711uv
 
 Ana (FE done, BE left to be done):
-
 - Navigation on mobile - the only thing left is the sr-only text, which is currently hardcoded
 
 Be (done):

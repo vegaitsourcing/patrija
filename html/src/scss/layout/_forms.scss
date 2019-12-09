@@ -56,6 +56,7 @@ textarea {
 	margin-right: 10px;
 	display: inline-block;
 	font-weight: 400;
+	cursor: default;
 	@include mq-down(md) {
 		font-size: 16px;
 	}

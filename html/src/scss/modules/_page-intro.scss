@@ -118,8 +118,6 @@
 }
 
 .page-intro__image--secondary {
-	position: relative;
-	padding-bottom: 90.635%;
 	&::after {
 		background-image: url('../assets/images/mask/page-intro-secondary-mask.svg');
 	}
