@@ -1,23 +1,20 @@
 using Patrija.Models.Generated;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Patrija.Core.ViewModels.Shared
 {
     public class CommentsBlockViewModel
     {
-        public CommentsBlockViewModel(CommentsBlock model, List<CommentViewModel> blogComments)
+        public CommentsBlockViewModel(CommentsBlock model)
         {
-            LeaveACommentTitle = model.CommentBlockLeaveAcommentTitle;
-            LeaveACommentSubtitle = model.CommentsBlockLeaveAcommentSubtitle;
-            CommenterNameLabel = model.CommentsBlockCommenterNameLabel;
-            CommenterEmailLabel = model.CommentsBlockCommenterEmail;
-            LeaveACommentSubmitText = model.CommentBlockLeaveAcommentSubmitText;
-            PreviousCommentsTitle = model.CommentsBlockPreviousCommentsTitle;
+            LeaveACommentTitle = model.Title;
+            LeaveACommentSubtitle = model.Subtitle;
 
             BlogId = model.Key;
 
-            Comments = blogComments;
+            Comments = model.Comments?.OfType<BlogComment>().Select(c => new CommentViewModel(c)).ToList();
         }
 
         public List<CommentViewModel> Comments { get; }

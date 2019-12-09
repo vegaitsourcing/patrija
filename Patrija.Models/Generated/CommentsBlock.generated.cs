@@ -46,45 +46,24 @@ namespace Patrija.Models.Generated
 		// properties
 
 		///<summary>
-		/// Leave A Comment Submit Text
+		/// Comments
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("commentBlockLeaveACommentSubmitText")]
-		public string CommentBlockLeaveAcommentSubmitText => this.Value<string>("commentBlockLeaveACommentSubmitText");
+		[ImplementPropertyType("comments")]
+		public IEnumerable<BlogComment> Comments => this.Value<IEnumerable<BlogComment>>("comments");
 
 		///<summary>
-		/// Leave A Comment Title
+		/// Subtitle
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("commentBlockLeaveACommentTitle")]
-		public string CommentBlockLeaveAcommentTitle => this.Value<string>("commentBlockLeaveACommentTitle");
+		[ImplementPropertyType("subtitle")]
+		public string Subtitle => this.Value<string>("subtitle");
 
 		///<summary>
-		/// Commenter Email
+		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("commentsBlockCommenterEmail")]
-		public string CommentsBlockCommenterEmail => this.Value<string>("commentsBlockCommenterEmail");
-
-		///<summary>
-		/// Commenter Name Label
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("commentsBlockCommenterNameLabel")]
-		public string CommentsBlockCommenterNameLabel => this.Value<string>("commentsBlockCommenterNameLabel");
-
-		///<summary>
-		/// Leave A Comment Subtitle
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("commentsBlockLeaveACommentSubtitle")]
-		public string CommentsBlockLeaveAcommentSubtitle => this.Value<string>("commentsBlockLeaveACommentSubtitle");
-
-		///<summary>
-		/// Previous Comments Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("commentsBlockPreviousCommentsTitle")]
-		public string CommentsBlockPreviousCommentsTitle => this.Value<string>("commentsBlockPreviousCommentsTitle");
+		[ImplementPropertyType("title")]
+		public string Title => this.Value<string>("title");
 	}
 }

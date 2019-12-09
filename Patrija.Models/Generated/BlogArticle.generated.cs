@@ -74,6 +74,13 @@ namespace Patrija.Models.Generated
 		public string BlogArticleSubtitle => this.Value<string>("blogArticleSubtitle");
 
 		///<summary>
+		/// Comment Section
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("commentSection")]
+		public CommentsBlock CommentSection => this.Value<CommentsBlock>("commentSection");
+
+		///<summary>
 		/// Date: //date will be used for sorting articles
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]

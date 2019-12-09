@@ -21,11 +21,10 @@ namespace Patrija.Core.Controllers.Surface.Partials
         {
             var article = Umbraco.Content(pageId) as BlogArticle;
             var blogCommentsBlock = article?.Ancestor<Blog>().BlogCommentsBlock;
-            var blogComments = article.Children<BlogComment>().Select(c => new CommentViewModel(c)).ToList();
 
-            if (article == null || blogCommentsBlock == null || blogComments == null) return new EmptyResult();
+            if (article == null || blogCommentsBlock == null) return new EmptyResult();
 
-            return PartialView(new CommentsBlockViewModel(blogCommentsBlock, blogComments));
+            return PartialView(new CommentsBlockViewModel(blogCommentsBlock));
         }
 
         [ChildActionOnly]
