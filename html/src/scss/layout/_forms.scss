@@ -74,6 +74,7 @@ textarea {
 	line-height: 16px;
 	color: $red;
 	font-weight: 400;
+	margin-top: 5px;
 	display: none;
 	@include mq-down(sm) {
 		padding: 5px 0 0 18px;

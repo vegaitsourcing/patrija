@@ -23,6 +23,19 @@
                         Html.RenderAction<SharedController>(c => nameof(SharedController.Share), new { page = Model.CurrentPage });
                     }
                 </div>
+                <div class="news-details__comments">
+                    <h3 class="h3 news-details__comments-title">Ostavi komentar</h3>
+                    <p class="news-details__comments-text">Cheesecake macaroon biscuit. Sugar plum brownie gingerbread marzipan jelly beans croissant dessert. Ice cream cotton candy macaroon pie brownie cookie. Apple pie cake gingerbread. Marzipan ice cream..</p>
+
+                    <div class="news-details__form-wrapper">
+                        <!-- Add the form here -->
+                    </div>
+                    <h3 class="h3 news-details__comments-heading">Komentari <span>(3)</span></h3>
+                    <div class="comment-block">
+                        <h4 class="comment-block__author">Andjelka Milosevic</h4>
+                        <p class="comment-block__text">Pastry chocolate soufflé icing croissant halvah sweet roll. Liquorice jelly gingerbread sesame snaps tootsie roll muffin lemon drops marzipan danish. Danish toffee topping pie sweet roll topping donut cupcake. Sweet soufflé chocolate bar lemon drops. Cake chocolate cake cake tootsie roll. Macaroon gummi bears cotton candy pastry carrot cake sugar plum marshmallow candy. Macaroon jelly beans pastry sweet. Ice cream oat cake gummies halvah jelly dessert. Apple pie pudding bonbon.</p>
+                    </div>
+                </div>
             </div>
             @if (Model.Widgets != null && Model.Widgets.Any())
             {
@@ -64,7 +77,6 @@
                     }
                 </div>
             }
-
             <div class="circle circle--mint single-blog-circle-left"></div>
             <div class="circle circle--large circle--blue single-blog-circle-right"></div>
             <div class="single-blog-shape-blue">

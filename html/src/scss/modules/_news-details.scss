@@ -107,6 +107,9 @@
 
 .news-details__item-title {
 	line-height: 25px;
+	a {
+		word-break: break-word;
+	}
 }
 
 .news-details__item-date {
@@ -114,4 +117,73 @@
 	line-height: 22px;
 	display: block;
 	padding: 12px 4px 0;
+}
+
+.news-details__comments {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.news-details__comments-title {
+	margin-bottom: 8px;
+}
+
+.news-details__comments-text {
+	max-width: 675px;
+	margin: 0 auto 50px;
+}
+
+.news-details__form-wrapper {
+	margin-top: 103px;
+	text-align: left;
+	padding: 0 0 0 18px;
+	@include mq-down(lg) {
+		padding: 0;
+	}
+	.form__label {
+		width: 238px;
+		@include mq-down(sm) {
+			width: auto;
+		}
+	}
+	.form__input {
+		width: calc(100% - 248px);
+		@include mq-down(sm) {
+			width: 100%;
+		}
+	}
+	.btn--submit {
+		margin-left: 248px;
+		width: calc(100% - 248px);
+		@include mq-down(sm) {
+			margin-left: 0;
+		}
+	}
+}
+
+.news-details__comments-heading {
+	margin: 53px 0 15px 18px;
+	text-align: left;
+	@include mq-down(lg) {
+		margin-left: 0;
+	}
+}
+
+.comment-block {
+	text-align: left;
+	padding-left: 27px;
+	@include mq-down(lg) {
+		padding: 0;
+	}
+}
+
+.comment-block__author {
+	font-size: 20px;
+	letter-spacing: -0.2px;
+	margin-bottom: 5px;
+}
+
+.comment-block__text {
+	font-size: 14px;
+	line-height: 25px;
 }

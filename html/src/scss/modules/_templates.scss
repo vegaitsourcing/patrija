@@ -7,7 +7,7 @@
 		position: absolute;
 		pointer-events: none;
 	}
-	.lice-ulice-shape{
+	.lice-ulice-shape {
 		top: 1218px;
 		left: -25.2vw;
 	}
@@ -39,6 +39,7 @@
 	left: -25.2vw;
 	pointer-events: none;
 	width: 47vw;
+	z-index: -1;
 	@include mq-down(lg) {
 		width: 30vw;
 		left: -18.2vw;
@@ -54,6 +55,7 @@
 	right: -28.8vw;
 	pointer-events: none;
 	width: 50vw;
+	z-index: -1;
 	@include mq-down(lg) {
 		top: 71.4%;
 		right: -17.8vw;
@@ -67,6 +69,9 @@
 .single-blog-circle-left {
 	top: 37.8%;
 	left: 9.5vw;
+	@include mq-down(lg) {
+		left: 5.5vw;
+	}
 	@include mq-down(md) {
 		left: 6vw;
 	}
@@ -78,7 +83,7 @@
 .single-blog-circle-right {
 	top: 64%;
 	right: 9vw;
-	@include mq-down(md) {
+	@include mq-down(lg) {
 		right: 2vw;
 	}
 	@include mq-down(sm) {

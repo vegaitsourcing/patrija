@@ -10,13 +10,12 @@ This is a collection of listed things that should be done:
 
 
 Ana (to do):
-- Comments on blog page FE
 - About us page : AboutUsProjectsContainer - FE missing
 - News - FE -  Banner dot position
 - News - FE - Blogs box bcg shadow
 - News - FE -  3.part button showing
 - Testimonial slider ????
-- 4 shapes not working well
+- 4 shapes not working well (should all images have multiple options?)
 - Project page - LiceUlice - featured module - to discuss
 - SupportUS - Kako da nas podrzis - Intro Image - http://prntscr.com/q711uv?
 - News - Dobro je znati - when only 2 items - bcg image shape
@@ -32,6 +31,7 @@ Ana (FE done):
 - Home - FE - short text ... or from BE ??
 - Popup form responsive (Pridruzi nam se)
 - Home - FE - dots overlapping image
+- Comments on blog page FE
 
 Ana (FE done, BE left to be done):
 
