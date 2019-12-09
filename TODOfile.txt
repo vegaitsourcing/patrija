@@ -4,15 +4,9 @@ This is a collection of listed things that should be done:
 - CommentsBlock.cshtml ??
 - FeaturedNews.cshtml ??
 - Finished Projects - where it is used??
-- About us page: where the Finished projects are pulled from?
 - Project page - setup left orientation on Image with text
-- Project page - image shape
-- Support us - banner image shape
 - Support us - Faq shape missing
 - EN - BE - Crate a new template
-- Project page - BE - Text-image module
-- Comments on blog page BE
-- Single blog page - Ostali tekstovi (BE was started - BlogArticleContent.cshtml)
 
 
 Ana (to do):
@@ -26,6 +20,7 @@ Ana (to do):
 - Project page - LiceUlice - featured module - to discuss
 - SupportUS - Kako da nas podrzis - Intro Image - http://prntscr.com/q711uv?
 - News - Dobro je znati - when only 2 items - bcg image shape
+- ContactUs - Green dot is missing
 
 Ana (FE done):
 - Contact page - responsive design
@@ -39,6 +34,8 @@ Ana (FE done):
 - Home - FE - dots overlapping image
 
 Ana (FE done, BE left to be done):
-- "O nama" section on home page: the green shape on the right is added to "AboutUs.cshtml". Src is currently hardcoded
+
 - Navigation on mobile - the only thing left is the sr-only text, which is currently hardcoded
 
+Be (done):
+- "O nama" section on home page: the green shape on the right is added to "AboutUs.cshtml". Src is currently hardcoded - stays as it is
