@@ -107,17 +107,8 @@
 	}
 }
 
-.page-intro__image-outer--secondary {
-	width: 34.4799vw;
-	top: 10.1%;
-	left: 63.2%;
-	@include mq-down(sm) {
-		top: 0;
-		width: 70vw;
-	}
-}
-
 .page-intro__image--secondary {
+	padding-bottom: 90%;
 	&::after {
 		background-image: url('../assets/images/mask/page-intro-secondary-mask.svg');
 	}
@@ -129,6 +120,21 @@
 	.circle--mint {
 		top: 80.2%;
 		left: -13.8%;
+	}
+}
+
+.page-intro__image--tertiary {
+	padding-bottom: 91%;
+	&::after {
+		background-image: url('../assets/images/mask/page-intro-tertiary-mask.svg');
+	}
+	.circle--blue {
+		top: 3.6%;
+		left: 66.5%;
+	}
+	.circle--mint {
+		top: 72%;
+		left: -10%;
 	}
 }
 

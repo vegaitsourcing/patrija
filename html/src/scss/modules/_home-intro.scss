@@ -55,7 +55,7 @@
 	}
 }
 
-.home-intro__image {
+.home-intro__image-wrapper {
 	position: absolute;
 	width: 75.21vw;
 	top: -680px;
@@ -75,6 +75,10 @@
 		position: relative;
 		top: -500px;
 	}
+}
+
+.homepage-intro__img {
+	padding-bottom: 90%;
 }
 
 .home-intro__circle {
