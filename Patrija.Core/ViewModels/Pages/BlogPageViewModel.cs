@@ -23,8 +23,9 @@ namespace Patrija.Core.ViewModels.Pages
 
             var articleContentHtml = context.Page.BlogArticleContent;
             var widgets = context.Page.Widgets != null ? context.Page.Widgets.Select(bw => new BlogWidgetsViewModel(bw)).ToList() : default(List<BlogWidgetsViewModel>);
+            CommentsBlock = context.Page.CommentSection != null ? new CommentsBlockViewModel(context.Page.CommentSection) : default(CommentsBlockViewModel);
 
-            ArticleContent = new ArticleContentViewModel(context.Page.BlogArticleSubtitle, articleContentHtml, widgets, context.CurrentPage);
+            ArticleContent = new ArticleContentViewModel(context.Page.BlogArticleSubtitle, articleContentHtml, widgets, CommentsBlock, context.CurrentPage);
             AreCommentsEnabled = context.Page.BlogArticleShowCommentsToggle;
 
             PageId = context.Page.Key;
@@ -38,6 +39,7 @@ namespace Patrija.Core.ViewModels.Pages
         
         public Guid PageId { get; }
         public ArticleContentViewModel ArticleContent { get; }
+        public CommentsBlockViewModel CommentsBlock { get; }
         
     }
 }

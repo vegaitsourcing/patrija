@@ -14,6 +14,7 @@ namespace Patrija.Core.ViewModels.Shared
 
             BlogId = model.Key;
 
+            Form = new SimpleFormViewModel();
             Comments = model.Comments?.OfType<BlogComment>().Select(c => new CommentViewModel(c)).ToList();
         }
 
@@ -32,5 +33,7 @@ namespace Patrija.Core.ViewModels.Shared
         public string PreviousCommentsTitle { get; }
 
         public Guid BlogId { get; }
+
+        public SimpleFormViewModel Form { get; }
     }
 }

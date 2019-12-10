@@ -53,13 +53,6 @@ namespace Patrija.Models.Generated
 		public string BlogCommentCommenter => this.Value<string>("blogCommentCommenter");
 
 		///<summary>
-		/// Commenter Email: Commenter email address
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("blogCommentCommenterEmail")]
-		public string BlogCommentCommenterEmail => this.Value<string>("blogCommentCommenterEmail");
-
-		///<summary>
 		/// Text: Comment text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]

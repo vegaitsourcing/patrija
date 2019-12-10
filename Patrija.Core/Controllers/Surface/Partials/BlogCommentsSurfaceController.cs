@@ -16,7 +16,6 @@ namespace Patrija.Core.Controllers.Surface.Partials
                 BlogComment.ModelTypeAlias);
             
             content.SetValue(nameof(BlogComment.BlogCommentCommenter).ToCamelCase(), comment.GetCommenterNameOrDefault());
-            content.SetValue(nameof(BlogComment.BlogCommentCommenterEmail).ToCamelCase(), comment.CommenterEmail);
             content.SetValue(nameof(BlogComment.BlogCommentText).ToCamelCase(), comment.CommentText);
 
             contentService.SaveAndPublish(content);
