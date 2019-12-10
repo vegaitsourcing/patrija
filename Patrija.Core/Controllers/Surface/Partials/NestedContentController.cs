@@ -120,6 +120,10 @@ namespace Patrija.Core.Controllers.Surface.Partials
             => PartialView(viewModel);
 
         [ChildActionOnly]
+        public ActionResult BlogForm(SimpleFormViewModel viewModel)
+           => PartialView(viewModel);
+
+        [ChildActionOnly]
         public ActionResult JoinUsForm(JoinUsFormViewModel viewModel)
            => PartialView(viewModel);
     }

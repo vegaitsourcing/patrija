@@ -28,6 +28,10 @@
 		$('#vol-form').on('click', '.btn--submit', (event) => {
 			this.submitSingleForm(event, '/umbraco/surface/SimpleFormSurface/SubmitVolunteerForm');
 		});
+
+		$('#comment-form').on('click', '.btn--submit', (event) => {
+			this.submitSingleForm(event, '/umbraco/surface/BlogCommentsSurface/AddComment');
+		});
 	},
 
 	submitSingleForm: function(event, url) {
@@ -46,14 +50,21 @@
 		const commentErrorNode = $(event.delegateTarget).find('[data-for="message"]');
 		commentErrorNode.css('display', commentValid ? 'none' : 'inherit');
 
-		if(fullNameValid && emailValid && commentValid) {
+		let pageId = 0;
+		if ($('#comment-form')) {
+			pageId = $('#comment-form').data('pageid');
+			alert(pageId);
+		}
+
+		if (fullNameValid && emailValid && commentValid) {
 			$.ajax({
 				type: 'POST',
 				url: url,
 				data: {
 					FullName: fullName,
 					EmailAddress: emailAddress,
-					Comment: comment
+					Comment: comment,
+					PageId: pageId
 				}
 			})
 				.done(() => {

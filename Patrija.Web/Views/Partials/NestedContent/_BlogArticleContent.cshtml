@@ -2,6 +2,10 @@
 
 @model Patrija.Core.ViewModels.Partials.Blog.ArticleContentViewModel
 
+@{
+    var formId = ViewData["formId"] as string ?? string.Empty;
+}
+
 <div class="news-details">
     <div class="wrap wrap--medium">
         <div class="news-details__container">
@@ -23,19 +27,68 @@
                         Html.RenderAction<SharedController>(c => nameof(SharedController.Share), new { page = Model.CurrentPage });
                     }
                 </div>
-                <div class="news-details__comments">
-                    <h3 class="h3 news-details__comments-title">Ostavi komentar</h3>
-                    <p class="news-details__comments-text">Cheesecake macaroon biscuit. Sugar plum brownie gingerbread marzipan jelly beans croissant dessert. Ice cream cotton candy macaroon pie brownie cookie. Apple pie cake gingerbread. Marzipan ice cream..</p>
+                @if (Model.CommentsBlock != null)
+                {
+                    <div class="news-details__comments">
+                        @if (!string.IsNullOrWhiteSpace(Model.CommentsBlock.LeaveACommentTitle))
+                        {
+                            <h3 class="h3 news-details__comments-title">@Model.CommentsBlock.LeaveACommentTitle</h3>
+                        }
+                        @if (!string.IsNullOrWhiteSpace(Model.CommentsBlock.LeaveACommentSubtitle))
+                        {
+                            <p class="news-details__comments-text">@Model.CommentsBlock.LeaveACommentSubtitle</p>
+                        }
+                        @{var form = Model.CommentsBlock.Form;}
+                            <div id="comment-form" data-pageId="@Model.CurrentPage.Id" class="news-details__form-wrapper">
+                                <div class="simple-form" id="@formId">
+                                    <div class="wrap wrap--normal">
+                                        <div class="simple-form__content">
+                                            <div class="simple-form__container">
+                                                <form action="" method="post" class="form">
+                                                    <div class="form__row">
+                                                        <label class="form__label" for="name">@form.NameFieldText</label>
+                                                        <input class="form__input" type="text" id="name" name="name">
+                                                        <span class="form__error-message" data-for="name">@form.NameFieldError</span>
+                                                    </div>
+                                                    <div class="form__row">
+                                                        <label class="form__label" for="email">@form.EmailFieldText</label>
+                                                        <input class="form__input" type="email" id="email" name="email">
+                                                        <span class="form__error-message" data-for="email">@form.EmailFieldError</span>
+                                                    </div>
+                                                    <div class="form__row">
+                                                        <label class="form__label" for="message">@form.CommentFieldText</label>
+                                                        <textarea class="form__input form__input--textarea" id="message" name="message"></textarea>
+                                                        <span class="form__error-message" data-for="message">@form.CommentFieldError</span>
+                                                    </div>
+                                                    <div class="form__row">
+                                                        <button class="btn btn--mint btn--submit" type="button">@form.SubmitButtonText</button>
+                                                    </div>
+                                                    <span class="form__message-success">@Html.Raw(form.SuccessMessage)</span>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @if (Model.CommentsBlock.Comments != null && Model.CommentsBlock.Comments.Any())
+                        {
+                            <h3 class="h3 news-details__comments-heading">@UmbracoDictionary.Blog.CommentsTitle <span>(@Model.CommentsBlock.Comments.Count)</span></h3>
+                            foreach (var comment in Model.CommentsBlock.Comments)
+                            {
+                                <div class="comment-block">
+                                    @if (!string.IsNullOrWhiteSpace(comment.CommenterName) && !string.IsNullOrWhiteSpace(comment.CommentText))
+                                    {
+                                        <h4 class="comment-block__author">@comment.CommenterName</h4>
+                                        <p class="comment-block__text">@comment.CommentText</p>
+                                    }
+                                </div>
+                            }
 
-                    <div class="news-details__form-wrapper">
-                        <!-- Add the form here -->
+                        }
+
                     </div>
-                    <h3 class="h3 news-details__comments-heading">Komentari <span>(3)</span></h3>
-                    <div class="comment-block">
-                        <h4 class="comment-block__author">Andjelka Milosevic</h4>
-                        <p class="comment-block__text">Pastry chocolate soufflé icing croissant halvah sweet roll. Liquorice jelly gingerbread sesame snaps tootsie roll muffin lemon drops marzipan danish. Danish toffee topping pie sweet roll topping donut cupcake. Sweet soufflé chocolate bar lemon drops. Cake chocolate cake cake tootsie roll. Macaroon gummi bears cotton candy pastry carrot cake sugar plum marshmallow candy. Macaroon jelly beans pastry sweet. Ice cream oat cake gummies halvah jelly dessert. Apple pie pudding bonbon.</p>
-                    </div>
-                </div>
+                }
+
             </div>
             @if (Model.Widgets != null && Model.Widgets.Any())
             {
