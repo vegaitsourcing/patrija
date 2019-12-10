@@ -15,5 +15,11 @@ namespace Patrija.Core.Dtos
 
         [Required]
         public string Comment { get; set; }
+
+        public int PageId { get; set; }
+
+
+        public string GetCommenterNameOrDefault()
+            => string.IsNullOrEmpty(FullName) ? "Anoniman" : FullName;
     }
 }

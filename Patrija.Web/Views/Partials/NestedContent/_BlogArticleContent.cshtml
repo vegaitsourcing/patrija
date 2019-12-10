@@ -2,6 +2,10 @@
 
 @model Patrija.Core.ViewModels.Partials.Blog.ArticleContentViewModel
 
+@{
+    var formId = ViewData["formId"] as string ?? string.Empty;
+}
+
 <div class="news-details">
     <div class="wrap wrap--medium">
         <div class="news-details__container">
@@ -35,29 +39,35 @@
                             <p class="news-details__comments-text">@Model.CommentsBlock.LeaveACommentSubtitle</p>
                         }
                         @{var form = Model.CommentsBlock.Form;}
-                            <div class="news-details__form-wrapper">
-                                <div class="simple-form__container">
-                                    <form action="" method="post" class="form">
-                                        <div class="form__row">
-                                            <label class="form__label" for="name">@form.NameFieldText</label>
-                                            <input class="form__input" type="text" id="name" name="name">
-                                            <span class="form__error-message" data-for="name">@form.NameFieldError</span>
+                            <div id="comment-form" data-pageId="@Model.CurrentPage.Id" class="news-details__form-wrapper">
+                                <div class="simple-form" id="@formId">
+                                    <div class="wrap wrap--normal">
+                                        <div class="simple-form__content">
+                                            <div class="simple-form__container">
+                                                <form action="" method="post" class="form">
+                                                    <div class="form__row">
+                                                        <label class="form__label" for="name">@form.NameFieldText</label>
+                                                        <input class="form__input" type="text" id="name" name="name">
+                                                        <span class="form__error-message" data-for="name">@form.NameFieldError</span>
+                                                    </div>
+                                                    <div class="form__row">
+                                                        <label class="form__label" for="email">@form.EmailFieldText</label>
+                                                        <input class="form__input" type="email" id="email" name="email">
+                                                        <span class="form__error-message" data-for="email">@form.EmailFieldError</span>
+                                                    </div>
+                                                    <div class="form__row">
+                                                        <label class="form__label" for="message">@form.CommentFieldText</label>
+                                                        <textarea class="form__input form__input--textarea" id="message" name="message"></textarea>
+                                                        <span class="form__error-message" data-for="message">@form.CommentFieldError</span>
+                                                    </div>
+                                                    <div class="form__row">
+                                                        <button class="btn btn--mint btn--submit" type="button">@form.SubmitButtonText</button>
+                                                    </div>
+                                                    <span class="form__message-success">@Html.Raw(form.SuccessMessage)</span>
+                                                </form>
+                                            </div>
                                         </div>
-                                        <div class="form__row">
-                                            <label class="form__label" for="email">@form.EmailFieldText</label>
-                                            <input class="form__input" type="email" id="email" name="email">
-                                            <span class="form__error-message" data-for="email">@form.EmailFieldError</span>
-                                        </div>
-                                        <div class="form__row">
-                                            <label class="form__label" for="message">@form.CommentFieldText</label>
-                                            <textarea class="form__input form__input--textarea" id="message" name="message"></textarea>
-                                            <span class="form__error-message" data-for="message">@form.CommentFieldError</span>
-                                        </div>
-                                        <div class="form__row">
-                                            <button class="btn btn--mint btn--submit" type="button">@form.SubmitButtonText</button>
-                                        </div>
-                                        <span class="form__message-success">@Html.Raw(form.SuccessMessage)</span>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         @if (Model.CommentsBlock.Comments != null && Model.CommentsBlock.Comments.Any())
