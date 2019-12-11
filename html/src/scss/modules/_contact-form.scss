@@ -45,7 +45,7 @@
 .contact-form__container {
 	flex: 1 1 50%;
 	max-width: 50%;
-	padding: 0 100px 20px 0px;
+	padding: 0 100px 20px 0;
 	@include mq-down(lg) {
 		padding-right: 0;
 	}

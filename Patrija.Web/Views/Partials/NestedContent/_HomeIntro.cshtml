@@ -11,15 +11,14 @@
         {
             @Html.Partial("Link", Model.Link, new ViewDataDictionary() { { "className", "btn" } })
         }
-        
-            <div class="home-intro__image">
-                @if (Model.Image != null)
-                {
-                    <img src="@Model.Image.Url" alt="@Model.Image.AlternateText">
-                }
-                <span class="home-intro__circle home-intro__circle--blue"></span>
-                <span class="home-intro__circle home-intro__circle--mint"></span>
-                <span class="home-intro__circle home-intro__circle--grey"></span>
+
+            <div class="home-intro__image-outer">
+                <div class="home-intro__image">
+                    <div class="homepage-intro__img has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
+                    <span class="home-intro__circle home-intro__circle--blue"></span>
+                    <span class="home-intro__circle home-intro__circle--mint"></span>
+                    <span class="home-intro__circle home-intro__circle--grey"></span>
+                 </div>
             </div>
     </div>
 </div>
