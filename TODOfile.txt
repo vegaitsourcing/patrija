@@ -11,11 +11,8 @@ This is a collection of listed things that should be done:
 
 Ana (to do):
 - About us page : AboutUsProjectsContainer - FE missing
-- News - FE - Dobro je znati box background shape
-- News - FE -  3.part button showing
 - Testimonial slider ????
 - Project page - LiceUlice - featured module - to discuss
-- News - Dobro je znati - when only 2 items - bcg image shape
 - Multiple shapes for images
 
 Ana (FE done):
@@ -33,6 +30,7 @@ Ana (FE done):
 - SupportUS - Kako da nas podrzis - Intro Image - http://prntscr.com/q711uv
 - Homepage shape on IE
 - Support us - Faq shape missing
+- News - FE - Dobro je znati box background shape
 
 Ana (FE done, BE left to be done):
 - Navigation on mobile - the only thing left is the sr-only text, which is currently hardcoded

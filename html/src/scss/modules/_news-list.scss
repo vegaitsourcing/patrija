@@ -2,12 +2,9 @@
 //------------------------------------------------------------------------------
 
 .news-list {
-	margin-bottom: 20px;
-	@include mq-only(lg) {
-		margin-bottom: 60px;
-	}
+	padding: 60px 0;
 	@include mq-down(sm) {
-		margin-bottom: 40px;
+		padding: 40px 0;
 	}
 }
 
