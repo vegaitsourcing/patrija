@@ -30,7 +30,7 @@
 		});
 
 		$('#comment-form').on('click', '.btn--submit', (event) => {
-			this.submitSingleForm(event, '/umbraco/surface/BlogCommentsSurface/AddComment');
+			this.submitSingleForm(event, '/umbraco/surface/SimpleFormSurface/SubmitBlogCommentForm');
 		});
 	},
 
@@ -50,10 +50,9 @@
 		const commentErrorNode = $(event.delegateTarget).find('[data-for="message"]');
 		commentErrorNode.css('display', commentValid ? 'none' : 'inherit');
 
-		let pageId = 0;
+		let pageName = '';
 		if ($('#comment-form')) {
-			pageId = $('#comment-form').data('pageid');
-			alert(pageId);
+			pageName = $('#comment-form').data('pagename');
 		}
 
 		if (fullNameValid && emailValid && commentValid) {
@@ -64,7 +63,7 @@
 					FullName: fullName,
 					EmailAddress: emailAddress,
 					Comment: comment,
-					PageId: pageId
+					PageName: pageName
 				}
 			})
 				.done(() => {
