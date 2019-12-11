@@ -8,22 +8,22 @@ namespace Patrija.Core.Controllers.Surface.Partials
 {
     public class BlogCommentsSurfaceController : BaseSurfaceController
     {
-        public ActionResult AddComment(SimpleFormDto comment)
-        {
-            var contentService = Services.ContentService;
+        //public ActionResult AddComment(SimpleFormDto comment)
+        //{
+        //    var contentService = Services.ContentService;
 
-            var content = contentService.Create(CreateCommentName(comment), contentService.GetById(comment.PageId),
-                BlogComment.ModelTypeAlias);
+        //    var content = contentService.Create(CreateCommentName(comment), contentService.GetById(int.Parse(comment.PageId)),
+        //        BlogComment.ModelTypeAlias);
             
-            content.SetValue(nameof(BlogComment.BlogCommentCommenter).ToCamelCase(), comment.GetCommenterNameOrDefault());
-            content.SetValue(nameof(BlogComment.BlogCommentText).ToCamelCase(), comment.Comment);
+        //    content.SetValue(nameof(BlogComment.BlogCommentCommenter).ToCamelCase(), comment.GetCommenterNameOrDefault());
+        //    content.SetValue(nameof(BlogComment.BlogCommentText).ToCamelCase(), comment.Comment);
 
-            contentService.SaveAndPublish(content);
+        //    contentService.SaveAndPublish(content);
             
-            return Content("Ok");
-        }
+        //    return Content("Ok");
+        //}
 
-        private static string CreateCommentName(SimpleFormDto comment)
-            => $"{comment.GetCommenterNameOrDefault()}:{DateTime.UtcNow.ToLongDateString()}";
+        //private static string CreateCommentName(SimpleFormDto comment)
+        //    => $"{comment.GetCommenterNameOrDefault()}:{DateTime.UtcNow.ToLongDateString()}";
     }
 }

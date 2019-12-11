@@ -109,6 +109,27 @@ namespace Patrija.Core.Controllers.Surface.Partials
             return new HttpStatusCodeResult(200);
         }
 
+        [HttpPost]
+        public ActionResult SubmitBlogCommentForm(SimpleFormDto formData)
+        {
+            if (!ModelState.IsValid)
+            {
+                return new HttpStatusCodeResult(400);
+            }
+
+            try
+            {
+                SendEmail(formData, $"[Komentar na stranicu: {formData.PageName}] Korisnik: {formData.FullName}");
+                
+            }
+            catch
+            {
+                return new HttpStatusCodeResult(500);
+            }
+
+            return new HttpStatusCodeResult(200);
+        }
+
         private void SendEmail(SimpleFormDto formData, string subject)
         {
             var emailClient = new SmtpClient();

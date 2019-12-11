@@ -39,8 +39,8 @@
                             <p class="news-details__comments-text">@Model.CommentsBlock.LeaveACommentSubtitle</p>
                         }
                         @{var form = Model.CommentsBlock.Form;}
-                            <div id="comment-form" data-pageId="@Model.CurrentPage.Id" class="news-details__form-wrapper">
-                                <div class="simple-form" id="@formId">
+                            <div id="comment-form" data-pagename="@Model.CurrentPage.PageTitle" class="news-details__form-wrapper">
+                                <div class="simple-form" id="blogcomment">
                                     <div class="wrap wrap--normal">
                                         <div class="simple-form__content">
                                             <div class="simple-form__container">
