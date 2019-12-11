@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Patrija.Core.Contexts;
+using Patrija.Core.ViewModels.Partials.AboutUsPage;
 using Patrija.Core.ViewModels.Partials.Features;
 using Patrija.Core.ViewModels.Partials.Home;
 using Patrija.Core.ViewModels.Shared;
@@ -11,8 +12,8 @@ namespace Patrija.Core.ViewModels.Pages
 	{
 		public HomeViewModel(IPageContext<Home> context) : base(context)
 		{
-		    var homeIntro = context.Home.HomeIntro.FirstOrDefault();
-            HomeIntro = homeIntro != null ? new HomeIntroViewModel(homeIntro) : null;
+		    var homeIntro = context.Home.HomeIntro;
+            HomeIntro = homeIntro != null ? new PageIntroViewModel(homeIntro) : null;
 
             var mostRecentBlogsRequest = context.Home.MostRecentBlogs.FirstOrDefault();
 
@@ -44,12 +45,11 @@ namespace Patrija.Core.ViewModels.Pages
             return new ArticleContainerViewModel(mostRecentBlogsRequest.MostRecentBlogsTitle, articles);
         }
 
-        public HomeIntroViewModel HomeIntro { get; }
+        public PageIntroViewModel HomeIntro { get; }
         public TaggedFeatureViewModel[] Features { get; }
         public ArticleContainerViewModel ArticleContainer { get; }
         public HomeSupportViewModel HomeSupport { get; }
         public LinksListViewModel[] LinksList { get; }
-        public JoinUsViewModel JoinUs { get; }
         public AboutUsViewModel AboutUs { get; }
 	}
 }

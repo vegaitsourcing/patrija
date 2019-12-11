@@ -64,7 +64,7 @@ namespace Patrija.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("homeIntro")]
-		public IEnumerable<HomeIntro> HomeIntro => this.Value<IEnumerable<HomeIntro>>("homeIntro");
+		public PageIntro HomeIntro => this.Value<PageIntro>("homeIntro");
 
 		///<summary>
 		/// Home Support

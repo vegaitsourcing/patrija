@@ -46,6 +46,13 @@ namespace Patrija.Models.Generated
 		// properties
 
 		///<summary>
+		/// Link: Shown only if First Shape variant is picked
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link")]
+		public Umbraco.Web.Models.Link Link => this.Value<Umbraco.Web.Models.Link>("link");
+
+		///<summary>
 		/// Image: Page intro image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]

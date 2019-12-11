@@ -482,9 +482,6 @@
     <Compile Include="Generated\Home.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Generated\HomeIntro.generated.cs">
-      <DependentUpon>ModelsBuilder.cs</DependentUpon>
-    </Compile>
     <Compile Include="Generated\HomeSupport.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>

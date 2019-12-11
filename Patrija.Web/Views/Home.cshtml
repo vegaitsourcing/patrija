@@ -1,6 +1,6 @@
 ﻿@inherits UmbracoViewPage<HomeViewModel>
 @{
-    Html.RenderAction<NestedContentController>(c => nameof(c.HomeIntro), new { viewModel = Model.HomeIntro });
+    Html.RenderAction<NestedContentController>(c => nameof(c.PageIntro), new { viewModel = Model.HomeIntro });
 }
 
 @if (Model.ArticleContainer != null)
