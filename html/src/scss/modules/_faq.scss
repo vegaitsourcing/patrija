@@ -101,7 +101,10 @@
 .faq__shape {
 	position: absolute;
 	top: 248px;
-	right: -22.5%;
+	right: -550px;
+	@include mq-up(xxl) {
+		right: -22.5%;
+	}
 	@include mq-down(lg) {
 		display: none;
 	}

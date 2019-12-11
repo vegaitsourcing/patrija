@@ -33,6 +33,7 @@ Ana (FE done):
 - Comments on blog page FE
 - ContactUs - Green dot is missing
 - SupportUS - Kako da nas podrzis - Intro Image - http://prntscr.com/q711uv
+- Homepage shape on IE
 
 Ana (FE done, BE left to be done):
 - Navigation on mobile - the only thing left is the sr-only text, which is currently hardcoded
