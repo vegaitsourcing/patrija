@@ -134,11 +134,16 @@
 }
 
 .news-details__form-wrapper {
-	margin-top: 103px;
+	margin-top: 75px;
 	text-align: left;
-	padding: 0 0 0 18px;
+	padding-left: 18px;
 	@include mq-down(lg) {
 		padding: 0;
+	}
+	.simple-form__container {
+		flex: 1 1 100%;
+		max-width: 100%;
+		padding: 27px 0 20px;
 	}
 	.form__label {
 		width: 238px;
@@ -159,10 +164,17 @@
 			margin-left: 0;
 		}
 	}
+	.form__error-message {
+		padding-left: 270px;
+		@include mq-down(sm) {
+			padding: 5px 0 0 18px;
+		}
+	}
+
 }
 
 .news-details__comments-heading {
-	margin: 53px 0 15px 18px;
+	margin: 21px 0 15px 18px;
 	text-align: left;
 	@include mq-down(lg) {
 		margin-left: 0;
