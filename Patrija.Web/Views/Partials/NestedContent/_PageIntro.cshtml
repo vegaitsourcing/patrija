@@ -2,6 +2,32 @@
 @using Patrija.Web.DisplayHelpers
 @inherits UmbracoViewPage<PageIntroViewModel>
 
+
+@if (string.Equals(Dictionaries.ShapeVariantMap[Model.ShapeVariant], ShapeVariant.First))
+{
+    <div class="home-intro">
+        <div class="wrap home-intro__wrap">
+            @if (!string.IsNullOrWhiteSpace(Model.Title))
+            {
+                <p class="home-intro__text">@Model.Title</p>
+            }
+            @if (Model.Link != null)
+            {
+                @Html.Partial("Link", Model.Link, new ViewDataDictionary() { { "className", "btn" } })
+            }
+
+            <div class="home-intro__image-outer">
+                <div class="home-intro__image">
+                    <div class="homepage-intro__img has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
+                    <span class="home-intro__circle home-intro__circle--blue"></span>
+                    <span class="home-intro__circle home-intro__circle--mint"></span>
+                    <span class="home-intro__circle home-intro__circle--grey"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
 <div class="page-intro">
     <div class="wrap wrap--medium">
         <div class="page-intro__container">
@@ -20,7 +46,7 @@
             </div>
             <div class="page-intro__image-outer @(Dictionaries.ShapeVariantMap[Model.ShapeVariant])">
                 <div class="page-intro__image @(Dictionaries.ShapeVariantMap[Model.ShapeVariant])">
-                    <div class="page-intro__img has-cover"style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
+                    <div class="page-intro__img has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
                     <span class="circle circle--blue circle--large"></span>
                     <span class="circle circle--mint"></span>
                 </div>
@@ -28,4 +54,3 @@
         </div>
     </div>
 </div>
-
