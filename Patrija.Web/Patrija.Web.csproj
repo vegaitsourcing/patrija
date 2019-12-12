@@ -532,6 +532,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DisplayHelpers\Dictionaries.cs" />
     <Content Include="Views\Partials\Shared\_ImageWithTextProjectPage.cshtml" />
+    <Content Include="Views\Partials\Shared\_ImageTextLink.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ImageTextLinkViewModel.cshtml" />
     <None Include="Views\Shared\DisplayTemplates\ImageWithTextProjectPageViewModel.cshtml" />
   </ItemGroup>
   <ItemGroup>

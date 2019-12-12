@@ -492,6 +492,9 @@
     <Compile Include="Generated\ImageContainer.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\ImageTextLink.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Generated\ImageWithText.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>

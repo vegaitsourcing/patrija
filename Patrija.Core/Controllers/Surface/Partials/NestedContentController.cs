@@ -52,6 +52,10 @@ namespace Patrija.Core.Controllers.Surface.Partials
             => PartialView(viewModel);
 
         [ChildActionOnly]
+        public ActionResult ImageTextLink(ImageTextLinkViewModel viewModel)
+            => PartialView(viewModel);
+
+        [ChildActionOnly]
         public ActionResult ArticleContainer(ArticleContainerViewModel viewModel)
             => PartialView(viewModel);
 

@@ -41,6 +41,9 @@ namespace Patrija.Core.Mappers
                 },
                 {
                     typeof(SimpleFormContent), el => new SimpleFormViewModel((SimpleFormContent)el)
+                },
+                {
+                    typeof(ImageTextLink), el => new ImageTextLinkViewModel((ImageTextLink)el)
                 }
             };
 

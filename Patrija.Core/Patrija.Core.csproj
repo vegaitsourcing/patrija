@@ -294,6 +294,7 @@
     <Compile Include="Extensions\UrlHelperExtensions.cs" />
     <Compile Include="ViewModels\Partials\Blog\BlogArticlePreviewViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blog\BlogWidgetsViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Features\ImagTextLinkViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\ImageWithTextProjectPageViewModel.cs" />
     <Compile Include="ViewModels\Partials\Share\ShareViewModel.cs" />
     <Compile Include="Controllers\Surface\Partials\SimpleFormSurfaceController.cs" />
