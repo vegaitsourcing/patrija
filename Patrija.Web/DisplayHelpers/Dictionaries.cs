@@ -14,10 +14,10 @@ namespace Patrija.Web.DisplayHelpers
         
         public static readonly Dictionary<ShapeVariant, string> ShapeVariantMap = new Dictionary<ShapeVariant, string>()
         {
-            { ShapeVariant.First, string.Empty },
-            { ShapeVariant.Second, "page-intro__image--secondary" },
-            { ShapeVariant.Third, "page-intro__image--tertiary" },
-            { ShapeVariant.Fourth, "page-intro__image--quaternary" }
+            { ShapeVariant.First, "primary" },
+            { ShapeVariant.Second, "secondary" },
+            { ShapeVariant.Third, "tertiary" },
+            { ShapeVariant.Fourth, "quaternary" }
         };
     }
 
