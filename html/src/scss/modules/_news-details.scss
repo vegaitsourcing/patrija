@@ -140,6 +140,9 @@
 	@include mq-down(lg) {
 		padding: 0;
 	}
+	@include mq-down(sm) {
+		margin: 0;
+	}
 	.simple-form__container {
 		flex: 1 1 100%;
 		max-width: 100%;
