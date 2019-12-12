@@ -3,7 +3,7 @@
 @inherits UmbracoViewPage<PageIntroViewModel>
 
 
-@if (string.Equals(Dictionaries.ShapeVariantMap[Model.ShapeVariant], ShapeVariant.First))
+@if (string.Equals(Model.ShapeVariant, ShapeVariant.First))
 {
     <div class="home-intro">
         <div class="wrap home-intro__wrap">
