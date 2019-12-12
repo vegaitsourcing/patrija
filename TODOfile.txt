@@ -5,20 +5,15 @@ This is a collection of listed things that should be done:
 - FeaturedNews.cshtml ??
 - Finished Projects - where it is used??
 - Project page - setup left orientation on Image with text
-- Support us - Faq shape missing
 - EN - BE - Crate a new template
+- On the form for adding comments the button should be "Postavi komentar", not "Posalji". Also the labels should be "Email adresa" and "Komentar"
 
 
 Ana (to do):
 - About us page : AboutUsProjectsContainer - FE missing
-- News - FE -  Banner dot position
-- News - FE - Blogs box bcg shadow
-- News - FE -  3.part button showing
 - Testimonial slider ????
 - Project page - LiceUlice - featured module - to discuss
-- News - Dobro je znati - when only 2 items - bcg image shape
-
-- 4 shapes not working well (should all images have multiple options?)
+- Multiple shapes for images
 
 Ana (FE done):
 - Contact page - responsive design
@@ -34,6 +29,8 @@ Ana (FE done):
 - ContactUs - Green dot is missing
 - SupportUS - Kako da nas podrzis - Intro Image - http://prntscr.com/q711uv
 - Homepage shape on IE
+- Support us - Faq shape missing
+- News - FE - Dobro je znati box background shape
 
 Ana (FE done, BE left to be done):
 - Navigation on mobile - the only thing left is the sr-only text, which is currently hardcoded
