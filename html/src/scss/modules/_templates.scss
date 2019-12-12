@@ -76,7 +76,7 @@
 		left: 6vw;
 	}
 	@include mq-down(sm) {
-		left: 2.5vw;
+		display: none;
 	}
 }
 
@@ -87,7 +87,6 @@
 		right: 2vw;
 	}
 	@include mq-down(sm) {
-		top: 74.6%;
-		right: 6vw;
+		display: none;
 	}
 }

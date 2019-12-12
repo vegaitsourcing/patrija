@@ -38,21 +38,21 @@
 
 .donations__logos {
 	font-size: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 	@include mq-down(sm) {
-		display: flex;
-		flex-wrap: wrap;
 		margin: 0 -10px;
 	}
 }
 
 .donations__logo {
 	display: inline-block;
-	width: 274px;
-	height: 170px;
-	vertical-align: top;
-	background: #fbfbfb;
+	width: 31%;
+	min-height: 170px;
 	border-radius: 10px;
-	margin: 0 10px;
+	margin: 0 10px 20px;
 	@include mq-only(md) {
 		width: 208px;
 		height: auto;
@@ -60,6 +60,7 @@
 	@include mq-down(sm) {
 		flex: 1 1 calc(50% - 20px);
 		height: auto;
+		min-height: 0;
 		margin: 0 10px 14px;
 		max-width: calc(50% - 20px);
 	}
