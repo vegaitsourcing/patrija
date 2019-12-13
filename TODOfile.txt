@@ -7,6 +7,9 @@ Ana (to do):
 - Testimonial slider ????
 - Project page - LiceUlice - featured module - to discuss
 - Multiple shapes for images
+- Dots on multiple links block
+- Take a look at shape svgs
+
 
 - EnglishPage.cshtml  - to created class instead of "something" :) - wide content
 
