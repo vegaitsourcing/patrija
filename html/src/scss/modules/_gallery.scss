@@ -59,6 +59,9 @@
 	padding: 0 14px;
 	vertical-align: top;
 	display: inline-block;
+	& + & {
+		display: none;
+	}
 }
 
 .gallery__image {
