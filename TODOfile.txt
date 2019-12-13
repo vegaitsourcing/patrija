@@ -4,14 +4,7 @@ This is a collection of listed things that should be done:
 
 Ana (to do):
 - About us page : AboutUsProjectsContainer - FE missing
-- Testimonial slider ????
 - Project page - LiceUlice - featured module - to discuss
-- Multiple shapes for images
-- Dots on multiple links block
-- Take a look at shape svgs
-
-
-- EnglishPage.cshtml  - to created class instead of "something" :) - wide content
 
 
 Ana (FE done):
@@ -30,3 +23,6 @@ Ana (FE done):
 - Homepage shape on IE
 - Support us - Faq shape missing
 - News - FE - Dobro je znati box background shape
+- Fix shape svgs
+- Multiple shapes for images
+- EnglishPage.cshtml  - to created class instead of "something" :) - wide content

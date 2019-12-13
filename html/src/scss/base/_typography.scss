@@ -189,3 +189,20 @@ img {
 iframe {
 	border: 0;
 }
+
+ul {
+	margin-bottom: 15px;
+	li {
+		font-size: 18px;
+		line-height: 30px;
+		@include breakpoint(laptop) {
+			font-size: 16px;
+			line-height: 28px;
+		}
+		@include mq-down(md) {
+			font-size: 14px;
+			line-height: 22px;
+		}
+	}
+}
+
