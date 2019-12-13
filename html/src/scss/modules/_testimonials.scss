@@ -84,6 +84,9 @@
 	padding: 0 10vw;
 	opacity: 0.2;
 	transform: scale(0.9) translateY(-80px);
+	& + & {
+		display: none;
+	}
 	.loaded & {
 		transition: $duration-slow $ease;
 	}
