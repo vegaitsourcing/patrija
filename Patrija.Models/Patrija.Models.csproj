@@ -413,7 +413,6 @@
     <Compile Include="Generated\Blog.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Generated\BlogArticle.cs" />
     <Compile Include="Generated\BlogArticle.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
@@ -424,6 +423,11 @@
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\BlogIntro.generated.cs">
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\BlogListingPage.cs" />
+    <Compile Include="Generated\BlogArticle.cs" />
+    <Compile Include="Generated\BlogListingPage.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\BlogWidgets.generated.cs">
