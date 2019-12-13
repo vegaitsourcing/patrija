@@ -275,6 +275,7 @@
     <Compile Include="Controllers\RenderMvc\AboutUsPageController.cs" />
     <Compile Include="Controllers\RenderMvc\BasePageController.cs" />
     <Compile Include="Controllers\RenderMvc\ContactUsController.cs" />
+    <Compile Include="Controllers\RenderMvc\BlogListingPageController.cs" />
     <Compile Include="Controllers\RenderMvc\EnglishPageController.cs" />
     <Compile Include="Controllers\RenderMvc\Error404Controller.cs" />
     <Compile Include="Controllers\RenderMvc\HomeController.cs" />
@@ -293,6 +294,7 @@
     <Compile Include="Controllers\Surface\Partials\SearchListingController.cs" />
     <Compile Include="Controllers\Surface\Partials\SharedController.cs" />
     <Compile Include="Extensions\UrlHelperExtensions.cs" />
+    <Compile Include="ViewModels\Pages\BlogListingPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\EnglishPageViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blog\BlogArticlePreviewViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blog\BlogWidgetsViewModel.cs" />

@@ -535,6 +535,7 @@
     <Content Include="Views\Partials\Shared\_ImageTextLink.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\ImageTextLinkViewModel.cshtml" />
     <Content Include="Views\EnglishPage.cshtml" />
+    <Content Include="Views\BlogListingPage.cshtml" />
     <None Include="Views\Shared\DisplayTemplates\ImageWithTextProjectPageViewModel.cshtml" />
   </ItemGroup>
   <ItemGroup>
