@@ -34,6 +34,7 @@
 	font-weight: 700;
 	line-height: 55px;
 	margin-bottom: 34px;
+	z-index: 101;
 	@include breakpoint(laptop) {
 		font-size: 30px;
 		line-height: 40px;
@@ -51,7 +52,6 @@
 		line-height: 32px;
 		max-width: 400px;
 		position: relative;
-		z-index: 20;
 	}
 }
 

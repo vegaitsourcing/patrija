@@ -35,6 +35,7 @@
 
 .text-block__text--left {
 	text-align: right;
+	vertical-align: top;
 	@include mq-down(sm) {
 		text-align: left;
 	}
@@ -42,6 +43,7 @@
 
 .text-block__text--right {
 	text-align: left;
+	vertical-align: top;
 	@include mq-down(sm) {
 		text-align: left;
 	}
