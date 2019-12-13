@@ -1,37 +1,61 @@
 ﻿@using Patrija.Web.DisplayHelpers
+@using Patrija.Core.ViewModels.Partials.AboutUsPage
 @model Patrija.Core.ViewModels.Shared.BlogIntroViewModel
 
+@if (string.Equals(Model.ShapeVariant, ShapeVariant.First))
+{
+    <div class="home-intro">
+        <div class="wrap home-intro__wrap">
+            @if (!string.IsNullOrWhiteSpace(Model.Title))
+            {
+                <p class="home-intro__text">@Model.Title</p>
+            }
 
-<div class="page-intro">
-    <div class="wrap wrap--medium">
-        <div class="page-intro__container">
-            <div class="page-intro__content">
-                <div class="page-intro__content-align">
-                    @if (Model.FormatedPublishDate != null)
-                    {
-                        <h5 class="page-intro__date">@Model.FormatedPublishDate</h5>
-                    }
-
-                    @if (!string.IsNullOrWhiteSpace(Model.Title))
-                    {
-                        <h1 class="h2 page-intro__title">@Model.Title</h1>
-                    }
-                    @if (!string.IsNullOrWhiteSpace(Model.PreviewText))
-                    {
-                        <p class="page-intro__text">@Model.PreviewText</p>
-                    }
-
-                </div>
-            </div>
-            <div class="page-intro__image-outer page-intro__image--@(Dictionaries.ShapeVariantMap[Model.ShapeVariant])">
-                <div class="page-intro__image page-intro__image--@(Dictionaries.ShapeVariantMap[Model.ShapeVariant])">
-                    <div class="page-intro__img has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
-                    <span class="circle circle--blue circle--large"></span>
-                    <span class="circle circle--mint"></span>
+            <div class="home-intro__image-outer">
+                <div class="home-intro__image">
+                    <div class="homepage-intro__img has-cover" style="@if (Model.Image != null)
+                    {<text>background-image: url('@Model.Image.Url');</text>}"></div>
+                    <span class="home-intro__circle home-intro__circle--blue"></span>
+                    <span class="home-intro__circle home-intro__circle--mint"></span>
+                    <span class="home-intro__circle home-intro__circle--grey"></span>
                 </div>
             </div>
         </div>
     </div>
-</div>
+}
+else
+{
+    <div class="page-intro">
+        <div class="wrap wrap--medium">
+            <div class="page-intro__container">
+                <div class="page-intro__content">
+                    <div class="page-intro__content-align">
+                        @if (Model.FormatedPublishDate != null)
+                        {
+                            <h5 class="page-intro__date">@Model.FormatedPublishDate</h5>
+                        }
 
+                        @if (!string.IsNullOrWhiteSpace(Model.Title))
+                        {
+                            <h1 class="h2 page-intro__title">@Model.Title</h1>
+                        }
+                        @if (!string.IsNullOrWhiteSpace(Model.PreviewText))
+                        {
+                            <p class="page-intro__text">@Model.PreviewText</p>
+                        }
+
+                    </div>
+                </div>
+                <div class="page-intro__image-outer page-intro__image--@(Dictionaries.ShapeVariantMap[Model.ShapeVariant])">
+                    <div class="page-intro__image page-intro__image--@(Dictionaries.ShapeVariantMap[Model.ShapeVariant])">
+                        <div class="page-intro__img has-cover" style="@if (Model.Image != null)
+                        {<text>background-image: url('@Model.Image.Url');</text>}"></div>
+                        <span class="circle circle--blue circle--large"></span>
+                        <span class="circle circle--mint"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
 
