@@ -4,12 +4,13 @@
 .home-intro {
 	padding-top: 208px;
 	margin-bottom: 480px;
+	position: relative;
 	@include breakpoint(laptop) {
 		padding-top: 140px;
-		margin-bottom: 240px;
+		margin-bottom: 370px;
 	}
 	@include mq-only(lg) {
-		margin-bottom: 160px;
+		margin-bottom: 180px;
 	}
 	@include mq-only(md) {
 		margin-bottom: 100px;
@@ -58,15 +59,12 @@
 .home-intro__image-outer {
 	position: absolute;
 	width: 39.271vw;
-	top: -77%;
+	top: 0;
 	left: 64%;
+	z-index: -1;
 	@include mq-down(xs) {
 		width: 43vw;
-		top: -82%;
 		left: 58%;
-	}
-	@include mq-down(xxs) {
-		top: -65%;
 	}
 }
 
@@ -86,22 +84,6 @@
 		background-size: cover;
 	}
 }
-
-// .home-intro__image--secondary {
-// 	padding-bottom: 90%;
-// 	&::after {
-// 		background-image: url('../assets/images/mask/page-intro-secondary-mask.svg');
-// 	}
-// 	.circle--blue {
-// 		top: 27.8%;
-// 		right: 6.2%;
-// 		left: auto;
-// 	}
-// 	.circle--mint {
-// 		top: 80.2%;
-// 		left: -13.8%;
-// 	}
-// }
 
 .homepage-intro__img {
 	position: absolute;

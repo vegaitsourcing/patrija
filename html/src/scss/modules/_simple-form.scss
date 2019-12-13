@@ -27,7 +27,7 @@
 .simple-form__info {
 	flex: 1 1 50%;
 	max-width: 50%;
-	padding: 0 8px;
+	padding: 0 10px;
 	@include mq-down(md) {
 		display: block;
 		max-width: 100%;
