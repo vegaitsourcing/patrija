@@ -1,19 +1,15 @@
 This is a collection of listed things that should be done:
 
 
-- CommentsBlock.cshtml ??
-- FeaturedNews.cshtml ??
-- Finished Projects - where it is used??
-- Project page - setup left orientation on Image with text
-- EN - BE - Crate a new template
-- On the form for adding comments the button should be "Postavi komentar", not "Posalji". Also the labels should be "Email adresa" and "Komentar"
-
 
 Ana (to do):
 - About us page : AboutUsProjectsContainer - FE missing
 - Testimonial slider ????
 - Project page - LiceUlice - featured module - to discuss
 - Multiple shapes for images
+
+- EnglishPage.cshtml  - to created class instead of "something" :) - wide content
+
 
 Ana (FE done):
 - Contact page - responsive design
@@ -31,9 +27,3 @@ Ana (FE done):
 - Homepage shape on IE
 - Support us - Faq shape missing
 - News - FE - Dobro je znati box background shape
-
-Ana (FE done, BE left to be done):
-- Navigation on mobile - the only thing left is the sr-only text, which is currently hardcoded
-
-Be (done):
-- "O nama" section on home page: the green shape on the right is added to "AboutUs.cshtml". Src is currently hardcoded - stays as it is
