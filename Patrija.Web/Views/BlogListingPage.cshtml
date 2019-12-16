@@ -7,30 +7,34 @@
 
 @if (!string.IsNullOrWhiteSpace(Model.Text.ToString()))
 {
-    <div class="something">@Model.Text</div>
+    <div class="wrap wrap--normal">@Model.Text</div>
 }
-@if (Model.Blogs != null && Model.Blogs.Any())
-{
-    foreach (var blog in Model.Blogs)
-    {
-        
-            <div class="news-list__item">
-                <div class="news-list__image has-cover" style="@if (blog.Image != null) {<text>background-image: url('@blog.Image.Url');</text>}"></div>
-                <div class="news-list__meta">
-                    <span class="news-list__date">@blog.Date.ToString("dd.MM.yyyy")</span>
+<div class="wrap wrap--normal">
+    <div class="blog-wrap">
+        @if (Model.Blogs != null && Model.Blogs.Any())
+        {
+            foreach (var blog in Model.Blogs)
+            {
+                
+                <div class="news-list__item">
+                    <div class="news-list__image has-cover" style="@if (blog.Image != null) {<text>background-image: url('@blog.Image.Url');</text>}"></div>
+                    <div class="news-list__meta">
+                        <span class="news-list__date">@blog.Date.ToString("dd.MM.yyyy")</span>
+                    </div>
+                    @if (!string.IsNullOrWhiteSpace(blog.Title))
+                    {<h4 class="h6 news-list__item-title">
+                            <a href="@blog.Url">@blog.Title </a>
+                        </h4>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(blog.Text))
+                    {
+                        <p class="news-list__text">
+                            @Html.Raw(blog.Text)
+                        </p>
+                    }
                 </div>
-                @if (!string.IsNullOrWhiteSpace(blog.Title))
-                {<h4 class="h6 news-list__item-title">
-                        <a href="@blog.Url">@blog.Title </a>
-                    </h4>
-                }
-                @if (!string.IsNullOrWhiteSpace(blog.Text))
-                {
-                    <p class="news-list__text">
-                        @Html.Raw(blog.Text)
-                    </p>
-                }
-            </div>
-       
-    }
-}
+            
+            }
+        }
+    </div>
+</div>

@@ -48,6 +48,7 @@
 	padding-bottom: 66%;
 	border-radius: 15px;
 	margin-bottom: 18px;
+	background-color: $grey-light;
 	@include mq-down(sm) {
 		margin-bottom: 10px;
 	}
@@ -88,4 +89,21 @@
 
 .news-list__load-more {
 	min-width: 262px;
+}
+
+.blog-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	.news-list__item {
+		flex: 1 1 33.333%;
+		max-width: 33.333%;
+		@include mq-only(md) {
+			flex: 1 1 50%;
+			max-width: 50%;
+		}
+		@include mq-down(sm) {
+			flex: 1 1 100%;
+			max-width: 100%;
+		}
+	}
 }
