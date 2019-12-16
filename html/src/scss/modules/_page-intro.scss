@@ -111,10 +111,6 @@
 	padding-bottom: 90%;
 	&::after {
 		background-image: url('../assets/images/mask/page-intro-secondary-mask.svg');
-		left: 3px;
-		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // sass-lint:disable-line no-vendor-prefixes
-			left: 1px;
-		}
 	}
 	.circle--blue {
 		top: 27.8%;
@@ -131,7 +127,6 @@
 	padding-bottom: 91%;
 	&::after {
 		background-image: url('../assets/images/mask/page-intro-tertiary-mask.svg');
-		left: 0;
 	}
 	.circle--blue {
 		top: 3.6%;

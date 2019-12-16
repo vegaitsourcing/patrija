@@ -3,6 +3,9 @@
 
 .text-image {
 	padding: 42px 0 164px;
+	@include mq-down(md) {
+		padding-bottom: 80px;
+	}
 	@include mq-down(sm) {
 		padding-bottom: 42px;
 	}
@@ -10,30 +13,37 @@
 
 .text-image__container {
 	position: relative;
-	padding: 0 30px;
-	@include mq-down(sm) {
-		padding: 80vw 0 0;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@include mq-down(md) {
+		flex-direction: column;
+		padding: 0;
 	}
 }
 
 .text-image__content {
 	max-width: 44%;
-	@include mq-down(sm) {
+	display: inline-block;
+	@include mq-down(md) {
 		max-width: 100%;
+		display: block;
+		margin-bottom: 30px;
 	}
 }
 
 .text-image__image-outer {
-	position: absolute;
-	top: 17px;
-	right: 6.5vw;
+	display: inline-block;
 	width: 26.39vw;
+	margin-right: 8%;
+	@include mq-down(md) {
+		width: 50vw;
+		margin-right: 0;
+		display: block;
+	}
 	@include mq-down(sm) {
-		top: 0;
 		width: 80vw;
-		left: 50%;
-		right: auto;
-		transform: translateX(-50%);
 	}
 }
 
@@ -70,4 +80,5 @@
 .text-image__circle {
 	top: 254px;
 	right: 0;
+	z-index: -1;
 }

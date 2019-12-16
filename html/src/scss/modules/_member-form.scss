@@ -15,10 +15,18 @@
 	align-items: flex-start;
 	justify-content: space-between;
 	padding: 0 42px;
+	@include mq-down(md) {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 .member-form__column {
 	flex: 1 1 50%;
 	max-width: 44%;
 	padding: 28px 0;
+	@include mq-down(md) {
+		flex: 1 1 100%;
+		max-width: 100%;
+	}
 }
