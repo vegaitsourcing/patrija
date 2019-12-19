@@ -53,11 +53,11 @@
 		overflow: visible;
 	}
 	.slick-prev {
-		top: 0;
+		top: 30px;
 		left: 58px;
 	}
 	.slick-next {
-		top: 0;
+		top: 30px;
 		right: 58px;
 	}
 	@include mq-between(md, lg) {

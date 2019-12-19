@@ -56,7 +56,7 @@
 		width: 100%;
 	}
 	.btn--submit {
-		@include mq-down(md) {
+		@include mq-down(sm) {
 			margin: 20px 0 0;
 			width: auto;
 		}

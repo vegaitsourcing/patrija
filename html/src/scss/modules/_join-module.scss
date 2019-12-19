@@ -133,9 +133,6 @@
 	background-color: rgba($white, 0.75);
 	z-index: 2000;
 	display: none;
-	@include mq-down(md) {
-		overflow: auto;
-	}
 }
 
 .popup-overlay--opened {
@@ -156,6 +153,7 @@
 	margin-top: -80px;
 	border-radius: 15px;
 	box-shadow: 4px 4px 20px rgba($black, 0.25);
+	overflow: auto;
 	@include mq-down(lg) {
 		width: 90%;
 		padding: 50px 30px;
@@ -165,14 +163,14 @@
 		transform: translateX(-50%);
 		left: 50%;
 		padding: 80px 30px;
-		margin-bottom: 30px;
+		max-height: 87vh;
 	}
 	@include mq-down(sm) {
 		top: 20px;
 		transform: translate(-50%);
 		padding: 58px 30px;
 		border-radius: 0;
-		margin-bottom: 20px;
+		max-height: 80vh;
 	}
 	.loaded & {
 		transition: $duration-slow $ease;
