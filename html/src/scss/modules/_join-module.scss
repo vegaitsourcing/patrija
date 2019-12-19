@@ -5,7 +5,7 @@
 	background-image: url('../assets/images/shapes/joinus-shape.svg');
 	text-align: center;
 	background-size: 100% auto;
-	padding-top: 135px;
+	padding: 135px 0 40px;
 	@include breakpoint(laptop) {
 		padding-top: 70px;
 	}

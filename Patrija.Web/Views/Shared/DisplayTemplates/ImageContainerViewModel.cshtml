@@ -11,9 +11,7 @@
                         @foreach (var image in Model.Images)
                         {
                             <div class="gallery__item">
-                                <a href="javascript:;">
-                                    <div class="gallery__image has-cover" style="background-image: url('@image.Url');"></div>
-                                </a>
+                                <div class="gallery__image has-cover" style="background-image: url('@image.Url');"></div>
                             </div>
                         }
                     </div>

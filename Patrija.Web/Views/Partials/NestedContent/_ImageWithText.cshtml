@@ -2,13 +2,13 @@
 @inherits UmbracoViewPage<ImageWithTextViewModel>
     
 <div class="image-text">
-	<div class="wrap wrap--medium">
-		<div class="image-text__container@(Model.ContentPosition == ContentPosition.Right ? "image-text__container--reverse" : string.Empty)">
-			<div class="image-text__image-outer">
-				<div class="image-text__image">
-					<div class="image-text__img has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
-				</div>
-			</div>
+    <div class="wrap wrap--medium">
+        <div class="image-text__container@(Model.ContentPosition == ContentPosition.Right ? "image-text__container--reverse" : string.Empty)">
+            <div class="image-text__image-outer">
+                <div class="image-text__image">
+                    <div class="image-text__img has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
+                </div>
+            </div>
             <div class="image-text__content">
                 @if (!string.IsNullOrWhiteSpace(Model.Title))
                 {
@@ -25,6 +25,6 @@
                 }
 
             </div>
-		</div>
-	</div>
+        </div>
+    </div>
 </div>
