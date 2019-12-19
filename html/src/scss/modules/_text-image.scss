@@ -2,7 +2,7 @@
 //------------------------------------------------------------------------------
 
 .text-image {
-	padding: 42px 0 164px;
+	padding: 42px 0 100px;
 	@include mq-down(md) {
 		padding-bottom: 80px;
 	}
