@@ -55,6 +55,10 @@ const peoplePopup = {
 
 	closePopup: function() {
 		$('.popup-overlay').stop().fadeOut(500).removeClass(this.popupOpenedClass);
+		$('.form__error-message').hide();
+		$('.form__input').each(function() {
+			$(this).val('');
+		});
 		scrollDisable.enableScroll();
 	}
 };
