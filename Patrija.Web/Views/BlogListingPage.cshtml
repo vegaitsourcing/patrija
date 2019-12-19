@@ -17,7 +17,9 @@
             {
                 
                 <div class="news-list__item">
-                    <div class="news-list__image has-cover" style="@if (blog.Image != null) {<text>background-image: url('@blog.Image.Url');</text>}"></div>
+                    <a href="@blog.Url">
+                        <div class="news-list__image has-cover" style="@if (blog.Image != null) {<text>background-image: url('@blog.Image.Url');</text>}"></div>
+                    </a>
                     <div class="news-list__meta">
                         <span class="news-list__date">@blog.Date.ToString("dd.MM.yyyy")</span>
                     </div>

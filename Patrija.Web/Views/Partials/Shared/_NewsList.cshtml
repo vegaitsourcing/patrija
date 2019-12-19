@@ -7,7 +7,9 @@
         <div class="news-list__container">
             @foreach(var article in Model.Articles) { 
             <div class="news-list__item">
-                <div class="news-list__image has-cover" style="background-image: url('@article.Image.Url');"></div>
+                <a href="@article.BlogPageUrl">
+                    <div class="news-list__image has-cover" style="background-image: url('@article.Image.Url');"></div>
+                </a>
                 <div class="news-list__meta">
                     <span class="news-list__date">@article.PublishDate.ToShortDateString()</span>
                 </div>

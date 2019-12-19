@@ -6,7 +6,9 @@
     if (article.BlogIntro != null)
     {
         <div class="news-list__item">
-            <div class="news-list__image has-cover" style="@if (article.BlogIntro.Image != null) {<text>background-image: url('@article.BlogIntro.Image.Url');</text>}"></div>
+            <a href="@article.Url">
+                <div class="news-list__image has-cover" style="@if (article.BlogIntro.Image != null) {<text>background-image: url('@article.BlogIntro.Image.Url');</text>}"></div>
+            </a>
             <div class="news-list__meta">
                 <span class="news-list__date">@article.BlogIntro.FormatedPublishDate</span>
             </div>

@@ -10,6 +10,9 @@
 		padding-bottom: 60px;
 		margin-bottom: 40px;
 	}
+	@include mq-down(md) {
+		margin-bottom: 10px;
+	}
 	@include mq-down(sm) {
 		padding-top: 20px;
 		padding-bottom: 40px;
