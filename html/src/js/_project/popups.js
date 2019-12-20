@@ -56,6 +56,7 @@ const peoplePopup = {
 	closePopup: function() {
 		$('.popup-overlay').stop().fadeOut(500).removeClass(this.popupOpenedClass);
 		$('.form__error-message').hide();
+		$('.form__message-success').hide();
 		$('.form__input').each(function() {
 			$(this).val('');
 		});
