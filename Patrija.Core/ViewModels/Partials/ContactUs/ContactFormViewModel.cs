@@ -19,7 +19,7 @@ namespace Patrija.Core.ViewModels.Partials.ContactUs
             EmailFieldText = form.ContactFormEmailFieldTitle;
             EmailFieldError = form.ContactFormEmailError;
             CommentFieldText = form.ContactFormCommentFieldTitle;
-            CommentFieldError = form.ContactFormCommentFieldTitle;
+            CommentFieldError = form.ContactFormCommentError;
             SubmitButtonText = form.ContactFormSubmitButtonTitle;
             SubmitButtonClass = Dictionaries.SupportContentBoxButtonType[form.ContactFormSubmitButtonColor];
             SuccessMessage = form.ContactFormSuccessMessage;
