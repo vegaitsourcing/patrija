@@ -124,13 +124,20 @@
 	margin-top: 50px;
 }
 
+.news-details__comments-title,
+.news-details__comments-text,
+.news-details__form-wrapper,
+.news-details__comments-heading,
+.comment-block {
+	max-width: 750px;
+}
+
 .news-details__comments-title {
 	margin-bottom: 8px;
 }
 
 .news-details__comments-text {
-	max-width: 675px;
-	margin: 0 auto 50px;
+	margin-bottom: 50px;
 }
 
 .news-details__form-wrapper {

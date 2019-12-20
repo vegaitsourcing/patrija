@@ -71,6 +71,9 @@
 	left: 0.5%;
 	width: 99%;
 	height: 99%;
+	@include mq-down(md) {
+		height: 98.5%;
+	}
 }
 
 .text-image__title {
