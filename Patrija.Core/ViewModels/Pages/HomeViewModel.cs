@@ -22,7 +22,8 @@ namespace Patrija.Core.ViewModels.Pages
                 ArticleContainer = GenerateArticleContainerViewModel(context, mostRecentBlogsRequest);
             }
 
-            Features = context.Home.Projects?.OfType<ProjectPage>().Select(f => new TaggedFeatureViewModel(f.PreviewInfo.FirstOrDefault(), f.Url)).ToArray()
+            Features = context.Home.Projects?.OfType<ProjectPage>().Where(f => f.PreviewInfo != null && f.PreviewInfo.FirstOrDefault() != null)
+                        .Select(f => new TaggedFeatureViewModel(f.PreviewInfo.FirstOrDefault(), f.Url)).ToArray()
                        ?? new TaggedFeatureViewModel[0];
 		    var linksList = context.Home.HomeFeaturedLinks;
 
