@@ -69,7 +69,7 @@ namespace Patrija.Models.Extensions
                 .Children
                 .OfType<BlogArticle>()
                 .Where(article => article.BlogArticlePageIntro != null && article.BlogArticlePageIntro.Any())
-                .OrderBy(article => article.CreateDate)
+                .OrderByDescending(article => article.Date)
                 .ToList();
 
         }

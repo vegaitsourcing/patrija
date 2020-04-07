@@ -16,9 +16,9 @@ namespace Patrija.Core.ViewModels.Pages
             PageIntro = pageIntro != null ? new PageIntroViewModel(pageIntro) : null;
 
             var featuredProjectsContainer = context.Page.CurrentProjects.FirstOrDefault();
-            CurrentProjects = context.Home.Projects?.OfType<ProjectPage>().Select(f => new TaggedFeatureViewModel(f.PreviewInfo.FirstOrDefault(), f.Url, true, true)).ToList()
+            CurrentProjects = context.Page.CurrentProjects?.OfType<ProjectPage>().Select(f => new TaggedFeatureViewModel(f.PreviewInfo.FirstOrDefault(), f.Url, true, true)).ToList()
                        ?? new List<TaggedFeatureViewModel>();
-            FinishedProjects = context.Home.Projects?.OfType<ProjectPage>().Select(f => new TaggedFeatureViewModel(f.PreviewInfo.FirstOrDefault(), f.Url, true, false)).ToList()
+            FinishedProjects = context.Page.FinishedProjects?.OfType<ProjectPage>().Select(f => new TaggedFeatureViewModel(f.PreviewInfo.FirstOrDefault(), f.Url, true, false)).ToList()
                       ?? new List<TaggedFeatureViewModel>();
 
             var imageWithText = context.Page.AboutUsPageImageWithText.FirstOrDefault();
