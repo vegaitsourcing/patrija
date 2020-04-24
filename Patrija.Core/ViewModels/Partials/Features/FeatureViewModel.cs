@@ -10,19 +10,23 @@ namespace Patrija.Core.ViewModels.Partials.Features
         {
             Title = feature.FeatureTitle;
             Text = feature.FeatureText;
-            ReadMore = new LinkViewModel(feature.FeatureReadMoreLink);
+            ReadMore = feature.FeatureReadMoreLink != null ? new LinkViewModel(feature.FeatureReadMoreLink) : default(LinkViewModel);
             ContentPosition = EnumMapper.MapContentPosition(feature.FeatureContentPosition);
-            Image = new ImageViewModel(feature.FeatureImage as Image);
+
+            Image = feature.FeatureImage != null
+                         ? new ImageViewModel(feature.FeatureImage as Image)
+                         : null;
+
             AdditionalImage = feature.FeatureAdditionalImage != null 
-                ? new ImageViewModel(feature.FeatureAdditionalImage as Image) 
-                : null;
+                         ? new ImageViewModel(feature.FeatureAdditionalImage as Image) 
+                         : null;
         }
         
         public string Title { get; }
         
         public string Text { get; }
         
-        public LinkViewModel ReadMore { get; }
+        public LinkViewModel ReadMore { get; set; }
         
         public ContentPosition ContentPosition { get; }
         

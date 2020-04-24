@@ -3,10 +3,20 @@
 
 <div class="text-block">
     <div class="wrap wrap--medium">
-        <h3 class="h3 text-block__title">@Model.Title</h3>
+        @if (!string.IsNullOrWhiteSpace(Model.Title))
+        {
+            <h3 class="h3 text-block__title">@Model.Title</h3>
+        }
         <div class="text-block__content">
-            <p class="text-block__text text-block__text--left">@Model.TextLeft</p>
-            <p class="text-block__text text-block__text--right">@Model.TextLeft</p>
+            @if (!string.IsNullOrWhiteSpace(Model.TextLeft))
+            {
+                <p class="text-block__text text-block__text--left">@Model.TextLeft</p>
+
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.TextRight))
+            {
+                <p class="text-block__text text-block__text--right">@Model.TextRight</p>
+            }
         </div>
     </div>
 </div>

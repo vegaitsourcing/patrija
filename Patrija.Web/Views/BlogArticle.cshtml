@@ -1,0 +1,11 @@
+﻿@inherits UmbracoViewPage<BlogPageViewModel>
+@{
+    if(Model.BlogIntro != null)
+    {
+        Html.RenderAction<NestedContentController>(c => nameof(c.BlogIntro), new { viewModel = Model.BlogIntro });
+    }
+    if (Model.ArticleContent != null)
+    {
+        Html.RenderAction<NestedContentController>(c => nameof(c.BlogArticleContent), new { viewModel = Model.ArticleContent });
+    }
+}

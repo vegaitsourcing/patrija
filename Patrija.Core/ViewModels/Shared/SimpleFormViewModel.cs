@@ -22,6 +22,18 @@ namespace Patrija.Core.ViewModels.Shared
             SuccessMessage = simpleForm.SimpleFormSuccessMessage.ToHtmlString();
         }
 
+        public SimpleFormViewModel()
+        {
+            NameFieldText = UmbracoDictionary.Blog.NameFieldText;
+            NameFieldError = UmbracoDictionary.Blog.NameFieldError;
+            EmailFieldText = UmbracoDictionary.Blog.EmailFieldText;
+            EmailFieldError = UmbracoDictionary.Blog.EmailFieldError;
+            CommentFieldText = UmbracoDictionary.Blog.CommentFieldText;
+            CommentFieldError = UmbracoDictionary.Blog.CommentFieldError;
+            SubmitButtonText = UmbracoDictionary.Blog.SubmitButton;
+            SuccessMessage = UmbracoDictionary.Blog.SuccessMessage;
+        }
+
         public string Title { get; }
         public string Text { get; }
         public string NameFieldText { get; }

@@ -1,5 +1,11 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Patrija.Models.Generated.ContactUs>
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContactUsViewModel>
 
-@{
-	Layout = null;
+@if (Model.MapInfo != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.ContactMap), new { viewModel = Model.MapInfo });
+}
+
+@if (Model.Form != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.ContactForm), new { viewModel = Model.Form });
 }

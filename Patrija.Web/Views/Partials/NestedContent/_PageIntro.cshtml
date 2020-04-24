@@ -2,21 +2,57 @@
 @using Patrija.Web.DisplayHelpers
 @inherits UmbracoViewPage<PageIntroViewModel>
 
-<div class="page-intro">
-	<div class="wrap wrap--medium">
-		<div class="page-intro__container">
-			<div class="page-intro__content">
-				<div class="page-intro__content-align">
-					<h1 class="h2 page-intro__title">@Model.Title</h1>
-					<p class="page-intro__text">@Model.Text</p>
-				</div>
-			</div>
-			<div class="page-intro__image @(Dictionaries.ShapeVariantMap[Model.ShapeVariant])">
-				<div class="page-intro__img has-cover" style="background-image: url('@Model.Image.Url');"></div>
-				<span class="circle circle--blue circle--large"></span>
-				<span class="circle circle--mint"></span>
-			</div>
-		</div>
-	</div>
-</div>
+
+@if (string.Equals(Model.ShapeVariant, ShapeVariant.First))
+{
+    <div class="home-intro">
+        <div class="wrap home-intro__wrap">
+            @if (!string.IsNullOrWhiteSpace(Model.Title))
+            {
+                <p class="home-intro__text">@Model.Title</p>
+            }
+            @if (Model.Link != null)
+            {
+                @Html.Partial("Link", Model.Link, new ViewDataDictionary() { { "className", "btn" } })
+            }
+        </div>
+        <div class="home-intro__image-outer">
+            <div class="home-intro__image">
+                <div class="homepage-intro__img has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
+                <span class="home-intro__circle home-intro__circle--blue"></span>
+                <span class="home-intro__circle home-intro__circle--mint"></span>
+                <span class="home-intro__circle home-intro__circle--grey"></span>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="page-intro">
+        <div class="wrap wrap--medium">
+            <div class="page-intro__container">
+                <div class="page-intro__content">
+                    <div class="page-intro__content-align">
+                        @if (!string.IsNullOrWhiteSpace(Model.Title))
+                        {
+                            <h1 class="h2 page-intro__title">@Model.Title</h1>
+                        }
+                        @if (!string.IsNullOrWhiteSpace(Model.Text))
+                        {
+                            <p class="page-intro__text">@Model.Text</p>
+                        }
+                    </div>
+                </div>
+
+                <div class="page-intro__image-outer">
+                    <div class="page-intro__image page-intro__image--@(Dictionaries.ShapeVariantMap[Model.ShapeVariant])">
+                        <div class="page-intro__img has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
+                        <span class="circle circle--blue circle--large"></span>
+                        <span class="circle circle--mint"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
 

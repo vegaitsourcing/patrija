@@ -50,7 +50,7 @@ namespace Patrija.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("faqItemAnswerText")]
-		public string FaqItemAnswerText => this.Value<string>("faqItemAnswerText");
+		public IHtmlString FaqItemAnswerText => this.Value<IHtmlString>("faqItemAnswerText");
 
 		///<summary>
 		/// Question Text

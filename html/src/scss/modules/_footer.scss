@@ -4,6 +4,16 @@
 	background-image: url('../assets/images/shapes/footer-shape.svg');
 	color: $white;
 	padding: 194px 0 52px;
+	@include breakpoint(laptop) {
+		padding: 130px 0 32px;
+	}
+	@include mq-only(md) {
+		padding: 130px 0 32px;
+	}
+	@include mq-down(sm) {
+		padding-top: 130px;
+		padding-bottom: 30px;
+	}
 }
 
 .footer__container {
@@ -12,10 +22,24 @@
 	justify-content: space-between;
 	padding-right: 96px;
 	margin-bottom: 50px;
+	@include breakpoint(laptop) {
+		padding-right: 0;
+	}
+	@include mq-only(md) {
+		padding-right: 0;
+	}
+	@include mq-down(sm) {
+		padding-right: 0;
+		display: block;
+	}
 }
 
 .footer__logo {
 	padding: 10px 0;
+	@include mq-only(md) {
+		flex: 1 1 50%;
+		max-width: 50%;
+	}
 }
 
 .footer__logo-image {
@@ -37,11 +61,19 @@
 
 .footer__links {
 	margin-bottom: 20px;
+	@include mq-only(md) {
+		flex: 1 1 50%;
+		max-width: 50%;
+	}
 }
 
 .footer__links-list {
 	column-count: 3;
 	column-gap: 30px;
+	@include mq-down(md) {
+		column-count: 2;
+		column-gap: 20px;
+	}
 }
 
 .footer__links-link {
@@ -69,6 +101,9 @@
 		&::before {
 			transform: translateX(-15px) scale(1);
 		}
+	}
+	@include mq-down(sm) {
+		font-size: 14px;
 	}
 }
 

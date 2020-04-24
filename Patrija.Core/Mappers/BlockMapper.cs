@@ -10,11 +10,16 @@ namespace Patrija.Core.Mappers
 {
     public static class BlockMapper
     {
+        private const string _testimonialsContainerBackgroundImageUrl = "/assets/images/shapes/testimonials-bg.svg";
+
         private static readonly Dictionary<Type, Func<IPublishedElement, object>> _contentMappers =
             new Dictionary<Type, Func<IPublishedElement, object>>()
             {
                 {
                     typeof(JoinUs), el => new JoinUsViewModel((JoinUs)el)
+                },
+                {
+                    typeof(ImageWithTextProjectPage), el => new ImageWithTextProjectPageViewModel((ImageWithTextProjectPage)el)
                 },
                 {
                     typeof(ImageWithText), el => new ImageWithTextViewModel((ImageWithText)el)
@@ -26,7 +31,7 @@ namespace Patrija.Core.Mappers
                     typeof(TextBlock), el => new TextBlockViewModel((TextBlock)el)
                 },
                 {
-                    typeof(TestimonialsContainer), el => new TestimonialsContainerViewModel((TestimonialsContainer)el, "")
+                    typeof(TestimonialsContainer), el => new TestimonialsContainerViewModel((TestimonialsContainer)el, _testimonialsContainerBackgroundImageUrl)
                 },
                 {
                     typeof(UntaggedFeature), el => new UntaggedFeatureViewModel((UntaggedFeature)el)
@@ -36,6 +41,9 @@ namespace Patrija.Core.Mappers
                 },
                 {
                     typeof(SimpleFormContent), el => new SimpleFormViewModel((SimpleFormContent)el)
+                },
+                {
+                    typeof(ImageTextLink), el => new ImageTextLinkViewModel((ImageTextLink)el)
                 }
             };
 

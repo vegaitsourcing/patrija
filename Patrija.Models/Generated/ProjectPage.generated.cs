@@ -46,6 +46,13 @@ namespace Patrija.Models.Generated
 		// properties
 
 		///<summary>
+		/// Preview Info: //this info will be shown when the page is picked from the other page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("previewInfo")]
+		public IEnumerable<TaggedFeature> PreviewInfo => this.Value<IEnumerable<TaggedFeature>>("previewInfo");
+
+		///<summary>
 		/// Blocks: Blocks presenting content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
@@ -58,6 +65,13 @@ namespace Patrija.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("projectPageIntro")]
 		public PageIntro ProjectPageIntro => this.Value<PageIntro>("projectPageIntro");
+
+		///<summary>
+		/// Show Green Shape: if false, the dot will be shown
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("showGreenShape")]
+		public bool ShowGreenShape => this.Value<bool>("showGreenShape");
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).
@@ -128,6 +142,13 @@ namespace Patrija.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("seoTitle")]
 		public string SeoTitle => Page.GetSeoTitle(this);
+
+		///<summary>
+		/// Show Join Us Module
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("showJoinUsModule")]
+		public bool ShowJoinUsModule => Page.GetShowJoinUsModule(this);
 
 		///<summary>
 		/// Sitemap Change Frequency: The expected change frequency of the page, associated with the sitemap used by search engines.

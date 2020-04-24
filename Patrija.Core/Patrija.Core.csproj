@@ -264,26 +264,45 @@
     <Compile Include="Attributes\ExternalRedirectAttribute.cs" />
     <Compile Include="Components\ApplicationConfigurationComponent.cs" />
     <Compile Include="Composers\SearchComposer.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Contexts\IPageContext.cs" />
     <Compile Include="Contexts\ISeoContext.cs" />
     <Compile Include="Contexts\ISiteContext.cs" />
     <Compile Include="Contexts\PageContext.cs" />
     <Compile Include="Contexts\SeoContext.cs" />
     <Compile Include="Contexts\SiteContext.cs" />
+    <Compile Include="Controllers\RenderMvc\BlogArticleController.cs" />
     <Compile Include="Controllers\RenderMvc\AboutUsPageController.cs" />
     <Compile Include="Controllers\RenderMvc\BasePageController.cs" />
+    <Compile Include="Controllers\RenderMvc\ContactUsController.cs" />
+    <Compile Include="Controllers\RenderMvc\BlogListingPageController.cs" />
+    <Compile Include="Controllers\RenderMvc\EnglishPageController.cs" />
     <Compile Include="Controllers\RenderMvc\Error404Controller.cs" />
     <Compile Include="Controllers\RenderMvc\HomeController.cs" />
+    <Compile Include="Controllers\RenderMvc\NewsController.cs" />
+    <Compile Include="Controllers\RenderMvc\JoinUsPageController.cs" />
     <Compile Include="Controllers\RenderMvc\ProjectPageController.cs" />
     <Compile Include="Controllers\RenderMvc\SearchResultsController.cs" />
     <Compile Include="Controllers\RenderMvc\SupportUsController.cs" />
     <Compile Include="Controllers\RenderMvc\XMLSitemapController.cs" />
     <Compile Include="Controllers\Surface\BaseSurfaceController.cs" />
+    <Compile Include="Controllers\Surface\Partials\BlogCommentsSurfaceController.cs" />
     <Compile Include="Controllers\Surface\Partials\ContainerController.cs" />
     <Compile Include="Controllers\Surface\Partials\LayoutController.cs" />
+    <Compile Include="Controllers\Surface\Partials\ListingController.cs" />
     <Compile Include="Controllers\Surface\Partials\NestedContentController.cs" />
     <Compile Include="Controllers\Surface\Partials\SearchListingController.cs" />
+    <Compile Include="Controllers\Surface\Partials\SharedController.cs" />
+    <Compile Include="Extensions\UrlHelperExtensions.cs" />
+    <Compile Include="ViewModels\Pages\BlogListingPageViewModel.cs" />
+    <Compile Include="ViewModels\Pages\EnglishPageViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Blog\BlogArticlePreviewViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Blog\BlogWidgetsViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Features\ImagTextLinkViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Features\ImageWithTextProjectPageViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Share\ShareViewModel.cs" />
     <Compile Include="Controllers\Surface\Partials\SimpleFormSurfaceController.cs" />
+    <Compile Include="Dtos\CommentDto.cs" />
     <Compile Include="Dtos\SimpleFormDto.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\HttpContextExtensions.cs" />
@@ -311,6 +330,9 @@
     <Compile Include="ViewModels\Pages\ContactUsViewModel.cs" />
     <Compile Include="ViewModels\Pages\Error404ViewModel.cs" />
     <Compile Include="ViewModels\Pages\HomeViewModel.cs" />
+    <Compile Include="ViewModels\Pages\NewsViewModel.cs" />
+    <Compile Include="ViewModels\Pages\BlogPageViewModel.cs" />
+    <Compile Include="ViewModels\Pages\JoinUsPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\PageViewModel.cs" />
     <Compile Include="ViewModels\Pages\ProjectPageViewModel.cs" />
     <Compile Include="ViewModels\Pages\SearchResultsViewModel.cs" />
@@ -319,8 +341,11 @@
     <Compile Include="ViewModels\Partials\AboutUsPage\FeaturedProjectsContainerViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\PageIntroViewModel.cs" />
     <Compile Include="ViewModels\Partials\AboutUsPage\ShapeVariant.cs" />
+    <Compile Include="ViewModels\Partials\ContactUs\ContactFormViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Blog\ArticleContentViewModel.cs" />
     <Compile Include="ViewModels\Partials\ContactUs\ContactMapViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\DonationsViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Features\UntaggedFeatureViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\ImageWithTextViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\SupportContentBoxButtonType.cs" />
     <Compile Include="ViewModels\Partials\Features\TextBlockViewModel.cs" />
@@ -329,24 +354,33 @@
     <Compile Include="ViewModels\Partials\Features\FeatureViewModel.cs" />
     <Compile Include="ViewModels\Partials\Features\TaggedFeatureViewModel.cs" />
     <Compile Include="ViewModels\Partials\Home\AboutUsViewModel.cs" />
-    <Compile Include="ViewModels\Partials\Home\HomeIntroViewModel.cs" />
     <Compile Include="ViewModels\Partials\Home\LinksListViewModel.cs" />
     <Compile Include="ViewModels\Partials\Home\SupportComboBoxViewModel.cs" />
+    <Compile Include="ViewModels\Partials\JoinUs\JoinUsFormViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\FooterViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\HeaderViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\MetaTagsViewModel.cs" />
     <Compile Include="ViewModels\Partials\Listing\ListingViewModel.cs" />
     <Compile Include="ViewModels\Partials\Listing\PaginationViewModel.cs" />
     <Compile Include="ViewModels\Partials\Listing\SearchResultsItemViewModel.cs" />
+    <Compile Include="ViewModels\Partials\News\DisplayVariant.cs" />
     <Compile Include="ViewModels\Partials\SupportUs\FaqContainerViewModel.cs" />
     <Compile Include="ViewModels\Partials\SupportUs\FaqViewModel.cs" />
     <Compile Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\ArticleContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\ArticleViewModel.cs" />
+    <Compile Include="ViewModels\Shared\CommentsBlockViewModel.cs" />
+    <Compile Include="ViewModels\Shared\CommentViewModel.cs" />
+    <Compile Include="ViewModels\Shared\BlogCategoryViewModel.cs" />
+    <Compile Include="ViewModels\Shared\BlogIntroViewModel.cs" />
+    <Compile Include="ViewModels\Shared\FormWithoutDescriptionViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageViewModel.cs" />
     <Compile Include="ViewModels\Shared\JoinUsViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />
+    <Compile Include="ViewModels\Shared\NewsBlogBlockPreviewViewModel.cs" />
+    <Compile Include="ViewModels\Shared\NewsBlogBlockViewModel.cs" />
+    <Compile Include="ViewModels\Shared\NewsListViewModel.cs" />
     <Compile Include="ViewModels\Shared\SimpleFormViewModel.cs" />
     <Compile Include="ViewModels\Shared\TestimonialsContainerViewModel.cs" />
     <Compile Include="ViewModels\Shared\TestimonialViewModels.cs" />
@@ -369,7 +403,9 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\Additional\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Umbraco.SqlServerCE.4.0.0.1\build\Umbraco.SqlServerCE.targets" Condition="Exists('..\packages\Umbraco.SqlServerCE.4.0.0.1\build\Umbraco.SqlServerCE.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

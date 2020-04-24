@@ -1,0 +1,46 @@
+﻿@model Patrija.Core.ViewModels.Shared.NewsBlogBlockViewModel
+
+<div class="news-list">
+    <div class="wrap wrap--normal">
+        <h2 class="h2 news-list__title">@Model.BlogCategoryName</h2>
+        @if (Model.ThreeColumnArticles.Any())
+        {
+            <div class="news-list__container js-three_column_article_container" data-on-load-number="@Model.NumberOfThreeColumnArticlesOnLoad">
+                @foreach (var article in Model.ThreeColumnArticles)
+                {
+                    if (article.BlogIntro != null)
+                    {
+                        <div class="news-list__item">
+                            <a href="@article.Url">
+                                <div class="news-list__image has-cover" style="@if (article.BlogIntro.Image != null) {<text>background-image: url('@article.BlogIntro.Image.Url');</text>}"></div>
+                            </a>
+                            <div class="news-list__meta">
+                                <span class="news-list__date">@article.BlogIntro.FormatedPublishDate</span>
+                            </div>
+                            @if (!string.IsNullOrWhiteSpace(article.BlogIntro.Title))
+                            {
+                                <h4 class="h6 news-list__item-title">
+                                    <a href="@article.Url">@article.BlogIntro.Title </a>
+                                </h4>
+                            }
+                            @if (!string.IsNullOrWhiteSpace(article.BlogIntro.PreviewText))
+                            {
+                                <p class="news-list__text">
+                                    @Html.Raw(article.BlogIntro.PreviewText))
+                                </p>
+                            }
+                        </div>
+                    }
+                }
+
+            </div>
+        }
+        @if (Model.TotalNumberOfExistingArticles > Model.NumberOfThreeColumnArticlesOnLoad)
+        {
+            <div class="news-list__buttons">
+                <button class="btn btn--mint news-list__load-more js-load-btn" type="button">@UmbracoDictionary.News.LoadMoreButton</button>
+            </div>
+        }
+    </div>
+
+</div>

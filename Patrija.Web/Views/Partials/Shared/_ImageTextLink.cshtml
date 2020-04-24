@@ -1,0 +1,31 @@
+﻿@using Patrija.Core.ViewModels.Partials.Features
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<ImageTextLinkViewModel>
+
+
+<div class="image-text">
+    <div class="wrap wrap--medium">
+        <div class="image-text__container image-text__container--reverse">
+            <div class="image-text__image-outer">
+                <div class="image-text__image">
+                    <div class="image-text__img has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
+                </div>
+            </div>
+            <div class="image-text__content">
+                @if (!string.IsNullOrWhiteSpace(Model.Title))
+                {
+                    <h2 class="h2 image-text__title">
+                        @Model.Title
+                    </h2>
+                }
+                @if (!string.IsNullOrWhiteSpace(Model.Text))
+                {
+                    <p class="text-image__text">@Model.Text</p>
+                }
+                @if (Model.Link != null)
+                {
+                    <a class="btn" href="@Model.Link.Url" target="@Model.Link.Target">@Model.Link.Content</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>

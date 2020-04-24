@@ -1,5 +1,4 @@
 using Patrija.Core.Mappers;
-using Patrija.Core.ViewModels.Partials.Features;
 using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
 
@@ -11,8 +10,8 @@ namespace Patrija.Core.ViewModels.Partials.Features
         {
             Title = imageWithText.ImageWithTextTitle;
             Text = imageWithText.ImageWithTextText;
-            ReadMore = new LinkViewModel(imageWithText.ImageWithTextReadMore);
-            Image = new ImageViewModel(imageWithText.ImageWithTextImage as Image);
+            ReadMore = imageWithText.ImageWithTextReadMore != null ? new LinkViewModel(imageWithText.ImageWithTextReadMore) : default(LinkViewModel);
+            Image = imageWithText.ImageWithTextImage != null ? new ImageViewModel(imageWithText.ImageWithTextImage as Image) : default(ImageViewModel);
             ContentPosition = EnumMapper.MapContentPosition(imageWithText.ImageWithTextContentPosition);
         }
         

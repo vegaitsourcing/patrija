@@ -1,10 +1,10 @@
-<div class="join-module has-cover ">
+<div class="join-module has-cover">
 	<div class="wrap wrap--small">
 		<div class="join-module__container">
 			<h2 class="h2 join-module__title">{{title}}</h2>
 			<p class="join-module__info">{{text}}</p>
 			<div class="join-module__links">
-				<button type="button" class="btn btn--small join-module__btn js-user-popup">{{btnTextFirst}}</button>
+				<button type="button" class="btn btn--small join-module__btn js-member-popup">{{btnTextFirst}}</button>
 				<button type="button" class="btn btn--small btn--mint join-module__btn js-volunteer-popup">{{btnTextSecond}}</button>
 			</div>
 			<div class="join-module__images">
@@ -12,6 +12,86 @@
 				<div class="join-module__image join-module__image--right"><img src="{{imageRight}}" alt=""></div>
 				<div class="join-module__image join-module__image--bottom"><img src="{{imageBottom}}" alt=""></div>
 				<div class="join-module__image join-module__image--left"><img src="{{imageLeft}}" alt=""></div>
+			</div>
+		</div>
+	</div>
+	<div class="popup-overlay volunteer-popup">
+		<div class="popup">
+			<button class="popup__close-btn js-close-popup" type="button">
+				<span class="sr-only">{{closePopup}}</span>
+			</button>
+			<div class="popup-form__container">
+				<div class="popup-form__column">
+					<h3 class="h3 popup-form__title">{{volunteerTitle}}</h3>
+					<form action="" method="post" class="form">
+						<div class="form__row">
+							<label class="form__label" for="v-name">{{labelName}}</label>
+							<input class="form__input" type="text" id="v-name" name="v-name">
+							<span class="form__error-message">{{errorMessage}}</span>
+						</div>
+						<div class="form__row">
+							<label class="form__label" for="v-email">{{labelEmail}}</label>
+							<input class="form__input" type="email" id="v-email" name="v-email">
+							<span class="form__error-message">{{errorMessage}}</span>
+						</div>
+						<div class="form__row">
+							<label class="form__label" for="v-message">{{labelMessage}}</label>
+							<textarea class="form__input form__input--textarea" id="v-message" name="v-message"></textarea>
+							<span class="form__error-message">{{errorMessage}}</span>
+						</div>
+						<div class="form__row">
+							<button class="btn btn--mint btn--submit" type="submit">{{volunteerSubmitBtn}}</button>
+						</div>
+						<span class="form__message-success">{{successMesage}}</span>
+					</form>
+				</div>
+				<div class="popup__image-outer">
+					<div class="popup__image">
+						<div class="popup__image-img has-cover" style="background-image: url('{{volunteerImage}}');"></div>
+						<span class="circle circle--blue"></span>
+						<span class="circle circle--mint circle--small"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup-overlay member-popup">
+		<div class="popup">
+			<button class="popup__close-btn js-close-popup" type="button">
+				<span class="sr-only">{{closePopup}}</span>
+			</button>
+			<div class="popup-form__container">
+				<div class="popup-form__column">
+					<h3 class="h3 popup-form__title">{{memberTitle}}</h3>
+					<form action="" method="post" class="form">
+						<div class="form__row">
+							<label class="form__label" for="m-name">{{labelName}}</label>
+							<input class="form__input" type="text" id="m-name" name="m-name">
+							<span class="form__error-message">{{errorMessage}}</span>
+						</div>
+						<div class="form__row">
+							<label class="form__label" for="m-email">{{labelEmail}}</label>
+							<input class="form__input" type="email" id="m-email" name="m-email">
+							<span class="form__error-message">{{errorMessage}}</span>
+						</div>
+						<div class="form__row">
+							<label class="form__label" for="m-message">{{labelMessage}}</label>
+							<textarea class="form__input form__input--textarea" id="m-message" name="m-message"></textarea>
+							<span class="form__error-message">{{errorMessage}}</span>
+						</div>
+						<div class="form__row">
+							<button class="btn btn--blue btn--submit" type="submit">{{memberSubmitBtn}}</button>
+						</div>
+						<span class="form__message-success">{{successMesage}}</span>
+					</form>
+				</div>
+				<div class="popup__image-outer">
+					<div class="popup__image">
+						<div class="popup__image-img has-cover" style="background-image: url('{{memberImage}}');"></div>
+						<span class="circle circle--blue"></span>
+						<span class="circle circle--mint circle--small"></span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

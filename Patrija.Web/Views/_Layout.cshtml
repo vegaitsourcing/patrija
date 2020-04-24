@@ -15,8 +15,10 @@
     }
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
-    @Styles.Render("~/css/style.min.css")
-    @Scripts.Render("~/js/global.min.js")
+    @Styles.Render("~/bundles-css/")
+
+    @RazorHelper.RenderScripts(true, "~/bundles-js/")
+
 </head>
 <body>
 @{
@@ -24,6 +26,10 @@
 }
 <main class="main">
 	@RenderBody()
+    @if (Model.ShowJoinUsModule && Model.JoinUs != null)
+    {
+        Html.RenderAction<NestedContentController>(c => nameof(c.JoinUs), new { viewModel = Model.JoinUs });
+    }
 </main>
 @{
 	Html.RenderAction<LayoutController>(c => nameof(c.Footer), new { viewModel = Model.Footer });

@@ -1,3 +1,23 @@
 {
-	"title": "This is Title"
+	"title": "Aktuelnosti",
+	"loadMore": "Učitaj sve",
+	"largeImage": "assets/images/content/rte-image.jpg",
+	"largeTitle": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut.",
+	"blogItems": [
+		{
+			"image": "assets/images/content/news-01.jpg",
+			"date": "10.09.2019",
+			"titleText": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut."
+		},
+		{
+			"image": "assets/images/content/news-02.jpg",
+			"date": "10.09.2019",
+			"titleText": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut."
+		},
+		{
+			"image": "assets/images/content/news-03.jpg",
+			"date": "10.09.2019",
+			"titleText": "Lorem ipsum dolor amet vinyl subway tile etsy PBR&B cred, hoodie cronut."
+		}
+	]
 }

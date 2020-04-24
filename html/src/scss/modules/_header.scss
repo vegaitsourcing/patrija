@@ -3,6 +3,7 @@
 .header {
 	padding-top: 56px;
 	padding-bottom: 20px;
+	z-index: 1000;
 	@include breakpoint(laptop) {
 		padding-top: 20px;
 		position: relative;
@@ -10,35 +11,92 @@
 			padding: 0 20px;
 		}
 	}
-	@include mq-between(md, lg) {
-		padding-top: 20px;
+	@include mq-only(lg) {
+		.wrap {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+	@include mq-down(lg) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 20px 0;
+		background-color: $white;
+	}
+	@include mq-down(sm) {
+		padding: 10px 0;
 	}
 }
+
 .header__container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-.header__logo {
-	width: 290px;
-	@include breakpoint(laptop) {
-		width: 220px;
+	@include mq-up(xl) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 }
+
+.header__logo {
+	max-width: 290px;
+	display: block;
+	img {
+		max-height: 80px;
+	}
+	@include breakpoint(laptop) {
+		max-width: 220px;
+	}
+	@include mq-down(md) {
+		max-width: 200px;
+	}
+}
+
 .nav {
 	vertical-align: middle;
 	display: inline-block;
+	@include mq-down(lg) {
+		position: fixed;
+		top: 100px;
+		left: 110%;
+		width: 100%;
+		height: 100%;
+		background-color: $white;
+		overflow: hidden;
+		z-index: 20;
+		.loaded & {
+			transition: $duration $ease;
+		}
+	}
+	@include mq-down(sm) {
+		top: 75px;
+	}
 }
+
+.nav--opened {
+	left: 0;
+}
+
 .nav__list {
 	display: flex;
 	padding-right: 12px;
+	@include mq-down(lg) {
+		padding: 30px 20px;
+		display: block;
+	}
 }
+
 .nav__item {
 	margin: 0 10px;
 	@include breakpoint(laptop) {
 		margin: 0 6px;
 	}
+	@include mq-down(lg) {
+		border-bottom: 1px solid $blue;
+		margin: 0;
+	}
 }
+
 .nav__link {
 	position: relative;
 	font-size: 16px;
@@ -68,31 +126,94 @@
 	@include breakpoint(laptop) {
 		font-size: 14px;
 	}
-}
-.nav__link--active {
-	&::before {
-		content: '';
-		position: absolute;
-		bottom: -10px;
-		left: 50%;
-		width: 6px;
-		height: 6px;
-		margin-left: -3px;
-		border-radius: 50%;
-		background-color: $mint;
+	@include mq-down(lg) {
+		padding: 14px 20px;
 	}
 }
+
+.nav__link--active {
+	@include mq-up(xl) {
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: -10px;
+			left: 50%;
+			width: 6px;
+			height: 6px;
+			margin-left: -3px;
+			border-radius: 50%;
+			background-color: $mint;
+		}
+	}
+}
+
 .header__join-btn {
 	vertical-align: middle;
 	@include breakpoint(laptop) {
+		display: none;
+	}
+	@include mq-down(lg) {
 		position: absolute;
-		right: 20px;
-		top: 32px;
-		font-size: 14px;
-		padding: 8px 12px;
-		min-width: 150px;
+		top: 30px;
+		right: 100px;
+		display: block;
+	}
+	@include mq-down(sm) {
+		display: none;
 	}
 }
+
 .nav-toggle {
+	position: absolute;
+	top: 36px;
+	right: 36px;
+	width: 32px;
+	height: 32px;
 	display: none;
+	@include mq-down(lg) {
+		display: block;
+	}
+	@include mq-down(sm) {
+		top: 22px;
+		right: 20px;
+	}
+}
+.nav-toggle--opened {
+	.nav-toggle__line {
+		width: 32px;
+		margin-top: -2px;
+	}
+	.nav-toggle__line--top {
+		transform: rotate(-45deg);
+	}
+	.nav-toggle__line--middle {
+		width: 0;
+	}
+	.nav-toggle__line--bottom {
+		transform: rotate(45deg);
+	}
+}
+
+.nav-toggle__line {
+	width: 100%;
+	height: 3px;
+	background-color: $blue;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	.loaded & {
+		transition: $duration $ease;
+	}
+}
+
+.nav-toggle__line--top {
+	margin-top: -13px;
+}
+
+.nav-toggle__line--middle {
+	margin-top: -2px;
+}
+
+.nav-toggle__line--bottom {
+	margin-top: 9px;
 }

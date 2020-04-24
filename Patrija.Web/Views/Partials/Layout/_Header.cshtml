@@ -4,30 +4,33 @@
 <header class="header">
     <div class="wrap">
         <div class="header__container">
-            <a href="@Model.LogoUrl" class="header__logo">
-                <img src="@Model.Logo.Url" alt="@Model.Logo.AlternateText">
-            </a>
+            @if (Model.Logo != null)
+            {
+                <a href="@Model.LogoUrl" class="header__logo">
+                    <img src="@Model.Logo.Url" alt="@Model.Logo.AlternateText">
+                </a>
+            }
             <div class="navigation">
                 @if (Model.MenuItems?.Length > 0)
                 {
-                    <nav class="nav">
+                    <nav class="nav js-nav">
                         <ul class="nav__list" role="menubar">
 
                             @for (var i = 0; i < Model.MenuItems.Length; i++)
                             {
                                 <li class="nav__item" role="menuitem">
-		                            @Html.Partial("Link", Model.MenuItems[i], new ViewDataDictionary() { { "className", $"nav__link {(Model.MenuItems[i].IsActive ? "nav__link--active" : string.Empty)}" } })
+                                    @Html.Partial("Link", Model.MenuItems[i], new ViewDataDictionary() { { "className", $"nav__link {(Model.MenuItems[i].IsActive ? "nav__link--active" : string.Empty)}" } })
                                 </li>
                             }
                         </ul>
                     </nav>
                 }
-		        @Html.Partial("Link", Model.JoinUsLink, new ViewDataDictionary() { { "className", "btn btn--mint header__join-btn" } })
-                <button class="nav-toggle" type="button">
+                @Html.Partial("Link", Model.JoinUsLink, new ViewDataDictionary() { { "className", "btn btn--mint header__join-btn" } })
+                <button class="nav-toggle js-nav-toggle" type="button">
                     <span class="nav-toggle__line nav-toggle__line--top"></span>
                     <span class="nav-toggle__line nav-toggle__line--middle"></span>
                     <span class="nav-toggle__line nav-toggle__line--bottom"></span>
-                    @*<span class="sr-only">{{navToggle}}</span>*@
+                    <span class="sr-only">sr-only text</span>
                 </button>
             </div>
         </div>

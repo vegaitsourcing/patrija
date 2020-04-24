@@ -1,6 +1,7 @@
 using System;
 using Patrija.Core.ViewModels.Partials.AboutUsPage;
 using Patrija.Core.ViewModels.Partials.Features;
+using Patrija.Core.ViewModels.Partials.News;
 
 namespace Patrija.Core.Mappers
 {
@@ -15,7 +16,7 @@ namespace Patrija.Core.Mappers
                 case "Right":
                     return ContentPosition.Right;
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(contentPosition));
+                    return ContentPosition.Left;
             }
         }
 
@@ -31,6 +32,21 @@ namespace Patrija.Core.Mappers
                     return ShapeVariant.Fourth;
                 default:
                     return ShapeVariant.First;
+            }
+        }
+
+        public static DisplayVariant MapDisplayVariant(string displayVariant)
+        {
+            switch (displayVariant)
+            {
+                case "Latest Article in Focus":
+                    return DisplayVariant.LatestArticleInFocus;
+                case "2 x 3":
+                    return DisplayVariant.TwoColumnThreeRows;
+                case "3 x 2":
+                    return DisplayVariant.ThreeColumnTwoRows;
+                default:
+                    return DisplayVariant.LatestArticleInFocus;
             }
         }
     }

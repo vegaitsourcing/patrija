@@ -1,0 +1,47 @@
+﻿@using Patrija.Core.ViewModels.Partials.JoinUs;
+
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<JoinUsFormViewModel>
+
+<div class="popup-overlay @(Model.IsVolunteer? "volunteer" : "member" )-popup">
+    <div class="popup">
+        <button class="popup__close-btn js-close-popup" type="button">
+            <span class="sr-only">@UmbracoDictionary.ScreenReaders.BtnClose</span>
+        </button>
+        <div class="popup-form__container">
+            <div class="popup-form__column">
+                @if (!string.IsNullOrWhiteSpace(Model.Title))
+                {
+                    <h3 class="h3 popup-form__title">@Model.Title</h3>
+                }
+                <form action="" method="post" class="form" id="@(Model.IsVolunteer ? "vol-form" : "member-form")">
+                    <div class="form__row">
+                        <label class="form__label" for="@(Model.IsVolunteer? "v":"m")-name">@Model.NameFieldText</label>
+                        <input class="form__input" type="text" id="@(Model.IsVolunteer? "v":"m")-name" name="name">
+                        <span class="form__error-message" data-for="name">@Model.NameFieldError</span>
+                    </div>
+                    <div class="form__row">
+                        <label class="form__label" for="@(Model.IsVolunteer? "v":"m")-email">@Model.EmailFieldText</label>
+                        <input class="form__input" type="email" id="@(Model.IsVolunteer? "v":"m")-email" name="email">
+                        <span class="form__error-message" data-for="email">@Model.EmailFieldError</span>
+                    </div>
+                    <div class="form__row">
+                        <label class="form__label" for="@(Model.IsVolunteer? "v":"m")-message">@Model.CommentFieldText</label>
+                        <textarea class="form__input form__input--textarea" id="@(Model.IsVolunteer? "v":"m")-message" name="message"></textarea>
+                        <span class="form__error-message" data-for="message">@Model.CommentFieldError</span>
+                    </div>
+                    <div class="form__row">
+                        <button class="btn @Model.SubmitButtonClass btn--submit" type="button">@Model.SubmitButtonText</button>
+                    </div>
+                    <span class="form__message-success">@Model.SuccessMessage</span>
+                </form>
+            </div>
+            <div class="popup__image-outer">
+                <div class="popup__image">
+                    <div class="popup__image-img has-cover" style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
+                    <span class="circle circle--blue"></span>
+                    <span class="circle circle--mint circle--small"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

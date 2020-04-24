@@ -1,7 +1,7 @@
 ﻿@model Patrija.Core.ViewModels.Shared.ArticleViewModel
 
 <div class="news-slider__item">
-    <div class="news-slider__image has-cover" style="background-image: url('@Model.Image.Url');"></div>
+    <div class="news-slider__image has-cover"  style="@if (Model.Image != null) {<text>background-image: url('@Model.Image.Url');</text>}"></div>
     @if (Model.HasMetadata)
     {
         <div class="news-slider__meta">
@@ -9,9 +9,9 @@
             {
                 <span class="news-slider__category">@Model.Category</span>
             }
-            @if (Model.PublishDate != null)
+            @if (Model.Date != null)
             {
-                <span class="news-slider__date">@Html.DisplayFor(model => model.PublishDate, "FormattedDate")</span>
+                <span class="news-slider__date">@Html.DisplayFor(model => model.Date, "FormattedDate")</span>
             }
         </div>
     }

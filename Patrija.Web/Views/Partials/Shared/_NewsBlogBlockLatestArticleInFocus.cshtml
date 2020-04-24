@@ -1,0 +1,59 @@
+﻿@model Patrija.Core.ViewModels.Shared.NewsBlogBlockViewModel
+
+<div class="featured-news">
+    <div class="wrap wrap--normal">
+        <h2 class="h2 featured-news__title">@Model.BlogCategoryName</h2>
+        <div class="featured-news__container">
+            @if (Model.FeatureArticle != null && Model.FeatureArticle.BlogIntro != null)
+            {
+                <div class="featured-news__large">
+                    <div class="featured-news__large-image has-cover"
+                         style="@if (Model.FeatureArticle.BlogIntro.Image != null) {<text>background-image: url('@Model.FeatureArticle.BlogIntro.Image.Url');</text>}">
+                        @if (!string.IsNullOrWhiteSpace(Model.FeatureArticle.BlogIntro.Title))
+                        {
+                            <h3 class="h6 featured-news__large-title"><a href="@Model.FeatureArticle.Url">@Model.FeatureArticle.BlogIntro.Title</a></h3>
+                        }
+                    </div>
+                </div>
+            }
+            <div class="featured-news__items">
+                @if (Model.RightArticles.Any())
+                {
+                    <ul class="featured-news__items-list">
+                        @foreach (var article in Model.RightArticles)
+                        {
+                            if (article.BlogIntro != null)
+                            {
+                                <li class="featured-news__item">
+                                    <div class="featured-news__item-img">
+                                        <a href="@article.Url">
+                                            <span class="featured-news__item-image has-cover" style="@if (article.BlogIntro.Image != null) {<text>background-image: url('@article.BlogIntro.Image.Url');</text>}"></span>
+                                        </a>
+                                    </div>
+                                    <div class="featured-news__item-content">
+                                        <span class="featured-news__item-date">@article.BlogIntro.FormatedPublishDate</span>
+                                        @if (!string.IsNullOrWhiteSpace(article.BlogIntro.Title))
+                                        {
+                                            <h4 class="h6 featured-news__item-title">
+                                                <a href="@article.Url">@article.BlogIntro.Title</a>
+                                            </h4>
+                                        }
+                                    </div>
+                                </li>
+                            }
+                        }
+                    </ul>
+                }
+            </div>
+        </div>
+        <div class="featured-news__items js-rest_articles_container" data-on-load-number="@Model.NumberOfFeaturedArticlesOnLoad">
+            @*to insert the rest of the articles*@
+        </div>
+        @if (Model.TotalNumberOfExistingArticles > Model.NumberOfFeaturedArticlesOnLoad + 1)
+        {
+            <div class="featured-news__buttons">
+                <button class="btn btn--mint featured-news__load-more js-load-btn" type="button">@UmbracoDictionary.News.LoadMoreButton</button>
+            </div>
+        }
+    </div>
+</div>

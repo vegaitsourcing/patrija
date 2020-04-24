@@ -5,13 +5,48 @@
     Html.RenderAction<NestedContentController>(c => nameof(c.PageIntro), new { viewModel = Model.PageIntro });
 }
 
-@if (Model.FeaturedProjectsContainer != null)
+@if (Model.CurrentProjects != null && Model.CurrentProjects.Any())
 {
-    Html.RenderAction<ContainerController>(c => nameof(c.AboutUsProjectsContainer), new { viewModel = Model.FeaturedProjectsContainer });
+    <div class="project">
+        <div class="wrap wrap--medium">
+            <h2 class="h2 project__main-title">@UmbracoDictionary.AboutUs.CurrentProjects</h2>
+            @foreach (var project in Model.CurrentProjects)
+            {
+                Html.RenderAction<NestedContentController>
+                    (c => nameof(c.TaggedFeature), new { viewModel = project });
+            }
+        </div>
+    </div>
+}
+
+@if (Model.FinishedProjects != null && Model.FinishedProjects.Any())
+{
+    <div class="news-slider news-slider__background" style="background-image: url('/assets/images/shapes/news-slider-bg.svg');">
+        <div class="wrap wrap--normal">
+            <h2 class="h2 news-slider__title">@UmbracoDictionary.AboutUs.FinishedProjects</h2>
+            <div class="news-slider__container">
+                <div class="news-slider__slider js-news-slider">
+                    @foreach (var project in Model.FinishedProjects)
+                    {
+                        Html.RenderAction<NestedContentController>
+                            (c => nameof(c.TaggedFeature), new { viewModel = project });
+                    }
+                </div>
+            </div>
+        </div>
+        <span class="circle circle--grey circle--small"></span>
+        <span class="circle circle--blue circle--large"></span>
+    </div>
 }
 
 @if (Model.ImageWithText != null)
 {
     Html.RenderAction<NestedContentController>(c => nameof(c.ImageWithText), new { viewModel = Model.ImageWithText });
 }
+
+@if (Model.Links != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.LinksList), new { viewModel = Model.Links });
 }
+
+

@@ -1,6 +1,4 @@
 ﻿using Patrija.Common;
-using Patrija.Core.ViewModels.Partials.AboutUsPage;
-using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
 
 namespace Patrija.Core.ViewModels.Partials.ContactUs

@@ -46,6 +46,13 @@ namespace Patrija.Models.Generated
 		// properties
 
 		///<summary>
+		/// Link: Shown only if First Shape variant is picked
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link")]
+		public Umbraco.Web.Models.Link Link => this.Value<Umbraco.Web.Models.Link>("link");
+
+		///<summary>
 		/// Image: Page intro image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
@@ -53,14 +60,14 @@ namespace Patrija.Models.Generated
 		public IPublishedContent PageIntroImage => this.Value<IPublishedContent>("pageIntroImage");
 
 		///<summary>
-		/// Shape Variant: Shape Variant
+		/// Shape Variant: Pick a shape
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageIntroShapeVariant")]
 		public string PageIntroShapeVariant => this.Value<string>("pageIntroShapeVariant");
 
 		///<summary>
-		/// Text: Page Intro Text
+		/// Text: not shown if First Shape variant is picked
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageIntroText")]

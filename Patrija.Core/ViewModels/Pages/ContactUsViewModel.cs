@@ -1,8 +1,7 @@
-﻿using System.Linq;
-using Patrija.Core.Contexts;
-using Patrija.Core.ViewModels.Partials.AboutUsPage;
-using Patrija.Core.ViewModels.Partials.Features;
+﻿using Patrija.Core.Contexts;
+using Patrija.Core.ViewModels.Partials.ContactUs;
 using Patrija.Models.Generated;
+using System.Linq;
 
 namespace Patrija.Core.ViewModels.Pages
 {
@@ -10,16 +9,14 @@ namespace Patrija.Core.ViewModels.Pages
     {
         public ContactUsViewModel(IPageContext<ContactUs> context) : base(context)
         {
-            //var pageIntro = context.Page.AboutUsPageIntro;
-            //PageIntro = pageIntro != null ? new PageIntroViewModel(pageIntro) : null;
+            var mapInfo = context.Page.ContactUsMapInfo.FirstOrDefault();
+            MapInfo = mapInfo != null ?  new ContactMapViewModel(mapInfo) : null;
 
-            //var featuredProjectsContainer = context.Page.AboutUsFeaturedProjects.FirstOrDefault();
-            //FeaturedProjectsContainer = featuredProjectsContainer != null ? new FeaturedProjectsContainerViewModel(featuredProjectsContainer) : null;
-
-            //var imageWithText = context.Page.AboutUsPageImageWithText.FirstOrDefault();
-            //ImageWithText = imageWithText != null ? new ImageWithTextViewModel(imageWithText) : null;
+            var form = context.Page.ContactUsForm.FirstOrDefault();
+            Form = form != null ? new ContactFormViewModel(form) : null;
         }
 
-
+        public ContactMapViewModel MapInfo { get; }
+        public ContactFormViewModel Form { get; }
     }
 }

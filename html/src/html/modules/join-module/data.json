@@ -6,5 +6,17 @@
 	"imageTop": "assets/images/content/join-top.png",
 	"imageRight": "assets/images/content/join-right.png",
 	"imageBottom": "assets/images/content/join-bottom.png",
-	"imageLeft": "assets/images/content/join-left.png"
+	"imageLeft": "assets/images/content/join-left.png",
+	"closePopup": "Zatvori",
+	"volunteerTitle": "Pridruži nam se kao volonter",
+	"memberTitle": "Postani naš korisnik",
+	"labelName": "Ime i prezime",
+	"labelEmail": "Email adresa",
+	"labelMessage": "Komentar",
+	"errorMessage": "Ovo polje je obavezno.",
+	"volunteerSubmitBtn": "Postani volonter",
+	"memberSubmitBtn": "Postani korisnik",
+	"successMesage": "Uskoro će vam stići mejl sa daljim instrukcijama",
+	"volunteerImage": "assets/images/content/pridruzi-se-intro.jpg",
+	"memberImage": "assets/images/content/news-intro-img.jpg"
 }

@@ -1,0 +1,11 @@
+﻿@inherits UmbracoViewPage<EnglishPageViewModel>
+
+@if (Model.PageIntro != null)
+{
+    Html.RenderAction<NestedContentController>(c => nameof(c.PageIntro), new { viewModel = Model.PageIntro });
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.Text.ToString()))
+{
+    <div class="wrap wrap--normal">@Model.Text</div>
+}

@@ -46,18 +46,11 @@ namespace Patrija.Models.Generated
 		// properties
 
 		///<summary>
-		/// As User Button Text
+		/// Forms
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("joinUsAsUserButtonText")]
-		public string JoinUsAsUserButtonText => this.Value<string>("joinUsAsUserButtonText");
-
-		///<summary>
-		/// As Volunteer Button Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("joinUsAsVolunteerButtonText")]
-		public string JoinUsAsVolunteerButtonText => this.Value<string>("joinUsAsVolunteerButtonText");
+		[ImplementPropertyType("forms")]
+		public IEnumerable<JoinUsForm> Forms => this.Value<IEnumerable<JoinUsForm>>("forms");
 
 		///<summary>
 		/// Bottom Image
@@ -85,7 +78,7 @@ namespace Patrija.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("joinUsText")]
-		public IHtmlString JoinUsText => this.Value<IHtmlString>("joinUsText");
+		public string JoinUsText => this.Value<string>("joinUsText");
 
 		///<summary>
 		/// Title

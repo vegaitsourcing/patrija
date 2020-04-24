@@ -4,10 +4,22 @@
 .donations {
 	text-align: center;
 	padding-bottom: 140px;
+	@include breakpoint(laptop) {
+		padding-bottom: 80px;
+	}
+	@include mq-only(md) {
+		padding-bottom: 60px;
+	}
+	@include mq-down(sm) {
+		padding-bottom: 40px;
+	}
 }
 
 .donations__content {
 	padding: 0 74px;
+	@include mq-down(sm) {
+		padding: 0;
+	}
 }
 
 .donations__title {
@@ -16,20 +28,42 @@
 
 .donations__text {
 	margin-bottom: 98px;
+	@include mq-between(md, lg) {
+		margin-bottom: 40px;
+	}
+	@include mq-down(sm) {
+		margin-bottom: 36px;
+	}
 }
 
 .donations__logos {
 	font-size: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	@include mq-down(sm) {
+		margin: 0 -10px;
+	}
 }
 
 .donations__logo {
 	display: inline-block;
-	width: 274px;
-	height: 170px;
-	vertical-align: top;
-	background: #fbfbfb;
+	width: 31%;
+	min-height: 170px;
 	border-radius: 10px;
-	margin: 0 10px;
+	margin: 0 10px 20px;
+	@include mq-only(md) {
+		width: 208px;
+		height: auto;
+	}
+	@include mq-down(sm) {
+		flex: 1 1 calc(50% - 20px);
+		height: auto;
+		min-height: 0;
+		margin: 0 10px 14px;
+		max-width: calc(50% - 20px);
+	}
 }
 
 .donations__logo-img {

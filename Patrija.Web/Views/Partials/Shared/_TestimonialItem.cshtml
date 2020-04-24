@@ -1,8 +1,18 @@
 ﻿@model Patrija.Core.ViewModels.Shared.TestimonialViewModels
 <div class="testimonials__item">
-    <p class="testimonials__text">@Model.Text</p>
-    <div class="testimonials__image">
-        <img src="@Model.AuthorsImage.Url" alt="">
-    </div>
-    <span class="testimonials__author">@Model.Author</span>
+    @if (!string.IsNullOrWhiteSpace(Model.Text))
+    {
+        <p class="testimonials__text">@Model.Text</p>
+    }
+    @if (Model.AuthorsImage != null)
+    {
+        <div class="testimonials__image">
+            <img src="@Model.AuthorsImage.Url" alt="@Model.AuthorsImage.AlternateText">
+        </div>
+    }
+    @if (!string.IsNullOrWhiteSpace(Model.Author))
+    {
+        <span class="testimonials__author">@Model.Author</span>
+    }
+
 </div>

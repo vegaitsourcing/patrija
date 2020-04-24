@@ -1,30 +1,39 @@
 ﻿using Patrija.Common;
+using Patrija.Core.ViewModels.Partials.Blog;
 using Patrija.Models.Generated;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Patrija.Core.ViewModels.Shared
 {
     public class ArticleViewModel
     {
-        public ArticleViewModel(BlogItem blogItem)
+        
+        public ArticleViewModel(BlogArticle blogArticle, string category)
         {
-            Guard.AgainstDefaultValue(blogItem);
-            Guard.AgainstDefaultValue(blogItem.BlogItemIntro);
+            Guard.AgainstDefaultValue(blogArticle);
+            Guard.AgainstDefaultValue(blogArticle.BlogArticlePageIntro);
 
-            Title = blogItem.BlogItemIntro.BlogIntroTitle;
-            PreviewText = blogItem.BlogItemIntro.BlogIntroPreview;
-            PublishDate = blogItem.BlogItemIntro.BlogIntroDateOfPublishing.Date;
-            Image = new ImageViewModel(blogItem.BlogItemIntro.BlogIntroImage as Image);
-            BlogPageUrl = blogItem.Url;
+            var blogIntro = blogArticle.BlogArticlePageIntro.FirstOrDefault();
+
+            Title = blogIntro.BlogIntroTitle;
+            PreviewText = blogIntro.BlogIntroPreview;
+            Date = blogArticle.CustomDate;
+            Image = blogIntro.BlogIntroImage != null ? new ImageViewModel(blogIntro.BlogIntroImage as Image) : default(ImageViewModel);
+            BlogPageUrl = blogArticle.Url;
+            Category = category;
+           
         }
 
-        public bool HasMetadata => !string.IsNullOrEmpty(Category) || PublishDate != null;
+        public bool HasMetadata => !string.IsNullOrEmpty(Category) || Date != null;
 
         public string Title { get; }
         public string PreviewText { get; }
         public string Category { get; }
-        public string BlogPageUrl { get; } 
-        public DateTime PublishDate { get; }
+        public string BlogPageUrl { get; }
+        public DateTime Date { get; }
         public ImageViewModel Image { get; }
+        
     }
 }

@@ -1,10 +1,6 @@
 ﻿using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Patrija.Core.ViewModels.Partials.Home
 {
@@ -17,8 +13,8 @@ namespace Patrija.Core.ViewModels.Partials.Home
             Tag = aboutUs.AboutUsTag;
             Title = aboutUs.AboutUsTitle;
             Text = aboutUs.AboutUsText;
-            Link = new LinkViewModel(aboutUs.AboutUsLink);
-            Image = new ImageViewModel(aboutUs.AboutUsImage as Image);
+            Link = aboutUs.AboutUsLink != null ? new LinkViewModel(aboutUs.AboutUsLink) : default(LinkViewModel);
+            Image = aboutUs.AboutUsImage != null ? new ImageViewModel(aboutUs.AboutUsImage as Image) : default(ImageViewModel);
         }
 
         public string Tag { get; }

@@ -5,6 +5,15 @@
 	position: relative;
 	padding-top: 130px;
 	margin-bottom: 88px;
+	@include breakpoint(laptop) {
+		padding-top: 60px;
+	}
+	@include mq-only(md) {
+		padding-top: 40px;
+	}
+	@include mq-down(sm) {
+		padding-top: 20px;
+	}
 }
 
 .faq__wrap {
@@ -14,6 +23,9 @@
 .faq__title {
 	margin-bottom: 46px;
 	text-align: center;
+	@include mq-down(sm) {
+		margin-bottom: 26px;
+	}
 }
 
 .faq__accordion-item {
@@ -53,6 +65,14 @@
 	@include hover {
 		background-color: $mint;
 	}
+	@include mq-only(md) {
+		padding: 18px 24px;
+	}
+	@include mq-down(sm) {
+		font-size: 14px;
+		line-height: 30px;
+		padding: 10px 20px;
+	}
 }
 
 .faq__accordion-btn--active {
@@ -66,9 +86,20 @@
 .faq__accordion-content {
 	padding: 28px 54px 12px 60px;
 	display: none;
+	@include mq-down(sm) {
+		padding: 28px 20px 12px;
+	}
 	p {
 		font-size: 18px;
 		line-height: 30px;
+		@include breakpoint(laptop) {
+			font-size: 16px;
+			line-height: 28px;
+		}
+		@include mq-down(sm) {
+			font-size: 14px;
+			line-height: 22px;
+		}
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -78,5 +109,11 @@
 .faq__shape {
 	position: absolute;
 	top: 248px;
-	right: -22.5%;
+	right: -550px;
+	@include mq-up(xxl) {
+		right: -22.5%;
+	}
+	@include mq-down(lg) {
+		display: none;
+	}
 }

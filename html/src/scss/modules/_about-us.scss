@@ -3,11 +3,28 @@
 
 .about-us {
 	padding: 74px 0 115px;
+	position: relative;
+	@include breakpoint(laptop) {
+		padding-bottom: 70px;
+	}
+	@include mq-only(lg) {
+		padding-top: 50px;
+		padding-bottom: 30px;
+	}
+	@include mq-down(md) {
+		padding: 40px 0 20px;
+	}
 }
 
 .about-us__content {
 	padding: 65px 80px 65px 20.2%;
 	position: relative;
+	@include mq-only(md) {
+		padding: 45px 60px 45px 29.2%;
+	}
+	@include mq-down(sm) {
+		padding: 70vw 0 40px;
+	}
 }
 
 .about-us__tag {
@@ -28,12 +45,25 @@
 	position: absolute;
 	top: 0;
 	right: 94.6%;
-	width: 39.187vw;
+	width: 39.063vw;
+	@include breakpoint(laptop) {
+		right: 88.6%;
+	}
+	@include mq-down(md) {
+		right: 78.6%;
+	}
+	@include mq-down(sm) {
+		top: -20px;
+		right: auto;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80vw;
+	}
 }
 
 .about-us__image {
 	position: relative;
-	padding-bottom: 82.6%;
+	padding-bottom: 83.3%;
 	&::after {
 		background-image: url('../assets/images/mask/about-us-mask.svg');
 		background-repeat: no-repeat;
@@ -51,16 +81,28 @@
 
 .about-us__img {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 99.9%;
-	height: 100%;
+	top: 0.5%;
+	left: 0.5%;
+	width: 99%;
+	height: 99%;
 }
 
 .about-us__shape {
 	position: absolute;
-	top: -86px;
-	right: -86.5%;
+	top: -10px;
+	right: -300px;
 	width: 535px;
 	height: 588px;
+	@include breakpoint(laptop) {
+		right: -220px;
+		width: 400px;
+		height: 440px;
+	}
+	@include mq-only(lg) {
+		width: 340px;
+		height: 374px;
+	}
+	@include mq-down(md) {
+		display: none;
+	}
 }

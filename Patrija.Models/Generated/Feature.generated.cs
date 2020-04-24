@@ -86,7 +86,7 @@ namespace Patrija.Models.Generated
 		public static IPublishedContent GetFeatureAdditionalImage(IFeature that) => that.Value<IPublishedContent>("featureAdditionalImage");
 
 		///<summary>
-		/// Content Position: Position of featured content
+		/// Content Position: Position of featured content; Default is left
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("featureContentPosition")]

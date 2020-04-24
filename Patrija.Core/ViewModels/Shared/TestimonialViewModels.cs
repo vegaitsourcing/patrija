@@ -1,5 +1,4 @@
 ﻿using Patrija.Common;
-using Patrija.Core.ViewModels.Shared;
 using Patrija.Models.Generated;
 
 namespace Patrija.Core.ViewModels.Shared
@@ -12,7 +11,9 @@ namespace Patrija.Core.ViewModels.Shared
 
             Text = testimonial.TestimonialItemText;
             Author = testimonial.TestimonialItemUser;
-            AuthorsImage = new ImageViewModel(testimonial.TestimonialItemUserImage as Image);
+            AuthorsImage = testimonial.TestimonialItemUserImage != null ? 
+                                new ImageViewModel(testimonial.TestimonialItemUserImage as Image) : 
+                                default(ImageViewModel);
         }
 
         public string Text { get; }

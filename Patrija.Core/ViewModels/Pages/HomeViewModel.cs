@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Patrija.Core.Contexts;
+using Patrija.Core.ViewModels.Partials.AboutUsPage;
 using Patrija.Core.ViewModels.Partials.Features;
 using Patrija.Core.ViewModels.Partials.Home;
 using Patrija.Core.ViewModels.Shared;
@@ -11,20 +12,18 @@ namespace Patrija.Core.ViewModels.Pages
 	{
 		public HomeViewModel(IPageContext<Home> context) : base(context)
 		{
-		    var homeIntro = context.Home.HomeIntro.FirstOrDefault();
-            HomeIntro = homeIntro != null ? new HomeIntroViewModel(homeIntro) : null;
+		    var homeIntro = context.Home.HomeIntro;
+            HomeIntro = homeIntro != null ? new PageIntroViewModel(homeIntro) : null;
 
             var mostRecentBlogsRequest = context.Home.MostRecentBlogs.FirstOrDefault();
+
             if(mostRecentBlogsRequest != null)
             {
-                var blogItems = context.Home.Children.OfType<Blog>().First().Children.OfType<BlogItem>()
-                    .OrderByDescending(blogItem => blogItem?.BlogItemIntro.BlogIntroDateOfPublishing)
-                    .Take(mostRecentBlogsRequest.MostRecentBlogsCount).ToArray();
-
-                ArticleContainer = new ArticleContainerViewModel(mostRecentBlogsRequest.MostRecentBlogsTitle, blogItems.Select(bi => new ArticleViewModel(bi)).ToArray());
+                ArticleContainer = GenerateArticleContainerViewModel(context, mostRecentBlogsRequest);
             }
-            
-            Features = context.Home.FeaturedContent?.Select(f => new TaggedFeatureViewModel(f)).ToArray()
+
+            Features = context.Home.Projects?.OfType<ProjectPage>().Where(f => f.PreviewInfo != null && f.PreviewInfo.FirstOrDefault() != null)
+                        .Select(f => new TaggedFeatureViewModel(f.PreviewInfo.FirstOrDefault(), f.Url)).ToArray()
                        ?? new TaggedFeatureViewModel[0];
 		    var linksList = context.Home.HomeFeaturedLinks;
 
@@ -33,19 +32,25 @@ namespace Patrija.Core.ViewModels.Pages
 
 		    LinksList = linksList?.Select(ll => new LinksListViewModel(ll)).ToArray();
 
-		    var joinUs = context.Home.HomeJoinUs.FirstOrDefault();
-            JoinUs = joinUs != null ? new JoinUsViewModel(joinUs) : null;
-
             var aboutUs = context.Home.HomeAboutUs.FirstOrDefault();
             AboutUs = aboutUs != null ? new AboutUsViewModel(aboutUs) : null;
 		}
 
-        public HomeIntroViewModel HomeIntro { get; }
+        private static ArticleContainerViewModel GenerateArticleContainerViewModel(IPageContext<Home> context, MostRecentBlogs mostRecentBlogsRequest)
+        {
+            var articles = context.Home.Children.OfType<BlogListingPage>().First()
+                .Children.OfType<BlogCategory>().SelectMany(category => category
+                .Children.OfType<BlogArticle>().Select(bi => new ArticleViewModel(bi, category.BlogCategoryName)))
+                .OrderByDescending(a => a.Date).Take(mostRecentBlogsRequest.MostRecentBlogsCount).ToArray();
+
+            return new ArticleContainerViewModel(mostRecentBlogsRequest.MostRecentBlogsTitle, articles);
+        }
+
+        public PageIntroViewModel HomeIntro { get; }
         public TaggedFeatureViewModel[] Features { get; }
         public ArticleContainerViewModel ArticleContainer { get; }
         public HomeSupportViewModel HomeSupport { get; }
         public LinksListViewModel[] LinksList { get; }
-        public JoinUsViewModel JoinUs { get; }
         public AboutUsViewModel AboutUs { get; }
 	}
 }
