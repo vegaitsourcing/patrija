@@ -2,7 +2,7 @@
 @inherits UmbracoViewPage<PageViewModel>
 
 @{
-	Layout = null;
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -19,20 +19,42 @@
 
     @RazorHelper.RenderScripts(true, "~/bundles-js/")
 
+    @if (!string.IsNullOrWhiteSpace(Model.GoogleAnalyticsCode))
+    {
+        if (Model.GoogleAnalyticsCode.Trim().StartsWith("<"))
+        {
+            @Html.Raw(Model.GoogleAnalyticsCode)
+        }
+        else
+        {
+            <script>
+				@Html.Raw(Model.GoogleAnalyticsCode)
+            </script>
+        }
+    }
+    @if (!string.IsNullOrWhiteSpace(Model.GoogleTagManagerScriptCode))
+    {
+        @Html.Raw(Model.GoogleTagManagerScriptCode)
+    }
 </head>
 <body>
-@{
-	Html.RenderAction<LayoutController>(c => nameof(c.Header), new { viewModel = Model.Header });
-}
-<main class="main">
-	@RenderBody()
-    @if (Model.ShowJoinUsModule && Model.JoinUs != null)
-    {
-        Html.RenderAction<NestedContentController>(c => nameof(c.JoinUs), new { viewModel = Model.JoinUs });
+    @{
+        Html.RenderAction<LayoutController>(c => nameof(c.Header), new { viewModel = Model.Header });
     }
-</main>
-@{
-	Html.RenderAction<LayoutController>(c => nameof(c.Footer), new { viewModel = Model.Footer });
-}
+    <main class="main">
+        @if (!string.IsNullOrWhiteSpace(Model.GoogleTagManagerNonScriptCode))
+        {
+            @Html.Raw(Model.GoogleTagManagerNonScriptCode)
+        }
+
+        @RenderBody()
+        @if (Model.ShowJoinUsModule && Model.JoinUs != null)
+        {
+            Html.RenderAction<NestedContentController>(c => nameof(c.JoinUs), new { viewModel = Model.JoinUs });
+        }
+    </main>
+    @{
+        Html.RenderAction<LayoutController>(c => nameof(c.Footer), new { viewModel = Model.Footer });
+    }
 </body>
 </html>
